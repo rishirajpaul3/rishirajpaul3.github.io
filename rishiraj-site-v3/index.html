@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rishiraj Paul — GTM Engineer</title>
+<meta name="description" content="GTM Engineer building outbound systems, lead enrichment pipelines, and revenue automation for B2B companies.">
+<link rel="stylesheet" href="style.css">
+<style>
+  /* HERO */
+  .hero-sub {
+    font-size: 17px;
+    color: var(--gray-600);
+    max-width: 520px;
+    margin-bottom: 40px;
+    line-height: 1.75;
+  }
+
+  .hero-ctas { display: flex; gap: 16px; align-items: center; flex-wrap: wrap; }
+
+  .hero-stats {
+    display: flex;
+    gap: 0;
+    margin-top: 72px;
+    padding-top: 40px;
+    border-top: 1px solid var(--gray-200);
+  }
+
+  .stat-block {
+    padding-right: 48px;
+    margin-right: 48px;
+    border-right: 1px solid var(--gray-200);
+  }
+  .stat-block:last-child { border-right: none; margin-right: 0; padding-right: 0; }
+
+  .stat-num {
+    font-family: var(--serif);
+    font-size: 40px;
+    line-height: 1;
+    margin-bottom: 5px;
+  }
+
+  .stat-label { font-size: 12px; color: var(--gray-400); font-weight: 500; letter-spacing: 0.03em; }
+
+  /* SERVICES */
+  .services-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1px;
+    background: var(--gray-200);
+    border: 1px solid var(--gray-200);
+  }
+
+  .service-card {
+    background: var(--white);
+    padding: 36px 32px;
+    transition: background 0.2s;
+  }
+  .service-card:hover { background: var(--gray-50); }
+
+  .service-num { font-family: var(--mono); font-size: 11px; color: var(--gray-400); margin-bottom: 18px; letter-spacing: 0.06em; }
+  .service-title { font-size: 17px; font-weight: 600; margin-bottom: 10px; letter-spacing: -0.01em; }
+  .service-desc { font-size: 13px; color: var(--gray-600); line-height: 1.7; }
+  .service-tools { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 18px; }
+
+  /* RESULTS */
+  .results-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    background: var(--gray-200);
+    border: 1px solid var(--gray-200);
+    margin-bottom: 48px;
+  }
+
+  .result-card {
+    background: var(--white);
+    padding: 40px 28px;
+    text-align: center;
+  }
+
+  .result-num { font-family: var(--serif); font-size: 48px; line-height: 1; margin-bottom: 8px; }
+  .result-label { font-size: 13px; color: var(--gray-600); font-weight: 600; }
+  .result-sub { font-size: 11px; color: var(--gray-400); margin-top: 4px; font-family: var(--mono); letter-spacing: 0.03em; }
+
+  /* PROJECTS */
+  .projects-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1px;
+    background: var(--gray-200);
+    border: 1px solid var(--gray-200);
+  }
+
+  .project-card {
+    background: var(--white);
+    padding: 36px 32px;
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    transition: background 0.2s;
+    position: relative;
+  }
+  .project-card:hover { background: var(--gray-50); }
+
+  .project-card-num { font-family: var(--mono); font-size: 11px; color: var(--gray-400); margin-bottom: 16px; letter-spacing: 0.06em; }
+  .project-card-title { font-size: 17px; font-weight: 600; margin-bottom: 10px; letter-spacing: -0.01em; line-height: 1.35; }
+  .project-card-desc { font-size: 13px; color: var(--gray-600); line-height: 1.7; flex: 1; }
+  .project-card-footer { display: flex; justify-content: space-between; align-items: center; margin-top: 24px; }
+  .project-card-tags { display: flex; gap: 6px; flex-wrap: wrap; }
+
+  .project-arrow {
+    font-size: 16px;
+    color: var(--gray-300);
+    transition: transform 0.2s, color 0.2s;
+    flex-shrink: 0;
+  }
+  .project-card:hover .project-arrow { transform: translate(3px, -3px); color: var(--black); }
+
+  /* ABOUT */
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 340px;
+    gap: 72px;
+    align-items: start;
+  }
+
+  .about-text p { color: var(--gray-600); margin-bottom: 18px; font-size: 15px; line-height: 1.8; }
+  .about-text p strong { color: var(--black); font-weight: 600; }
+
+  .about-badges { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 28px; }
+  .badge-green { font-family: var(--mono); font-size: 11px; background: var(--green-bg); color: var(--green); padding: 6px 14px; border-radius: 2px; letter-spacing: 0.04em; }
+  .badge-outline { font-family: var(--mono); font-size: 11px; border: 1px solid var(--gray-200); color: var(--gray-600); padding: 6px 14px; border-radius: 2px; letter-spacing: 0.04em; }
+
+  .stack-panel { border: 1px solid var(--gray-200); }
+  .stack-panel-header { padding: 14px 20px; border-bottom: 1px solid var(--gray-200); font-family: var(--mono); font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--gray-400); }
+
+  .stack-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 13px 20px;
+    border-bottom: 1px solid var(--gray-200);
+    font-size: 13px;
+  }
+  .stack-row:last-child { border-bottom: none; }
+  .stack-row-name { font-weight: 600; }
+  .stack-row-use { font-family: var(--mono); font-size: 10px; color: var(--gray-400); letter-spacing: 0.04em; }
+
+  /* CONTACT */
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 72px;
+    align-items: start;
+  }
+
+  .contact-intro p { font-size: 15px; color: var(--gray-600); line-height: 1.8; margin-bottom: 36px; }
+
+  .contact-links { display: flex; flex-direction: column; gap: 14px; }
+
+  .contact-link {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    text-decoration: none;
+    color: var(--black);
+    font-size: 13px;
+    font-weight: 500;
+    padding: 14px 16px;
+    border: 1px solid var(--gray-200);
+    transition: border-color 0.2s, background 0.2s;
+  }
+  .contact-link:hover { border-color: var(--black); background: var(--gray-50); }
+
+  .contact-link-icon {
+    width: 36px;
+    height: 36px;
+    border: 1px solid var(--gray-200);
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--gray-400);
+    flex-shrink: 0;
+    background: var(--gray-100);
+  }
+
+  .contact-label { font-size: 11px; font-family: var(--mono); color: var(--gray-400); letter-spacing: 0.04em; display: block; margin-bottom: 2px; }
+
+  .contact-form { display: flex; flex-direction: column; gap: 16px; }
+
+  .form-field { display: flex; flex-direction: column; gap: 7px; }
+  .form-label { font-family: var(--mono); font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gray-400); }
+  .form-input, .form-textarea {
+    font-family: var(--sans); font-size: 14px;
+    padding: 11px 14px;
+    border: 1px solid var(--gray-200);
+    border-radius: 2px;
+    background: var(--white);
+    color: var(--black);
+    outline: none;
+    transition: border-color 0.2s;
+    width: 100%;
+  }
+  .form-input:focus, .form-textarea:focus { border-color: var(--black); }
+  .form-textarea { resize: vertical; min-height: 110px; }
+
+  @media (max-width: 720px) {
+    .services-grid, .projects-grid, .about-grid, .contact-grid { grid-template-columns: 1fr; }
+    .results-grid { grid-template-columns: 1fr 1fr; }
+    .hero-stats { flex-direction: column; gap: 28px; }
+    .stat-block { border-right: none; margin-right: 0; padding-right: 0; padding-bottom: 28px; border-bottom: 1px solid var(--gray-200); }
+    .stat-block:last-child { border-bottom: none; padding-bottom: 0; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="index.html">rishiraj.paul</a>
+  <ul class="nav-links">
+    <li><a href="#services">Services</a></li>
+    <li><a href="#results">Results</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <span class="nav-badge">Open to work</span>
+</nav>
+
+<!-- HERO -->
+<div class="page-wrap">
+<section id="hero">
+  <div class="eyebrow">GTM Engineer</div>
+  <h1>I build the systems that turn<br><em>cold lists into closed revenue.</em></h1>
+  <p class="hero-sub">Outbound infrastructure. Lead enrichment pipelines. CRM automation. End-to-end GTM systems for B2B companies that want to scale without scaling headcount.</p>
+  <div class="hero-ctas">
+    <a href="#contact" class="btn-primary">Work with me</a>
+    <a href="#projects" class="btn-ghost">See my work →</a>
+  </div>
+  <div class="hero-stats">
+    <div class="stat-block">
+      <div class="stat-num">8</div>
+      <div class="stat-label">GTM systems built</div>
+    </div>
+    <div class="stat-block">
+      <div class="stat-num">E2E</div>
+      <div class="stat-label">Inbound & outbound</div>
+    </div>
+    <div class="stat-block">
+      <div class="stat-num">QMUL</div>
+      <div class="stat-label">MSc Entrepreneurship</div>
+    </div>
+    <div class="stat-block">
+      <div class="stat-num">UK</div>
+      <div class="stat-label">Post-study work visa</div>
+    </div>
+  </div>
+</section>
+</div>
+
+<div class="divider"></div>
+
+<!-- SERVICES -->
+<div class="page-wrap">
+<section id="services">
+  <div class="eyebrow">Services</div>
+  <h2>What I build for you</h2>
+  <div class="services-grid">
+    <div class="service-card">
+      <div class="service-num">01</div>
+      <div class="service-title">Outbound Infrastructure</div>
+      <p class="service-desc">Full cold outreach stack — ICP targeting, inbox setup, deliverability, multi-step sequencing, and reply handling. Campaigns that land in inboxes, not spam folders.</p>
+      <div class="service-tools">
+        <span class="tag">Clay</span><span class="tag">Instantly</span><span class="tag">Smartlead</span><span class="tag">Apollo</span>
+      </div>
+    </div>
+    <div class="service-card">
+      <div class="service-num">02</div>
+      <div class="service-title">Lead Enrichment Pipelines</div>
+      <p class="service-desc">Multi-waterfall enrichment combining Clay, Apollo, Hunter.io, and AI to build verified, firmographic-rich contact lists with hyper-personalised first lines baked in.</p>
+      <div class="service-tools">
+        <span class="tag">Clay</span><span class="tag">Hunter.io</span><span class="tag">Clearbit</span><span class="tag">GPT-4o</span>
+      </div>
+    </div>
+    <div class="service-card">
+      <div class="service-num">03</div>
+      <div class="service-title">CRM Operations & Automation</div>
+      <p class="service-desc">HubSpot setup, lead routing logic, deal enforcement, stale deal alerts, and workflow automation that keeps your CRM accurate and your sales team focused on selling.</p>
+      <div class="service-tools">
+        <span class="tag">HubSpot</span><span class="tag">n8n</span><span class="tag">Zapier</span><span class="tag">Clay</span>
+      </div>
+    </div>
+    <div class="service-card">
+      <div class="service-num">04</div>
+      <div class="service-title">GTM Signal Monitoring</div>
+      <p class="service-desc">Automated buying-signal tracking — hiring surges, funding events, job changes, LinkedIn activity — piped into your CRM so sales acts before a competitor even gets a reply.</p>
+      <div class="service-tools">
+        <span class="tag">Clay</span><span class="tag">n8n</span><span class="tag">HubSpot</span><span class="tag">HeyReach</span>
+      </div>
+    </div>
+  </div>
+</section>
+</div>
+
+<div class="divider"></div>
+
+<!-- RESULTS -->
+<div class="page-wrap">
+<section id="results">
+  <div class="eyebrow">Results</div>
+  <h2>Impact in numbers</h2>
+  <div class="results-grid">
+    <div class="result-card">
+      <div class="result-num">8</div>
+      <div class="result-label">GTM systems built</div>
+      <div class="result-sub">End-to-end, inbound & outbound</div>
+    </div>
+    <div class="result-card">
+      <div class="result-num">50+</div>
+      <div class="result-label">Reps managed</div>
+      <div class="result-sub">Sales team leadership</div>
+    </div>
+    <div class="result-card">
+      <div class="result-num">E2E</div>
+      <div class="result-label">Full-stack GTM</div>
+      <div class="result-sub">From signal to signed</div>
+    </div>
+    <div class="result-card">
+      <div class="result-num">UK</div>
+      <div class="result-label">Based & visa-ready</div>
+      <div class="result-sub">QMUL MSc graduate</div>
+    </div>
+  </div>
+</section>
+</div>
+
+<div class="divider"></div>
+
+<!-- PROJECTS -->
+<div class="page-wrap">
+<section id="projects">
+  <div class="eyebrow">Projects</div>
+  <h2>Systems I've built</h2>
+  <div class="projects-grid">
+
+    <a href="project-apollo-bdr.html" class="project-card">
+      <div class="project-card-num">01</div>
+      <div class="project-card-title">Apollo → AI → Instantly: Full-Stack BDR Automation</div>
+      <p class="project-card-desc">End-to-end outbound replacing 80% of SDR manual work. Leads sourced from Apollo, deep-enriched, AI-personalised across 3 emails, pushed to Instantly campaign — zero human touchpoints.</p>
+      <div class="project-card-footer">
+        <div class="project-card-tags">
+          <span class="tag-outline">n8n</span><span class="tag-outline">Apollo</span><span class="tag-outline">Instantly</span>
+        </div>
+        <span class="project-arrow">↗</span>
+      </div>
+    </a>
+
+    <a href="project-hubspot-enrichment.html" class="project-card">
+      <div class="project-card-num">02</div>
+      <div class="project-card-title">HubSpot + Phantombuster + GPT: Auto-Personalised Outreach</div>
+      <p class="project-card-desc">Triggers on new HubSpot contact. Scrapes LinkedIn/Twitter via Phantombuster. GPT generates a unique outreach email from live social data. Sent automatically. No copy-pasting.</p>
+      <div class="project-card-footer">
+        <div class="project-card-tags">
+          <span class="tag-outline">n8n</span><span class="tag-outline">HubSpot</span><span class="tag-outline">GPT-4</span>
+        </div>
+        <span class="project-arrow">↗</span>
+      </div>
+    </a>
+
+    <a href="project-company-research.html" class="project-card">
+      <div class="project-card-num">03</div>
+      <div class="project-card-title">GPT-4o Autonomous Company Research Engine</div>
+      <p class="project-card-desc">Reads a company name list from Google Sheets, deploys an AI agent to scour the web, and returns enriched firmographics — LinkedIn, pricing, integrations, market focus — back into the sheet.</p>
+      <div class="project-card-footer">
+        <div class="project-card-tags">
+          <span class="tag-outline">n8n</span><span class="tag-outline">GPT-4o</span><span class="tag-outline">Sheets</span>
+        </div>
+        <span class="project-arrow">↗</span>
+      </div>
+    </a>
+
+    <a href="project-lead-gen-perplexity.html" class="project-card">
+      <div class="project-card-num">04</div>
+      <div class="project-card-title">Perplexity + Hunter.io: AI-Powered Lead Gen Pipeline</div>
+      <p class="project-card-desc">Prompt an industry. Perplexity finds 15 matching companies. Hunter.io enriches up to 3 verified emails per domain. AI fallback for gaps. All deduplicated and logged into Google Sheets.</p>
+      <div class="project-card-footer">
+        <div class="project-card-tags">
+          <span class="tag-outline">n8n</span><span class="tag-outline">Perplexity</span><span class="tag-outline">Hunter.io</span>
+        </div>
+        <span class="project-arrow">↗</span>
+      </div>
+    </a>
+
+    <a href="project-ai-sdr.html" class="project-card">
+      <div class="project-card-num">05</div>
+      <div class="project-card-title">AI SDR: Autonomous Cold Outreach with Local LLM</div>
+      <p class="project-card-desc">Three synced n8n flows running on weekday schedules. Scores leads 0–100 with Ollama, generates 3-email sequences, manages follow-up cadence, detects replies, fires Telegram alerts.</p>
+      <div class="project-card-footer">
+        <div class="project-card-tags">
+          <span class="tag-outline">n8n</span><span class="tag-outline">Ollama</span><span class="tag-outline">Gmail</span>
+        </div>
+        <span class="project-arrow">↗</span>
+      </div>
+    </a>
+
+    <a href="project-icp-scoring.html" class="project-card">
+      <div class="project-card-num">06</div>
+      <div class="project-card-title">ICP Qualification & Revenue Scoring Engine</div>
+      <p class="project-card-desc">Clay pipeline that scores inbound leads against ICP criteria, enriches firmographics via waterfall, calculates a revenue potential score, and routes qualified accounts to HubSpot with context.</p>
+      <div class="project-card-footer">
+        <div class="project-card-tags">
+          <span class="tag-outline">Clay</span><span class="tag-outline">HubSpot</span><span class="tag-outline">Clearbit</span>
+        </div>
+        <span class="project-arrow">↗</span>
+      </div>
+    </a>
+
+    <a href="project-expansion-signals.html" class="project-card">
+      <div class="project-card-num">07</div>
+      <div class="project-card-title">Customer Expansion Propensity Pipeline</div>
+      <p class="project-card-desc">Monitors existing accounts for hiring surges, funding rounds, and role changes. When a growth signal fires, CRM alerts the CSM before the customer even starts looking at alternatives.</p>
+      <div class="project-card-footer">
+        <div class="project-card-tags">
+          <span class="tag-outline">Clay</span><span class="tag-outline">n8n</span><span class="tag-outline">HubSpot</span>
+        </div>
+        <span class="project-arrow">↗</span>
+      </div>
+    </a>
+
+    <a href="project-outreach-engine.html" class="project-card">
+      <div class="project-card-num">08</div>
+      <div class="project-card-title">Context-Aware Outreach Orchestration Engine</div>
+      <p class="project-card-desc">Clay enrichment → AI-generated first lines from LinkedIn activity → HeyReach for LinkedIn touches → Salesforge for email. Sequences adapt based on engagement signals in real time.</p>
+      <div class="project-card-footer">
+        <div class="project-card-tags">
+          <span class="tag-outline">Clay</span><span class="tag-outline">HeyReach</span><span class="tag-outline">Salesforge</span>
+        </div>
+        <span class="project-arrow">↗</span>
+      </div>
+    </a>
+
+  </div>
+</section>
+</div>
+
+<div class="divider"></div>
+
+<!-- ABOUT -->
+<div class="page-wrap">
+<section id="about">
+  <div class="eyebrow">About</div>
+  <h2>Who I am</h2>
+  <div class="about-grid">
+    <div class="about-text">
+      <p>I'm a <strong>GTM Engineer</strong> with a background in business operations and sales, graduated from MSc Entrepreneurship & Innovation at Queen Mary University of London.</p>
+      <p>That background gives me something most engineers don't have. I've worked on the front lines of sales, managed teams of 50+ representatives, and built commercial partnerships from scratch. I understand the revenue process from the inside out — not just the technology around it.</p>
+      <p>My core focus is making <strong>revenue predictable</strong> for scaling companies — by building and managing full sales systems, both inbound and outbound, end to end.</p>
+      <p>What separates my approach is how I think about problems. I work in layers, starting from the end of the sales process and moving forward. I identify the bottlenecks first, then solve them one at a time in the correct sequence — because solving the right problem in the wrong order can still leave a company stuck.</p>
+      <p>The result is a sales process that is <strong>built correctly, maintained properly, and designed to scale.</strong></p>
+      <div class="about-badges">
+        <span class="badge-green">MSc QMUL London</span>
+        <span class="badge-outline">UK Work Visa</span>
+        <span class="badge-outline">50+ Team Management</span>
+        <span class="badge-outline">Open to Work</span>
+      </div>
+    </div>
+    <div>
+      <div class="stack-panel">
+        <div class="stack-panel-header">Outbound</div>
+        <div class="stack-row"><span class="stack-row-name">Instantly / Smartlead</span><span class="stack-row-use">cold email</span></div>
+        <div class="stack-row"><span class="stack-row-name">Apollo / Outreach</span><span class="stack-row-use">sequences · prospecting</span></div>
+      </div>
+      <div class="stack-panel" style="margin-top:1px;">
+        <div class="stack-panel-header">Enrichment & Data</div>
+        <div class="stack-row"><span class="stack-row-name">Clay / ZoomInfo</span><span class="stack-row-use">enrichment · waterfall</span></div>
+        <div class="stack-row"><span class="stack-row-name">Seamless.ai / Apollo</span><span class="stack-row-use">contact data</span></div>
+      </div>
+      <div class="stack-panel" style="margin-top:1px;">
+        <div class="stack-panel-header">Automation</div>
+        <div class="stack-row"><span class="stack-row-name">n8n / Make / Zapier</span><span class="stack-row-use">workflows · orchestration</span></div>
+      </div>
+      <div class="stack-panel" style="margin-top:1px;">
+        <div class="stack-panel-header">CRM</div>
+        <div class="stack-row"><span class="stack-row-name">HubSpot / Salesforce</span><span class="stack-row-use">pipeline · routing</span></div>
+        <div class="stack-row"><span class="stack-row-name">GoHighLevel / Pipedrive</span><span class="stack-row-use">CRM ops</span></div>
+      </div>
+      <div class="stack-panel" style="margin-top:1px;">
+        <div class="stack-panel-header">Paid Ads</div>
+        <div class="stack-row"><span class="stack-row-name">LinkedIn / Google / Meta</span><span class="stack-row-use">demand gen</span></div>
+      </div>
+      <div class="stack-panel" style="margin-top:1px;">
+        <div class="stack-panel-header">Code & APIs</div>
+        <div class="stack-row"><span class="stack-row-name">Python / JavaScript</span><span class="stack-row-use">REST APIs · Webhooks</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+</div>
+
+<div class="divider"></div>
+
+<!-- CONTACT -->
+<div class="page-wrap">
+<section id="contact">
+  <div class="eyebrow">Contact</div>
+  <div class="contact-grid">
+    <div class="contact-intro">
+      <h2 style="margin-bottom: 16px;">Let's build something.</h2>
+      <p>Open to freelance GTM projects, consulting engagements, and full-time roles in the UK. If you need revenue infrastructure that actually ships — reach out.</p>
+      <div class="contact-links">
+        <a href="mailto:rishirajpaul3@gmail.com" class="contact-link">
+          <div class="contact-link-icon">@</div>
+          <div>
+            <span class="contact-label">Email</span>
+            rishirajpaul3@gmail.com
+          </div>
+        </a>
+        <a href="https://www.linkedin.com/in/rishiraj-paul/" target="_blank" class="contact-link">
+          <div class="contact-link-icon">in</div>
+          <div>
+            <span class="contact-label">LinkedIn</span>
+            linkedin.com/in/rishiraj-paul
+          </div>
+        </a>
+        <a href="tel:+447587260808" class="contact-link">
+          <div class="contact-link-icon">UK</div>
+          <div>
+            <span class="contact-label">Phone (UK)</span>
+            +44 7587 260808
+          </div>
+        </a>
+        <a href="tel:+919667988282" class="contact-link">
+          <div class="contact-link-icon">IN</div>
+          <div>
+            <span class="contact-label">Phone (India)</span>
+            +91 9667 988282
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="contact-form">
+      <div class="form-field">
+        <label class="form-label">Name</label>
+        <input type="text" class="form-input" placeholder="Your name">
+      </div>
+      <div class="form-field">
+        <label class="form-label">Company</label>
+        <input type="text" class="form-input" placeholder="Your company">
+      </div>
+      <div class="form-field">
+        <label class="form-label">Email</label>
+        <input type="email" class="form-input" placeholder="your@company.com">
+      </div>
+      <div class="form-field">
+        <label class="form-label">What do you need?</label>
+        <textarea class="form-textarea" placeholder="Tell me about your GTM challenge — outbound setup, CRM automation, enrichment pipeline..."></textarea>
+      </div>
+      <button class="btn-primary">Send message</button>
+    </div>
+  </div>
+</section>
+</div>
+
+<footer>
+  <span class="footer-l">© 2026 Rishiraj Paul — GTM Engineer</span>
+  <span class="footer-r">rishirajpaul3.github.io</span>
+</footer>
+
+<!-- MOUSE FOLLOWER -->
+<div id="cursor-dot"></div>
+<div id="cursor-ring"></div>
+
+<!-- PARTICLE CANVAS -->
+<canvas id="particle-canvas"></canvas>
+
+<style>
+  #cursor-dot {
+    width: 6px;
+    height: 6px;
+    background: #0a0a0a;
+    border-radius: 50%;
+    position: fixed;
+    top: 0; left: 0;
+    pointer-events: none;
+    z-index: 9999;
+    transform: translate(-50%, -50%);
+    transition: transform 0.08s ease, background 0.2s;
+  }
+
+  #cursor-ring {
+    width: 32px;
+    height: 32px;
+    border: 1px solid rgba(10,10,10,0.25);
+    border-radius: 50%;
+    position: fixed;
+    top: 0; left: 0;
+    pointer-events: none;
+    z-index: 9998;
+    transform: translate(-50%, -50%);
+    transition: width 0.3s ease, height 0.3s ease, border-color 0.3s ease;
+  }
+
+  body:has(a:hover) #cursor-ring,
+  body:has(button:hover) #cursor-ring {
+    width: 48px;
+    height: 48px;
+    border-color: rgba(10,10,10,0.5);
+  }
+
+  #particle-canvas {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    pointer-events: none;
+    z-index: 0;
+    opacity: 0.4;
+  }
+
+  /* lift content above canvas */
+  nav, .page-wrap, footer { position: relative; z-index: 1; }
+
+  /* fade-in on scroll */
+  .fade-up {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+  .fade-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+</style>
+
+<script>
+  /* ── CURSOR ── */
+  const dot = document.getElementById('cursor-dot');
+  const ring = document.getElementById('cursor-ring');
+  let mx = 0, my = 0, rx = 0, ry = 0;
+
+  document.addEventListener('mousemove', e => {
+    mx = e.clientX; my = e.clientY;
+    dot.style.left = mx + 'px';
+    dot.style.top  = my + 'px';
+  });
+
+  (function animRing() {
+    rx += (mx - rx) * 0.12;
+    ry += (my - ry) * 0.12;
+    ring.style.left = rx + 'px';
+    ring.style.top  = ry + 'px';
+    requestAnimationFrame(animRing);
+  })();
+
+  /* hide default cursor on desktop */
+  if (window.matchMedia('(pointer:fine)').matches) {
+    document.body.style.cursor = 'none';
+    document.querySelectorAll('a, button, input, textarea').forEach(el => {
+      el.style.cursor = 'none';
+    });
+  }
+
+  /* ── PARTICLES ── */
+  const canvas = document.getElementById('particle-canvas');
+  const ctx = canvas.getContext('2d');
+  let W, H, particles = [];
+
+  function resize() {
+    W = canvas.width  = window.innerWidth;
+    H = canvas.height = window.innerHeight;
+  }
+  resize();
+  window.addEventListener('resize', resize);
+
+  class Particle {
+    constructor() { this.reset(true); }
+    reset(init) {
+      this.x  = Math.random() * W;
+      this.y  = init ? Math.random() * H : H + 10;
+      this.r  = Math.random() * 1.5 + 0.5;
+      this.vx = (Math.random() - 0.5) * 0.3;
+      this.vy = -(Math.random() * 0.4 + 0.1);
+      this.alpha = Math.random() * 0.5 + 0.1;
+    }
+    update() {
+      this.x += this.vx;
+      this.y += this.vy;
+      if (this.y < -10) this.reset(false);
+    }
+    draw() {
+      ctx.beginPath();
+      ctx.arc(this.x, this.y, this.r, 0, Math.PI * 2);
+      ctx.fillStyle = `rgba(10,10,10,${this.alpha})`;
+      ctx.fill();
+    }
+  }
+
+  for (let i = 0; i < 55; i++) particles.push(new Particle());
+
+  (function animParticles() {
+    ctx.clearRect(0, 0, W, H);
+    particles.forEach(p => { p.update(); p.draw(); });
+    requestAnimationFrame(animParticles);
+  })();
+
+  /* ── SCROLL FADE-IN ── */
+  document.querySelectorAll('section, .project-card, .service-card, .result-card').forEach(el => {
+    el.classList.add('fade-up');
+  });
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        observer.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.08 });
+
+  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
