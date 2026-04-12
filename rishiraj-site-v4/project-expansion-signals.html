@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Customer Expansion Propensity Pipeline — Rishiraj Paul</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="index.html">rishiraj.paul</a>
+  <ul class="nav-links">
+    <li><a href="index.html#services">Services</a></li>
+    <li><a href="index.html#projects">Projects</a></li>
+    <li><a href="index.html#about">About</a></li>
+    <li><a href="index.html#contact">Contact</a></li>
+  </ul>
+  <span class="nav-badge">Open to work</span>
+</nav>
+
+<div class="page-wrap">
+
+<div class="project-hero">
+  <a href="index.html#projects" class="back-link">← Back to projects</a>
+  <div class="project-meta">
+    <span class="tag">Clay</span><span class="tag">n8n</span><span class="tag">HubSpot</span><span class="tag">Signal Monitoring</span><span class="tag">Upsell Automation</span>
+  </div>
+  <h1>Customer Expansion<br>Propensity Pipeline</h1>
+  <p class="lead">Monitors your existing customer accounts for growth signals — hiring surges, funding rounds, executive hires, and product expansion signals. When an account shows buying propensity, the CSM gets a contextual HubSpot alert before the customer starts looking at alternatives.</p>
+  <div class="project-stats">
+    <div class="p-stat"><div class="p-stat-num">5+</div><div class="p-stat-label">Signal types monitored</div></div>
+    <div class="p-stat"><div class="p-stat-num">Daily</div><div class="p-stat-label">Monitoring cadence</div></div>
+    <div class="p-stat"><div class="p-stat-num">Auto</div><div class="p-stat-label">CSM alerts</div></div>
+    <div class="p-stat"><div class="p-stat-num">CRM</div><div class="p-stat-label">Full context in HubSpot</div></div>
+  </div>
+</div>
+
+<div class="project-section">
+  <div class="two-col">
+    <div class="section-label">The Problem</div>
+    <div class="two-col-content">
+      <p>Most upsell conversations happen reactively — the customer brings it up, or the CSM checks in at renewal. By then, either the window has passed or a competitor is already in the conversation.</p>
+      <p><strong>Growth signals are public and available in real time.</strong> A customer who just raised a Series B, hired 20 engineers in a month, or posted a VP of Sales job is almost certainly expanding their stack. This pipeline catches those signals the moment they appear and puts them in front of the right CSM with context — so the conversation happens first, not last.</p>
+    </div>
+  </div>
+</div>
+
+<div class="project-section">
+  <div class="two-col">
+    <div class="section-label">Signals Monitored</div>
+    <div class="two-col-content">
+      <div class="audience-grid">
+        <div class="audience-card">
+          <h4>Hiring Surge</h4>
+          <p>Company posts 10+ new roles in 30 days, especially in functions your product serves — Sales, Marketing, RevOps, Engineering.</p>
+        </div>
+        <div class="audience-card">
+          <h4>Funding Announcement</h4>
+          <p>New funding round detected via Crunchbase or news scraping. Funded companies expand headcount and tools quickly.</p>
+        </div>
+        <div class="audience-card">
+          <h4>Executive Hire</h4>
+          <p>New C-suite or VP joins the company. New executives frequently re-evaluate the tech stack in their first 90 days.</p>
+        </div>
+        <div class="audience-card">
+          <h4>Product Expansion Signal</h4>
+          <p>Customer starts posting roles or content suggesting they're moving into a new market or product line — your product may need to scale with them.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="project-section">
+  <div class="two-col">
+    <div class="section-label">How It Works</div>
+    <div class="two-col-content">
+      <div class="workflow-steps">
+        <div class="workflow-step">
+          <div class="step-num">1</div>
+          <div>
+            <div class="step-title">Customer Account Sync</div>
+            <p class="step-desc">The pipeline pulls your current customer list from HubSpot daily — all companies with deal stage "Closed Won" or customer lifecycle stage. This becomes the watchlist. New customers are automatically added as they close; churned accounts are removed.</p>
+            <div class="step-tags"><span class="tag">HubSpot API</span><span class="tag">Clay Table</span><span class="tag">Daily Sync</span></div>
+          </div>
+        </div>
+        <div class="workflow-step">
+          <div class="step-num">2</div>
+          <div>
+            <div class="step-title">Signal Scraping via Clay</div>
+            <p class="step-desc">For each customer, Clay runs enrichment columns that check: LinkedIn job posting count (last 30 days), Crunchbase funding announcements (last 90 days), recent executive hires (LinkedIn profile changes), and company news via Google News API. Each signal is compared against the previous day's snapshot to detect changes.</p>
+            <div class="step-tags"><span class="tag">Clay</span><span class="tag">LinkedIn Jobs</span><span class="tag">Crunchbase</span><span class="tag">Google News</span></div>
+          </div>
+        </div>
+        <div class="workflow-step">
+          <div class="step-num">3</div>
+          <div>
+            <div class="step-title">Propensity Score Calculation</div>
+            <p class="step-desc">Each signal type contributes to a propensity score — a 0–100 number representing expansion likelihood in the next 90 days. Hiring surge in a relevant function scores highest. Multiple signals firing simultaneously creates a compound score. Accounts crossing the threshold (configurable, typically 65+) trigger an alert.</p>
+            <div class="step-tags"><span class="tag">Weighted Scoring</span><span class="tag">Signal Compounding</span></div>
+          </div>
+        </div>
+        <div class="workflow-step">
+          <div class="step-num">4</div>
+          <div>
+            <div class="step-title">n8n Alert Orchestration</div>
+            <p class="step-desc">When a customer crosses the propensity threshold, n8n fires the alert sequence. It looks up the assigned CSM from HubSpot, generates a natural-language summary of the signals detected (e.g. "Acme Corp hired 14 people last month including a VP of Revenue and posted 3 SDR roles — expansion signal strong"), and prepares the HubSpot task.</p>
+            <div class="step-tags"><span class="tag">n8n</span><span class="tag">CSM Lookup</span><span class="tag">AI Summary</span></div>
+          </div>
+        </div>
+        <div class="workflow-step">
+          <div class="step-num">5</div>
+          <div>
+            <div class="step-title">HubSpot Task Creation & Slack/Email Alert</div>
+            <p class="step-desc">A task is created on the customer's HubSpot record: "Expansion signal detected — reach out this week". The task includes the signal summary, propensity score, and suggested talking points based on the specific signals. Simultaneously, a Slack message goes to the CSM's channel and an email summary hits their inbox. Everything they need to start the conversation.</p>
+            <div class="step-tags"><span class="tag">HubSpot Tasks</span><span class="tag">Slack</span><span class="tag">Email Alert</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="project-section">
+  <div class="two-col">
+    <div class="section-label">Stack</div>
+    <div class="two-col-content">
+      <div class="stack-grid">
+        <div class="stack-item"><div class="stack-item-name">Clay</div><div class="stack-item-role">Signal monitoring</div></div>
+        <div class="stack-item"><div class="stack-item-name">n8n</div><div class="stack-item-role">Alert orchestration</div></div>
+        <div class="stack-item"><div class="stack-item-name">HubSpot</div><div class="stack-item-role">CRM & task creation</div></div>
+        <div class="stack-item"><div class="stack-item-name">Crunchbase</div><div class="stack-item-role">Funding signals</div></div>
+        <div class="stack-item"><div class="stack-item-name">LinkedIn</div><div class="stack-item-role">Hiring signals</div></div>
+        <div class="stack-item"><div class="stack-item-name">Slack</div><div class="stack-item-role">CSM notifications</div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="cta-block">
+  <div>
+    <h3>Never miss an expansion opportunity.</h3>
+    <p>I'll build this monitoring pipeline for your customer base and CRM.</p>
+  </div>
+  <div class="cta-btns">
+    <a href="index.html#contact" class="btn-primary">Get in touch</a>
+    <a href="index.html#projects" class="btn-outline">View all projects</a>
+  </div>
+</div>
+
+</div>
+
+<footer>
+  <span class="footer-l">© 2026 Rishiraj Paul — GTM Engineer</span>
+  <span class="footer-r"><a href="index.html" style="color:inherit;text-decoration:none;">rishiraj.github.io</a></span>
+</footer>
+</body>
+</html>

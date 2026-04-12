@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Apollo → AI → Instantly: Full-Stack BDR Automation — Rishiraj Paul</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="index.html">rishiraj.paul</a>
+  <ul class="nav-links">
+    <li><a href="index.html#services">Services</a></li>
+    <li><a href="index.html#projects">Projects</a></li>
+    <li><a href="index.html#about">About</a></li>
+    <li><a href="index.html#contact">Contact</a></li>
+  </ul>
+  <span class="nav-badge">Open to work</span>
+</nav>
+
+<div class="page-wrap">
+
+<div class="project-hero">
+  <a href="index.html#projects" class="back-link">← Back to projects</a>
+  <div class="project-meta">
+    <span class="tag">n8n</span>
+    <span class="tag">Apollo.io</span>
+    <span class="tag">Instantly.ai</span>
+    <span class="tag">Airtable</span>
+    <span class="tag">AI-Powered</span>
+  </div>
+  <h1>Apollo → AI → Instantly:<br>Full-Stack BDR Automation</h1>
+  <p class="lead">An end-to-end outbound system that replaces 80% of SDR manual work — from sourcing raw leads in Apollo to launching a hyper-personalised, multi-sequence campaign in Instantly.ai, fully orchestrated by n8n.</p>
+  <div class="project-stats">
+    <div class="p-stat">
+      <div class="p-stat-num">6</div>
+      <div class="p-stat-label">Workflow stages</div>
+    </div>
+    <div class="p-stat">
+      <div class="p-stat-num">3</div>
+      <div class="p-stat-label">Personalised emails</div>
+    </div>
+    <div class="p-stat">
+      <div class="p-stat-num">~30%</div>
+      <div class="p-stat-label">Cost reduction</div>
+    </div>
+    <div class="p-stat">
+      <div class="p-stat-num">0</div>
+      <div class="p-stat-label">Manual touchpoints</div>
+    </div>
+  </div>
+</div>
+
+<div class="project-section">
+  <div class="two-col">
+    <div class="section-label">The Problem</div>
+    <div class="two-col-content">
+      <p>A typical BDR spends 60–70% of their time on tasks that aren't selling — finding leads, researching companies, writing personalised emails, managing follow-up cadences. It's expensive, inconsistent, and doesn't scale.</p>
+      <p><strong>The result:</strong> a pipeline that depends entirely on individual effort, burns out reps, and produces wildly variable output month to month. Founders and sales leaders want predictable outbound. This system delivers it.</p>
+    </div>
+  </div>
+</div>
+
+<div class="project-section">
+  <div class="two-col">
+    <div class="section-label">Who It's For</div>
+    <div class="two-col-content">
+      <div class="audience-grid">
+        <div class="audience-card">
+          <h4>Founders</h4>
+          <p>Need consistent outbound but can't justify a full SDR salary in the first 18 months. This runs 24/7 for a fraction of the cost.</p>
+        </div>
+        <div class="audience-card">
+          <h4>Sales Teams</h4>
+          <p>Reps want to close, not prospect. Hand the top-of-funnel to the machine — reps only touch leads that have already shown interest.</p>
+        </div>
+        <div class="audience-card">
+          <h4>Agencies</h4>
+          <p>Running outbound for multiple clients simultaneously. One n8n instance handles multiple Apollo workspaces and Instantly accounts.</p>
+        </div>
+        <div class="audience-card">
+          <h4>RevOps Teams</h4>
+          <p>Want to standardise outbound across an entire sales org. This workflow becomes the single source of truth for lead processing.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="project-section">
+  <div class="two-col">
+    <div class="section-label">How It Works</div>
+    <div class="two-col-content">
+      <div class="workflow-steps">
+        <div class="workflow-step">
+          <div class="step-num">1</div>
+          <div>
+            <div class="step-title">Lead Sourcing via Apollo.io</div>
+            <p class="step-desc">Workflow pulls targeted leads from Apollo based on configured filters — job title, industry, company size, geography, and tech stack. Captures name, title, company, and LinkedIn URL automatically. Triggered on a schedule or manually via Airtable interface.</p>
+            <div class="step-tags"><span class="tag">Apollo API</span><span class="tag">Airtable</span></div>
+          </div>
+        </div>
+        <div class="workflow-step">
+          <div class="step-num">2</div>
+          <div>
+            <div class="step-title">Pre-Verification & ICP Qualification</div>
+            <p class="step-desc">Before spending API credits on enrichment, leads pass through a qualification gate. A scoring node checks company size, role seniority, and domain health. Leads that don't meet ICP threshold are filtered out early — this alone reduces enrichment costs by roughly 30%.</p>
+            <div class="step-tags"><span class="tag">Logic Nodes</span><span class="tag">Domain Validation</span></div>
+          </div>
+        </div>
+        <div class="workflow-step">
+          <div class="step-num">3</div>
+          <div>
+            <div class="step-title">Deep Lead Enrichment</div>
+            <p class="step-desc">Qualified leads get enriched with context beyond what Apollo provides — company business summary scraped from their website, the lead's most recent LinkedIn post, and recent company news releases. This builds a research dossier that the AI uses to write relevant, non-generic emails.</p>
+            <div class="step-tags"><span class="tag">Web Scraping</span><span class="tag">LinkedIn Scraper</span><span class="tag">News API</span></div>
+          </div>
+        </div>
+        <div class="workflow-step">
+          <div class="step-num">4</div>
+          <div>
+            <div class="step-title">AI-Powered Personalisation</div>
+            <p class="step-desc">An AI model (GPT-4 or Claude) receives the full enrichment dossier and generates a three-email sequence — subject line and body for each touch. Each email references something specific to the prospect: a recent LinkedIn post, a company announcement, or a product detail. A built-in remake option lets you adjust any message before sending.</p>
+            <div class="step-tags"><span class="tag">GPT-4</span><span class="tag">3-Email Sequence</span><span class="tag">Airtable Preview</span></div>
+          </div>
+        </div>
+        <div class="workflow-step">
+          <div class="step-num">5</div>
+          <div>
+            <div class="step-title">Campaign Launch in Instantly.ai</div>
+            <p class="step-desc">The enriched, personalised lead list is pushed directly to Instantly.ai via API. A new campaign is automatically created and activated with the correct sending schedule, warmup settings, and sequence timing. No manual import, no copy-paste.</p>
+            <div class="step-tags"><span class="tag">Instantly API</span><span class="tag">Auto-Campaign</span></div>
+          </div>
+        </div>
+        <div class="workflow-step">
+          <div class="step-num">6</div>
+          <div>
+            <div class="step-title">Status Sync Back to Airtable</div>
+            <p class="step-desc">As emails go out and replies come in, Instantly webhooks update the Airtable base in real time — lead status, last email sent, reply detected. Sales team has a live view of the entire pipeline without logging into Instantly.</p>
+            <div class="step-tags"><span class="tag">Webhooks</span><span class="tag">Airtable Sync</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="project-section">
+  <div class="two-col">
+    <div class="section-label">Stack</div>
+    <div class="two-col-content">
+      <div class="stack-grid">
+        <div class="stack-item"><div class="stack-item-name">n8n</div><div class="stack-item-role">Orchestration</div></div>
+        <div class="stack-item"><div class="stack-item-name">Apollo.io</div><div class="stack-item-role">Lead sourcing</div></div>
+        <div class="stack-item"><div class="stack-item-name">Instantly.ai</div><div class="stack-item-role">Email campaigns</div></div>
+        <div class="stack-item"><div class="stack-item-name">Airtable</div><div class="stack-item-role">Interface & DB</div></div>
+        <div class="stack-item"><div class="stack-item-name">GPT-4</div><div class="stack-item-role">AI personalisation</div></div>
+        <div class="stack-item"><div class="stack-item-name">Web Scraper</div><div class="stack-item-role">Enrichment</div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="project-section">
+  <div class="two-col">
+    <div class="section-label">Setup Guide</div>
+    <div class="two-col-content">
+      <div class="setup-list">
+        <div class="setup-item">
+          <div class="setup-num">1</div>
+          <div>
+            <div class="setup-title">Connect Apollo.io</div>
+            <p class="setup-desc">Add your Apollo API key to n8n credentials. Configure your ICP filters — title keywords, industries, company size range, and geography. Set a daily lead cap to stay within Apollo rate limits.</p>
+          </div>
+        </div>
+        <div class="setup-item">
+          <div class="setup-num">2</div>
+          <div>
+            <div class="setup-title">Set Up Airtable Base</div>
+            <p class="setup-desc">Create a base with fields: Lead Name, Email, Company, LinkedIn URL, Website, ICP Score, Email 1/2/3 (subject + body), Status, Campaign ID, Reply Detected. Connect Airtable OAuth2 in n8n.</p>
+          </div>
+        </div>
+        <div class="setup-item">
+          <div class="setup-num">3</div>
+          <div>
+            <div class="setup-title">Configure AI Prompts</div>
+            <p class="setup-desc">Edit the system prompt with your product description, ICP pain points, value proposition, and tone guidelines. The AI uses this as context when generating all three emails in the sequence.</p>
+          </div>
+        </div>
+        <div class="setup-item">
+          <div class="setup-num">4</div>
+          <div>
+            <div class="setup-title">Connect Instantly.ai</div>
+            <p class="setup-desc">Add your Instantly API key. Configure default campaign settings — sending window, daily email limit per inbox, warmup schedule, and unsubscribe handling. The workflow will use these as defaults when auto-creating campaigns.</p>
+          </div>
+        </div>
+        <div class="setup-item">
+          <div class="setup-num">5</div>
+          <div>
+            <div class="setup-title">Test with 5 Leads</div>
+            <p class="setup-desc">Run the workflow manually with a small batch. Verify Apollo pulls the right profiles, enrichment returns useful context, AI generates non-generic emails, and the Instantly campaign is created correctly. Then enable the schedule.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="cta-block">
+  <div>
+    <h3>Want this system built for you?</h3>
+    <p>I'll configure the full workflow for your ICP, tools, and sending infrastructure.</p>
+  </div>
+  <div class="cta-btns">
+    <a href="index.html#contact" class="btn-primary">Get in touch</a>
+    <a href="index.html#projects" class="btn-outline">View all projects</a>
+  </div>
+</div>
+
+</div>
+
+<footer>
+  <span class="footer-l">© 2026 Rishiraj Paul — GTM Engineer</span>
+  <span class="footer-r"><a href="index.html" style="color:inherit;text-decoration:none;">rishiraj.github.io</a></span>
+</footer>
+
+</body>
+</html>

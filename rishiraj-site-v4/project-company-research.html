@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GPT-4o Autonomous Company Research Engine — Rishiraj Paul</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="index.html">rishiraj.paul</a>
+  <ul class="nav-links">
+    <li><a href="index.html#services">Services</a></li>
+    <li><a href="index.html#projects">Projects</a></li>
+    <li><a href="index.html#about">About</a></li>
+    <li><a href="index.html#contact">Contact</a></li>
+  </ul>
+  <span class="nav-badge">Open to work</span>
+</nav>
+
+<div class="page-wrap">
+
+<div class="project-hero">
+  <a href="index.html#projects" class="back-link">← Back to projects</a>
+  <div class="project-meta">
+    <span class="tag">n8n</span>
+    <span class="tag">GPT-4o</span>
+    <span class="tag">Google Sheets</span>
+    <span class="tag">Web Scraping</span>
+    <span class="tag">AI Agent</span>
+  </div>
+  <h1>GPT-4o Autonomous<br>Company Research Engine</h1>
+  <p class="lead">Drop a list of company names into a Google Sheet. An autonomous GPT-4o agent scours the web, extracts critical firmographic data — LinkedIn URLs, pricing, tech stack, market focus, key decision-maker roles — and writes it back into the sheet. No API keys per company. No manual lookup.</p>
+  <div class="project-stats">
+    <div class="p-stat">
+      <div class="p-stat-num">8+</div>
+      <div class="p-stat-label">Data points per company</div>
+    </div>
+    <div class="p-stat">
+      <div class="p-stat-num">Auto</div>
+      <div class="p-stat-label">Sheet write-back</div>
+    </div>
+    <div class="p-stat">
+      <div class="p-stat-num">0</div>
+      <div class="p-stat-label">Manual lookups</div>
+    </div>
+    <div class="p-stat">
+      <div class="p-stat-num">Any</div>
+      <div class="p-stat-label">Industry or market</div>
+    </div>
+  </div>
+</div>
+
+<div class="project-section">
+  <div class="two-col">
+    <div class="section-label">The Problem</div>
+    <div class="two-col-content">
+      <p>Sales and marketing teams spend hours manually researching prospect companies before they can write a meaningful email or build a qualified list. Tools like Clearbit and ZoomInfo are expensive and often outdated — they return what a company looked like 6 months ago.</p>
+      <p><strong>This system uses live web research</strong> via a GPT-4o agent that searches and reads pages in real time. What you get is current, structured, and automatically organised — ready for outreach without a single manual lookup.</p>
+    </div>
+  </div>
+</div>
+
+<div class="project-section">
+  <div class="two-col">
+    <div class="section-label">Who It's For</div>
+    <div class="two-col-content">
+      <div class="audience-grid">
+        <div class="audience-card">
+          <h4>Sales Ops Teams</h4>
+          <p>Building target account lists at scale. Upload 200 company names, come back to a fully enriched spreadsheet ready for segmentation.</p>
+        </div>
+        <div class="audience-card">
+          <h4>SDRs & BDRs</h4>
+          <p>Research that would take 15 minutes per company now takes seconds. Spend time on conversations, not browser tabs.</p>
+        </div>
+        <div class="audience-card">
+          <h4>Demand Gen Marketers</h4>
+          <p>Segment account lists by market focus, pricing tier, or tech stack — fields that standard databases rarely include or keep updated.</p>
+        </div>
+        <div class="audience-card">
+          <h4>Investors & Analysts</h4>
+          <p>Quickly gather structured competitive intelligence across a portfolio of companies without hiring a research team.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="project-section">
+  <div class="two-col">
+    <div class="section-label">How It Works</div>
+    <div class="two-col-content">
+      <div class="workflow-steps">
+        <div class="workflow-step">
+          <div class="step-num">1</div>
+          <div>
+            <div class="step-title">Read Company List from Google Sheets</div>
+            <p class="step-desc">The workflow reads all rows in a designated Google Sheet where the status column is blank or "pending". It processes companies in batches to stay within API rate limits and avoid hitting Google Sheets quota. Each company name is passed to the AI agent as a separate task.</p>
+            <div class="step-tags"><span class="tag">Google Sheets</span><span class="tag">Batch Processing</span></div>
+          </div>
+        </div>
+        <div class="workflow-step">
+          <div class="step-num">2</div>
+          <div>
+            <div class="step-title">GPT-4o Agent Deploys Web Research</div>
+            <p class="step-desc">An autonomous GPT-4o agent is equipped with Google Search and web scraping tools. For each company, it runs a series of targeted searches — company homepage, LinkedIn company page, Crunchbase or G2 profile, recent press. It reads each page and extracts structured data points.</p>
+            <div class="step-tags"><span class="tag">GPT-4o Agent</span><span class="tag">Google Search</span><span class="tag">Web Scraper</span></div>
+          </div>
+        </div>
+        <div class="workflow-step">
+          <div class="step-num">3</div>
+          <div>
+            <div class="step-title">Structured Data Extraction</div>
+            <p class="step-desc">The agent extracts and structures: LinkedIn company URL, website, employee count, HQ location, primary market (B2B/B2C/both), pricing model, key integrations and tech stack, main product category, ideal customer profile, and any recent funding or news. Output is a clean JSON object — no hallucinated data, only what the agent actually finds.</p>
+            <div class="step-tags"><span class="tag">JSON Output</span><span class="tag">8+ Fields</span></div>
+          </div>
+        </div>
+        <div class="workflow-step">
+          <div class="step-num">4</div>
+          <div>
+            <div class="step-title">Sheet Write-Back</div>
+            <p class="step-desc">Each field from the JSON object maps to a column in the original Google Sheet. The row is updated in place — no new rows created, no formatting broken. Status column is set to "enriched" so re-runs skip completed entries. Failed lookups are flagged as "review" for manual fallback.</p>
+            <div class="step-tags"><span class="tag">Google Sheets Update</span><span class="tag">Status Tracking</span></div>
+          </div>
+        </div>
+        <div class="workflow-step">
+          <div class="step-num">5</div>
+          <div>
+            <div class="step-title">CRM or Outreach Push (Optional)</div>
+            <p class="step-desc">Once enriched, rows can be automatically pushed to HubSpot as new companies, added to a Clay table for further waterfall enrichment, or exported to Instantly as a targeted campaign segment. The sheet becomes a clean handoff layer between research and outreach.</p>
+            <div class="step-tags"><span class="tag">HubSpot</span><span class="tag">Clay</span><span class="tag">Instantly</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="project-section">
+  <div class="two-col">
+    <div class="section-label">Stack</div>
+    <div class="two-col-content">
+      <div class="stack-grid">
+        <div class="stack-item"><div class="stack-item-name">n8n</div><div class="stack-item-role">Orchestration</div></div>
+        <div class="stack-item"><div class="stack-item-name">GPT-4o</div><div class="stack-item-role">AI research agent</div></div>
+        <div class="stack-item"><div class="stack-item-name">Google Sheets</div><div class="stack-item-role">Input & output</div></div>
+        <div class="stack-item"><div class="stack-item-name">Google Search</div><div class="stack-item-role">Web research</div></div>
+        <div class="stack-item"><div class="stack-item-name">Web Scraper</div><div class="stack-item-role">Page reading</div></div>
+        <div class="stack-item"><div class="stack-item-name">HubSpot</div><div class="stack-item-role">Optional CRM push</div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="project-section">
+  <div class="two-col">
+    <div class="section-label">Setup Guide</div>
+    <div class="two-col-content">
+      <div class="setup-list">
+        <div class="setup-item">
+          <div class="setup-num">1</div>
+          <div>
+            <div class="setup-title">Prepare Google Sheet</div>
+            <p class="setup-desc">Create a sheet with a "Company Name" column and blank columns for each output field: LinkedIn, Website, Employees, Location, Market, Pricing, Tech Stack, Product Category, ICP, News, Status. Share the sheet with the service account or connect via OAuth2.</p>
+          </div>
+        </div>
+        <div class="setup-item">
+          <div class="setup-num">2</div>
+          <div>
+            <div class="setup-title">Configure GPT-4o in n8n</div>
+            <p class="setup-desc">Add your OpenAI API key to n8n credentials. Set model to gpt-4o. Configure the AI Agent node with tools: Google Search and HTTP Request (for web scraping). Set max iterations to 8 per company to control costs.</p>
+          </div>
+        </div>
+        <div class="setup-item">
+          <div class="setup-num">3</div>
+          <div>
+            <div class="setup-title">Write the Research Prompt</div>
+            <p class="setup-desc">The system prompt tells the agent exactly what to find and how to structure the JSON output. Specify field names, acceptable values for categorical fields (e.g. market: "B2B" | "B2C" | "Both"), and instructions to leave fields blank rather than hallucinate.</p>
+          </div>
+        </div>
+        <div class="setup-item">
+          <div class="setup-num">4</div>
+          <div>
+            <div class="setup-title">Test with 3 Companies</div>
+            <p class="setup-desc">Run manually with 3 known companies you can verify. Check that returned data is accurate, fields map correctly to the sheet, and status updates properly. Adjust the prompt if any fields return inconsistently.</p>
+          </div>
+        </div>
+        <div class="setup-item">
+          <div class="setup-num">5</div>
+          <div>
+            <div class="setup-title">Schedule or Trigger</div>
+            <p class="setup-desc">Set a daily schedule to process new rows automatically, or trigger manually when you upload a new batch. Add a Slack notification node to alert you when a batch completes.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="cta-block">
+  <div>
+    <h3>Want this GTM system built for you?</h3>
+    <p>I'll build and configure the research agent for your specific data requirements.</p>
+  </div>
+  <div class="cta-btns">
+    <a href="index.html#contact" class="btn-primary">Get in touch</a>
+    <a href="index.html#projects" class="btn-outline">View all projects</a>
+  </div>
+</div>
+
+</div>
+
+<footer>
+  <span class="footer-l">© 2026 Rishiraj Paul — GTM Engineer</span>
+  <span class="footer-r"><a href="index.html" style="color:inherit;text-decoration:none;">rishiraj.github.io</a></span>
+</footer>
+
+</body>
+</html>

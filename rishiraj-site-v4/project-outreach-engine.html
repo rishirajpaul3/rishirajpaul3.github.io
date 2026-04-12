@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Context-Aware Outreach Orchestration Engine — Rishiraj Paul</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="index.html">rishiraj.paul</a>
+  <ul class="nav-links">
+    <li><a href="index.html#services">Services</a></li>
+    <li><a href="index.html#projects">Projects</a></li>
+    <li><a href="index.html#about">About</a></li>
+    <li><a href="index.html#contact">Contact</a></li>
+  </ul>
+  <span class="nav-badge">Open to work</span>
+</nav>
+
+<div class="page-wrap">
+
+<div class="project-hero">
+  <a href="index.html#projects" class="back-link">← Back to projects</a>
+  <div class="project-meta">
+    <span class="tag">Clay</span><span class="tag">HeyReach</span><span class="tag">Salesforge</span><span class="tag">AI Personalisation</span><span class="tag">Multi-Channel</span>
+  </div>
+  <h1>Context-Aware Outreach<br>Orchestration Engine</h1>
+  <p class="lead">Clay enrichment feeds AI-generated first lines built from live LinkedIn activity. HeyReach handles LinkedIn touchpoints. Salesforge manages email sequences. Sequences adapt based on real-time engagement signals — channel, timing, and messaging shift automatically as prospects respond.</p>
+  <div class="project-stats">
+    <div class="p-stat"><div class="p-stat-num">Multi</div><div class="p-stat-label">Channel orchestration</div></div>
+    <div class="p-stat"><div class="p-stat-num">Live</div><div class="p-stat-label">LinkedIn signals</div></div>
+    <div class="p-stat"><div class="p-stat-num">Auto</div><div class="p-stat-label">Sequence adaptation</div></div>
+    <div class="p-stat"><div class="p-stat-num">Clay</div><div class="p-stat-label">Certified build</div></div>
+  </div>
+</div>
+
+<div class="project-section">
+  <div class="two-col">
+    <div class="section-label">The Problem</div>
+    <div class="two-col-content">
+      <p>Most outreach sequences are static — the same email goes out on day 1, day 4, day 8, regardless of what the prospect does in between. If they visit your LinkedIn profile, click an email, or post something relevant, the sequence keeps going exactly the same way.</p>
+      <p><strong>This system is reactive.</strong> When a prospect engages — even passively — the orchestration layer detects it and adjusts. A prospect who clicked your email but didn't reply gets a LinkedIn message next, not another email. One who posted a relevant article gets a response that references it. The outreach adapts to the prospect's behaviour, not a fixed calendar.</p>
+    </div>
+  </div>
+</div>
+
+<div class="project-section">
+  <div class="two-col">
+    <div class="section-label">How It Works</div>
+    <div class="two-col-content">
+      <div class="workflow-steps">
+        <div class="workflow-step">
+          <div class="step-num">1</div>
+          <div>
+            <div class="step-title">Clay Enrichment & Signal Collection</div>
+            <p class="step-desc">Prospect list enters Clay. Waterfall enrichment fills firmographics — company size, industry, tech stack, funding. A separate Clay column scrapes the prospect's LinkedIn profile for their most recent post (last 14 days), their headline, and any shared connections. A second column pulls recent company news. This becomes the personalisation context.</p>
+            <div class="step-tags"><span class="tag">Clay</span><span class="tag">Waterfall Enrichment</span><span class="tag">LinkedIn Scraper</span><span class="tag">News Scraper</span></div>
+          </div>
+        </div>
+        <div class="workflow-step">
+          <div class="step-num">2</div>
+          <div>
+            <div class="step-title">AI-Generated Personalisation Layer</div>
+            <p class="step-desc">A Clay AI column passes the enrichment context to Claude or GPT-4 with a prompt that generates three outputs: a LinkedIn connection request note (300 chars max, references their LinkedIn post), an email first line (one sentence, references company context), and a follow-up hook (references a pain point implied by their role and tech stack). Three different personalisation levers for three different touchpoints.</p>
+            <div class="step-tags"><span class="tag">Clay AI Column</span><span class="tag">Claude / GPT-4</span><span class="tag">3 Outputs</span></div>
+          </div>
+        </div>
+        <div class="workflow-step">
+          <div class="step-num">3</div>
+          <div>
+            <div class="step-title">HeyReach LinkedIn Sequence</div>
+            <p class="step-desc">Enriched prospects are pushed to HeyReach via API. HeyReach sends the personalised connection request on day 1. If accepted within 5 days, it sends a DM follow-up using the second personalisation output. Acceptance and DM response status are synced back to Clay daily via webhook.</p>
+            <div class="step-tags"><span class="tag">HeyReach API</span><span class="tag">LinkedIn Automation</span><span class="tag">Status Sync</span></div>
+          </div>
+        </div>
+        <div class="workflow-step">
+          <div class="step-num">4</div>
+          <div>
+            <div class="step-title">Salesforge Email Sequence</div>
+            <p class="step-desc">Simultaneously, the email sequence launches in Salesforge using the enriched first line and the template body. Salesforge handles deliverability, inbox rotation, and send timing. If HeyReach detects a LinkedIn reply, a webhook fires to Salesforge to pause the email sequence for that prospect — no double-touching people who've already engaged.</p>
+            <div class="step-tags"><span class="tag">Salesforge</span><span class="tag">Inbox Rotation</span><span class="tag">Pause on Reply</span></div>
+          </div>
+        </div>
+        <div class="workflow-step">
+          <div class="step-num">5</div>
+          <div>
+            <div class="step-title">Engagement-Driven Sequence Adaptation</div>
+            <p class="step-desc">Clay monitors engagement data from both channels daily. Email opens without reply → trigger LinkedIn visit from HeyReach to increase awareness. LinkedIn profile view from the prospect → accelerate email follow-up timing. Two channels engaged with no reply → switch to a shorter, more direct template. All adaptation rules are configurable and logged to HubSpot for pipeline visibility.</p>
+            <div class="step-tags"><span class="tag">Clay Monitoring</span><span class="tag">Adaptation Rules</span><span class="tag">HubSpot Logging</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="project-section">
+  <div class="two-col">
+    <div class="section-label">Stack</div>
+    <div class="two-col-content">
+      <div class="stack-grid">
+        <div class="stack-item"><div class="stack-item-name">Clay</div><div class="stack-item-role">Enrichment & orchestration</div></div>
+        <div class="stack-item"><div class="stack-item-name">HeyReach</div><div class="stack-item-role">LinkedIn outreach</div></div>
+        <div class="stack-item"><div class="stack-item-name">Salesforge</div><div class="stack-item-role">Email sequences</div></div>
+        <div class="stack-item"><div class="stack-item-name">Claude / GPT-4</div><div class="stack-item-role">AI personalisation</div></div>
+        <div class="stack-item"><div class="stack-item-name">HubSpot</div><div class="stack-item-role">Pipeline visibility</div></div>
+        <div class="stack-item"><div class="stack-item-name">n8n</div><div class="stack-item-role">Webhook handling</div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="project-section">
+  <div class="two-col">
+    <div class="section-label">Setup Guide</div>
+    <div class="two-col-content">
+      <div class="setup-list">
+        <div class="setup-item"><div class="setup-num">1</div><div><div class="setup-title">Clay Table Architecture</div><p class="setup-desc">Build the Clay table with distinct column groups: raw input (name, email, LinkedIn URL), waterfall enrichment (company data), signal scraping (LinkedIn posts, news), AI outputs (3 personalisation fields), and channel status (HeyReach connection status, Salesforge sequence ID, last engagement date).</p></div></div>
+        <div class="setup-item"><div class="setup-num">2</div><div><div class="setup-title">Craft the AI Personalisation Prompts</div><p class="setup-desc">Write separate prompts for each output: connection note (be specific, reference their post, no pitch), email first line (one sentence, no fluff, demonstrate you read about them), follow-up hook (reference a problem their role typically owns). Test on 10 real prospects and iterate until output is indistinguishable from manually written messages.</p></div></div>
+        <div class="setup-item"><div class="setup-num">3</div><div><div class="setup-title">Configure HeyReach</div><p class="setup-desc">Connect your LinkedIn accounts to HeyReach. Set daily connection request limits (20–25 per account to stay safe). Build the sequence: connection request (with note) → wait for acceptance → DM on acceptance. Add your HeyReach webhook URL to push status updates back to Clay.</p></div></div>
+        <div class="setup-item"><div class="setup-num">4</div><div><div class="setup-title">Configure Salesforge</div><p class="setup-desc">Set up your email sequence in Salesforge. Use Clay merge tags to pull in the personalised first line. Configure inbox rotation across your sending domains. Set up the Salesforge webhook to receive pause/resume commands from Clay when LinkedIn engagement is detected.</p></div></div>
+        <div class="setup-item"><div class="setup-num">5</div><div><div class="setup-title">Test Adaptation Rules</div><p class="setup-desc">Run 5 test prospects through the full system. Manually simulate engagement events (email open, LinkedIn profile view) and verify the adaptation rules trigger correctly. Check HubSpot for accurate pipeline logging. Activate live with a small batch of 20–30 prospects before scaling.</p></div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="cta-block">
+  <div>
+    <h3>Ready to run smarter outreach?</h3>
+    <p>I'll build and configure this multi-channel engine for your ICP and tool stack.</p>
+  </div>
+  <div class="cta-btns">
+    <a href="index.html#contact" class="btn-primary">Get in touch</a>
+    <a href="index.html#projects" class="btn-outline">View all projects</a>
+  </div>
+</div>
+
+</div>
+
+<footer>
+  <span class="footer-l">© 2026 Rishiraj Paul — GTM Engineer</span>
+  <span class="footer-r"><a href="index.html" style="color:inherit;text-decoration:none;">rishiraj.github.io</a></span>
+</footer>
+</body>
+</html>
