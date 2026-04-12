@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Perplexity + Hunter.io: AI-Powered Lead Gen Pipeline — Rishiraj Paul</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="index.html">rishiraj.paul</a>
+  <ul class="nav-links">
+    <li><a href="index.html#services">Services</a></li>
+    <li><a href="index.html#projects">Projects</a></li>
+    <li><a href="index.html#about">About</a></li>
+    <li><a href="index.html#contact">Contact</a></li>
+  </ul>
+  <span class="nav-badge">Open to work</span>
+</nav>
+
+<div class="page-wrap">
+
+<div class="project-hero">
+  <a href="index.html#projects" class="back-link">← Back to projects</a>
+  <div class="project-meta">
+    <span class="tag">n8n</span><span class="tag">Perplexity AI</span><span class="tag">Hunter.io</span><span class="tag">Google Sheets</span><span class="tag">OpenRouter</span>
+  </div>
+  <h1>Perplexity + Hunter.io:<br>AI-Powered Lead Gen Pipeline</h1>
+  <p class="lead">Type an industry or topic. The workflow uses Perplexity AI to find 15 matching companies with verified domains, Hunter.io to extract up to 3 real contact emails per company, deduplicates everything, and logs clean, enriched leads into Google Sheets — ready for outreach.</p>
+  <div class="project-stats">
+    <div class="p-stat"><div class="p-stat-num">15</div><div class="p-stat-label">Companies per prompt</div></div>
+    <div class="p-stat"><div class="p-stat-num">3</div><div class="p-stat-label">Emails per domain</div></div>
+    <div class="p-stat"><div class="p-stat-num">Auto</div><div class="p-stat-label">Deduplication</div></div>
+    <div class="p-stat"><div class="p-stat-num">Safe</div><div class="p-stat-label">Batches of 10</div></div>
+  </div>
+</div>
+
+<div class="project-section">
+  <div class="two-col">
+    <div class="section-label">The Problem</div>
+    <div class="two-col-content">
+      <p>Lead sourcing is the most time-consuming part of outbound — and the part most likely to be done badly. Reps use the same Apollo filters everyone else uses and end up targeting the same companies with the same messaging.</p>
+      <p><strong>This workflow uses Perplexity's live web intelligence</strong> to find relevant companies in any niche — including emerging or underserved markets — and pairs it with Hunter.io's email verification to ensure you're only reaching real inboxes. The result is a constantly refreshable, highly targeted lead list that costs a fraction of traditional database subscriptions.</p>
+    </div>
+  </div>
+</div>
+
+<div class="project-section">
+  <div class="two-col">
+    <div class="section-label">How It Works</div>
+    <div class="two-col-content">
+      <div class="workflow-steps">
+        <div class="workflow-step">
+          <div class="step-num">1</div>
+          <div>
+            <div class="step-title">Prompt Input via Chat or Telegram</div>
+            <p class="step-desc">The workflow accepts a natural language prompt — e.g. "B2B SaaS companies in the UK focused on HR tech with under 200 employees". This can come from an n8n chat trigger, a Telegram bot command, or a Google Sheet cell. The prompt is passed directly to Perplexity.</p>
+            <div class="step-tags"><span class="tag">Chat Trigger</span><span class="tag">Telegram</span><span class="tag">Google Sheets</span></div>
+          </div>
+        </div>
+        <div class="workflow-step">
+          <div class="step-num">2</div>
+          <div>
+            <div class="step-title">Perplexity Finds Matching Companies</div>
+            <p class="step-desc">Using OpenRouter to access Perplexity's Sonar model, the workflow requests 15 companies that match the prompt — including their domain names. Perplexity uses live web search, so results reflect the current landscape, not a database snapshot from 2022.</p>
+            <div class="step-tags"><span class="tag">Perplexity Sonar</span><span class="tag">OpenRouter</span><span class="tag">Live Web</span></div>
+          </div>
+        </div>
+        <div class="workflow-step">
+          <div class="step-num">3</div>
+          <div>
+            <div class="step-title">Deduplication Against Existing Leads</div>
+            <p class="step-desc">Before enrichment, each domain is checked against the existing Google Sheet. Domains already in the database are filtered out — no wasted API calls on companies you've already targeted. New domains only move forward.</p>
+            <div class="step-tags"><span class="tag">Google Sheets Check</span><span class="tag">Dedup Logic</span></div>
+          </div>
+        </div>
+        <div class="workflow-step">
+          <div class="step-num">4</div>
+          <div>
+            <div class="step-title">Hunter.io Email Enrichment</div>
+            <p class="step-desc">For each new domain, Hunter.io returns up to 3 verified personal email addresses — actual named contacts, not generic info@ addresses. If Hunter finds nothing, an AI fallback node attempts to locate publicly listed contact information before marking the domain as unfindable.</p>
+            <div class="step-tags"><span class="tag">Hunter.io API</span><span class="tag">AI Fallback</span><span class="tag">Email Verification</span></div>
+          </div>
+        </div>
+        <div class="workflow-step">
+          <div class="step-num">5</div>
+          <div>
+            <div class="step-title">Batch Processing & Sheet Write-Back</div>
+            <p class="step-desc">Leads are processed in safe batches of 10 to protect API rate limits. Valid, enriched leads are written to Google Sheets with status "Enriched". Each row includes company name, domain, contact name, verified email, and the source prompt used to find them. The sheet becomes a living, filterable lead database.</p>
+            <div class="step-tags"><span class="tag">Batching</span><span class="tag">Google Sheets</span><span class="tag">Status Tracking</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="project-section">
+  <div class="two-col">
+    <div class="section-label">Stack</div>
+    <div class="two-col-content">
+      <div class="stack-grid">
+        <div class="stack-item"><div class="stack-item-name">n8n</div><div class="stack-item-role">Orchestration</div></div>
+        <div class="stack-item"><div class="stack-item-name">Perplexity AI</div><div class="stack-item-role">Company discovery</div></div>
+        <div class="stack-item"><div class="stack-item-name">OpenRouter</div><div class="stack-item-role">Model access</div></div>
+        <div class="stack-item"><div class="stack-item-name">Hunter.io</div><div class="stack-item-role">Email enrichment</div></div>
+        <div class="stack-item"><div class="stack-item-name">Google Sheets</div><div class="stack-item-role">Lead database</div></div>
+        <div class="stack-item"><div class="stack-item-name">Telegram</div><div class="stack-item-role">Optional trigger</div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="project-section">
+  <div class="two-col">
+    <div class="section-label">Setup Guide</div>
+    <div class="two-col-content">
+      <div class="setup-list">
+        <div class="setup-item"><div class="setup-num">1</div><div><div class="setup-title">OpenRouter Account</div><p class="setup-desc">Sign up at openrouter.ai. Add your API key to n8n. Select the Perplexity Sonar model. OpenRouter gives you access to multiple AI providers from one key, making it easy to swap models later.</p></div></div>
+        <div class="setup-item"><div class="setup-num">2</div><div><div class="setup-title">Hunter.io API Key</div><p class="setup-desc">Create a Hunter.io account (free tier gives 25 searches/month; paid plans from $49/month). Copy your API key into the n8n HTTP Request node configured for the Hunter.io domain search endpoint.</p></div></div>
+        <div class="setup-item"><div class="setup-num">3</div><div><div class="setup-title">Google Sheets Setup</div><p class="setup-desc">Create a sheet with columns: Prompt Used, Company Name, Domain, Contact Name, Email, Status, Date Added. Share with the n8n service account. The workflow reads from and writes to this sheet automatically.</p></div></div>
+        <div class="setup-item"><div class="setup-num">4</div><div><div class="setup-title">Optional: Telegram Bot</div><p class="setup-desc">Create a bot via @BotFather, grab the token and your chat ID. Connect to n8n's Telegram trigger node. You can then generate a new lead batch by sending a message to your own bot from anywhere.</p></div></div>
+        <div class="setup-item"><div class="setup-num">5</div><div><div class="setup-title">Test with One Prompt</div><p class="setup-desc">Run with a specific niche prompt and verify: Perplexity returns 15 real companies with valid domains, Hunter finds emails for at least 8–10 of them, dedup logic correctly skips any already in your sheet, and all data writes cleanly.</p></div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="cta-block">
+  <div>
+    <h3>Want a live lead gen machine?</h3>
+    <p>I'll build and configure this pipeline for your specific ICP and outreach stack.</p>
+  </div>
+  <div class="cta-btns">
+    <a href="index.html#contact" class="btn-primary">Get in touch</a>
+    <a href="index.html#projects" class="btn-outline">View all projects</a>
+  </div>
+</div>
+
+</div>
+
+<footer>
+  <span class="footer-l">© 2026 Rishiraj Paul — GTM Engineer</span>
+  <span class="footer-r"><a href="index.html" style="color:inherit;text-decoration:none;">rishiraj.github.io</a></span>
+</footer>
+</body>
+</html>

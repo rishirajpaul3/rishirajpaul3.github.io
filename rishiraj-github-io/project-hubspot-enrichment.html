@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HubSpot + Phantombuster + GPT: Auto-Personalised Outreach — Rishiraj Paul</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="index.html">rishiraj.paul</a>
+  <ul class="nav-links">
+    <li><a href="index.html#services">Services</a></li>
+    <li><a href="index.html#projects">Projects</a></li>
+    <li><a href="index.html#about">About</a></li>
+    <li><a href="index.html#contact">Contact</a></li>
+  </ul>
+  <span class="nav-badge">Open to work</span>
+</nav>
+
+<div class="page-wrap">
+
+<div class="project-hero">
+  <a href="index.html#projects" class="back-link">← Back to projects</a>
+  <div class="project-meta">
+    <span class="tag">n8n</span>
+    <span class="tag">HubSpot</span>
+    <span class="tag">Phantombuster</span>
+    <span class="tag">GPT-4</span>
+    <span class="tag">Gmail</span>
+  </div>
+  <h1>HubSpot + Phantombuster + GPT:<br>Auto-Personalised Outreach</h1>
+  <p class="lead">Every new contact in HubSpot triggers a pipeline that scrapes their live LinkedIn and Twitter activity, feeds it to GPT, and sends a genuinely personalised email — automatically, within minutes of them hitting your CRM.</p>
+  <div class="project-stats">
+    <div class="p-stat">
+      <div class="p-stat-num">0</div>
+      <div class="p-stat-label">Manual research</div>
+    </div>
+    <div class="p-stat">
+      <div class="p-stat-num">Live</div>
+      <div class="p-stat-label">Social data</div>
+    </div>
+    <div class="p-stat">
+      <div class="p-stat-num">100%</div>
+      <div class="p-stat-label">Unique emails</div>
+    </div>
+    <div class="p-stat">
+      <div class="p-stat-num">&lt;5min</div>
+      <div class="p-stat-label">Contact-to-send</div>
+    </div>
+  </div>
+</div>
+
+<div class="project-section">
+  <div class="two-col">
+    <div class="section-label">The Problem</div>
+    <div class="two-col-content">
+      <p>CRMs are full of contacts nobody has actually researched. Sales reps open LinkedIn, spend 10 minutes reading someone's profile, write a semi-personalised email, and repeat — 40 times a day. It's unsustainable and the output is still mediocre.</p>
+      <p><strong>The real cost</strong> isn't just time — it's quality. A rep doing manual research at scale can't stay genuinely relevant to every prospect. This system does it better, faster, and without fatigue.</p>
+    </div>
+  </div>
+</div>
+
+<div class="project-section">
+  <div class="two-col">
+    <div class="section-label">Who It's For</div>
+    <div class="two-col-content">
+      <div class="audience-grid">
+        <div class="audience-card">
+          <h4>Sales Teams with HubSpot</h4>
+          <p>Already using HubSpot for contact management. This slots in as an automation layer — no new tools for reps to learn.</p>
+        </div>
+        <div class="audience-card">
+          <h4>High-Touch B2B Sales</h4>
+          <p>Selling enterprise deals where a generic template destroys your chances. Every email needs to feel researched. This makes that scalable.</p>
+        </div>
+        <div class="audience-card">
+          <h4>SDR Managers</h4>
+          <p>Want to free reps from top-of-funnel research so they focus on conversations and closing — not copy-pasting LinkedIn bios.</p>
+        </div>
+        <div class="audience-card">
+          <h4>Agencies & Consultants</h4>
+          <p>Running personalised outreach for clients across multiple industries. One workflow handles all of them with different AI prompts per client.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="project-section">
+  <div class="two-col">
+    <div class="section-label">How It Works</div>
+    <div class="two-col-content">
+      <div class="workflow-steps">
+        <div class="workflow-step">
+          <div class="step-num">1</div>
+          <div>
+            <div class="step-title">HubSpot Webhook Trigger</div>
+            <p class="step-desc">The workflow fires the moment a contact is created or updated in HubSpot. n8n receives the webhook, pulls full contact details — email, name, company, LinkedIn URL, Twitter handle — and logs the tracking status to Google Sheets.</p>
+            <div class="step-tags"><span class="tag">HubSpot Webhook</span><span class="tag">Google Sheets</span></div>
+          </div>
+        </div>
+        <div class="workflow-step">
+          <div class="step-num">2</div>
+          <div>
+            <div class="step-title">Social Profile Validation</div>
+            <p class="step-desc">Before scraping, the workflow checks whether the contact has a valid LinkedIn or Twitter handle. If neither exists, it routes to a fallback node that uses the company website and news coverage instead. No contact is left without research context.</p>
+            <div class="step-tags"><span class="tag">Conditional Logic</span><span class="tag">Fallback Routing</span></div>
+          </div>
+        </div>
+        <div class="workflow-step">
+          <div class="step-num">3</div>
+          <div>
+            <div class="step-title">Live Social Scraping via Phantombuster</div>
+            <p class="step-desc">Phantombuster scrapes the prospect's LinkedIn profile (recent posts, headline, current role, shared connections) and Twitter activity (recent tweets, engagement patterns). This returns real-time signal — what they're thinking about right now, not 6-month-old profile text.</p>
+            <div class="step-tags"><span class="tag">Phantombuster API</span><span class="tag">LinkedIn Scraper</span><span class="tag">Twitter Scraper</span></div>
+          </div>
+        </div>
+        <div class="workflow-step">
+          <div class="step-num">4</div>
+          <div>
+            <div class="step-title">GPT-4 Email Generation</div>
+            <p class="step-desc">The enriched profile, social activity, and company context are passed to GPT-4 with a tailored system prompt. GPT generates a personalised subject line and email body that references something specific — a post they shared, a challenge in their role, or a recent company announcement. No two emails are the same.</p>
+            <div class="step-tags"><span class="tag">GPT-4</span><span class="tag">Custom Prompt</span></div>
+          </div>
+        </div>
+        <div class="workflow-step">
+          <div class="step-num">5</div>
+          <div>
+            <div class="step-title">Send via Gmail & Log to HubSpot</div>
+            <p class="step-desc">The generated email is sent directly from Gmail with correct From name and reply-to settings. Simultaneously, HubSpot is updated — the email content is logged as a note on the contact, and the contact's outreach status is set to "contacted". Full CRM traceability, zero manual entry.</p>
+            <div class="step-tags"><span class="tag">Gmail API</span><span class="tag">HubSpot Update</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="project-section">
+  <div class="two-col">
+    <div class="section-label">Stack</div>
+    <div class="two-col-content">
+      <div class="stack-grid">
+        <div class="stack-item"><div class="stack-item-name">n8n</div><div class="stack-item-role">Orchestration</div></div>
+        <div class="stack-item"><div class="stack-item-name">HubSpot</div><div class="stack-item-role">CRM & trigger</div></div>
+        <div class="stack-item"><div class="stack-item-name">Phantombuster</div><div class="stack-item-role">Social scraping</div></div>
+        <div class="stack-item"><div class="stack-item-name">GPT-4</div><div class="stack-item-role">Email generation</div></div>
+        <div class="stack-item"><div class="stack-item-name">Gmail</div><div class="stack-item-role">Email delivery</div></div>
+        <div class="stack-item"><div class="stack-item-name">Google Sheets</div><div class="stack-item-role">Status tracking</div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="project-section">
+  <div class="two-col">
+    <div class="section-label">Setup Guide</div>
+    <div class="two-col-content">
+      <div class="setup-list">
+        <div class="setup-item">
+          <div class="setup-num">1</div>
+          <div>
+            <div class="setup-title">HubSpot Private App</div>
+            <p class="setup-desc">In HubSpot: Settings → Integrations → Private Apps → Create. Scopes needed: contacts.read, contacts.write, crm.objects.contacts. Copy the access token into n8n. Set up a webhook pointing to your n8n webhook URL.</p>
+          </div>
+        </div>
+        <div class="setup-item">
+          <div class="setup-num">2</div>
+          <div>
+            <div class="setup-title">Phantombuster API</div>
+            <p class="setup-desc">Create a Phantombuster account, set up the LinkedIn Profile Scraper and Twitter Profile Scraper phantoms. Copy your API key and the phantom IDs into the n8n HTTP Request nodes.</p>
+          </div>
+        </div>
+        <div class="setup-item">
+          <div class="setup-num">3</div>
+          <div>
+            <div class="setup-title">Gmail OAuth2</div>
+            <p class="setup-desc">Connect Gmail using OAuth2 in n8n. Ensure the connected account matches the From address you want prospects to see. Set up a reply-to address if your sending account differs from your inbox.</p>
+          </div>
+        </div>
+        <div class="setup-item">
+          <div class="setup-num">4</div>
+          <div>
+            <div class="setup-title">Customise the AI Prompt</div>
+            <p class="setup-desc">Edit the GPT system prompt with your product, ICP pain points, desired tone, and any hard rules (max word count, no-mention list, preferred CTA). This is the most important step — the quality of the AI output depends entirely on prompt quality.</p>
+          </div>
+        </div>
+        <div class="setup-item">
+          <div class="setup-num">5</div>
+          <div>
+            <div class="setup-title">Test with a Dummy Contact</div>
+            <p class="setup-desc">Create a test contact in HubSpot with your own LinkedIn URL. Verify the webhook fires, Phantombuster returns data, GPT generates a sensible email, and Gmail sends it. Check HubSpot for the logged note. Then activate.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="cta-block">
+  <div>
+    <h3>Want this built for your CRM?</h3>
+    <p>I'll configure the full workflow for your HubSpot instance, tools, and outreach tone.</p>
+  </div>
+  <div class="cta-btns">
+    <a href="index.html#contact" class="btn-primary">Get in touch</a>
+    <a href="index.html#projects" class="btn-outline">View all projects</a>
+  </div>
+</div>
+
+</div>
+
+<footer>
+  <span class="footer-l">© 2026 Rishiraj Paul — GTM Engineer</span>
+  <span class="footer-r"><a href="index.html" style="color:inherit;text-decoration:none;">rishiraj.github.io</a></span>
+</footer>
+
+</body>
+</html>
