@@ -543,25 +543,27 @@
         </a>
       </div>
     </div>
-    <div class="contact-form">
+    <form class="contact-form" id="contact-form" action="https://formspree.io/f/xeoqgpwb" method="POST">
       <div class="form-field">
         <label class="form-label">Name</label>
-        <input type="text" class="form-input" placeholder="Your name">
+        <input type="text" name="name" class="form-input" placeholder="Your name" required>
       </div>
       <div class="form-field">
         <label class="form-label">Company</label>
-        <input type="text" class="form-input" placeholder="Your company">
+        <input type="text" name="company" class="form-input" placeholder="Your company">
       </div>
       <div class="form-field">
         <label class="form-label">Email</label>
-        <input type="email" class="form-input" placeholder="your@company.com">
+        <input type="email" name="email" class="form-input" placeholder="your@company.com" required>
       </div>
       <div class="form-field">
         <label class="form-label">What do you need?</label>
-        <textarea class="form-textarea" placeholder="Tell me about your GTM challenge: outbound setup, CRM automation, enrichment pipeline..."></textarea>
+        <textarea name="message" class="form-textarea" placeholder="Tell me about your GTM challenge: outbound setup, CRM automation, enrichment pipeline..."></textarea>
       </div>
-      <button class="btn-primary">Send message</button>
-    </div>
+      <button type="submit" class="btn-primary" id="submit-btn">Send message</button>
+      <div id="form-success" style="display:none; font-family: var(--mono); font-size: 12px; color: var(--green); padding: 12px 0; letter-spacing: 0.04em;">Message sent. I'll get back to you shortly.</div>
+      <div id="form-error" style="display:none; font-family: var(--mono); font-size: 12px; color: #c0392b; padding: 12px 0; letter-spacing: 0.04em;">Something went wrong. Email me directly at rishirajpaul3@gmail.com</div>
+    </form>
   </div>
 </section>
 </div>
@@ -703,6 +705,37 @@
     particles.forEach(p => { p.update(); p.draw(); });
     requestAnimationFrame(animParticles);
   })();
+
+  /* ── CONTACT FORM ── */
+  const form = document.getElementById('contact-form');
+  if (form) {
+    form.addEventListener('submit', async function(e) {
+      e.preventDefault();
+      const btn = document.getElementById('submit-btn');
+      const success = document.getElementById('form-success');
+      const error = document.getElementById('form-error');
+      btn.textContent = 'Sending...';
+      btn.disabled = true;
+      try {
+        const res = await fetch(form.action, {
+          method: 'POST',
+          body: new FormData(form),
+          headers: { 'Accept': 'application/json' }
+        });
+        if (res.ok) {
+          form.reset();
+          btn.style.display = 'none';
+          success.style.display = 'block';
+        } else {
+          throw new Error();
+        }
+      } catch {
+        btn.textContent = 'Send message';
+        btn.disabled = false;
+        error.style.display = 'block';
+      }
+    });
+  }
 
   /* ── SCROLL FADE-IN ── */
   document.querySelectorAll('section, .project-card, .service-card, .result-card').forEach(el => {
