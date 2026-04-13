@@ -27,7 +27,7 @@
     <span class="tag">n8n</span><span class="tag">Ollama</span><span class="tag">Gmail</span><span class="tag">Google Sheets</span><span class="tag">Telegram</span><span class="tag">Self-Hosted</span>
   </div>
   <h1>AI SDR: Autonomous Cold<br>Outreach with Local LLM</h1>
-  <p class="lead">Three synchronised n8n workflows running on weekday schedules — scoring leads 0–100, generating 3-email sequences, managing follow-up cadence, detecting replies, and firing Telegram alerts. Fully self-hosted. No SaaS subscription. No data leaving your infrastructure.</p>
+  <p class="lead">Three synchronised n8n workflows running on weekday schedules: scoring leads 0–100, generating 3-email sequences, managing follow-up cadence, detecting replies, and firing Telegram alerts. Fully self-hosted. No SaaS subscription. No data leaving your infrastructure.</p>
   <div class="project-stats">
     <div class="p-stat"><div class="p-stat-num">3</div><div class="p-stat-label">Synced workflows</div></div>
     <div class="p-stat"><div class="p-stat-num">0–100</div><div class="p-stat-label">AI lead scoring</div></div>
@@ -41,7 +41,7 @@
     <div class="section-label">The Problem</div>
     <div class="two-col-content">
       <p>Most outbound tools are SaaS platforms with per-seat pricing, OpenAI API bills, and your lead data sitting on someone else's servers. For founders, agencies, and privacy-conscious companies, this is a real constraint.</p>
-      <p><strong>This system runs entirely on your own infrastructure.</strong> n8n self-hosted, Ollama running locally with Mistral or Llama3 — all the intelligence of a paid AI SDR tool, at infrastructure cost only. The system scores leads, writes emails, manages cadence, and detects replies autonomously on weekday schedules.</p>
+      <p><strong>This system runs entirely on your own infrastructure.</strong> n8n self-hosted, Ollama running locally with Mistral or Llama3. All the intelligence of a paid AI SDR tool, at infrastructure cost only. The system scores leads, writes emails, manages cadence, and detects replies autonomously on weekday schedules.</p>
     </div>
   </div>
 </div>
@@ -55,7 +55,7 @@
           <div class="step-num">1</div>
           <div>
             <div class="step-title">Flow 1 — New Lead Processing (8am weekdays)</div>
-            <p class="step-desc">Reads rows with status "New" from Google Sheets. For each lead, scrapes their company website to build a research dossier — product description, target market, value prop. Passes the dossier to Ollama (running Mistral locally) which scores the lead 0–100 based on your ICP criteria and generates 3 personalised emails with subject lines. Results written back to Sheets. Email 1 sent immediately via Gmail.</p>
+            <p class="step-desc">Reads rows with status "New" from Google Sheets. For each lead, scrapes their company website to build a research dossier: product description, target market, value prop. Passes the dossier to Ollama (running Mistral locally) which scores the lead 0–100 based on your ICP criteria and generates 3 personalised emails with subject lines. Results written back to Sheets. Email 1 sent immediately via Gmail.</p>
             <div class="step-tags"><span class="tag">Google Sheets</span><span class="tag">Web Scraper</span><span class="tag">Ollama/Mistral</span><span class="tag">Gmail</span></div>
           </div>
         </div>
@@ -63,7 +63,7 @@
           <div class="step-num">2</div>
           <div>
             <div class="step-title">Flow 2 — Follow-up Cadence (every 2hrs weekdays)</div>
-            <p class="step-desc">Checks the Sheets for leads where Email 1 was sent 3+ days ago and Email 2 hasn't gone out — sends Email 2. Checks for 7+ day gaps and sends Email 3. Automatically marks sequence "complete" after Email 3. Skips any lead marked "replied" — the sequence stops the moment a reply is detected.</p>
+            <p class="step-desc">Checks the Sheets for leads where Email 1 was sent 3+ days ago and Email 2 hasn't gone out: sends Email 2. Checks for 7+ day gaps and sends Email 3. Automatically marks sequence "complete" after Email 3. Skips any lead marked "replied". The sequence stops the moment a reply is detected.</p>
             <div class="step-tags"><span class="tag">Cadence Logic</span><span class="tag">Date Comparison</span><span class="tag">Gmail</span></div>
           </div>
         </div>
@@ -103,9 +103,9 @@
       <div class="setup-list">
         <div class="setup-item"><div class="setup-num">1</div><div><div class="setup-title">Google Sheets Structure</div><p class="setup-desc">Create a sheet with: Lead Name, Email, Company, Website, Role, ICP Score, Email 1/2/3 Subject, Email 1/2/3 Body, Status, Date Sent 1/2/3, Reply Detected, Reply Preview. This is the workflow's single source of truth.</p></div></div>
         <div class="setup-item"><div class="setup-num">2</div><div><div class="setup-title">Install Ollama Locally</div><p class="setup-desc">Install Ollama from ollama.ai. Pull your chosen model: <code style="font-family:var(--mono);font-size:12px;background:var(--gray-100);padding:2px 6px;">ollama pull mistral</code> or llama3. The n8n Ollama node connects to localhost:11434 by default. Swap for OpenAI or Anthropic credentials if you prefer cloud models.</p></div></div>
-        <div class="setup-item"><div class="setup-num">3</div><div><div class="setup-title">Gmail OAuth2 + Telegram Bot</div><p class="setup-desc">Connect Gmail via OAuth2 in n8n — ensure it's the inbox you want to send from and monitor for replies. Create a Telegram bot via @BotFather, note the token and your personal chat ID for the alert destination.</p></div></div>
+        <div class="setup-item"><div class="setup-num">3</div><div><div class="setup-title">Gmail OAuth2 + Telegram Bot</div><p class="setup-desc">Connect Gmail via OAuth2 in n8n. Ensure it's the inbox you want to send from and monitor for replies. Create a Telegram bot via @BotFather, note the token and your personal chat ID for the alert destination.</p></div></div>
         <div class="setup-item"><div class="setup-num">4</div><div><div class="setup-title">Customise AI Prompts</div><p class="setup-desc">Two prompts to configure: the Lead Scorer (ICP definition, scoring criteria, what makes a 90+ vs 40 score) and the Email Writer (product description, value prop, tone, CTA, max word count per email). The quality of your prompts determines the quality of the output.</p></div></div>
-        <div class="setup-item"><div class="setup-num">5</div><div><div class="setup-title">Test & Activate All Three Flows</div><p class="setup-desc">Add one test lead with status "New" and your own email address. Run Flow 1 manually — verify scoring, email generation, and Gmail send. Wait for the schedule to test Flows 2 and 3, or trigger them manually. Activate all three schedules once satisfied.</p></div></div>
+        <div class="setup-item"><div class="setup-num">5</div><div><div class="setup-title">Test & Activate All Three Flows</div><p class="setup-desc">Add one test lead with status "New" and your own email address. Run Flow 1 manually. Verify scoring, email generation, and Gmail send. Wait for the schedule to test Flows 2 and 3, or trigger them manually. Activate all three schedules once satisfied.</p></div></div>
       </div>
     </div>
   </div>
@@ -114,7 +114,7 @@
 <div class="cta-block">
   <div>
     <h3>Want a private, self-hosted SDR?</h3>
-    <p>I'll build and deploy this system on your own infrastructure — no SaaS dependency.</p>
+    <p>I'll build and deploy this system on your own infrastructure. No SaaS dependency.</p>
   </div>
   <div class="cta-btns">
     <a href="index.html#contact" class="btn-primary">Get in touch</a>

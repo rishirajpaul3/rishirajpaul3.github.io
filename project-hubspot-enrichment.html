@@ -31,7 +31,7 @@
     <span class="tag">Gmail</span>
   </div>
   <h1>HubSpot + Phantombuster + GPT:<br>Auto-Personalised Outreach</h1>
-  <p class="lead">Every new contact in HubSpot triggers a pipeline that scrapes their live LinkedIn and Twitter activity, feeds it to GPT, and sends a genuinely personalised email — automatically, within minutes of them hitting your CRM.</p>
+  <p class="lead">Every new contact in HubSpot triggers a pipeline that scrapes their live LinkedIn and Twitter activity, feeds it to GPT, and sends a genuinely personalised email, automatically, within minutes of them hitting your CRM.</p>
   <div class="project-stats">
     <div class="p-stat">
       <div class="p-stat-num">0</div>
@@ -56,8 +56,8 @@
   <div class="two-col">
     <div class="section-label">The Problem</div>
     <div class="two-col-content">
-      <p>CRMs are full of contacts nobody has actually researched. Sales reps open LinkedIn, spend 10 minutes reading someone's profile, write a semi-personalised email, and repeat — 40 times a day. It's unsustainable and the output is still mediocre.</p>
-      <p><strong>The real cost</strong> isn't just time — it's quality. A rep doing manual research at scale can't stay genuinely relevant to every prospect. This system does it better, faster, and without fatigue.</p>
+      <p>CRMs are full of contacts nobody has actually researched. Sales reps open LinkedIn, spend 10 minutes reading someone's profile, write a semi-personalised email. And repeat. 40 times a day. It's unsustainable and the output is still mediocre.</p>
+      <p><strong>The real cost</strong> isn't just time. It's quality. A rep doing manual research at scale can't stay genuinely relevant to every prospect. This system does it better, faster, and without fatigue.</p>
     </div>
   </div>
 </div>
@@ -69,7 +69,7 @@
       <div class="audience-grid">
         <div class="audience-card">
           <h4>Sales Teams with HubSpot</h4>
-          <p>Already using HubSpot for contact management. This slots in as an automation layer — no new tools for reps to learn.</p>
+          <p>Already using HubSpot for contact management. This slots in as an automation layer. No new tools for reps to learn.</p>
         </div>
         <div class="audience-card">
           <h4>High-Touch B2B Sales</h4>
@@ -77,7 +77,7 @@
         </div>
         <div class="audience-card">
           <h4>SDR Managers</h4>
-          <p>Want to free reps from top-of-funnel research so they focus on conversations and closing — not copy-pasting LinkedIn bios.</p>
+          <p>Want to free reps from top-of-funnel research so they focus on conversations and closing, not copy-pasting LinkedIn bios.</p>
         </div>
         <div class="audience-card">
           <h4>Agencies & Consultants</h4>
@@ -97,7 +97,7 @@
           <div class="step-num">1</div>
           <div>
             <div class="step-title">HubSpot Webhook Trigger</div>
-            <p class="step-desc">The workflow fires the moment a contact is created or updated in HubSpot. n8n receives the webhook, pulls full contact details — email, name, company, LinkedIn URL, Twitter handle — and logs the tracking status to Google Sheets.</p>
+            <p class="step-desc">The workflow fires the moment a contact is created or updated in HubSpot. n8n receives the webhook, pulls full contact details (email, name, company, LinkedIn URL, Twitter handle) and logs the tracking status to Google Sheets.</p>
             <div class="step-tags"><span class="tag">HubSpot Webhook</span><span class="tag">Google Sheets</span></div>
           </div>
         </div>
@@ -113,7 +113,7 @@
           <div class="step-num">3</div>
           <div>
             <div class="step-title">Live Social Scraping via Phantombuster</div>
-            <p class="step-desc">Phantombuster scrapes the prospect's LinkedIn profile (recent posts, headline, current role, shared connections) and Twitter activity (recent tweets, engagement patterns). This returns real-time signal — what they're thinking about right now, not 6-month-old profile text.</p>
+            <p class="step-desc">Phantombuster scrapes the prospect's LinkedIn profile (recent posts, headline, current role, shared connections) and Twitter activity (recent tweets, engagement patterns). This returns real-time signal: what they're thinking about right now. Not 6-month-old profile text.</p>
             <div class="step-tags"><span class="tag">Phantombuster API</span><span class="tag">LinkedIn Scraper</span><span class="tag">Twitter Scraper</span></div>
           </div>
         </div>
@@ -121,7 +121,7 @@
           <div class="step-num">4</div>
           <div>
             <div class="step-title">GPT-4 Email Generation</div>
-            <p class="step-desc">The enriched profile, social activity, and company context are passed to GPT-4 with a tailored system prompt. GPT generates a personalised subject line and email body that references something specific — a post they shared, a challenge in their role, or a recent company announcement. No two emails are the same.</p>
+            <p class="step-desc">The enriched profile, social activity, and company context are passed to GPT-4 with a tailored system prompt. GPT generates a personalised subject line and email body that references something specific: a post they shared, a challenge in their role, or a recent company announcement. No two emails are the same.</p>
             <div class="step-tags"><span class="tag">GPT-4</span><span class="tag">Custom Prompt</span></div>
           </div>
         </div>
@@ -129,7 +129,7 @@
           <div class="step-num">5</div>
           <div>
             <div class="step-title">Send via Gmail & Log to HubSpot</div>
-            <p class="step-desc">The generated email is sent directly from Gmail with correct From name and reply-to settings. Simultaneously, HubSpot is updated — the email content is logged as a note on the contact, and the contact's outreach status is set to "contacted". Full CRM traceability, zero manual entry.</p>
+            <p class="step-desc">The generated email is sent directly from Gmail with correct From name and reply-to settings. Simultaneously, HubSpot is updated: the email content is logged as a note on the contact, and the contact's outreach status is set to "contacted". Full CRM traceability, zero manual entry.</p>
             <div class="step-tags"><span class="tag">Gmail API</span><span class="tag">HubSpot Update</span></div>
           </div>
         </div>

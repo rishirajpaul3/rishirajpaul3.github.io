@@ -27,7 +27,7 @@
     <span class="tag">Clay</span><span class="tag">n8n</span><span class="tag">HubSpot</span><span class="tag">Signal Monitoring</span><span class="tag">Upsell Automation</span>
   </div>
   <h1>Customer Expansion<br>Propensity Pipeline</h1>
-  <p class="lead">Monitors your existing customer accounts for growth signals — hiring surges, funding rounds, executive hires, and product expansion signals. When an account shows buying propensity, the CSM gets a contextual HubSpot alert before the customer starts looking at alternatives.</p>
+  <p class="lead">Monitors your existing customer accounts for growth signals: hiring surges, funding rounds, executive hires, and product expansion signals. When an account shows buying propensity, the CSM gets a contextual HubSpot alert before the customer starts looking at alternatives.</p>
   <div class="project-stats">
     <div class="p-stat"><div class="p-stat-num">5+</div><div class="p-stat-label">Signal types monitored</div></div>
     <div class="p-stat"><div class="p-stat-num">Daily</div><div class="p-stat-label">Monitoring cadence</div></div>
@@ -40,8 +40,8 @@
   <div class="two-col">
     <div class="section-label">The Problem</div>
     <div class="two-col-content">
-      <p>Most upsell conversations happen reactively — the customer brings it up, or the CSM checks in at renewal. By then, either the window has passed or a competitor is already in the conversation.</p>
-      <p><strong>Growth signals are public and available in real time.</strong> A customer who just raised a Series B, hired 20 engineers in a month, or posted a VP of Sales job is almost certainly expanding their stack. This pipeline catches those signals the moment they appear and puts them in front of the right CSM with context — so the conversation happens first, not last.</p>
+      <p>Most upsell conversations happen reactively. The customer brings it up, or the CSM checks in at renewal. By then, either the window has passed or a competitor is already in the conversation.</p>
+      <p><strong>Growth signals are public and available in real time.</strong> A customer who just raised a Series B, hired 20 engineers in a month, or posted a VP of Sales job is almost certainly expanding their stack. This pipeline catches those signals the moment they appear and puts them in front of the right CSM with context, so the conversation happens first, not last.</p>
     </div>
   </div>
 </div>
@@ -53,7 +53,7 @@
       <div class="audience-grid">
         <div class="audience-card">
           <h4>Hiring Surge</h4>
-          <p>Company posts 10+ new roles in 30 days, especially in functions your product serves — Sales, Marketing, RevOps, Engineering.</p>
+          <p>Company posts 10+ new roles in 30 days, especially in functions your product serves: Sales, Marketing, RevOps, Engineering.</p>
         </div>
         <div class="audience-card">
           <h4>Funding Announcement</h4>
@@ -65,7 +65,7 @@
         </div>
         <div class="audience-card">
           <h4>Product Expansion Signal</h4>
-          <p>Customer starts posting roles or content suggesting they're moving into a new market or product line — your product may need to scale with them.</p>
+          <p>Customer starts posting roles or content suggesting they're moving into a new market or product line, and your product may need to scale with them.</p>
         </div>
       </div>
     </div>
@@ -81,7 +81,7 @@
           <div class="step-num">1</div>
           <div>
             <div class="step-title">Customer Account Sync</div>
-            <p class="step-desc">The pipeline pulls your current customer list from HubSpot daily — all companies with deal stage "Closed Won" or customer lifecycle stage. This becomes the watchlist. New customers are automatically added as they close; churned accounts are removed.</p>
+            <p class="step-desc">The pipeline pulls your current customer list from HubSpot daily: all companies with deal stage "Closed Won" or customer lifecycle stage. This becomes the watchlist. New customers are automatically added as they close; churned accounts are removed.</p>
             <div class="step-tags"><span class="tag">HubSpot API</span><span class="tag">Clay Table</span><span class="tag">Daily Sync</span></div>
           </div>
         </div>
@@ -97,7 +97,7 @@
           <div class="step-num">3</div>
           <div>
             <div class="step-title">Propensity Score Calculation</div>
-            <p class="step-desc">Each signal type contributes to a propensity score — a 0–100 number representing expansion likelihood in the next 90 days. Hiring surge in a relevant function scores highest. Multiple signals firing simultaneously creates a compound score. Accounts crossing the threshold (configurable, typically 65+) trigger an alert.</p>
+            <p class="step-desc">Each signal type contributes to a propensity score, a 0–100 number representing expansion likelihood in the next 90 days. Hiring surge in a relevant function scores highest. Multiple signals firing simultaneously creates a compound score. Accounts crossing the threshold (configurable, typically 65+) trigger an alert.</p>
             <div class="step-tags"><span class="tag">Weighted Scoring</span><span class="tag">Signal Compounding</span></div>
           </div>
         </div>
@@ -105,7 +105,7 @@
           <div class="step-num">4</div>
           <div>
             <div class="step-title">n8n Alert Orchestration</div>
-            <p class="step-desc">When a customer crosses the propensity threshold, n8n fires the alert sequence. It looks up the assigned CSM from HubSpot, generates a natural-language summary of the signals detected (e.g. "Acme Corp hired 14 people last month including a VP of Revenue and posted 3 SDR roles — expansion signal strong"), and prepares the HubSpot task.</p>
+            <p class="step-desc">When a customer crosses the propensity threshold, n8n fires the alert sequence. It looks up the assigned CSM from HubSpot, generates a natural-language summary of the signals detected (e.g. "Acme Corp hired 14 people last month including a VP of Revenue and posted 3 SDR roles. Expansion signal strong."), and prepares the HubSpot task.</p>
             <div class="step-tags"><span class="tag">n8n</span><span class="tag">CSM Lookup</span><span class="tag">AI Summary</span></div>
           </div>
         </div>
@@ -113,7 +113,7 @@
           <div class="step-num">5</div>
           <div>
             <div class="step-title">HubSpot Task Creation & Slack/Email Alert</div>
-            <p class="step-desc">A task is created on the customer's HubSpot record: "Expansion signal detected — reach out this week". The task includes the signal summary, propensity score, and suggested talking points based on the specific signals. Simultaneously, a Slack message goes to the CSM's channel and an email summary hits their inbox. Everything they need to start the conversation.</p>
+            <p class="step-desc">A task is created on the customer's HubSpot record: "Expansion signal detected. Reach out this week.". The task includes the signal summary, propensity score, and suggested talking points based on the specific signals. Simultaneously, a Slack message goes to the CSM's channel and an email summary hits their inbox. Everything they need to start the conversation.</p>
             <div class="step-tags"><span class="tag">HubSpot Tasks</span><span class="tag">Slack</span><span class="tag">Email Alert</span></div>
           </div>
         </div>

@@ -27,7 +27,7 @@
     <span class="tag">Clay</span><span class="tag">HeyReach</span><span class="tag">Salesforge</span><span class="tag">AI Personalisation</span><span class="tag">Multi-Channel</span>
   </div>
   <h1>Context-Aware Outreach<br>Orchestration Engine</h1>
-  <p class="lead">Clay enrichment feeds AI-generated first lines built from live LinkedIn activity. HeyReach handles LinkedIn touchpoints. Salesforge manages email sequences. Sequences adapt based on real-time engagement signals — channel, timing, and messaging shift automatically as prospects respond.</p>
+  <p class="lead">Clay enrichment feeds AI-generated first lines built from live LinkedIn activity. HeyReach handles LinkedIn touchpoints. Salesforge manages email sequences. Sequences adapt based on real-time engagement signals. Channel, timing, and messaging shift automatically as prospects respond.</p>
   <div class="project-stats">
     <div class="p-stat"><div class="p-stat-num">Multi</div><div class="p-stat-label">Channel orchestration</div></div>
     <div class="p-stat"><div class="p-stat-num">Live</div><div class="p-stat-label">LinkedIn signals</div></div>
@@ -40,8 +40,8 @@
   <div class="two-col">
     <div class="section-label">The Problem</div>
     <div class="two-col-content">
-      <p>Most outreach sequences are static — the same email goes out on day 1, day 4, day 8, regardless of what the prospect does in between. If they visit your LinkedIn profile, click an email, or post something relevant, the sequence keeps going exactly the same way.</p>
-      <p><strong>This system is reactive.</strong> When a prospect engages — even passively — the orchestration layer detects it and adjusts. A prospect who clicked your email but didn't reply gets a LinkedIn message next, not another email. One who posted a relevant article gets a response that references it. The outreach adapts to the prospect's behaviour, not a fixed calendar.</p>
+      <p>Most outreach sequences are static. The same email goes out on day 1, day 4, day 8, regardless of what the prospect does in between. If they visit your LinkedIn profile, click an email, or post something relevant, the sequence keeps going exactly the same way.</p>
+      <p><strong>This system is reactive.</strong> When a prospect engages, even passively, the orchestration layer detects it and adjusts. A prospect who clicked your email but didn't reply gets a LinkedIn message next, not another email. One who posted a relevant article gets a response that references it. The outreach adapts to the prospect's behaviour, not a fixed calendar.</p>
     </div>
   </div>
 </div>
@@ -55,7 +55,7 @@
           <div class="step-num">1</div>
           <div>
             <div class="step-title">Clay Enrichment & Signal Collection</div>
-            <p class="step-desc">Prospect list enters Clay. Waterfall enrichment fills firmographics — company size, industry, tech stack, funding. A separate Clay column scrapes the prospect's LinkedIn profile for their most recent post (last 14 days), their headline, and any shared connections. A second column pulls recent company news. This becomes the personalisation context.</p>
+            <p class="step-desc">Prospect list enters Clay. Waterfall enrichment fills firmographics: company size, industry, tech stack, funding. A separate Clay column scrapes the prospect's LinkedIn profile for their most recent post (last 14 days), their headline, and any shared connections. A second column pulls recent company news. This becomes the personalisation context.</p>
             <div class="step-tags"><span class="tag">Clay</span><span class="tag">Waterfall Enrichment</span><span class="tag">LinkedIn Scraper</span><span class="tag">News Scraper</span></div>
           </div>
         </div>
@@ -79,7 +79,7 @@
           <div class="step-num">4</div>
           <div>
             <div class="step-title">Salesforge Email Sequence</div>
-            <p class="step-desc">Simultaneously, the email sequence launches in Salesforge using the enriched first line and the template body. Salesforge handles deliverability, inbox rotation, and send timing. If HeyReach detects a LinkedIn reply, a webhook fires to Salesforge to pause the email sequence for that prospect — no double-touching people who've already engaged.</p>
+            <p class="step-desc">Simultaneously, the email sequence launches in Salesforge using the enriched first line and the template body. Salesforge handles deliverability, inbox rotation, and send timing. If HeyReach detects a LinkedIn reply, a webhook fires to Salesforge to pause the email sequence for that prospect. No double-touching people who've already engaged.</p>
             <div class="step-tags"><span class="tag">Salesforge</span><span class="tag">Inbox Rotation</span><span class="tag">Pause on Reply</span></div>
           </div>
         </div>

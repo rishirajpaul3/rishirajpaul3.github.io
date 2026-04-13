@@ -40,8 +40,8 @@
   <div class="two-col">
     <div class="section-label">The Problem</div>
     <div class="two-col-content">
-      <p>Lead sourcing is the most time-consuming part of outbound — and the part most likely to be done badly. Reps use the same Apollo filters everyone else uses and end up targeting the same companies with the same messaging.</p>
-      <p><strong>This workflow uses Perplexity's live web intelligence</strong> to find relevant companies in any niche — including emerging or underserved markets — and pairs it with Hunter.io's email verification to ensure you're only reaching real inboxes. The result is a constantly refreshable, highly targeted lead list that costs a fraction of traditional database subscriptions.</p>
+      <p>Lead sourcing is the most time-consuming part of outbound, and the part most likely to be done badly. Reps use the same Apollo filters everyone else uses and end up targeting the same companies with the same messaging.</p>
+      <p><strong>This workflow uses Perplexity's live web intelligence</strong> to find relevant companies in any niche, including emerging or underserved markets, and pairs it with Hunter.io's email verification to ensure you're only reaching real inboxes. The result is a constantly refreshable, highly targeted lead list that costs a fraction of traditional database subscriptions.</p>
     </div>
   </div>
 </div>
@@ -55,7 +55,7 @@
           <div class="step-num">1</div>
           <div>
             <div class="step-title">Prompt Input via Chat or Telegram</div>
-            <p class="step-desc">The workflow accepts a natural language prompt — e.g. "B2B SaaS companies in the UK focused on HR tech with under 200 employees". This can come from an n8n chat trigger, a Telegram bot command, or a Google Sheet cell. The prompt is passed directly to Perplexity.</p>
+            <p class="step-desc">The workflow accepts a natural language prompt. e.g. "B2B SaaS companies in the UK focused on HR tech with under 200 employees". This can come from an n8n chat trigger, a Telegram bot command, or a Google Sheet cell. The prompt is passed directly to Perplexity.</p>
             <div class="step-tags"><span class="tag">Chat Trigger</span><span class="tag">Telegram</span><span class="tag">Google Sheets</span></div>
           </div>
         </div>
@@ -63,7 +63,7 @@
           <div class="step-num">2</div>
           <div>
             <div class="step-title">Perplexity Finds Matching Companies</div>
-            <p class="step-desc">Using OpenRouter to access Perplexity's Sonar model, the workflow requests 15 companies that match the prompt — including their domain names. Perplexity uses live web search, so results reflect the current landscape, not a database snapshot from 2022.</p>
+            <p class="step-desc">Using OpenRouter to access Perplexity's Sonar model, the workflow requests 15 companies that match the prompt, including their domain names. Perplexity uses live web search, so results reflect the current landscape, not a database snapshot from 2022.</p>
             <div class="step-tags"><span class="tag">Perplexity Sonar</span><span class="tag">OpenRouter</span><span class="tag">Live Web</span></div>
           </div>
         </div>
@@ -71,7 +71,7 @@
           <div class="step-num">3</div>
           <div>
             <div class="step-title">Deduplication Against Existing Leads</div>
-            <p class="step-desc">Before enrichment, each domain is checked against the existing Google Sheet. Domains already in the database are filtered out — no wasted API calls on companies you've already targeted. New domains only move forward.</p>
+            <p class="step-desc">Before enrichment, each domain is checked against the existing Google Sheet. Domains already in the database are filtered out. No wasted API calls on companies you've already targeted. New domains only move forward.</p>
             <div class="step-tags"><span class="tag">Google Sheets Check</span><span class="tag">Dedup Logic</span></div>
           </div>
         </div>
@@ -79,7 +79,7 @@
           <div class="step-num">4</div>
           <div>
             <div class="step-title">Hunter.io Email Enrichment</div>
-            <p class="step-desc">For each new domain, Hunter.io returns up to 3 verified personal email addresses — actual named contacts, not generic info@ addresses. If Hunter finds nothing, an AI fallback node attempts to locate publicly listed contact information before marking the domain as unfindable.</p>
+            <p class="step-desc">For each new domain, Hunter.io returns up to 3 verified personal email addresses: actual named contacts, not generic info@ addresses. If Hunter finds nothing, an AI fallback node attempts to locate publicly listed contact information before marking the domain as unfindable.</p>
             <div class="step-tags"><span class="tag">Hunter.io API</span><span class="tag">AI Fallback</span><span class="tag">Email Verification</span></div>
           </div>
         </div>

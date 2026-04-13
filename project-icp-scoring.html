@@ -27,7 +27,7 @@
     <span class="tag">Clay</span><span class="tag">HubSpot</span><span class="tag">Clearbit</span><span class="tag">Apollo</span><span class="tag">Waterfall Enrichment</span>
   </div>
   <h1>ICP Qualification &<br>Revenue Scoring Engine</h1>
-  <p class="lead">A Clay pipeline that auto-scores every inbound lead against your ICP criteria, enriches firmographic data via multi-source waterfall, calculates a revenue potential score, and routes only qualified accounts to HubSpot — with full context attached.</p>
+  <p class="lead">A Clay pipeline that auto-scores every inbound lead against your ICP criteria, enriches firmographic data via multi-source waterfall, calculates a revenue potential score, and routes only qualified accounts to HubSpot, with full context attached.</p>
   <div class="project-stats">
     <div class="p-stat"><div class="p-stat-num">Multi</div><div class="p-stat-label">Waterfall sources</div></div>
     <div class="p-stat"><div class="p-stat-num">Auto</div><div class="p-stat-label">ICP scoring</div></div>
@@ -40,7 +40,7 @@
   <div class="two-col">
     <div class="section-label">The Problem</div>
     <div class="two-col-content">
-      <p>Most companies route every inbound lead to sales regardless of fit. Reps waste hours on leads that were never going to close — and the truly high-value accounts get the same attention as the noise.</p>
+      <p>Most companies route every inbound lead to sales regardless of fit. Reps waste hours on leads that were never going to close. The truly high-value accounts get the same attention as the noise.</p>
       <p><strong>This pipeline does what a great SDR does manually at scale:</strong> pulls in every available data point about a lead, scores them objectively against your ICP, calculates their likely deal size, and only surfaces the accounts worth a sales rep's time. The rest go into a nurture track automatically.</p>
     </div>
   </div>
@@ -55,7 +55,7 @@
           <div class="step-num">1</div>
           <div>
             <div class="step-title">Inbound Lead Capture</div>
-            <p class="step-desc">New leads enter the Clay table via webhook from your website form, HubSpot form, or CSV import. Clay immediately enriches the email domain to pull the company name, website, and basic firmographics — preparing the record for full waterfall enrichment.</p>
+            <p class="step-desc">New leads enter the Clay table via webhook from your website form, HubSpot form, or CSV import. Clay immediately enriches the email domain to pull the company name, website, and basic firmographics, preparing the record for full waterfall enrichment.</p>
             <div class="step-tags"><span class="tag">Clay Webhook</span><span class="tag">HubSpot Forms</span><span class="tag">CSV Import</span></div>
           </div>
         </div>
@@ -63,7 +63,7 @@
           <div class="step-num">2</div>
           <div>
             <div class="step-title">Waterfall Enrichment</div>
-            <p class="step-desc">Clay runs enrichment across multiple providers in sequence — Clearbit first, then Apollo, then PeopleDataLabs as fallback. Each provider attempts to fill gaps left by the previous. The result is the highest possible data completeness without paying for every source on every lead. Fields enriched: employee count, industry, tech stack, revenue range, funding stage, HQ location, decision-maker roles.</p>
+            <p class="step-desc">Clay runs enrichment across multiple providers in sequence: Clearbit first, then Apollo, then PeopleDataLabs as fallback. Each provider attempts to fill gaps left by the previous. The result is the highest possible data completeness without paying for every source on every lead. Fields enriched: employee count, industry, tech stack, revenue range, funding stage, HQ location, decision-maker roles.</p>
             <div class="step-tags"><span class="tag">Clearbit</span><span class="tag">Apollo</span><span class="tag">PeopleDataLabs</span><span class="tag">Waterfall Logic</span></div>
           </div>
         </div>
@@ -71,7 +71,7 @@
           <div class="step-num">3</div>
           <div>
             <div class="step-title">ICP Scoring Formula</div>
-            <p class="step-desc">A weighted scoring formula runs against the enriched data. Each ICP criterion contributes points — industry match (25pts), company size range (20pts), tech stack signals (20pts), role seniority (15pts), geography (10pts), funding stage (10pts). Scores above 70 are "Strong ICP". 50–70 is "Partial Fit". Below 50 routes to nurture.</p>
+            <p class="step-desc">A weighted scoring formula runs against the enriched data. Each ICP criterion contributes points: industry match (25pts), company size range (20pts), tech stack signals (20pts), role seniority (15pts), geography (10pts), funding stage (10pts). Scores above 70 are "Strong ICP". 50–70 is "Partial Fit". Below 50 routes to nurture.</p>
             <div class="step-tags"><span class="tag">Weighted Scoring</span><span class="tag">Clay Formula</span></div>
           </div>
         </div>
@@ -79,7 +79,7 @@
           <div class="step-num">4</div>
           <div>
             <div class="step-title">Revenue Potential Calculation</div>
-            <p class="step-desc">Based on company size, industry benchmarks, and tech stack, the pipeline estimates a revenue potential score — a proxy for likely deal size and expansion potential. This score helps sales prioritise within the "Strong ICP" tier. A 100-employee SaaS company with the right tech stack ranks differently than a 100-person retailer.</p>
+            <p class="step-desc">Based on company size, industry benchmarks, and tech stack, the pipeline estimates a revenue potential score, a proxy for likely deal size and expansion potential. This score helps sales prioritise within the "Strong ICP" tier. A 100-employee SaaS company with the right tech stack ranks differently than a 100-person retailer.</p>
             <div class="step-tags"><span class="tag">Revenue Model</span><span class="tag">Clay AI Column</span></div>
           </div>
         </div>
@@ -87,7 +87,7 @@
           <div class="step-num">5</div>
           <div>
             <div class="step-title">HubSpot Routing with Context</div>
-            <p class="step-desc">Qualified leads (ICP score 70+) are pushed to HubSpot as contacts with all enriched fields mapped to custom properties. The ICP score, revenue potential, and scoring breakdown are written as a note on the contact record — so the rep sees exactly why this account surfaced and what to lead with. Partial fits go to a nurture sequence. Non-fits are archived.</p>
+            <p class="step-desc">Qualified leads (ICP score 70+) are pushed to HubSpot as contacts with all enriched fields mapped to custom properties. The ICP score, revenue potential, and scoring breakdown are written as a note on the contact record, so the rep sees exactly why this account surfaced and what to lead with. Partial fits go to a nurture sequence. Non-fits are archived.</p>
             <div class="step-tags"><span class="tag">HubSpot API</span><span class="tag">Custom Properties</span><span class="tag">Automated Routing</span></div>
           </div>
         </div>
@@ -121,7 +121,7 @@
         <div class="setup-item"><div class="setup-num">2</div><div><div class="setup-title">Set Up Clay Table & Enrichment Waterfall</div><p class="setup-desc">Create a Clay table with an email/domain column as the primary key. Add enrichment columns in waterfall order: Clearbit → Apollo → PeopleDataLabs. Configure each to only run if the previous returned null for that field.</p></div></div>
         <div class="setup-item"><div class="setup-num">3</div><div><div class="setup-title">Build the Scoring Formula</div><p class="setup-desc">Add a Clay formula column that calculates the ICP score based on enriched fields. Use IF/SWITCH logic per criterion, multiply by the weight, and sum to 100. Add a second column for revenue potential using company size and industry as inputs.</p></div></div>
         <div class="setup-item"><div class="setup-num">4</div><div><div class="setup-title">Connect HubSpot</div><p class="setup-desc">Add the HubSpot integration in Clay. Map each Clay column to the correct HubSpot contact or company property. Create custom HubSpot properties for ICP Score and Revenue Potential before mapping. Set routing conditions based on score thresholds.</p></div></div>
-        <div class="setup-item"><div class="setup-num">5</div><div><div class="setup-title">Test with Historical Leads</div><p class="setup-desc">Run 20–30 past leads through the pipeline — including known good and known bad fits. Verify scores align with your human judgement. Adjust weights until the formula reliably surfaces the right accounts. Then activate the inbound webhook.</p></div></div>
+        <div class="setup-item"><div class="setup-num">5</div><div><div class="setup-title">Test with Historical Leads</div><p class="setup-desc">Run 20–30 past leads through the pipeline, including known good and known bad fits. Verify scores align with your human judgement. Adjust weights until the formula reliably surfaces the right accounts. Then activate the inbound webhook.</p></div></div>
       </div>
     </div>
   </div>
