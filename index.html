@@ -63,37 +63,25 @@
   .service-desc { font-size: 13px; color: var(--gray-600); line-height: 1.7; }
   .service-tools { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 18px; }
 
-  /* RESULTS — dark premium section */
-  .results-dark-section {
-    background: #0a0a0a;
-  }
-  .results-dark-section .eyebrow {
-    color: rgba(255,255,255,0.35);
-  }
-  .results-dark-section h2 {
-    color: #ffffff;
-  }
+  /* RESULTS */
   .results-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 16px;
-    background: transparent;
-    border: none;
-    margin-bottom: 0;
+    gap: 1px;
+    background: var(--gray-200);
+    border: 1px solid var(--gray-200);
+    margin-bottom: 48px;
   }
+
   .result-card {
-    background: #141414;
-    padding: 48px 24px;
+    background: var(--white);
+    padding: 40px 28px;
     text-align: center;
-    border-radius: 10px;
-    border: 1px solid rgba(255,255,255,0.07);
   }
-  .result-num { font-family: var(--serif); font-size: 64px; font-weight: 700; line-height: 1; margin-bottom: 12px; color: #ffffff; }
-  .result-num-green { color: #00c896; }
-  .result-num-pink  { color: #ff4d8d; }
-  .result-num-blue  { color: #4db8ff; }
-  .result-label { font-size: 13px; color: rgba(255,255,255,0.75); font-weight: 600; }
-  .result-sub { font-size: 11px; color: rgba(255,255,255,0.3); margin-top: 6px; font-family: var(--mono); letter-spacing: 0.03em; }
+
+  .result-num { font-family: var(--serif); font-size: 48px; line-height: 1; margin-bottom: 8px; }
+  .result-label { font-size: 13px; color: var(--gray-600); font-weight: 600; }
+  .result-sub { font-size: 11px; color: var(--gray-400); margin-top: 4px; font-family: var(--mono); letter-spacing: 0.03em; }
 
   /* PROJECTS */
   .projects-grid {
@@ -227,7 +215,6 @@
     .hero-stats { flex-direction: column; gap: 28px; }
     .stat-block { border-right: none; margin-right: 0; padding-right: 0; padding-bottom: 28px; border-bottom: 1px solid var(--gray-200); }
     .stat-block:last-child { border-bottom: none; padding-bottom: 0; }
-    .result-num { font-size: 48px; }
   }
 </style>
 </head>
@@ -261,16 +248,16 @@
       <div class="stat-label">GTM systems built</div>
     </div>
     <div class="stat-block">
-      <div class="stat-num">QMUL</div>
-      <div class="stat-label">MSc Entrepreneurship</div>
+      <div class="stat-num">2×</div>
+      <div class="stat-label">Reply rate lift</div>
     </div>
     <div class="stat-block">
-      <div class="stat-num">E2E</div>
-      <div class="stat-label">Inbound & outbound</div>
+      <div class="stat-num">80%</div>
+      <div class="stat-label">SDR work automated</div>
     </div>
     <div class="stat-block">
-      <div class="stat-num">UK</div>
-      <div class="stat-label">Post-study work visa</div>
+      <div class="stat-num">50+</div>
+      <div class="stat-label">Reps managed</div>
     </div>
   </div>
 </section>
@@ -320,37 +307,39 @@
 </section>
 </div>
 
+<div class="divider"></div>
+
 <!-- RESULTS -->
-<div class="results-dark-section">
 <div class="page-wrap">
 <section id="results">
   <div class="eyebrow">Results</div>
   <h2>Impact in numbers</h2>
   <div class="results-grid">
     <div class="result-card">
-      <div class="result-num result-num-green">8</div>
-      <div class="result-label">GTM systems built</div>
-      <div class="result-sub">End-to-end, inbound & outbound</div>
+      <div class="result-num">2×</div>
+      <div class="result-label">Reply rate improvement</div>
+      <div class="result-sub">Via AI personalisation & signal-based timing</div>
     </div>
     <div class="result-card">
-      <div class="result-num result-num-pink">50+</div>
+      <div class="result-num">10+</div>
+      <div class="result-label">Hours saved per week</div>
+      <div class="result-sub">Per client through workflow automation</div>
+    </div>
+    <div class="result-card">
+      <div class="result-num">80%</div>
+      <div class="result-label">SDR work automated</div>
+      <div class="result-sub">Sourcing, enrichment, sequencing — hands-free</div>
+    </div>
+    <div class="result-card">
+      <div class="result-num">50+</div>
       <div class="result-label">Reps managed</div>
-      <div class="result-sub">Sales team leadership</div>
-    </div>
-    <div class="result-card">
-      <div class="result-num result-num-blue">E2E</div>
-      <div class="result-label">Full-stack GTM</div>
-      <div class="result-sub">From signal to signed</div>
-    </div>
-    <div class="result-card">
-      <div class="result-num">UK</div>
-      <div class="result-label">Based & visa-ready</div>
-      <div class="result-sub">QMUL MSc graduate</div>
+      <div class="result-sub">Sales team leadership across East India</div>
     </div>
   </div>
 </section>
 </div>
-</div>
+
+<div class="divider"></div>
 
 <!-- PROJECTS -->
 <div class="page-wrap">
@@ -464,8 +453,8 @@
 <!-- ABOUT -->
 <div class="page-wrap">
 <section id="about">
-  <h2 style="margin-bottom: 8px;">Who I am</h2>
-  <div class="eyebrow" style="margin-bottom: 40px;">About</div>
+  <div class="eyebrow">About</div>
+  <h2>Who I am</h2>
   <div class="about-grid">
     <div class="about-text">
       <p>I'm a <strong>GTM Engineer</strong> with a background in business operations and sales, graduated from MSc Entrepreneurship & Innovation at Queen Mary University of London.</p>
@@ -593,33 +582,32 @@
   #cursor-dot {
     width: 4px;
     height: 4px;
-    background: #000000;
+    background: #0a0a0a;
     border-radius: 50%;
     position: fixed;
     top: 0; left: 0;
     pointer-events: none;
     z-index: 9999;
     transform: translate(-50%, -50%);
-    transition: transform 0.08s ease, background 0.2s;
   }
 
   #cursor-ring {
-    width: 18px;
-    height: 18px;
-    border: 0.5px solid rgba(10,10,10,0.15);
+    width: 20px;
+    height: 20px;
+    border: 0.5px solid rgba(10,10,10,0.18);
     border-radius: 50%;
     position: fixed;
     top: 0; left: 0;
     pointer-events: none;
     z-index: 9998;
     transform: translate(-50%, -50%);
-    transition: width 0.3s ease, height 0.3s ease, border-color 0.3s ease;
+    transition: width 0.25s ease, height 0.25s ease, border-color 0.25s ease;
   }
 
   body:has(a:hover) #cursor-ring,
   body:has(button:hover) #cursor-ring {
-    width: 28px;
-    height: 28px;
+    width: 36px;
+    height: 36px;
     border-color: rgba(10,10,10,0.3);
   }
 
@@ -629,17 +617,15 @@
     width: 100%; height: 100%;
     pointer-events: none;
     z-index: 0;
-    opacity: 0.4;
+    opacity: 0.3;
   }
 
-  /* lift content above canvas */
   nav, .page-wrap, footer { position: relative; z-index: 1; }
 
-  /* fade-in on scroll */
   .fade-up {
     opacity: 0;
-    transform: translateY(24px);
-    transition: opacity 0.6s ease, transform 0.6s ease;
+    transform: translateY(20px);
+    transition: opacity 0.55s ease, transform 0.55s ease;
   }
   .fade-up.visible {
     opacity: 1;

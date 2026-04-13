@@ -115,6 +115,12 @@ section:first-of-type {
   text-transform: uppercase;
   color: var(--gray-400);
   margin-bottom: 14px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.eyebrow::before {
+  display: none;
 }
 
 /* HEADINGS */
@@ -502,23 +508,4 @@ footer {
   .project-stats { flex-wrap: wrap; }
   .cta-block { flex-direction: column; }
   footer { flex-direction: column; gap: 8px; text-align: center; }
-}
-
-/* WORKFLOW DIAGRAM */
-.workflow-diagram-wrap {
-  padding: 40px 0 0;
-  overflow-x: auto;
-}
-.workflow-diagram-label {
-  font-family: var(--mono);
-  font-size: 10px;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--gray-400);
-  margin-bottom: 14px;
-}
-.workflow-diagram-svg {
-  width: 100%;
-  display: block;
-  min-width: 480px;
 }
