@@ -1,0 +1,858 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GTM Daily — by Rishiraj Paul</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IBM+Plex+Mono:wght@300;400;500&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg: #0c0c0c;
+  --surface: #141414;
+  --border: #1e1e1e;
+  --border2: #2a2a2a;
+  --accent: #e8ff47;
+  --accent2: #ff4757;
+  --text: #f0ede8;
+  --muted: #505050;
+  --muted2: #383838;
+  --card: #111111;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'IBM Plex Sans', sans-serif;
+  min-height: 100vh;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+/* Grid lines background */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.015) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.015) 1px, transparent 1px);
+  background-size: 48px 48px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.wrap { max-width: 900px; margin: 0 auto; padding: 0 24px; position: relative; z-index: 1; }
+
+/* ── NAV ── */
+nav {
+  border-bottom: 1px solid var(--border);
+  padding: 16px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav-logo {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.72rem;
+  color: var(--muted);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+.nav-logo span { color: var(--accent); }
+.nav-right { display: flex; gap: 20px; align-items: center; }
+.nav-right a {
+  font-size: 0.72rem; color: var(--muted); text-decoration: none;
+  text-transform: uppercase; letter-spacing: 1px;
+  transition: color 0.2s;
+}
+.nav-right a:hover { color: var(--text); }
+
+/* ── MASTHEAD ── */
+.masthead {
+  padding: 64px 0 48px;
+  border-bottom: 1px solid var(--border);
+}
+.issue-line {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.68rem;
+  color: var(--muted);
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.issue-line::before {
+  content: '';
+  display: inline-block;
+  width: 24px; height: 1px;
+  background: var(--accent);
+}
+.masthead h1 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(4rem, 12vw, 9rem);
+  line-height: 0.9;
+  letter-spacing: 2px;
+  color: var(--text);
+}
+.masthead h1 .accent { color: var(--accent); }
+.masthead-sub {
+  margin-top: 20px;
+  font-size: 0.82rem;
+  color: var(--muted);
+  font-family: 'IBM Plex Mono', monospace;
+  letter-spacing: 1px;
+}
+.masthead-sub span { color: var(--text); }
+
+/* ── API INPUT ── */
+.api-strip {
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  padding: 14px 0;
+}
+.api-inner {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.api-label {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.65rem;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  white-space: nowrap;
+}
+.api-input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.8rem;
+  color: var(--text);
+  padding: 6px 0;
+  border-bottom: 1px solid var(--border2);
+}
+.api-input:focus { outline: none; border-bottom-color: var(--accent); }
+.api-input::placeholder { color: var(--muted2); }
+
+/* ── CONTROLS ── */
+.controls {
+  padding: 32px 0;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  gap: 12px;
+  align-items: flex-end;
+  flex-wrap: wrap;
+}
+.ctrl-group { display: flex; flex-direction: column; gap: 6px; flex: 1; min-width: 160px; }
+.ctrl-label {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.62rem;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.ctrl-select, .ctrl-input {
+  background: var(--surface);
+  border: 1px solid var(--border2);
+  border-radius: 6px;
+  padding: 10px 14px;
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 0.82rem;
+  color: var(--text);
+  appearance: none;
+}
+.ctrl-select:focus, .ctrl-input:focus { outline: none; border-color: var(--accent); }
+.ctrl-select option { background: var(--surface); }
+
+.run-btn {
+  background: var(--accent);
+  color: #000;
+  border: none;
+  border-radius: 6px;
+  padding: 11px 28px;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.1rem;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: opacity 0.2s;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.run-btn:hover { opacity: 0.85; }
+.run-btn:disabled { opacity: 0.35; cursor: not-allowed; }
+
+/* ── STATUS ── */
+#status {
+  display: none;
+  padding: 48px 0;
+  text-align: center;
+}
+.status-terminal {
+  background: var(--surface);
+  border: 1px solid var(--border2);
+  border-radius: 8px;
+  padding: 24px 28px;
+  display: inline-block;
+  min-width: 360px;
+  text-align: left;
+}
+.terminal-header {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 16px;
+}
+.dot-r { width: 10px; height: 10px; border-radius: 50%; background: #ff5f57; }
+.dot-y { width: 10px; height: 10px; border-radius: 50%; background: #febc2e; }
+.dot-g { width: 10px; height: 10px; border-radius: 50%; background: #28c840; }
+.terminal-line {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.78rem;
+  color: var(--muted);
+  margin-bottom: 6px;
+}
+.terminal-line.active { color: var(--accent); }
+.terminal-line.done { color: #28c840; }
+.cursor { display: inline-block; width: 8px; height: 14px; background: var(--accent); animation: blink 1s infinite; vertical-align: middle; margin-left: 4px; }
+@keyframes blink { 0%,100%{opacity:1} 50%{opacity:0} }
+
+/* ── ERROR ── */
+.error-box {
+  display: none;
+  background: #150808;
+  border: 1px solid #3a1010;
+  border-left: 3px solid var(--accent2);
+  border-radius: 6px;
+  padding: 16px 20px;
+  margin: 24px 0;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.78rem;
+  color: #ff6b6b;
+}
+
+/* ── DIGEST OUTPUT ── */
+#digest { display: none; }
+
+.digest-header {
+  padding: 40px 0 32px;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+.digest-date {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.68rem;
+  color: var(--muted);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+.digest-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 2.2rem;
+  letter-spacing: 1px;
+  line-height: 1;
+}
+.digest-meta { display: flex; gap: 16px; flex-wrap: wrap; }
+.meta-pill {
+  background: var(--surface);
+  border: 1px solid var(--border2);
+  border-radius: 4px;
+  padding: 6px 12px;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.65rem;
+  color: var(--muted);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.meta-pill span { color: var(--accent); font-weight: 500; }
+
+/* ── PULSE BANNER ── */
+.pulse-banner {
+  margin: 32px 0;
+  border: 1px solid var(--border2);
+  border-left: 3px solid var(--accent);
+  border-radius: 0 8px 8px 0;
+  padding: 24px 28px;
+  background: var(--surface);
+}
+.section-tag {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.6rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.section-tag::after { content: ''; flex: 1; height: 1px; background: var(--border2); }
+.pulse-text {
+  font-size: 0.9rem;
+  line-height: 1.8;
+  color: var(--text);
+}
+
+/* ── GRID LAYOUT ── */
+.digest-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1px;
+  background: var(--border);
+  margin: 0 -24px;
+  padding: 0 24px;
+}
+@media (max-width: 600px) { .digest-grid { grid-template-columns: 1fr; } }
+
+.grid-cell {
+  background: var(--bg);
+  padding: 28px 0;
+  border-bottom: 1px solid var(--border);
+}
+.grid-cell:nth-child(odd) { padding-right: 28px; border-right: 1px solid var(--border); }
+.grid-cell:nth-child(even) { padding-left: 28px; }
+
+.cell-tag {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.6rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 12px;
+}
+.cell-tag.hot { color: var(--accent2); }
+.cell-tag.gold { color: var(--accent); }
+.cell-title {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  line-height: 1.4;
+  margin-bottom: 10px;
+  color: var(--text);
+}
+.cell-body {
+  font-size: 0.82rem;
+  color: var(--muted);
+  line-height: 1.7;
+}
+.cell-quote {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.78rem;
+  color: var(--text);
+  border-left: 2px solid var(--accent);
+  padding-left: 12px;
+  margin-bottom: 8px;
+  line-height: 1.5;
+}
+.cell-attr {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.65rem;
+  color: var(--muted);
+}
+
+/* ── POSTS TABLE ── */
+.posts-section { padding: 32px 0; border-bottom: 1px solid var(--border); }
+.posts-section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.posts-section-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.4rem;
+  letter-spacing: 1px;
+}
+.posts-count {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.65rem;
+  color: var(--muted);
+  letter-spacing: 1px;
+}
+
+.post-row {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--border);
+  animation: fadeUp 0.4s ease both;
+  text-decoration: none;
+  color: inherit;
+}
+.post-row:last-child { border-bottom: none; }
+@keyframes fadeUp { from { opacity:0; transform:translateY(8px); } to { opacity:1; transform:translateY(0); } }
+
+.post-num {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.6rem;
+  color: var(--border2);
+  line-height: 1;
+  min-width: 28px;
+  padding-top: 2px;
+}
+.post-num.top1 { color: var(--accent); }
+.post-num.top2 { color: var(--muted); }
+
+.post-content { flex: 1; }
+.post-title-text {
+  font-size: 0.88rem;
+  font-weight: 500;
+  line-height: 1.5;
+  margin-bottom: 6px;
+  color: var(--text);
+}
+.post-summary-text {
+  font-size: 0.78rem;
+  color: var(--muted);
+  line-height: 1.6;
+  margin-bottom: 8px;
+}
+.post-tags { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+.post-tag {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.62rem;
+  color: var(--muted);
+  letter-spacing: 0.5px;
+}
+.post-sub { color: var(--accent); }
+.post-score {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.72rem;
+  color: var(--muted);
+  text-align: right;
+  padding-top: 2px;
+  white-space: nowrap;
+}
+.post-score strong { color: var(--text); display: block; font-size: 0.9rem; }
+
+/* ── SCOREBOARD ── */
+.scoreboard {
+  padding: 32px 0;
+  border-bottom: 1px solid var(--border);
+}
+.score-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.75rem;
+}
+.score-table th {
+  text-align: left;
+  padding: 10px 16px;
+  color: var(--muted);
+  font-size: 0.62rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  border-bottom: 1px solid var(--border2);
+  font-weight: 400;
+}
+.score-table td {
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--border);
+  color: var(--muted);
+  vertical-align: top;
+}
+.score-table td:first-child { color: var(--text); }
+.score-table td .val { color: var(--accent); font-weight: 500; }
+.score-table tr:last-child td { border-bottom: none; }
+
+/* ── FACTS ── */
+.facts-section { padding: 32px 0; border-bottom: 1px solid var(--border); }
+.fact-item {
+  display: flex;
+  gap: 14px;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--border);
+  align-items: flex-start;
+}
+.fact-item:last-child { border-bottom: none; }
+.fact-num {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.65rem;
+  color: var(--accent);
+  padding-top: 2px;
+  min-width: 20px;
+}
+.fact-text {
+  font-size: 0.82rem;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+/* ── FOOTER ── */
+footer {
+  padding: 32px 0;
+  border-top: 1px solid var(--border);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.footer-left {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.65rem;
+  color: var(--muted);
+  letter-spacing: 1px;
+}
+.footer-left a { color: var(--accent); text-decoration: none; }
+.footer-right {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.65rem;
+  color: var(--muted2);
+}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <nav>
+    <div class="nav-logo">rishiraj.paul / <span>GTM Daily</span></div>
+    <div class="nav-right">
+      <a href="https://rishirajpaul3.github.io" target="_blank">Portfolio →</a>
+    </div>
+  </nav>
+</div>
+
+<div class="api-strip">
+  <div class="wrap">
+    <div class="api-inner">
+      <div class="api-label">Anthropic API Key</div>
+      <input type="password" class="api-input" id="apiKey" placeholder="sk-ant-api03-..." />
+    </div>
+  </div>
+</div>
+
+<div class="wrap">
+  <div class="masthead">
+    <div class="issue-line">GTM Engineer Intelligence Feed</div>
+    <h1>GTM<br><span class="accent">DAILY</span></h1>
+    <div class="masthead-sub">
+      Top signal from <span>r/GTMbuilders · r/gtmengineering · r/sales · r/startups · HackerNews</span>
+      — summarised by Claude, curated by <span>Rishiraj Paul</span>
+    </div>
+  </div>
+
+  <div class="controls">
+    <div class="ctrl-group">
+      <div class="ctrl-label">Focus Topic</div>
+      <select class="ctrl-select" id="topic">
+        <option value="GTM engineering and sales automation">GTM Engineering</option>
+        <option value="AI sales tools and outbound automation">AI Sales Tools</option>
+        <option value="Clay enrichment and lead gen">Clay & Lead Gen</option>
+        <option value="CRM automation and RevOps">RevOps & CRM</option>
+        <option value="cold email and outbound strategy">Cold Email</option>
+        <option value="startup growth and go-to-market">Startup GTM</option>
+      </select>
+    </div>
+    <div class="ctrl-group">
+      <div class="ctrl-label">Sources</div>
+      <select class="ctrl-select" id="sources">
+        <option value="r/GTMbuilders, r/gtmengineering, r/sales, HackerNews">All Sources</option>
+        <option value="r/GTMbuilders and r/gtmengineering">GTM Subreddits</option>
+        <option value="r/sales and r/startups">Sales & Startups</option>
+        <option value="HackerNews">Hacker News</option>
+      </select>
+    </div>
+    <button class="run-btn" id="runBtn" onclick="generate()">RUN DIGEST →</button>
+  </div>
+
+  <div id="status">
+    <div class="status-terminal">
+      <div class="terminal-header">
+        <div class="dot-r"></div><div class="dot-y"></div><div class="dot-g"></div>
+      </div>
+      <div class="terminal-line done" id="tl1">$ initializing gtm_daily.sh</div>
+      <div class="terminal-line" id="tl2">$ searching reddit + hackernews...</div>
+      <div class="terminal-line" id="tl3">$ running claude analysis...</div>
+      <div class="terminal-line" id="tl4">$ generating digest...<span class="cursor"></span></div>
+    </div>
+  </div>
+
+  <div class="error-box" id="errorBox"></div>
+  <div id="digest"></div>
+</div>
+
+<script>
+const TODAY = new Date().toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
+const TODAY_SHORT = new Date().toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+
+function animateTerminal() {
+  const lines = ['tl1','tl2','tl3','tl4'];
+  lines.forEach((id, i) => {
+    const el = document.getElementById(id);
+    el.classList.remove('active','done');
+    setTimeout(() => el.classList.add('active'), i * 1800);
+    setTimeout(() => { el.classList.remove('active'); el.classList.add('done'); }, i * 1800 + 1600);
+  });
+}
+
+async function generate() {
+  const key = document.getElementById('apiKey').value.trim();
+  const topic = document.getElementById('topic').value;
+  const sources = document.getElementById('sources').value;
+  if (!key) return alert('Paste your Anthropic API key first.');
+
+  const btn = document.getElementById('runBtn');
+  const status = document.getElementById('status');
+  const errorBox = document.getElementById('errorBox');
+  const digestEl = document.getElementById('digest');
+
+  btn.disabled = true;
+  status.style.display = 'block';
+  errorBox.style.display = 'none';
+  digestEl.style.display = 'none';
+  animateTerminal();
+
+  const prompt = `You are a sharp GTM intelligence analyst. Search ${sources} for today's most interesting posts, discussions, and tools related to ${topic}.
+
+Find at least 6-8 real posts/threads/articles from today or this week. Then generate a daily digest in this EXACT JSON format (raw JSON only, no markdown, no backticks):
+
+{
+  "date": "${TODAY_SHORT}",
+  "topic": "${topic}",
+  "pulse": "2-3 sentence editorial overview of what's happening in the GTM/sales space today. Opinionated, sharp, specific.",
+  "hottest_thread": {
+    "title": "exact post title",
+    "source": "r/GTMbuilders or HackerNews etc",
+    "summary": "2-3 sentences about what's being discussed and why it matters for GTM engineers",
+    "upvotes": 342,
+    "comments": 89,
+    "url": "https://..."
+  },
+  "tool_of_the_day": {
+    "name": "Tool or repo name",
+    "tagline": "one line description",
+    "why_it_matters": "2 sentences on why GTM engineers should care",
+    "url": "https://..."
+  },
+  "best_take": {
+    "quote": "exact quote from a comment or post",
+    "attribution": "u/username or HN user",
+    "context": "one sentence on why this take is sharp"
+  },
+  "top_posts": [
+    {
+      "title": "post title",
+      "source": "subreddit or site",
+      "upvotes": 234,
+      "comments": 45,
+      "summary": "1-2 sentence summary of what GTM engineers should take away from this",
+      "url": "https://..."
+    }
+  ],
+  "fun_facts": [
+    "specific, witty one-liner fact about today's content",
+    "another specific fact with a number or detail",
+    "a third fact that's slightly surprising"
+  ],
+  "scoreboard": {
+    "posts_tracked": 89,
+    "total_upvotes": 4200,
+    "total_comments": 890,
+    "top_subreddit": "r/GTMbuilders",
+    "hottest_keyword": "Clay",
+    "tools_mentioned": 7
+  }
+}`;
+
+  try {
+    const res = await fetch('https://api.anthropic.com/v1/messages', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'x-api-key': key,
+        'anthropic-version': '2023-06-01',
+        'anthropic-dangerous-direct-browser-access': 'true'
+      },
+      body: JSON.stringify({
+        model: 'claude-sonnet-4-20250514',
+        max_tokens: 2000,
+        tools: [{ type: 'web_search_20250305', name: 'web_search' }],
+        messages: [{ role: 'user', content: prompt }]
+      })
+    });
+
+    const data = await res.json();
+    if (data.error) throw new Error(data.error.message);
+
+    const text = data.content.filter(b => b.type === 'text').map(b => b.text).join('');
+    const match = text.match(/\{[\s\S]*\}/);
+    if (!match) throw new Error('No digest generated. Try again.');
+
+    let d;
+    try { d = JSON.parse(match[0]); }
+    catch(e) { throw new Error('Could not parse digest. Try again.'); }
+
+    renderDigest(d);
+
+  } catch(e) {
+    errorBox.textContent = 'Error: ' + e.message;
+    errorBox.style.display = 'block';
+  } finally {
+    btn.disabled = false;
+    status.style.display = 'none';
+  }
+}
+
+function fmt(n) {
+  if (!n) return '—';
+  if (n >= 1000) return (n/1000).toFixed(1) + 'k';
+  return n;
+}
+
+function renderDigest(d) {
+  const posts = (d.top_posts || []).slice(0, 6);
+  const facts = d.fun_facts || [];
+  const sb = d.scoreboard || {};
+
+  let html = `
+  <div class="digest-header">
+    <div>
+      <div class="digest-date">${d.date || TODAY_SHORT} — Issue #${Math.floor(Math.random()*900+100)}</div>
+      <div class="digest-title">Today's GTM Intelligence</div>
+    </div>
+    <div class="digest-meta">
+      <div class="meta-pill">Posts tracked <span>${fmt(sb.posts_tracked)}</span></div>
+      <div class="meta-pill">Upvotes <span>${fmt(sb.total_upvotes)}</span></div>
+      <div class="meta-pill">Keyword <span>${sb.hottest_keyword || '—'}</span></div>
+    </div>
+  </div>
+
+  <!-- PULSE -->
+  <div class="pulse-banner">
+    <div class="section-tag">The Pulse</div>
+    <div class="pulse-text">${d.pulse || ''}</div>
+  </div>
+
+  <!-- 2-col grid: hottest thread + tool of day + best take -->
+  <div class="digest-grid">`;
+
+  if (d.hottest_thread) {
+    const ht = d.hottest_thread;
+    html += `
+    <div class="grid-cell">
+      <div class="cell-tag hot">🔥 Hottest Thread</div>
+      <div class="cell-title">${ht.title}</div>
+      <div class="cell-body">${ht.summary}</div>
+      <div class="post-tags" style="margin-top:12px">
+        <span class="post-tag post-sub">${ht.source}</span>
+        <span class="post-tag">▲ ${fmt(ht.upvotes)}</span>
+        <span class="post-tag">💬 ${fmt(ht.comments)}</span>
+        ${ht.url ? `<a href="${ht.url}" target="_blank" style="font-family:'IBM Plex Mono',monospace;font-size:0.62px;color:var(--accent);text-decoration:none;font-size:0.65rem">→ View</a>` : ''}
+      </div>
+    </div>`;
+  }
+
+  if (d.tool_of_the_day) {
+    const t = d.tool_of_the_day;
+    html += `
+    <div class="grid-cell">
+      <div class="cell-tag gold">⚡ Tool of the Day</div>
+      <div class="cell-title">${t.name}</div>
+      <div class="cell-body" style="margin-bottom:10px;font-style:italic;color:var(--text)">${t.tagline}</div>
+      <div class="cell-body">${t.why_it_matters}</div>
+      ${t.url ? `<div style="margin-top:12px"><a href="${t.url}" target="_blank" style="font-family:'IBM Plex Mono',monospace;font-size:0.65rem;color:var(--accent);text-decoration:none">→ Check it out</a></div>` : ''}
+    </div>`;
+  }
+
+  if (d.best_take) {
+    const bt = d.best_take;
+    html += `
+    <div class="grid-cell">
+      <div class="cell-tag gold">💬 Best Take</div>
+      <div class="cell-quote">"${bt.quote}"</div>
+      <div class="cell-attr">${bt.attribution}</div>
+      <div class="cell-body" style="margin-top:10px">${bt.context}</div>
+    </div>`;
+  }
+
+  if (facts.length) {
+    html += `
+    <div class="grid-cell">
+      <div class="cell-tag">📊 Fun Facts</div>
+      ${facts.map((f,i) => `<div class="fact-item"><div class="fact-num">0${i+1}</div><div class="fact-text">${f}</div></div>`).join('')}
+    </div>`;
+  }
+
+  html += `</div>`;
+
+  // TOP POSTS
+  if (posts.length) {
+    html += `
+    <div class="posts-section">
+      <div class="posts-section-header">
+        <div class="posts-section-title">Top Posts</div>
+        <div class="posts-count">${posts.length} posts · ${TODAY_SHORT}</div>
+      </div>
+      ${posts.map((p,i) => `
+        <a class="post-row" href="${p.url || '#'}" target="_blank" style="animation-delay:${i*0.06}s">
+          <div class="post-num ${i===0?'top1':i===1?'top2':''}">${String(i+1).padStart(2,'0')}</div>
+          <div class="post-content">
+            <div class="post-title-text">${p.title}</div>
+            <div class="post-summary-text">${p.summary}</div>
+            <div class="post-tags">
+              <span class="post-tag post-sub">${p.source}</span>
+              <span class="post-tag">▲ ${fmt(p.upvotes)}</span>
+              <span class="post-tag">💬 ${fmt(p.comments)}</span>
+            </div>
+          </div>
+          <div class="post-score">
+            <strong>${fmt(p.upvotes)}</strong>
+            upvotes
+          </div>
+        </a>`).join('')}
+    </div>`;
+  }
+
+  // SCOREBOARD
+  html += `
+  <div class="scoreboard">
+    <div class="posts-section-header" style="margin-bottom:16px">
+      <div class="posts-section-title">Scoreboard</div>
+    </div>
+    <table class="score-table">
+      <thead>
+        <tr>
+          <th>Metric</th>
+          <th>Count</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Posts tracked</td><td><span class="val">${fmt(sb.posts_tracked)}</span></td></tr>
+        <tr><td>Total upvotes</td><td><span class="val">${fmt(sb.total_upvotes)}</span></td></tr>
+        <tr><td>Total comments</td><td><span class="val">${fmt(sb.total_comments)}</span></td></tr>
+        <tr><td>Top subreddit</td><td><span class="val">${sb.top_subreddit || '—'}</span></td></tr>
+        <tr><td>Hottest keyword</td><td><span class="val">${sb.hottest_keyword || '—'}</span></td></tr>
+        <tr><td>Tools mentioned</td><td><span class="val">${sb.tools_mentioned || '—'}</span></td></tr>
+        <tr><td>Generated at</td><td><span class="val">${new Date().toLocaleTimeString()}</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <footer>
+    <div class="footer-left">
+      Built by <a href="https://rishirajpaul3.github.io" target="_blank">Rishiraj Paul</a> · GTM Engineer ·
+      Powered by Claude + Web Search
+    </div>
+    <div class="footer-right">GTM Daily · ${TODAY_SHORT}</div>
+  </footer>`;
+
+  const digestEl = document.getElementById('digest');
+  digestEl.innerHTML = html;
+  digestEl.style.display = 'block';
+  digestEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+</script>
+</body>
+</html>
