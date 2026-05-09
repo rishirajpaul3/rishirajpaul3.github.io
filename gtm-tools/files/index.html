@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GTM Tools — Rishiraj Paul</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IBM+Plex+Mono:wght@300;400;500&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg: #0c0c0c;
+  --surface: #141414;
+  --border: #1e1e1e;
+  --border2: #2a2a2a;
+  --accent: #e8ff47;
+  --accent2: #ff4757;
+  --accent3: #00d4aa;
+  --text: #f0ede8;
+  --muted: #505050;
+  --muted2: #383838;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'IBM Plex Sans', sans-serif;
+  min-height: 100vh;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.015) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.015) 1px, transparent 1px);
+  background-size: 48px 48px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.wrap { max-width: 960px; margin: 0 auto; padding: 0 24px; position: relative; z-index: 1; }
+
+/* NAV */
+nav {
+  border-bottom: 1px solid var(--border);
+  padding: 16px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav-logo {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.72rem;
+  color: var(--muted);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+.nav-logo span { color: var(--accent); }
+.nav-right { display: flex; gap: 20px; align-items: center; }
+.nav-right a {
+  font-size: 0.72rem;
+  color: var(--muted);
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: color 0.2s;
+}
+.nav-right a:hover { color: var(--text); }
+
+/* MASTHEAD */
+.masthead {
+  padding: 72px 0 56px;
+  border-bottom: 1px solid var(--border);
+}
+.tag-line {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.68rem;
+  color: var(--muted);
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.tag-line::before { content: ''; width: 24px; height: 1px; background: var(--accent); }
+
+h1 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(3.5rem, 10vw, 7.5rem);
+  line-height: 0.92;
+  letter-spacing: 2px;
+  margin-bottom: 28px;
+}
+h1 .acc { color: var(--accent); }
+
+.masthead-sub {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.82rem;
+  color: var(--muted);
+  line-height: 1.8;
+  max-width: 560px;
+}
+.masthead-sub span { color: var(--text); }
+
+/* STATS BAR */
+.stats-bar {
+  display: flex;
+  gap: 40px;
+  padding: 24px 0;
+  border-bottom: 1px solid var(--border);
+  flex-wrap: wrap;
+}
+.stat {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.stat-num {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.8rem;
+  color: var(--accent);
+  letter-spacing: 1px;
+}
+.stat-label {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.6rem;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* TOOLS GRID */
+.tools-section { padding: 48px 0; }
+
+.section-label {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.62rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 28px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.section-label::after { content: ''; flex: 1; height: 1px; background: var(--border2); }
+
+.tools-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(420px, 1fr));
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.tool-card {
+  background: var(--bg);
+  padding: 36px 32px;
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  transition: background 0.2s;
+  position: relative;
+  overflow: hidden;
+}
+.tool-card::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 2px;
+  background: var(--accent);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+.tool-card:hover { background: var(--surface); }
+.tool-card:hover::after { transform: scaleX(1); }
+
+.card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.card-index {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.6rem;
+  color: var(--muted2);
+  letter-spacing: 2px;
+}
+
+.card-badge {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.58rem;
+  color: var(--accent);
+  background: rgba(232,255,71,0.08);
+  border: 1px solid rgba(232,255,71,0.2);
+  border-radius: 2px;
+  padding: 3px 8px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.card-badge.live { color: var(--accent3); background: rgba(0,212,170,0.08); border-color: rgba(0,212,170,0.2); }
+
+.card-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 2.4rem;
+  letter-spacing: 2px;
+  line-height: 1;
+  color: var(--text);
+}
+.card-title .acc { color: var(--accent); }
+
+.card-desc {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.75rem;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.card-tags {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.tag {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.58rem;
+  color: var(--muted);
+  border: 1px solid var(--border2);
+  border-radius: 2px;
+  padding: 3px 8px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.card-arrow {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.7rem;
+  color: var(--muted);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: color 0.2s, gap 0.2s;
+}
+.tool-card:hover .card-arrow { color: var(--accent); gap: 10px; }
+
+/* FOOTER */
+footer {
+  border-top: 1px solid var(--border);
+  padding: 28px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.footer-left {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.65rem;
+  color: var(--muted);
+  letter-spacing: 1px;
+}
+.footer-left span { color: var(--accent); }
+.footer-right {
+  display: flex;
+  gap: 16px;
+}
+.footer-right a {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.65rem;
+  color: var(--muted);
+  text-decoration: none;
+  letter-spacing: 1px;
+  transition: color 0.2s;
+}
+.footer-right a:hover { color: var(--text); }
+
+@media (max-width: 600px) {
+  .tools-grid { grid-template-columns: 1fr; }
+  .stats-bar { gap: 24px; }
+  h1 { font-size: 3.2rem; }
+}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <nav>
+    <div class="nav-logo">GTM <span>//</span> Tools</div>
+    <div class="nav-right">
+      <a href="https://rishirajpaul3.github.io" target="_blank">Portfolio</a>
+      <a href="https://www.linkedin.com/in/rishirajpaul3" target="_blank">LinkedIn</a>
+    </div>
+  </nav>
+
+  <div class="masthead">
+    <div class="tag-line">Browser-based AI tools</div>
+    <h1>GTM<br><span class="acc">TOOLKIT</span></h1>
+    <p class="masthead-sub">
+      AI-powered tools for <span>Go-To-Market engineers</span>.<br>
+      Built by <span>Rishiraj Paul</span> — runs entirely in your browser,<br>
+      powered by the <span>Anthropic API</span>.
+    </p>
+  </div>
+
+  <div class="stats-bar">
+    <div class="stat">
+      <div class="stat-num">3</div>
+      <div class="stat-label">Live Tools</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">0</div>
+      <div class="stat-label">Backend Required</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">Claude</div>
+      <div class="stat-label">Powered By</div>
+    </div>
+  </div>
+
+  <div class="tools-section">
+    <div class="section-label">Available tools</div>
+    <div class="tools-grid">
+
+      <!-- GTM Job Hunter -->
+      <a class="tool-card" href="gtm-job-hunter-6.html">
+        <div class="card-top">
+          <div class="card-index">01</div>
+          <div class="card-badge live">Live</div>
+        </div>
+        <div class="card-title">GTM JOB <span class="acc">HUNTER</span></div>
+        <p class="card-desc">
+          Drop in your profile and a job description — get a tailored cold outreach message, application angle, and talking points generated by Claude. Built for GTM engineers applying to agencies and startups.
+        </p>
+        <div class="card-tags">
+          <span class="tag">Outreach</span>
+          <span class="tag">Job Search</span>
+          <span class="tag">Claude AI</span>
+        </div>
+        <div class="card-arrow">Open tool →</div>
+      </a>
+
+      <!-- GTM Daily -->
+      <a class="tool-card" href="gtm-daily.html">
+        <div class="card-top">
+          <div class="card-index">02</div>
+          <div class="card-badge">Newsletter</div>
+        </div>
+        <div class="card-title">GTM <span class="acc">DAILY</span></div>
+        <p class="card-desc">
+          Your daily briefing on GTM signals — curated news, hiring trends, and tool updates for revenue operators and GTM engineers. Generated fresh on demand via Claude and live web search.
+        </p>
+        <div class="card-tags">
+          <span class="tag">Intelligence</span>
+          <span class="tag">News</span>
+          <span class="tag">Web Search</span>
+        </div>
+        <div class="card-arrow">Open tool →</div>
+      </a>
+
+      <!-- PriceHunter -->
+      <a class="tool-card" href="pricehunter-v6.html">
+        <div class="card-top">
+          <div class="card-index">03</div>
+          <div class="card-badge live">Live</div>
+        </div>
+        <div class="card-title">PRICE<span class="acc">HUNTER</span></div>
+        <p class="card-desc">
+          Paste any product and let Claude hunt for the best price across the web. Compares deals, surfaces discounts, and gives you a buying recommendation — all from a single prompt.
+        </p>
+        <div class="card-tags">
+          <span class="tag">Pricing</span>
+          <span class="tag">Web Search</span>
+          <span class="tag">Claude AI</span>
+        </div>
+        <div class="card-arrow">Open tool →</div>
+      </a>
+
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-left">
+      Built by <span>Rishiraj Paul</span> · GTM Engineer
+    </div>
+    <div class="footer-right">
+      <a href="https://rishirajpaul3.github.io" target="_blank">Portfolio</a>
+      <a href="mailto:rishirajpaul3@gmail.com">Email</a>
+      <a href="https://www.linkedin.com/in/rishirajpaul3" target="_blank">LinkedIn</a>
+    </div>
+  </footer>
+</div>
+
+</body>
+</html>
