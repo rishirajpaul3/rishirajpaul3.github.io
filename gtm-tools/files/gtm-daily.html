@@ -666,7 +666,7 @@ Find at least 6-8 real posts/threads/articles from today or this week. Then gene
   }
 }`;
 
-  try {
+  async function callClaude(messages) {
     const res = await fetch('https://api.anthropic.com/v1/messages', {
       method: 'POST',
       headers: {
@@ -677,17 +677,57 @@ Find at least 6-8 real posts/threads/articles from today or this week. Then gene
       },
       body: JSON.stringify({
         model: 'claude-sonnet-4-20250514',
-        max_tokens: 2000,
+        max_tokens: 4000,
         tools: [{ type: 'web_search_20250305', name: 'web_search' }],
-        messages: [{ role: 'user', content: prompt }]
+        messages
       })
     });
-
     const data = await res.json();
     if (data.error) throw new Error(data.error.message);
+    return data;
+  }
 
-    const text = data.content.filter(b => b.type === 'text').map(b => b.text).join('');
-    const match = text.match(/\{[\s\S]*\}/);
+  try {
+    let messages = [{ role: 'user', content: prompt }];
+    let finalText = '';
+    let rounds = 0;
+
+    while (rounds < 8) {
+      rounds++;
+      const data = await callClaude(messages);
+
+      // Collect any text from this response
+      const textBlocks = data.content.filter(b => b.type === 'text');
+      if (textBlocks.length) {
+        finalText = textBlocks.map(b => b.text).join('');
+      }
+
+      // If stop_reason is end_turn, we're done
+      if (data.stop_reason === 'end_turn') break;
+
+      // If there are tool_use blocks, we need to feed results back
+      const toolUseBlocks = data.content.filter(b => b.type === 'tool_use');
+      if (!toolUseBlocks.length) break;
+
+      // Add assistant message with full content
+      messages.push({ role: 'assistant', content: data.content });
+
+      // Add tool results (web_search results come back in the response itself)
+      const toolResults = toolUseBlocks.map(block => ({
+        type: 'tool_result',
+        tool_use_id: block.id,
+        content: block.type === 'web_search_20250305'
+          ? (block.content || 'Search completed.')
+          : 'Done.'
+      }));
+      messages.push({ role: 'user', content: toolResults });
+    }
+
+    if (!finalText) throw new Error('No digest generated. Try again.');
+
+    // Extract JSON from the final text
+    const clean = finalText.replace(/```json|```/g, '').trim();
+    const match = clean.match(/\{[\s\S]*\}/);
     if (!match) throw new Error('No digest generated. Try again.');
 
     let d;
