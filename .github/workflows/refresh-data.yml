@@ -1,0 +1,35 @@
+name: Refresh GitHub data
+
+on:
+  schedule:
+    # Runs daily at 8am UTC
+    - cron: '0 8 * * *'
+  workflow_dispatch:
+    # Also lets you trigger manually from GitHub Actions tab
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Fetch GitHub profile stats
+        run: |
+          mkdir -p data
+          curl -sf "https://api.github.com/users/rishirajpaul3" \
+            -H "Accept: application/vnd.github+json" \
+            > data/github-profile.json
+
+          curl -sf "https://api.github.com/users/rishirajpaul3/repos?sort=updated&per_page=20" \
+            -H "Accept: application/vnd.github+json" \
+            > data/github-repos.json
+
+          echo "Fetched at $(date -u)" > data/last-updated.txt
+
+      - name: Commit if data changed
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/github-profile.json data/github-repos.json data/last-updated.txt
+          git diff --staged --quiet || git commit -m "chore: refresh github data [skip ci]"
+          git push
