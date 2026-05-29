@@ -1,0 +1,84 @@
+name: Build blog posts
+
+on:
+  push:
+    paths:
+      - 'posts/**'       # triggers when you add/edit a markdown post
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Parse markdown posts to JSON
+        run: |
+          mkdir -p data
+          python3 - <<'PYEOF'
+          import os, json, re
+          from datetime import datetime
+
+          posts = []
+          posts_dir = "posts"
+
+          if not os.path.exists(posts_dir):
+              print("No posts/ directory found, skipping")
+              exit(0)
+
+          for fname in sorted(os.listdir(posts_dir), reverse=True):
+              if not fname.endswith(".md"):
+                  continue
+
+              with open(os.path.join(posts_dir, fname)) as f:
+                  content = f.read()
+
+              # Parse frontmatter (--- key: value ---)
+              fm = {}
+              body = content
+              if content.startswith("---"):
+                  parts = content.split("---", 2)
+                  if len(parts) >= 3:
+                      for line in parts[1].strip().splitlines():
+                          if ":" in line:
+                              k, v = line.split(":", 1)
+                              fm[k.strip()] = v.strip()
+                      body = parts[2].strip()
+
+              slug = fname.replace(".md", "")
+              # First non-empty paragraph as excerpt if not in frontmatter
+              excerpt = fm.get("excerpt", "")
+              if not excerpt:
+                  paras = [p.strip() for p in body.split("\n\n") if p.strip() and not p.startswith("#")]
+                  excerpt = paras[0][:240] + "..." if paras else ""
+
+              tags_raw = fm.get("tags", "")
+              tags = [t.strip() for t in tags_raw.split(",")] if tags_raw else []
+
+              posts.append({
+                  "slug": slug,
+                  "title": fm.get("title", slug.replace("-", " ").title()),
+                  "date": fm.get("date", ""),
+                  "source": "blog",
+                  "excerpt": excerpt,
+                  "readTime": fm.get("readTime", ""),
+                  "tags": tags,
+                  "content": body
+              })
+
+          # Sort by date descending
+          posts.sort(key=lambda p: p.get("date", ""), reverse=True)
+
+          with open("data/posts.json", "w") as f:
+              json.dump(posts, f, indent=2)
+
+          print(f"Generated data/posts.json with {len(posts)} posts")
+          PYEOF
+
+      - name: Commit if changed
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/posts.json
+          git diff --staged --quiet || git commit -m "chore: rebuild posts.json [skip ci]"
+          git push

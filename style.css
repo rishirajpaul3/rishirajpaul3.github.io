@@ -734,6 +734,67 @@ h1 em { font-style: normal; color: var(--accent); }
 }
 .footer-links a:hover { color: var(--accent); }
 
+/* ── FLOATING SOCIAL SIDEBAR ── */
+.social-sidebar {
+  position: fixed;
+  right: 24px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 50;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.social-btn {
+  width: 38px; height: 38px;
+  display: flex; align-items: center; justify-content: center;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+  text-decoration: none;
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.06em;
+  transition: border-color 0.2s, color 0.2s, background 0.2s;
+}
+.social-btn:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  background: var(--accent-dim);
+}
+
+/* ── SUBSCRIBE STRIP ── */
+.subscribe-strip {
+  border: 1px solid var(--border);
+  background: var(--surface);
+  padding: 36px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+}
+
+.subscribe-form-strip {
+  display: flex;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.subscribe-input-strip {
+  font-family: var(--mono);
+  font-size: 13px;
+  padding: 10px 16px;
+  background: var(--bg);
+  border: 1px solid var(--border-2);
+  color: var(--text);
+  outline: none;
+  width: 220px;
+  transition: border-color 0.2s;
+}
+.subscribe-input-strip:focus { border-color: var(--accent); }
+.subscribe-input-strip::placeholder { color: var(--text-dim); }
+
 /* ── ANIMATIONS ── */
 .fade-up {
   opacity: 0;
@@ -747,6 +808,10 @@ h1 em { font-style: normal; color: var(--accent); }
   nav { padding: 0 20px; }
   .nav-links { display: none; }
   .page-wrap { padding: 0 20px; }
+  .social-sidebar { display: none; }
+  .subscribe-strip { flex-direction: column; gap: 20px; padding: 28px 20px; }
+  .subscribe-form-strip { flex-direction: column; width: 100%; }
+  .subscribe-input-strip { width: 100%; }
   h1 { font-size: 38px; }
   .hero-stats { grid-template-columns: 1fr 1fr; }
   .story-grid,

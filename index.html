@@ -17,19 +17,26 @@
 
 <!-- ── NAV ── -->
 <nav>
-  <a class="nav-brand" href="#hero">
+  <a class="nav-brand" href="index.html">
     <span class="status-dot"></span>
     rishiraj.paul
   </a>
   <ul class="nav-links">
-    <li><a href="#story">story</a></li>
+    <li><a href="index.html" style="color:var(--text)">home</a></li>
+    <li><a href="blog.html">blog</a></li>
     <li><a href="#projects">projects</a></li>
     <li><a href="#services">services</a></li>
-    <li><a href="#content">content</a></li>
     <li><a href="#contact">contact</a></li>
   </ul>
   <a href="#contact" class="nav-cta">let's talk →</a>
 </nav>
+
+<!-- ── FLOATING SOCIAL SIDEBAR ── -->
+<div class="social-sidebar">
+  <a href="https://linkedin.com/in/rishiraj-paul" target="_blank" class="social-btn" title="LinkedIn">in</a>
+  <a href="https://github.com/rishirajpaul3" target="_blank" class="social-btn" title="GitHub">gh</a>
+  <a href="mailto:rishirajpaul3@gmail.com" class="social-btn" title="Email">@</a>
+</div>
 
 <!-- ── HERO ── -->
 <div class="page-wrap">
@@ -431,10 +438,33 @@
 </section>
 </div>
 
+<!-- ── SUBSCRIBE ── -->
+<div style="max-width:var(--max-w);margin:0 auto;padding:0 40px 80px;">
+  <div class="subscribe-strip">
+    <div>
+      <div style="font-size:18px;font-weight:600;letter-spacing:-0.01em;margin-bottom:5px;">
+        Follow the build
+      </div>
+      <div style="font-size:13px;color:var(--text-muted);">
+        GTM systems, AI tools, and what I'm shipping — no noise, no spam.
+      </div>
+    </div>
+    <form class="subscribe-form-strip" id="subscribe-form-strip"
+          action="https://api.web3forms.com/submit" method="POST">
+      <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY">
+      <input type="hidden" name="subject" value="New subscriber from rishirajpaul.com">
+      <input type="email" name="email" class="subscribe-input-strip"
+             placeholder="your@email.com" required>
+      <button type="submit" class="btn-primary">Subscribe</button>
+    </form>
+  </div>
+</div>
+
 <footer>
   <div class="footer-wrap">
     <span class="footer-l">© 2026 Rishiraj Paul — GTM Engineer · UK</span>
     <div class="footer-links">
+      <a href="blog.html">Blog</a>
       <a href="https://linkedin.com/in/rishiraj-paul" target="_blank">LinkedIn</a>
       <a href="https://github.com/rishirajpaul3" target="_blank">GitHub</a>
       <a href="mailto:rishirajpaul3@gmail.com">Email</a>
@@ -586,6 +616,22 @@ document.getElementById('contact-form').addEventListener('submit', async functio
     btn.disabled = false;
   }
 });
+
+/* ── SUBSCRIBE STRIP ── */
+const subForm = document.getElementById('subscribe-form-strip');
+if (subForm) {
+  subForm.addEventListener('submit', async function(e) {
+    e.preventDefault();
+    const btn = this.querySelector('button');
+    btn.textContent = '...'; btn.disabled = true;
+    try {
+      const res = await fetch(this.action, { method: 'POST', body: new FormData(this) });
+      const json = await res.json();
+      btn.textContent = json.success ? '✓ subscribed' : 'error — email me';
+      if (!json.success) btn.disabled = false;
+    } catch (_) { btn.textContent = 'error'; btn.disabled = false; }
+  });
+}
 
 /* ── SCROLL FADE-IN ── */
 const observer = new IntersectionObserver(entries => {
