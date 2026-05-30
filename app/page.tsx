@@ -118,9 +118,7 @@ export default function Home() {
                 </a>
               ))}
             </div>
-            <form action="https://api.web3forms.com/submit" method="POST" style={{ display:"flex", flexDirection:"column", gap:12 }}>
-              <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY" />
-              <input type="hidden" name="subject" value="New message from rishirajpaul.com" />
+            <form action="https://formspree.io/f/mlgvkeja" method="POST" style={{ display:"flex", flexDirection:"column", gap:12 }}>
               {[{name:"name",label:"NAME",type:"text",ph:"Your name",req:true},{name:"company",label:"COMPANY",type:"text",ph:"Your company",req:false},{name:"email",label:"EMAIL",type:"email",ph:"your@company.com",req:true}].map(f=>(
                 <div key={f.name} style={{ display:"flex", flexDirection:"column", gap:6 }}>
                   <label style={{ fontFamily:"'JetBrains Mono',monospace", fontSize:10, letterSpacing:"0.1em", color:"var(--text-dim)" }}>{f.label}</label>
@@ -142,9 +140,7 @@ export default function Home() {
             <div style={{ fontFamily:"'Space Grotesk',sans-serif", fontSize:20, fontWeight:600, color:"var(--text)", marginBottom:6 }}>// follow the build</div>
             <div style={{ fontFamily:"'JetBrains Mono',monospace", fontSize:13, color:"var(--text-muted)" }}>GTM systems, AI tools, and what I&apos;m shipping — no noise.</div>
           </div>
-          <form action="https://api.web3forms.com/submit" method="POST" style={{ display:"flex", gap:8 }}>
-            <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY" />
-            <input type="hidden" name="subject" value="New subscriber" />
+          <form action="https://formspree.io/f/mlgvkeja" method="POST" style={{ display:"flex", gap:8 }}>
             <input type="email" name="email" placeholder="your@email.com" required style={{ width:220, borderRadius:8 }} />
             <button type="submit" style={{ fontFamily:"'JetBrains Mono',monospace", fontSize:12, padding:"11px 22px", background:"var(--gold)", color:"var(--bg)", border:"none", borderRadius:8, fontWeight:600, cursor:"pointer", whiteSpace:"nowrap" }}>Subscribe</button>
           </form>

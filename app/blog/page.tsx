@@ -47,9 +47,7 @@ export default function BlogPage() {
             <div style={{ fontFamily:"'Space Grotesk',sans-serif", fontSize:20, fontWeight:600, color:"var(--text)", letterSpacing:"-0.01em", marginBottom:5 }}>Build logs. GTM drops. No spam.</div>
             <div style={{ fontFamily:"'JetBrains Mono',monospace", fontSize:13, color:"var(--text-muted)" }}>Unsubscribe anytime.</div>
           </div>
-          <form action="https://api.web3forms.com/submit" method="POST" style={{ display:"flex", gap:8 }}>
-            <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY" />
-            <input type="hidden" name="subject" value="New subscriber from blog" />
+          <form action="https://formspree.io/f/mlgvkeja" method="POST" style={{ display:"flex", gap:8 }}>
             <input type="email" name="email" placeholder="your@email.com" required style={{ width:220, borderRadius:8 }} />
             <button type="submit" style={{ fontFamily:"'JetBrains Mono',monospace", fontSize:12, padding:"11px 22px", background:"var(--gold)", color:"var(--bg)", border:"none", borderRadius:8, fontWeight:600, cursor:"pointer", whiteSpace:"nowrap" }}>Subscribe</button>
           </form>
