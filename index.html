@@ -6,23 +6,19 @@
 <title>Rishiraj Paul — GTM Engineer</title>
 <meta name="description" content="GTM Engineer building AI-powered sales systems, outbound infrastructure, and revenue automation for B2B companies.">
 <meta property="og:title" content="Rishiraj Paul — GTM Engineer">
-<meta property="og:description" content="I build the revenue systems that ops teams couldn't. AI-powered GTM infrastructure for B2B.">
-<meta property="og:type" content="website">
+<meta property="og:description" content="I build the revenue systems that ops teams couldn't.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- ── NAV ── -->
+<!-- NAV -->
 <nav>
-  <a class="nav-brand" href="index.html">
-    <span class="status-dot"></span>
-    rishiraj.paul
-  </a>
+  <a class="nav-brand" href="index.html">rishiraj.paul</a>
   <ul class="nav-links">
-    <li><a href="index.html" style="color:var(--text)">home</a></li>
+    <li><a href="index.html" class="active">home</a></li>
     <li><a href="blog.html">blog</a></li>
     <li><a href="#projects">projects</a></li>
     <li><a href="#services">services</a></li>
@@ -31,193 +27,142 @@
   <a href="#contact" class="nav-cta">let's talk →</a>
 </nav>
 
-<!-- ── FLOATING SOCIAL SIDEBAR ── -->
-<div class="social-sidebar">
-  <a href="https://linkedin.com/in/rishiraj-paul" target="_blank" class="social-btn" title="LinkedIn">in</a>
-  <a href="https://github.com/rishirajpaul3" target="_blank" class="social-btn" title="GitHub">gh</a>
-  <a href="mailto:rishirajpaul3@gmail.com" class="social-btn" title="Email">@</a>
+<!-- ANNOUNCEMENT BAR -->
+<div class="announce-bar" id="announce-bar">
+  <span>// open to GTM engineering roles &amp; freelance projects in the UK —
+    <a href="#contact">reach out →</a>
+  </span>
+  <button class="announce-close" onclick="document.getElementById('announce-bar').remove()">×</button>
 </div>
 
-<!-- ── HERO ── -->
+<!-- FLOATING RIGHT SIDEBAR -->
+<div class="right-rail">
+  <a href="https://linkedin.com/in/rishiraj-paul" target="_blank" class="rail-btn" title="LinkedIn">in</a>
+  <a href="https://github.com/rishirajpaul3" target="_blank" class="rail-btn" title="GitHub">gh</a>
+  <a href="blog.html" class="rail-btn" title="Blog">✍</a>
+  <a href="mailto:rishirajpaul3@gmail.com" class="rail-btn" title="Email">@</a>
+</div>
+
 <div class="page-wrap">
-<section id="hero">
-  <div class="hero-label">GTM Engineer</div>
-  <h1>I build the revenue<br>systems that <em>ops teams<br>couldn't.</em></h1>
-  <p class="hero-sub">
-    From running 50+ reps across East India to building AI pipelines that do it without them.
-    I got frustrated with broken GTM tools — so I learned to code and built my own.
-  </p>
-  <div class="hero-ctas">
-    <a href="#projects" class="btn-primary">See what I've built →</a>
-    <a href="#contact" class="btn-ghost">Work with me</a>
-  </div>
-  <div class="hero-stats">
-    <div class="stat-card">
-      <div class="stat-value">10+</div>
-      <div class="stat-label">Systems shipped</div>
-    </div>
-    <div class="stat-card">
-      <div class="stat-value">2×</div>
-      <div class="stat-label">Reply rate lift</div>
-    </div>
-    <div class="stat-card">
-      <div class="stat-value">80%</div>
-      <div class="stat-label">SDR work automated</div>
-    </div>
-    <div class="stat-card">
-      <div class="stat-value" id="gh-repos-stat">—
-        <span class="live-badge">LIVE</span>
+
+  <!-- HERO -->
+  <div class="hero-wrap fade-up">
+    <div class="hero-top">
+      <div class="avatar">RP</div>
+      <div class="hero-meta">
+        <div class="hero-eyebrow">// <span>hello</span></div>
+        <h1>Rishiraj Paul</h1>
+        <div class="hero-sub">GTM Engineer. Ops floor to AI systems.</div>
+        <p class="hero-body">
+          I build AI-powered GTM infrastructure from scratch — outbound pipelines,
+          CRM automation, lead enrichment, and sales co-pilots that run in production.
+          Every system, every tool, runs through a single codebase.
+        </p>
+        <div class="hero-ctas">
+          <a href="blog.html" class="btn-primary">read the build log →</a>
+          <a href="#projects" class="btn-outline">see projects</a>
+        </div>
       </div>
-      <div class="stat-label">GitHub repos</div>
     </div>
+
+    <!-- STORY CARDS -->
+    <div class="story-cards">
+      <div class="story-card">
+        <div class="story-card-era">ops floor · 2018–2022</div>
+        <div class="story-card-title">I managed 50+ reps. Watched every broken GTM tool fail in real time.</div>
+        <div class="story-card-body">every system has a logic. i just couldn't fix the tools i was using.</div>
+      </div>
+      <div class="story-card">
+        <div class="story-card-era">MSc QMUL · 2022–2023</div>
+        <div class="story-card-title">Moved to London. Studied innovation. Learned to code instead of complain.</div>
+        <div class="story-card-body">not to become a developer — to fix the infrastructure around sales.</div>
+      </div>
+      <div class="story-card">
+        <div class="story-card-era">GTM engineer · 2024–now</div>
+        <div class="story-card-title">I stopped working inside the systems and started building them.</div>
+        <div class="story-card-body">fastapi + react on railway. real hubspot integrations. real revenue impact.</div>
+      </div>
+    </div>
+    <a href="#story" class="arc-link" style="margin-top:20px; display:inline-flex;">Read the full arc →</a>
   </div>
-</section>
+
 </div>
 
-<div class="divider"></div>
+<div class="divider" style="margin-top:0;"></div>
 
-<!-- ── STORY ── -->
-<div class="page-wrap">
-<section id="story" class="fade-up">
-  <div class="section-label">origin</div>
-  <h2>The long way round<br>to <em>building systems.</em></h2>
-  <div class="story-grid">
-    <div class="story-text">
-      <p>
-        I started on the ops floor — managing 50+ sales reps across East India, calling every broken handoff,
-        every missed follow-up, every CRM that nobody used correctly. I knew the process better than anyone.
-        I just couldn't fix the tools.
-      </p>
-      <p>
-        So I got an MSc in Entrepreneurship from <strong>Queen Mary University of London</strong>, came to the UK,
-        and taught myself to code — not to become a developer, but because I was tired of waiting for someone
-        else to fix the infrastructure around sales.
-      </p>
-      <p>
-        Now I build <strong>AI-powered GTM systems</strong> from scratch — outbound infrastructure, lead enrichment pipelines,
-        CRM automation, and sales co-pilots that run in production. I've been on both sides: the rep who needed
-        the tool, and the engineer who built it.
-      </p>
-      <p>
-        That's the difference. Most GTM engineers know the code. I know the <strong>job the code is supposed to do.</strong>
-      </p>
-    </div>
-    <div class="timeline">
-      <div class="tl-item">
-        <div class="tl-year">2018 — 2022</div>
-        <div class="tl-title">Sales ops floor, East India</div>
-        <div class="tl-desc">Managed 50+ reps. Ran commercial partnerships. Watched every broken GTM tool fail in real time.</div>
-      </div>
-      <div class="tl-item">
-        <div class="tl-year">2022 — 2023</div>
-        <div class="tl-title">MSc Entrepreneurship, QMUL London</div>
-        <div class="tl-desc">Moved to the UK. Studied innovation systems. Started building instead of complaining about tools.</div>
-      </div>
-      <div class="tl-item">
-        <div class="tl-year">2023 — 2024</div>
-        <div class="tl-title">First systems shipped</div>
-        <div class="tl-desc">Built n8n outbound pipelines, AI SDR workflows, CRM enrichment stacks for early clients.</div>
-      </div>
-      <div class="tl-item">
-        <div class="tl-year">2025 — now</div>
-        <div class="tl-title">Production AI infrastructure</div>
-        <div class="tl-desc">Shipping FastAPI + React apps on Railway. Real deployments. Real HubSpot integrations. Real revenue impact.</div>
-      </div>
-    </div>
-  </div>
-</section>
-</div>
-
-<div class="divider"></div>
-
-<!-- ── DEPLOYED PROJECTS ── -->
+<!-- DEPLOYED PROJECTS -->
 <div class="page-wrap">
 <section id="projects" class="fade-up">
   <div class="section-label">deployed</div>
   <h2>Production systems<br><em>running right now.</em></h2>
-  <div class="deployed-grid">
+  <div class="projects-grid">
 
-    <div class="deploy-card">
-      <div class="deploy-header">
-        <div class="deploy-name">SaravaSales Notetaker</div>
-        <span class="badge-live">● live</span>
+    <div class="project-card">
+      <div class="project-header">
+        <div class="project-name">SaravaSales Notetaker</div>
+        <span class="badge-live">live</span>
       </div>
-      <p class="deploy-desc">
-        AI sales co-pilot that polls HubSpot for new calls, transcribes with Deepgram, extracts BANT with GPT-4o,
-        and pushes insights back to deals automatically. Full React dashboard for review. Runs 24/7 on Railway.
-      </p>
-      <div class="deploy-stack">
-        <span class="tag">FastAPI</span>
-        <span class="tag">React</span>
-        <span class="tag">Deepgram</span>
-        <span class="tag">GPT-4o</span>
-        <span class="tag">HubSpot</span>
-        <span class="tag">PostgreSQL</span>
-        <span class="tag">Railway</span>
+      <p class="project-desc">AI sales co-pilot that polls HubSpot for new calls, transcribes with Deepgram,
+      extracts BANT with GPT-4o, and pushes insights back to deals automatically.
+      Full React dashboard. Runs 24/7 on Railway.</p>
+      <div class="tag-row">
+        <span class="tag">FastAPI</span><span class="tag">React</span>
+        <span class="tag">Deepgram</span><span class="tag">GPT-4o</span>
+        <span class="tag">HubSpot</span><span class="tag">Railway</span>
       </div>
-      <div class="deploy-links">
-        <a href="https://github.com/rishirajpaul3/rishirajpaul3.github.io" class="deploy-link primary" target="_blank">view on github ↗</a>
+      <div class="project-links">
+        <a href="https://github.com/rishirajpaul3/rishirajpaul3.github.io" class="project-link primary" target="_blank">view on github ↗</a>
       </div>
     </div>
 
-    <div class="deploy-card">
-      <div class="deploy-header">
-        <div class="deploy-name">Pipeline AI</div>
-        <span class="badge-live">● live</span>
+    <div class="project-card">
+      <div class="project-header">
+        <div class="project-name">Pipeline AI</div>
+        <span class="badge-live">live</span>
       </div>
-      <p class="deploy-desc">
-        Paste a prospect CSV and get a full outreach pipeline: AI lead scoring, deep company research,
-        personalised email drafts, and discovery call scripts — all with human review gates before anything sends.
-      </p>
-      <div class="deploy-stack">
-        <span class="tag">Python</span>
-        <span class="tag">GPT-4o</span>
-        <span class="tag">Claude</span>
-        <span class="tag">n8n</span>
-        <span class="tag">HubSpot</span>
+      <p class="project-desc">Paste a prospect CSV and get a full outreach pipeline: AI lead scoring,
+      deep company research, personalised email drafts, and discovery call scripts —
+      with human review gates before anything sends.</p>
+      <div class="tag-row">
+        <span class="tag">Python</span><span class="tag">GPT-4o</span>
+        <span class="tag">Claude</span><span class="tag">n8n</span><span class="tag">HubSpot</span>
       </div>
-      <div class="deploy-links">
-        <a href="https://github.com/rishirajpaul3/pipeline-ai" class="deploy-link primary" target="_blank">view on github ↗</a>
+      <div class="project-links">
+        <a href="https://github.com/rishirajpaul3/pipeline-ai" class="project-link primary" target="_blank">view on github ↗</a>
       </div>
     </div>
 
-    <div class="deploy-card">
-      <div class="deploy-header">
-        <div class="deploy-name">DeepAccount</div>
-        <span class="badge-live">● live</span>
+    <div class="project-card">
+      <div class="project-header">
+        <div class="project-name">DeepAccount</div>
+        <span class="badge-live">live</span>
       </div>
-      <p class="deploy-desc">
-        B2B account intelligence in seconds. Paste a URL and your ICP, get back a fit score, buyer profiles,
-        key objections, and a cold outreach opener — all generated from live web data.
-      </p>
-      <div class="deploy-stack">
-        <span class="tag">Python</span>
-        <span class="tag">GPT-4o</span>
-        <span class="tag">Web scraping</span>
-        <span class="tag">React</span>
+      <p class="project-desc">B2B account intelligence in seconds. Paste a URL and your ICP,
+      get back a fit score, buyer profiles, key objections, and a cold outreach opener —
+      all generated from live web data.</p>
+      <div class="tag-row">
+        <span class="tag">Python</span><span class="tag">GPT-4o</span>
+        <span class="tag">Web scraping</span><span class="tag">React</span>
       </div>
-      <div class="deploy-links">
-        <a href="https://github.com/rishirajpaul3/deepaccount" class="deploy-link primary" target="_blank">view on github ↗</a>
+      <div class="project-links">
+        <a href="https://github.com/rishirajpaul3/deepaccount" class="project-link primary" target="_blank">view on github ↗</a>
       </div>
     </div>
 
-    <div class="deploy-card">
-      <div class="deploy-header">
-        <div class="deploy-name">OutreachOS</div>
-        <span class="badge-live">● live</span>
+    <div class="project-card">
+      <div class="project-header">
+        <div class="project-name">OutreachOS</div>
+        <span class="badge-live">live</span>
       </div>
-      <p class="deploy-desc">
-        Unified outbound dashboard consolidating Smartlead email and HeyReach LinkedIn campaigns in one view.
-        AI-powered insights surface what's working, what's stalling, and what to fix first.
-      </p>
-      <div class="deploy-stack">
-        <span class="tag">React</span>
-        <span class="tag">Smartlead API</span>
-        <span class="tag">HeyReach API</span>
-        <span class="tag">GPT-4o</span>
+      <p class="project-desc">Unified outbound dashboard consolidating Smartlead email and HeyReach
+      LinkedIn campaigns in one view. AI-powered insights surface what's working,
+      what's stalling, and what to fix.</p>
+      <div class="tag-row">
+        <span class="tag">React</span><span class="tag">Smartlead API</span>
+        <span class="tag">HeyReach API</span><span class="tag">GPT-4o</span>
       </div>
-      <div class="deploy-links">
-        <a href="https://github.com/rishirajpaul3/outreachos-app" class="deploy-link primary" target="_blank">view on github ↗</a>
+      <div class="project-links">
+        <a href="https://github.com/rishirajpaul3/outreachos-app" class="project-link primary" target="_blank">view on github ↗</a>
       </div>
     </div>
 
@@ -225,110 +170,107 @@
 </section>
 </div>
 
-<!-- ── OPEN SOURCE (LIVE FROM GITHUB) ── -->
-<div class="page-wrap" style="padding-bottom: var(--gap);">
-  <div class="gh-bar fade-up">
+<div class="divider"></div>
+
+<!-- GITHUB LIVE -->
+<div class="page-wrap">
+<section class="fade-up">
+  <div class="gh-header">
     <div>
       <div class="section-label">open source</div>
-      <h2 style="margin-bottom: 0;">Latest from <em>GitHub</em></h2>
+      <h2 style="margin-bottom:0;">Latest from <em>GitHub</em></h2>
     </div>
-    <a href="https://github.com/rishirajpaul3" class="gh-profile-link" target="_blank">github.com/rishirajpaul3 ↗</a>
+    <div style="display:flex;align-items:center;gap:16px;">
+      <span class="gh-live-badge" id="gh-status">live from github</span>
+      <a href="https://github.com/rishirajpaul3" class="gh-link" target="_blank">github.com/rishirajpaul3 ↗</a>
+    </div>
   </div>
-  <div style="height: 24px;"></div>
-  <div class="gh-status fade-up" style="display:inline-flex; margin-bottom: 20px;">fetching live data</div>
+  <div style="height:20px;"></div>
   <div class="repos-grid fade-up" id="repos-grid">
-    <div class="repos-loading">// loading repos from github api...</div>
+    <div class="repos-loading">// loading from github api...</div>
   </div>
+</section>
 </div>
 
 <div class="divider"></div>
 
-<!-- ── SERVICES ── -->
+<!-- SERVICES -->
 <div class="page-wrap">
 <section id="services" class="fade-up">
   <div class="section-label">services</div>
   <h2>What I build <em>for you.</em></h2>
   <div class="services-grid">
-
     <div class="service-card">
       <div class="service-num">01</div>
       <div class="service-title">Outbound Infrastructure</div>
-      <p class="service-desc">Full cold outreach stack — ICP targeting, inbox setup, deliverability tuning,
-      multi-step sequencing, and reply handling. Built to land in inboxes, not spam folders.
-      I've run this myself with 50+ reps. I know what breaks.</p>
-      <div class="deploy-stack">
+      <p class="service-desc">Full cold outreach stack — ICP targeting, inbox setup, deliverability,
+      multi-step sequencing, and reply handling. I've run this with 50+ reps. I know what breaks.</p>
+      <div class="tag-row">
         <span class="tag">Clay</span><span class="tag">Instantly</span>
         <span class="tag">Smartlead</span><span class="tag">Apollo</span><span class="tag">HeyReach</span>
       </div>
     </div>
-
     <div class="service-card">
       <div class="service-num">02</div>
       <div class="service-title">Lead Enrichment Pipelines</div>
-      <p class="service-desc">Multi-waterfall enrichment stacks that build verified, firmographic-rich contact lists
-      with AI-generated first lines baked in. Combines Clay, Apollo, Hunter.io, and GPT-4o into one
-      automated flow — no manual scrubbing.</p>
-      <div class="deploy-stack">
+      <p class="service-desc">Multi-waterfall enrichment combining Clay, Apollo, Hunter.io, and GPT-4o
+      into one automated flow. Verified contacts with AI-generated first lines — no manual scrubbing.</p>
+      <div class="tag-row">
         <span class="tag">Clay</span><span class="tag">Hunter.io</span>
         <span class="tag">Clearbit</span><span class="tag">GPT-4o</span><span class="tag">n8n</span>
       </div>
     </div>
-
     <div class="service-card">
       <div class="service-num">03</div>
       <div class="service-title">CRM Operations & Automation</div>
-      <p class="service-desc">HubSpot setup, lead routing, deal stage enforcement, stale deal alerts,
-      and workflow automation that keeps your CRM accurate. Plus AI call transcription and BANT extraction
-      directly into deal records.</p>
-      <div class="deploy-stack">
+      <p class="service-desc">HubSpot setup, lead routing, deal enforcement, stale deal alerts, and AI
+      call transcription with BANT extraction directly into deal records.</p>
+      <div class="tag-row">
         <span class="tag">HubSpot</span><span class="tag">n8n</span>
         <span class="tag">Zapier</span><span class="tag">Deepgram</span><span class="tag">GPT-4o</span>
       </div>
     </div>
-
     <div class="service-card">
       <div class="service-num">04</div>
       <div class="service-title">GTM Signal Monitoring</div>
-      <p class="service-desc">Automated buying-signal tracking — hiring surges, funding events, job changes,
-      LinkedIn activity — piped into your CRM so your team acts on intent before a competitor even
-      gets a reply back.</p>
-      <div class="deploy-stack">
+      <p class="service-desc">Automated buying-signal tracking — hiring surges, funding events, job changes —
+      piped into your CRM so your team acts on intent before a competitor even replies.</p>
+      <div class="tag-row">
         <span class="tag">Clay</span><span class="tag">n8n</span>
         <span class="tag">HubSpot</span><span class="tag">Webhook APIs</span>
       </div>
     </div>
-
   </div>
 </section>
 </div>
 
 <div class="divider"></div>
 
-<!-- ── RESULTS ── -->
+<!-- RESULTS -->
 <div class="page-wrap">
-<section id="results" class="fade-up">
+<section id="story" class="fade-up">
   <div class="section-label">impact</div>
   <h2>In <em>numbers.</em></h2>
   <div class="results-grid">
     <div class="result-card">
       <div class="result-num">2×</div>
-      <div class="result-label">Reply rate improvement</div>
-      <div class="result-sub">Signal-based timing + AI personalisation</div>
+      <div class="result-label">Reply rate lift</div>
+      <div class="result-sub">signal-based timing + AI</div>
     </div>
     <div class="result-card">
       <div class="result-num">10+</div>
-      <div class="result-label">Hours saved per rep/week</div>
-      <div class="result-sub">Sourcing, enrichment, sequencing automated</div>
+      <div class="result-label">Hours saved / rep / week</div>
+      <div class="result-sub">sourcing, enrichment automated</div>
     </div>
     <div class="result-card">
       <div class="result-num">80%</div>
       <div class="result-label">SDR work automated</div>
-      <div class="result-sub">End-to-end, zero human touchpoints</div>
+      <div class="result-sub">end-to-end, zero touchpoints</div>
     </div>
     <div class="result-card">
       <div class="result-num">50+</div>
       <div class="result-label">Reps managed</div>
-      <div class="result-sub">Sales team leadership, East India</div>
+      <div class="result-sub">sales leadership, East India</div>
     </div>
   </div>
 </section>
@@ -336,82 +278,38 @@
 
 <div class="divider"></div>
 
-<!-- ── LINKEDIN / CONTENT ── -->
-<div class="page-wrap">
-<section id="content" class="fade-up">
-  <div class="section-label">content</div>
-  <h2>Building in <em>public.</em></h2>
-  <div class="content-box">
-    <div class="content-box-header">
-      <div class="cbh-left">
-        <div class="content-box-title">Follow on LinkedIn</div>
-        <div class="content-box-sub">Weekly posts on GTM systems, AI tools, and building in public from the UK.</div>
-      </div>
-      <a href="https://www.linkedin.com/in/rishiraj-paul/" class="li-follow-btn" target="_blank">
-        + Follow on LinkedIn
-      </a>
-    </div>
-    <div id="posts-container">
-      <!-- Posts loaded from data/content.json -->
-      <div class="content-empty" id="posts-empty">
-        Posts loading — or start following on LinkedIn to see them first.
-      </div>
-    </div>
-  </div>
-</section>
-</div>
-
-<div class="divider"></div>
-
-<!-- ── CONTACT ── -->
+<!-- CONTACT -->
 <div class="page-wrap">
 <section id="contact" class="fade-up">
   <div class="section-label">contact</div>
   <div class="contact-grid">
     <div class="contact-intro">
-      <h2 style="margin-bottom: 20px;">Let's build <em>something.</em></h2>
+      <h2 style="margin-bottom:16px;">Let's build <em>something.</em></h2>
       <p>Open to freelance GTM projects, consulting engagements, and full-time roles in the UK.
       If you need revenue infrastructure that actually ships — reach out.</p>
       <div class="contact-links">
         <a href="mailto:rishirajpaul3@gmail.com" class="contact-link">
           <span class="cl-icon">@</span>
-          <div>
-            <span class="cl-label">Email</span>
-            rishirajpaul3@gmail.com
-          </div>
+          <div><span class="cl-label">Email</span>rishirajpaul3@gmail.com</div>
         </a>
-        <a href="https://www.linkedin.com/in/rishiraj-paul/" class="contact-link" target="_blank">
+        <a href="https://linkedin.com/in/rishiraj-paul" class="contact-link" target="_blank">
           <span class="cl-icon">in</span>
-          <div>
-            <span class="cl-label">LinkedIn</span>
-            linkedin.com/in/rishiraj-paul
-          </div>
+          <div><span class="cl-label">LinkedIn</span>linkedin.com/in/rishiraj-paul</div>
         </a>
         <a href="https://github.com/rishirajpaul3" class="contact-link" target="_blank">
           <span class="cl-icon">gh</span>
-          <div>
-            <span class="cl-label">GitHub</span>
-            github.com/rishirajpaul3
-          </div>
+          <div><span class="cl-label">GitHub</span>github.com/rishirajpaul3</div>
         </a>
         <a href="tel:+447587260808" class="contact-link">
           <span class="cl-icon">UK</span>
-          <div>
-            <span class="cl-label">Phone (UK)</span>
-            +44 7587 260808
-          </div>
+          <div><span class="cl-label">Phone (UK)</span>+44 7587 260808</div>
         </a>
       </div>
     </div>
-
-    <!-- Contact form via Web3Forms — free, no account needed
-         Get your access key at: https://web3forms.com (enter your email, get key instantly)
-         Replace YOUR_ACCESS_KEY below with the key they email you -->
     <form class="contact-form" id="contact-form"
           action="https://api.web3forms.com/submit" method="POST">
       <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY">
       <input type="hidden" name="subject" value="New message from rishirajpaul.com">
-      <input type="hidden" name="redirect" value="">
       <div class="form-field">
         <label class="form-label">Name</label>
         <input type="text" name="name" class="form-input" placeholder="Your name" required>
@@ -430,39 +328,32 @@
                   placeholder="Tell me about your GTM challenge..." required></textarea>
       </div>
       <button type="submit" class="btn-primary">Send message</button>
-      <div class="form-success" id="form-success">
-        // message received. I'll reply within 24h.
-      </div>
+      <div class="form-success" id="form-success">// message received — I'll reply within 24h.</div>
     </form>
   </div>
 </section>
 </div>
 
-<!-- ── SUBSCRIBE ── -->
-<div style="max-width:var(--max-w);margin:0 auto;padding:0 40px 80px;">
-  <div class="subscribe-strip">
+<!-- SUBSCRIBE -->
+<div class="page-wrap" style="padding-bottom:80px;">
+  <div class="subscribe-box fade-up">
     <div>
-      <div style="font-size:18px;font-weight:600;letter-spacing:-0.01em;margin-bottom:5px;">
-        Follow the build
-      </div>
-      <div style="font-size:13px;color:var(--text-muted);">
-        GTM systems, AI tools, and what I'm shipping — no noise, no spam.
-      </div>
+      <div class="subscribe-title">// follow the build</div>
+      <div class="subscribe-sub">GTM systems, AI tools, and what I'm shipping — no noise.</div>
     </div>
-    <form class="subscribe-form-strip" id="subscribe-form-strip"
+    <form class="subscribe-form" id="sub-form"
           action="https://api.web3forms.com/submit" method="POST">
       <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY">
-      <input type="hidden" name="subject" value="New subscriber from rishirajpaul.com">
-      <input type="email" name="email" class="subscribe-input-strip"
-             placeholder="your@email.com" required>
+      <input type="hidden" name="subject" value="New subscriber">
+      <input type="email" name="email" class="subscribe-input" placeholder="your@email.com" required>
       <button type="submit" class="btn-primary">Subscribe</button>
     </form>
   </div>
 </div>
 
 <footer>
-  <div class="footer-wrap">
-    <span class="footer-l">© 2026 Rishiraj Paul — GTM Engineer · UK</span>
+  <div class="footer-inner">
+    <span>© 2026 Rishiraj Paul · GTM Engineer · UK</span>
     <div class="footer-links">
       <a href="blog.html">Blog</a>
       <a href="https://linkedin.com/in/rishiraj-paul" target="_blank">LinkedIn</a>
@@ -473,178 +364,59 @@
 </footer>
 
 <script>
-/* ── GITHUB LIVE DATA ── */
+/* ── GITHUB LIVE ── */
 (async () => {
   const USER = 'rishirajpaul3';
-  const CACHE_KEY = 'gh_v2';
-  const TTL = 6 * 60 * 60 * 1000; // 6 hours
-
-  function timeAgo(dateStr) {
-    const diff = (Date.now() - new Date(dateStr)) / 1000;
-    if (diff < 3600)  return Math.floor(diff / 60) + 'm ago';
-    if (diff < 86400) return Math.floor(diff / 3600) + 'h ago';
-    return Math.floor(diff / 86400) + 'd ago';
-  }
-
-  function langDot(lang) {
-    const colors = {
-      Python: '#3572A5', JavaScript: '#f1e05a', TypeScript: '#3178c6',
-      HTML: '#e34c26', CSS: '#563d7c', Shell: '#89e051',
-    };
-    return lang ? `<span style="color:${colors[lang]||'#888'}">${lang}</span>` : '—';
-  }
-
-  function renderRepos(repos) {
-    const grid = document.getElementById('repos-grid');
-    if (!repos.length) {
-      grid.innerHTML = '<div class="repos-loading">// no public repos found</div>';
-      return;
-    }
-    grid.innerHTML = repos.map(r => `
-      <a class="repo-card" href="${r.html_url}" target="_blank" rel="noopener">
-        <div class="repo-lang">${langDot(r.language)}</div>
+  const CACHE_KEY = 'gh_v3'; const TTL = 6*60*60*1000;
+  function timeAgo(d){const s=(Date.now()-new Date(d))/1000;return s<3600?Math.floor(s/60)+'m ago':s<86400?Math.floor(s/3600)+'h ago':Math.floor(s/86400)+'d ago';}
+  function render(repos){
+    const g=document.getElementById('repos-grid');
+    if(!repos.length){g.innerHTML='<div class="repos-loading">// visit github.com/rishirajpaul3</div>';return;}
+    g.innerHTML=repos.map(r=>`
+      <a class="repo-card" href="${r.html_url}" target="_blank">
+        <div class="repo-lang">${r.language||'—'}</div>
         <div class="repo-name">${r.name}</div>
-        <p class="repo-desc">${r.description || 'No description.'}</p>
-        <div class="repo-footer">
-          <span>★ ${r.stargazers_count}</span>
-          <span>${timeAgo(r.updated_at)}</span>
-        </div>
-      </a>
-    `).join('');
+        <p class="repo-desc">${r.description||'No description.'}</p>
+        <div class="repo-footer"><span>★ ${r.stargazers_count}</span><span>${timeAgo(r.updated_at)}</span></div>
+      </a>`).join('');
   }
-
-  function renderStatBadge(repoCount) {
-    const el = document.getElementById('gh-repos-stat');
-    if (el) el.innerHTML = `${repoCount} <span class="live-badge">LIVE</span>`;
-    const statusEl = document.querySelector('.gh-status');
-    if (statusEl) statusEl.textContent = 'live from github api';
-  }
-
-  // Check cache
   try {
-    const raw = localStorage.getItem(CACHE_KEY);
-    if (raw) {
-      const { data, ts } = JSON.parse(raw);
-      if (Date.now() - ts < TTL) {
-        renderRepos(data.repos);
-        renderStatBadge(data.repoCount);
-        return;
-      }
-    }
-  } catch (_) {}
-
-  // Fetch fresh
-  try {
-    const [profileRes, reposRes] = await Promise.all([
-      fetch(`https://api.github.com/users/${USER}`),
-      fetch(`https://api.github.com/users/${USER}/repos?sort=updated&per_page=20`)
-    ]);
-
-    if (!profileRes.ok || !reposRes.ok) throw new Error('API error');
-
-    const profile = await profileRes.json();
-    const allRepos = await reposRes.json();
-
-    const repos = allRepos
-      .filter(r => !r.fork && r.name !== USER && r.name !== `${USER}.github.io`)
-      .sort((a, b) => new Date(b.updated_at) - new Date(a.updated_at))
-      .slice(0, 6);
-
-    const data = { repos, repoCount: profile.public_repos };
-    localStorage.setItem(CACHE_KEY, JSON.stringify({ data, ts: Date.now() }));
-
-    renderRepos(repos);
-    renderStatBadge(profile.public_repos);
-  } catch (e) {
-    const grid = document.getElementById('repos-grid');
-    if (grid) grid.innerHTML = '<div class="repos-loading">// visit github.com/rishirajpaul3 to see all repos</div>';
-    const statusEl = document.querySelector('.gh-status');
-    if (statusEl) statusEl.textContent = 'see github.com/rishirajpaul3';
-  }
-})();
-
-/* ── LINKEDIN POSTS (from data/content.json) ── */
-(async () => {
-  try {
-    const res = await fetch('data/content.json');
-    if (!res.ok) return;
-    const posts = await res.json();
-    if (!posts.length) return;
-
-    const container = document.getElementById('posts-container');
-    const empty = document.getElementById('posts-empty');
-    if (empty) empty.remove();
-
-    const grid = document.createElement('div');
-    grid.className = 'posts-grid';
-    grid.innerHTML = posts.slice(0, 3).map(p => `
-      <div class="post-card">
-        <div class="post-date">${p.date}</div>
-        <p class="post-excerpt">${p.excerpt}</p>
-        <a href="${p.url}" class="post-link" target="_blank" rel="noopener">
-          read on linkedin ↗
-        </a>
-      </div>
-    `).join('');
-    container.appendChild(grid);
-  } catch (_) {}
+    const raw=localStorage.getItem(CACHE_KEY);
+    if(raw){const{data,ts}=JSON.parse(raw);if(Date.now()-ts<TTL){render(data);return;}}
+    const r=await fetch(`https://api.github.com/users/${USER}/repos?sort=updated&per_page=20`);
+    if(!r.ok)throw 0;
+    const all=await r.json();
+    const repos=all.filter(r=>!r.fork&&r.name!==USER).slice(0,6);
+    localStorage.setItem(CACHE_KEY,JSON.stringify({data:repos,ts:Date.now()}));
+    render(repos);
+  } catch(_){document.getElementById('repos-grid').innerHTML='<div class="repos-loading">// visit github.com/rishirajpaul3</div>';}
 })();
 
 /* ── CONTACT FORM ── */
-document.getElementById('contact-form').addEventListener('submit', async function(e) {
-  e.preventDefault();
-  const btn = this.querySelector('button[type=submit]');
-  btn.textContent = 'sending...';
-  btn.disabled = true;
-
-  try {
-    const res = await fetch(this.action, {
-      method: 'POST',
-      body: new FormData(this),
-    });
-    const json = await res.json();
-    if (json.success) {
-      this.reset();
-      document.getElementById('form-success').style.display = 'block';
-      btn.style.display = 'none';
-    } else {
-      btn.textContent = 'something went wrong — email me directly';
-      btn.disabled = false;
-    }
-  } catch (_) {
-    btn.textContent = 'something went wrong — email me directly';
-    btn.disabled = false;
-  }
+document.getElementById('contact-form').addEventListener('submit',async function(e){
+  e.preventDefault();const btn=this.querySelector('button[type=submit]');
+  btn.textContent='sending...';btn.disabled=true;
+  try{const r=await fetch(this.action,{method:'POST',body:new FormData(this)});
+  const j=await r.json();
+  if(j.success){this.reset();document.getElementById('form-success').style.display='block';btn.style.display='none';}
+  else{btn.textContent='error — email me directly';btn.disabled=false;}}
+  catch(_){btn.textContent='error — email me directly';btn.disabled=false;}
 });
 
-/* ── SUBSCRIBE STRIP ── */
-const subForm = document.getElementById('subscribe-form-strip');
-if (subForm) {
-  subForm.addEventListener('submit', async function(e) {
-    e.preventDefault();
-    const btn = this.querySelector('button');
-    btn.textContent = '...'; btn.disabled = true;
-    try {
-      const res = await fetch(this.action, { method: 'POST', body: new FormData(this) });
-      const json = await res.json();
-      btn.textContent = json.success ? '✓ subscribed' : 'error — email me';
-      if (!json.success) btn.disabled = false;
-    } catch (_) { btn.textContent = 'error'; btn.disabled = false; }
-  });
-}
+/* ── SUBSCRIBE ── */
+document.getElementById('sub-form').addEventListener('submit',async function(e){
+  e.preventDefault();const btn=this.querySelector('button');
+  btn.textContent='...';btn.disabled=true;
+  try{const r=await fetch(this.action,{method:'POST',body:new FormData(this)});
+  const j=await r.json();btn.textContent=j.success?'✓ subscribed':'error';if(!j.success)btn.disabled=false;}
+  catch(_){btn.textContent='error';btn.disabled=false;}
+});
 
-/* ── SCROLL FADE-IN ── */
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(e => {
-    if (e.isIntersecting) {
-      e.target.classList.add('visible');
-      observer.unobserve(e.target);
-    }
-  });
-}, { threshold: 0.07 });
-
-document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+/* ── FADE IN ── */
+const obs=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target);}});
+},{threshold:0.07});
+document.querySelectorAll('.fade-up').forEach(el=>obs.observe(el));
 </script>
-
 </body>
 </html>

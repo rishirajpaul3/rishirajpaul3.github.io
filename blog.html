@@ -4,272 +4,20 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Blog — Rishiraj Paul</title>
-<meta name="description" content="GTM systems, AI tools, and building in public. All posts by Rishiraj Paul.">
+<meta name="description" content="GTM systems, AI tools, and building in public.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
-<style>
-  /* ── BLOG-SPECIFIC STYLES ── */
-  .author-bar {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-    padding: 32px 0 0;
-  }
-
-  .author-avatar {
-    width: 52px; height: 52px;
-    background: var(--accent-dim);
-    border: 1px solid rgba(0,230,118,0.3);
-    border-radius: 50%;
-    display: flex; align-items: center; justify-content: center;
-    font-family: var(--mono);
-    font-size: 16px;
-    font-weight: 600;
-    color: var(--accent);
-    flex-shrink: 0;
-  }
-
-  .author-meta { flex: 1; }
-
-  .author-name {
-    font-size: 18px;
-    font-weight: 700;
-    color: var(--text);
-    letter-spacing: -0.01em;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 4px;
-  }
-
-  .live-pill {
-    font-family: var(--mono);
-    font-size: 9px;
-    letter-spacing: 0.1em;
-    color: var(--accent);
-    background: var(--accent-dim);
-    border: 1px solid rgba(0,230,118,0.25);
-    padding: 3px 8px;
-    display: inline-flex;
-    align-items: center;
-    gap: 5px;
-  }
-  .live-pill::before {
-    content: '';
-    width: 5px; height: 5px;
-    background: var(--accent);
-    border-radius: 50%;
-    animation: blink 1.8s infinite;
-  }
-
-  .author-bio { font-size: 13px; color: var(--text-muted); }
-
-  /* ── TABS ── */
-  .tab-bar {
-    display: flex;
-    gap: 4px;
-    padding: 24px 0 0;
-    border-bottom: 1px solid var(--border);
-    margin-bottom: 32px;
-  }
-
-  .tab-btn {
-    font-family: var(--mono);
-    font-size: 12px;
-    letter-spacing: 0.04em;
-    color: var(--text-muted);
-    background: none;
-    border: 1px solid transparent;
-    padding: 7px 16px;
-    cursor: pointer;
-    transition: color 0.15s, border-color 0.15s, background 0.15s;
-    display: flex;
-    align-items: center;
-    gap: 7px;
-    margin-bottom: -1px;
-  }
-
-  .tab-btn:hover { color: var(--text); }
-
-  .tab-btn.active {
-    color: var(--text);
-    border-color: var(--border);
-    border-bottom-color: var(--bg);
-    background: var(--bg);
-  }
-
-  .tab-count {
-    font-size: 10px;
-    color: var(--text-dim);
-    font-family: var(--mono);
-  }
-  .tab-btn.active .tab-count { color: var(--accent); }
-
-  /* ── FEED ── */
-  .feed { display: flex; flex-direction: column; gap: 1px; }
-
-  .feed-card {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    padding: 28px 32px;
-    transition: border-color 0.2s, background 0.2s;
-    text-decoration: none;
-    color: inherit;
-    display: block;
-  }
-  .feed-card:hover { border-color: var(--border-2); background: var(--surface-2); }
-
-  .feed-card-meta {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    margin-bottom: 12px;
-  }
-
-  .source-badge {
-    font-family: var(--mono);
-    font-size: 9px;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    padding: 3px 8px;
-    border: 1px solid;
-  }
-  .source-badge.blog     { color: var(--accent); border-color: rgba(0,230,118,0.25); background: var(--accent-dim); }
-  .source-badge.linkedin { color: #7eb8f7;        border-color: rgba(10,102,194,0.35); background: rgba(10,102,194,0.08); }
-  .source-badge.github   { color: #c9a8ff;        border-color: rgba(139,92,246,0.35); background: rgba(139,92,246,0.08); }
-
-  .feed-date {
-    font-family: var(--mono);
-    font-size: 10px;
-    color: var(--text-dim);
-    letter-spacing: 0.06em;
-  }
-
-  .feed-title {
-    font-size: 17px;
-    font-weight: 600;
-    color: var(--text);
-    letter-spacing: -0.01em;
-    line-height: 1.35;
-    margin-bottom: 8px;
-  }
-
-  .feed-excerpt {
-    font-size: 13px;
-    color: var(--text-muted);
-    line-height: 1.75;
-    max-width: 720px;
-    margin-bottom: 16px;
-  }
-
-  .feed-footer {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-  }
-
-  .feed-read {
-    font-family: var(--mono);
-    font-size: 11px;
-    color: var(--accent);
-    letter-spacing: 0.04em;
-  }
-
-  .feed-tags { display: flex; gap: 6px; flex-wrap: wrap; }
-
-  .feed-tag {
-    font-family: var(--mono);
-    font-size: 10px;
-    color: var(--text-dim);
-    border: 1px solid var(--border);
-    padding: 2px 8px;
-    letter-spacing: 0.03em;
-  }
-
-  .feed-empty {
-    padding: 80px 32px;
-    text-align: center;
-    font-family: var(--mono);
-    font-size: 12px;
-    color: var(--text-muted);
-    border: 1px solid var(--border);
-    background: var(--surface);
-    line-height: 1.9;
-  }
-
-  .feed-loading {
-    padding: 60px 32px;
-    text-align: center;
-    font-family: var(--mono);
-    font-size: 12px;
-    color: var(--text-muted);
-  }
-
-  /* ── SUBSCRIBE (inline) ── */
-  .subscribe-box {
-    border: 1px solid var(--border);
-    background: var(--surface);
-    padding: 40px 36px;
-    margin-top: 48px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 40px;
-  }
-
-  .subscribe-left h3 {
-    font-size: 18px;
-    font-weight: 600;
-    letter-spacing: -0.01em;
-    margin-bottom: 6px;
-  }
-  .subscribe-left p {
-    font-size: 13px;
-    color: var(--text-muted);
-  }
-
-  .subscribe-form {
-    display: flex;
-    gap: 10px;
-    flex-shrink: 0;
-  }
-
-  .subscribe-input {
-    font-family: var(--mono);
-    font-size: 13px;
-    padding: 10px 16px;
-    background: var(--bg);
-    border: 1px solid var(--border-2);
-    color: var(--text);
-    outline: none;
-    width: 240px;
-    transition: border-color 0.2s;
-  }
-  .subscribe-input:focus { border-color: var(--accent); }
-  .subscribe-input::placeholder { color: var(--text-dim); }
-
-  @media (max-width: 860px) {
-    .subscribe-box { flex-direction: column; gap: 24px; padding: 28px 20px; }
-    .subscribe-form { flex-direction: column; width: 100%; }
-    .subscribe-input { width: 100%; }
-    .feed-card { padding: 20px; }
-    .tab-btn { padding: 7px 10px; font-size: 11px; }
-  }
-</style>
 </head>
 <body>
 
-<!-- ── NAV ── -->
+<!-- NAV -->
 <nav>
-  <a class="nav-brand" href="index.html">
-    <span class="status-dot"></span>
-    rishiraj.paul
-  </a>
+  <a class="nav-brand" href="index.html">rishiraj.paul</a>
   <ul class="nav-links">
     <li><a href="index.html">home</a></li>
-    <li><a href="blog.html" style="color:var(--text)">blog</a></li>
+    <li><a href="blog.html" class="active">blog</a></li>
     <li><a href="index.html#projects">projects</a></li>
     <li><a href="index.html#services">services</a></li>
     <li><a href="index.html#contact">contact</a></li>
@@ -277,73 +25,78 @@
   <a href="index.html#contact" class="nav-cta">let's talk →</a>
 </nav>
 
-<!-- ── FLOATING SOCIAL SIDEBAR ── -->
-<div class="social-sidebar">
-  <a href="https://linkedin.com/in/rishiraj-paul" target="_blank" class="social-btn" title="LinkedIn">in</a>
-  <a href="https://github.com/rishirajpaul3" target="_blank" class="social-btn" title="GitHub">gh</a>
-  <a href="mailto:rishirajpaul3@gmail.com" class="social-btn" title="Email">@</a>
+<!-- FLOATING RIGHT SIDEBAR -->
+<div class="right-rail">
+  <a href="https://linkedin.com/in/rishiraj-paul" target="_blank" class="rail-btn" title="LinkedIn">in</a>
+  <a href="https://github.com/rishirajpaul3" target="_blank" class="rail-btn" title="GitHub">gh</a>
+  <a href="mailto:rishirajpaul3@gmail.com" class="rail-btn" title="Email">@</a>
 </div>
 
 <div class="page-wrap">
 
-  <!-- Author bar -->
-  <div class="author-bar">
+  <!-- AUTHOR ROW -->
+  <div class="author-row">
     <div class="author-avatar">RP</div>
-    <div class="author-meta">
+    <div>
       <div class="author-name">
         Rishiraj Paul
-        <span class="live-pill">LIVE</span>
+        <span class="live-badge">LIVE</span>
       </div>
-      <div class="author-bio">GTM Engineer · Building AI revenue systems in public · UK</div>
+      <div class="author-bio">Live feed — everything I build: blog, LinkedIn, GitHub.</div>
     </div>
-    <a href="https://linkedin.com/in/rishiraj-paul" class="li-follow-btn" target="_blank" style="margin-left:auto">
+    <a href="https://linkedin.com/in/rishiraj-paul" target="_blank" class="author-follow">
       + Follow on LinkedIn
     </a>
   </div>
 
-  <!-- Tab bar -->
+  <!-- TAB BAR -->
   <div class="tab-bar">
     <button class="tab-btn active" data-tab="all">
-      All <span class="tab-count" id="count-all">·  0</span>
+      All <span class="tab-count" id="c-all">· 0</span>
     </button>
     <button class="tab-btn" data-tab="blog">
-      Blog <span class="tab-count" id="count-blog">·  0</span>
+      Blog <span class="tab-count" id="c-blog">· 0</span>
     </button>
     <button class="tab-btn" data-tab="linkedin">
-      LinkedIn <span class="tab-count" id="count-linkedin">·  0</span>
+      LinkedIn <span class="tab-count" id="c-linkedin">· 0</span>
     </button>
     <button class="tab-btn" data-tab="github">
-      GitHub <span class="tab-count" id="count-github">·  0</span>
+      GitHub <span class="tab-count" id="c-github">· 0</span>
     </button>
   </div>
 
-  <!-- Feed -->
+  <!-- FEED -->
   <div id="feed" class="feed">
     <div class="feed-loading">// loading feed...</div>
   </div>
 
-  <!-- Subscribe -->
-  <div class="subscribe-box">
-    <div class="subscribe-left">
-      <h3>Follow the build</h3>
-      <p>GTM systems, AI tools, and what I'm shipping — no noise, no spam.</p>
+  <!-- SUBSCRIBE -->
+  <div style="padding: 48px 0 80px;">
+    <div class="subscribe-box">
+      <div>
+        <div class="subscribe-title">// subscribe to follow the build</div>
+        <div class="subscribe-sub">build logs, gtm engineering drops. no spam. unsubscribe anytime.</div>
+      </div>
+      <form class="subscribe-form" id="sub-form"
+            action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY">
+        <input type="hidden" name="subject" value="New subscriber from blog">
+        <input type="email" name="email" class="subscribe-input"
+               placeholder="your@email.com" required>
+        <button type="submit" class="btn-primary">Subscribe</button>
+      </form>
     </div>
-    <form class="subscribe-form" id="subscribe-form"
-          action="https://api.web3forms.com/submit" method="POST">
-      <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY">
-      <input type="hidden" name="subject" value="New subscriber from rishirajpaul.com">
-      <input type="hidden" name="redirect" value="">
-      <input type="email" name="email" class="subscribe-input"
-             placeholder="your@email.com" required>
-      <button type="submit" class="btn-primary">Subscribe</button>
-    </form>
   </div>
 
 </div>
 
 <footer>
-  <div class="footer-wrap">
-    <span class="footer-l">© 2026 Rishiraj Paul — GTM Engineer · UK</span>
+  <div class="footer-inner">
+    <div style="display:flex;gap:12px;align-items:center;">
+      <a href="index.html" style="color:var(--accent-dark);text-decoration:none;font-weight:500;">rishiraj.paul</a>
+      <span style="color:var(--border-2)">|</span>
+      <span>building in public</span>
+    </div>
     <div class="footer-links">
       <a href="https://linkedin.com/in/rishiraj-paul" target="_blank">LinkedIn</a>
       <a href="https://github.com/rishirajpaul3" target="_blank">GitHub</a>
@@ -353,181 +106,137 @@
 </footer>
 
 <script>
-/* ── DATA LOADING ── */
-let allPosts = [];
-let githubRepos = [];
-let activeTab = 'all';
+let allPosts = [], ghRepos = [], activeTab = 'all';
 
-async function loadAll() {
-  const [posts, linkedin, github] = await Promise.allSettled([
-    fetch('data/posts.json').then(r => r.ok ? r.json() : []),
-    fetch('data/content.json').then(r => r.ok ? r.json() : []),
-    loadGitHub()
+/* ── LOAD ALL DATA ── */
+async function init() {
+  const [posts, li, gh] = await Promise.allSettled([
+    fetch('data/posts.json').then(r=>r.ok?r.json():[]),
+    fetch('data/content.json').then(r=>r.ok?r.json():[]),
+    loadGH()
   ]);
-
-  const blogPosts = (posts.value || []).map(p => ({ ...p, source: 'blog' }));
-  const liPosts   = (linkedin.value || []).map(p => ({ ...p, source: 'linkedin' }));
-  githubRepos     = github.value || [];
-
-  allPosts = [...blogPosts, ...liPosts].sort((a, b) => {
-    return new Date(b.date || 0) - new Date(a.date || 0);
-  });
-
-  updateCounts();
-  renderFeed(activeTab);
+  const blog = (posts.value||[]).map(p=>({...p,source:'blog'}));
+  const linkedin = (li.value||[]).map(p=>({...p,source:'linkedin'}));
+  ghRepos = gh.value||[];
+  allPosts = [...blog,...linkedin].sort((a,b)=>new Date(b.date||0)-new Date(a.date||0));
+  updateCounts(); render(activeTab);
 }
 
-async function loadGitHub() {
-  const CACHE_KEY = 'gh_blog_v1';
-  const TTL = 6 * 60 * 60 * 1000;
+async function loadGH() {
+  const K='gh_blog_v2', TTL=6*60*60*1000;
   try {
-    const raw = localStorage.getItem(CACHE_KEY);
-    if (raw) {
-      const { data, ts } = JSON.parse(raw);
-      if (Date.now() - ts < TTL) return data;
-    }
-    const res = await fetch('https://api.github.com/users/rishirajpaul3/repos?sort=updated&per_page=20');
-    if (!res.ok) return [];
-    const repos = await res.json();
-    const filtered = repos.filter(r => !r.fork && r.name !== 'rishirajpaul3');
-    localStorage.setItem(CACHE_KEY, JSON.stringify({ data: filtered, ts: Date.now() }));
-    return filtered;
-  } catch (_) { return []; }
+    const raw=localStorage.getItem(K);
+    if(raw){const{data,ts}=JSON.parse(raw);if(Date.now()-ts<TTL)return data;}
+    const r=await fetch('https://api.github.com/users/rishirajpaul3/repos?sort=updated&per_page=20');
+    if(!r.ok)return[];
+    const all=await r.json();
+    const repos=all.filter(r=>!r.fork&&r.name!=='rishirajpaul3');
+    localStorage.setItem(K,JSON.stringify({data:repos,ts:Date.now()}));
+    return repos;
+  } catch(_){return[];}
 }
 
 function updateCounts() {
-  const total = allPosts.length + githubRepos.length;
-  const blog = allPosts.filter(p => p.source === 'blog').length;
-  const li   = allPosts.filter(p => p.source === 'linkedin').length;
-  const gh   = githubRepos.length;
-
-  document.getElementById('count-all').textContent     = `· ${total}`;
-  document.getElementById('count-blog').textContent    = `· ${blog}`;
-  document.getElementById('count-linkedin').textContent = `· ${li}`;
-  document.getElementById('count-github').textContent  = `· ${gh}`;
+  const total = allPosts.length + ghRepos.length;
+  document.getElementById('c-all').textContent     = `· ${total}`;
+  document.getElementById('c-blog').textContent    = `· ${allPosts.filter(p=>p.source==='blog').length}`;
+  document.getElementById('c-linkedin').textContent= `· ${allPosts.filter(p=>p.source==='linkedin').length}`;
+  document.getElementById('c-github').textContent  = `· ${ghRepos.length}`;
 }
 
-function timeAgo(dateStr) {
-  const diff = (Date.now() - new Date(dateStr)) / 1000;
-  if (diff < 3600)  return Math.floor(diff / 60) + 'm ago';
-  if (diff < 86400) return Math.floor(diff / 3600) + 'h ago';
-  return Math.floor(diff / 86400) + 'd ago';
+function ago(d){const s=(Date.now()-new Date(d))/1000;return s<3600?Math.floor(s/60)+'m ago':s<86400?Math.floor(s/3600)+'h ago':Math.floor(s/86400)+'d ago';}
+
+function blogCard(p) {
+  const tags=(p.tags||[]).map(t=>`<span class="tag">${t}</span>`).join('');
+  return `<a class="feed-card" href="#">
+    <div class="feed-meta">
+      <span class="source-badge blog">blog</span>
+      <span class="feed-date">${p.date||''}</span>
+      ${p.readTime?`<span class="feed-date">${p.readTime} read</span>`:''}
+    </div>
+    <div class="feed-title">${p.title}</div>
+    <p class="feed-excerpt">${p.excerpt}</p>
+    <div class="feed-foot">
+      <span class="feed-read">read post →</span>
+      <div class="feed-tags">${tags}</div>
+    </div>
+  </a>`;
 }
 
-function renderBlogCard(p) {
-  const tags = (p.tags || []).map(t => `<span class="feed-tag">${t}</span>`).join('');
-  const readLink = p.slug ? `post.html?slug=${p.slug}` : '#';
-  return `
-    <a class="feed-card" href="${readLink}">
-      <div class="feed-card-meta">
-        <span class="source-badge blog">blog</span>
-        <span class="feed-date">${p.date || ''}</span>
-        ${p.readTime ? `<span class="feed-date">${p.readTime} read</span>` : ''}
-      </div>
-      <div class="feed-title">${p.title}</div>
-      <p class="feed-excerpt">${p.excerpt}</p>
-      <div class="feed-footer">
-        <span class="feed-read">read post →</span>
-        <div class="feed-tags">${tags}</div>
-      </div>
-    </a>`;
+function liCard(p) {
+  return `<a class="feed-card" href="${p.url||'#'}" target="_blank" rel="noopener">
+    <div class="feed-meta">
+      <span class="source-badge linkedin">linkedin</span>
+      <span class="feed-date">${p.date||''}</span>
+    </div>
+    <p class="feed-excerpt">${p.excerpt}</p>
+    <div class="feed-foot"><span class="feed-read" style="color:#2563eb;">read on linkedin ↗</span></div>
+  </a>`;
 }
 
-function renderLinkedInCard(p) {
-  return `
-    <a class="feed-card" href="${p.url || '#'}" target="_blank" rel="noopener">
-      <div class="feed-card-meta">
-        <span class="source-badge linkedin">linkedin</span>
-        <span class="feed-date">${p.date || ''}</span>
-      </div>
-      <p class="feed-excerpt">${p.excerpt}</p>
-      <div class="feed-footer">
-        <span class="feed-read" style="color:#7eb8f7">read on linkedin ↗</span>
-      </div>
-    </a>`;
+function ghCard(r) {
+  return `<a class="feed-card" href="${r.html_url}" target="_blank" rel="noopener">
+    <div class="feed-meta">
+      <span class="source-badge github">github</span>
+      <span class="feed-date">${ago(r.updated_at)}</span>
+      ${r.language?`<span class="feed-date">${r.language}</span>`:''}
+    </div>
+    <div class="feed-title">${r.name}</div>
+    <p class="feed-excerpt">${r.description||'No description.'}</p>
+    <div class="feed-foot">
+      <span class="feed-read" style="color:#7c3aed;">view repo ↗</span>
+      <div class="feed-tags"><span class="tag">★ ${r.stargazers_count}</span></div>
+    </div>
+  </a>`;
 }
 
-function renderGithubCard(r) {
-  const lang = r.language || '—';
-  const stars = r.stargazers_count || 0;
-  return `
-    <a class="feed-card" href="${r.html_url}" target="_blank" rel="noopener">
-      <div class="feed-card-meta">
-        <span class="source-badge github">github</span>
-        <span class="feed-date">${timeAgo(r.updated_at)}</span>
-        <span class="feed-date">${lang}</span>
-      </div>
-      <div class="feed-title">${r.name}</div>
-      <p class="feed-excerpt">${r.description || 'No description.'}</p>
-      <div class="feed-footer">
-        <span class="feed-read" style="color:#c9a8ff">view repo ↗</span>
-        <div class="feed-tags"><span class="feed-tag">★ ${stars}</span></div>
-      </div>
-    </a>`;
-}
-
-function renderFeed(tab) {
+function render(tab) {
   const feed = document.getElementById('feed');
-  let items = [];
-
-  if (tab === 'all') {
-    const sorted = [...allPosts].sort((a, b) =>
-      new Date(b.date || 0) - new Date(a.date || 0));
-    items = sorted.map(p =>
-      p.source === 'blog' ? renderBlogCard(p) : renderLinkedInCard(p));
-    // Interleave GitHub repos
-    const ghCards = githubRepos.slice(0, 3).map(renderGithubCard);
-    items = [...items, ...ghCards];
-  } else if (tab === 'blog') {
-    items = allPosts.filter(p => p.source === 'blog').map(renderBlogCard);
-  } else if (tab === 'linkedin') {
-    items = allPosts.filter(p => p.source === 'linkedin').map(renderLinkedInCard);
-  } else if (tab === 'github') {
-    items = githubRepos.map(renderGithubCard);
+  let cards = [];
+  if (tab==='all') {
+    const sorted=[...allPosts].sort((a,b)=>new Date(b.date||0)-new Date(a.date||0));
+    cards=[...sorted.map(p=>p.source==='blog'?blogCard(p):liCard(p)),
+           ...ghRepos.slice(0,4).map(ghCard)];
+  } else if (tab==='blog') {
+    cards=allPosts.filter(p=>p.source==='blog').map(blogCard);
+  } else if (tab==='linkedin') {
+    cards=allPosts.filter(p=>p.source==='linkedin').map(liCard);
+  } else {
+    cards=ghRepos.map(ghCard);
   }
-
-  if (!items.length) {
-    feed.innerHTML = `
-      <div class="feed-empty">
-        // nothing here yet — check back soon.<br><br>
-        <a href="https://linkedin.com/in/rishiraj-paul" target="_blank"
-           style="color:var(--accent); font-family:var(--mono); font-size:11px;">
-          follow on linkedin to get posts first ↗
-        </a>
-      </div>`;
+  if (!cards.length) {
+    feed.innerHTML=`<div class="feed-empty">
+      // nothing here yet — check back soon.<br><br>
+      <a href="https://linkedin.com/in/rishiraj-paul" target="_blank"
+         style="color:var(--accent-dark);font-size:12px;">
+        follow on linkedin to see posts first ↗
+      </a>
+    </div>`;
     return;
   }
-
-  feed.innerHTML = items.join('');
+  feed.innerHTML=cards.join('');
 }
 
 /* ── TAB SWITCHING ── */
-document.querySelectorAll('.tab-btn').forEach(btn => {
-  btn.addEventListener('click', () => {
-    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+document.querySelectorAll('.tab-btn').forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
     btn.classList.add('active');
-    activeTab = btn.dataset.tab;
-    renderFeed(activeTab);
+    activeTab=btn.dataset.tab;
+    render(activeTab);
   });
 });
 
-/* ── SUBSCRIBE FORM ── */
-document.getElementById('subscribe-form').addEventListener('submit', async function(e) {
-  e.preventDefault();
-  const btn = this.querySelector('button');
-  btn.textContent = '...';
-  btn.disabled = true;
-  try {
-    const res = await fetch(this.action, { method: 'POST', body: new FormData(this) });
-    const json = await res.json();
-    if (json.success) { btn.textContent = '✓ subscribed'; }
-    else { btn.textContent = 'error — email me'; btn.disabled = false; }
-  } catch (_) { btn.textContent = 'error'; btn.disabled = false; }
+/* ── SUBSCRIBE ── */
+document.getElementById('sub-form').addEventListener('submit',async function(e){
+  e.preventDefault();const btn=this.querySelector('button');
+  btn.textContent='...';btn.disabled=true;
+  try{const r=await fetch(this.action,{method:'POST',body:new FormData(this)});
+  const j=await r.json();btn.textContent=j.success?'✓ subscribed':'error';
+  if(!j.success)btn.disabled=false;}catch(_){btn.textContent='error';btn.disabled=false;}
 });
 
-/* ── INIT ── */
-loadAll();
+init();
 </script>
-
 </body>
 </html>
