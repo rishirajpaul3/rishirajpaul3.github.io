@@ -67,19 +67,35 @@ export default function StoryCards() {
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
         href="#story"
-        style={{
-          display: "inline-flex",
-          alignItems: "center",
-          gap: 6,
-          marginTop: 20,
-          fontFamily: "'JetBrains Mono', monospace",
-          fontSize: 13,
-          color: "var(--text-muted)",
-          textDecoration: "none",
-        }}
+        style={{ display: "inline-flex", alignItems: "center", gap: 6, marginTop: 20, fontFamily: "'JetBrains Mono', monospace", fontSize: 13, color: "var(--text-muted)", textDecoration: "none" }}
       >
         Read the full arc →
       </motion.a>
+
+      {/* GTM Daily social proof */}
+      <motion.div
+        initial={{ opacity: 0, y: 10 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5, delay: 0.2 }}
+        style={{ marginTop: 48, borderTop: "1px solid var(--border)", paddingTop: 36 }}
+      >
+        <div style={{ fontFamily: "'JetBrains Mono',monospace", fontSize: 10, color: "var(--text-dim)", letterSpacing: "0.14em", textTransform: "uppercase", marginBottom: 20 }}>
+          // as featured at
+        </div>
+        <div style={{ display: "flex", alignItems: "center", gap: 32, flexWrap: "wrap" }}>
+          <div style={{ display: "flex", alignItems: "center", gap: 12, background: "var(--surface-2)", border: "1px solid var(--border)", borderRadius: 10, padding: "14px 20px" }}>
+            <div style={{ fontFamily: "'Space Grotesk',sans-serif", fontSize: 14, fontWeight: 700, color: "var(--text)", letterSpacing: "-0.01em" }}>
+              <span style={{ background: "var(--gold)", color: "var(--bg)", padding: "1px 6px", borderRadius: 3, marginRight: 4, fontSize: 12 }}>GTM</span>
+              daily
+            </div>
+            <div style={{ fontFamily: "'JetBrains Mono',monospace", fontSize: 11, color: "var(--text-muted)" }}>Office Hours Speaker</div>
+          </div>
+          <div style={{ fontFamily: "'JetBrains Mono',monospace", fontSize: 12, color: "var(--text-muted)", maxWidth: 420, lineHeight: 1.7 }}>
+            &ldquo;Rishiraj went from pharma sales to building AI tools for real sales teams without a traditional coding background.&rdquo;
+          </div>
+        </div>
+      </motion.div>
     </div>
   );
 }

@@ -7,22 +7,34 @@ export default function StatCounter({ value, suffix = "" }: { value: number; suf
   const started = useRef(false);
 
   useEffect(() => {
-    const observer = new IntersectionObserver(([entry]) => {
-      if (entry.isIntersecting && !started.current) {
-        started.current = true;
-        const duration = 1200;
-        const steps = 40;
-        let step = 0;
-        const timer = setInterval(() => {
-          step++;
-          setDisplay(Math.round((step / steps) * value));
-          if (step >= steps) clearInterval(timer);
-        }, duration / steps);
-      }
-    }, { threshold: 0.5 });
+    // Small delay ensures hydration is complete before observing
+    const setup = setTimeout(() => {
+      const observer = new IntersectionObserver(
+        ([entry]) => {
+          if (entry.isIntersecting && !started.current) {
+            started.current = true;
+            const duration = 1400;
+            const steps = 50;
+            let step = 0;
+            const timer = setInterval(() => {
+              step++;
+              // Ease out: slow down near the end
+              const progress = 1 - Math.pow(1 - step / steps, 3);
+              setDisplay(Math.round(progress * value));
+              if (step >= steps) {
+                setDisplay(value);
+                clearInterval(timer);
+              }
+            }, duration / steps);
+          }
+        },
+        { threshold: 0, rootMargin: "0px 0px -20px 0px" }
+      );
+      if (ref.current) observer.observe(ref.current);
+      return () => observer.disconnect();
+    }, 200);
 
-    if (ref.current) observer.observe(ref.current);
-    return () => observer.disconnect();
+    return () => clearTimeout(setup);
   }, [value]);
 
   return (
