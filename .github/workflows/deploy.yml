@@ -4,8 +4,7 @@ on:
   push:
     branches: [main]
   schedule:
-    # Rebuild every 6 hours — keeps GitHub stats fresh
-    - cron: '0 */6 * * *'
+    - cron: '0 */6 * * *'   # every 6 hours — keeps data fresh
   workflow_dispatch:
 
 permissions:
@@ -24,22 +23,49 @@ jobs:
           node-version: 20
           cache: npm
 
-      - name: Refresh GitHub data
+      - name: Refresh live data
         run: |
           mkdir -p public
+
+          # GitHub profile + repos
           curl -sf "https://api.github.com/users/rishirajpaul3/repos?sort=updated&per_page=20" \
-            -H "Accept: application/vnd.github+json" \
-            > public/github-repos.json || true
+            -H "Accept: application/vnd.github+json" > public/github-repos.json || echo "[]" > public/github-repos.json
+
           curl -sf "https://api.github.com/users/rishirajpaul3" \
-            -H "Accept: application/vnd.github+json" \
-            > public/github-profile.json || true
+            -H "Accept: application/vnd.github+json" > public/github-profile.json || echo "{}" > public/github-profile.json
+
+          # ── Substack RSS (add your Substack slug when ready) ──────────────
+          # SUBSTACK_SLUG="rishirajpaul"
+          # RSS_URL="https://${SUBSTACK_SLUG}.substack.com/feed"
+          # curl -sf "$RSS_URL" | python3 -c "
+          # import sys, json, xml.etree.ElementTree as ET
+          # tree = ET.parse(sys.stdin)
+          # items = []
+          # for item in tree.findall('.//item')[:5]:
+          #   items.append({
+          #     'title':   (item.findtext('title') or '').strip(),
+          #     'date':    (item.findtext('pubDate') or '')[:16],
+          #     'excerpt': (item.findtext('description') or '')[:240].strip() + '...',
+          #     'url':     item.findtext('link') or '',
+          #     'source':  'substack'
+          #   })
+          # print(json.dumps(items))
+          # " > public/substack-posts.json || echo "[]" > public/substack-posts.json
+
+          # ── Medium RSS (add your Medium username when ready) ──────────────
+          # MEDIUM_USER="@rishirajpaul"
+          # curl -sf "https://medium.com/feed/${MEDIUM_USER}" | python3 -c "
+          # import sys, json, xml.etree.ElementTree as ET
+          # # (same parser as above)
+          # print(json.dumps([]))
+          # " > public/medium-posts.json || echo "[]" > public/medium-posts.json
+
+          echo "Data refreshed at $(date -u)" > public/last-updated.txt
 
       - name: Install & build
-        run: |
-          npm ci
-          npm run build
+        run: npm ci && npm run build
 
-      - name: Deploy to gh-pages branch
+      - name: Deploy to gh-pages
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}

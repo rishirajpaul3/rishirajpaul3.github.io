@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 
 type Post = { slug?: string; title?: string; date: string; source: string; excerpt: string; url?: string; readTime?: string; tags?: string[]; name?: string; description?: string; html_url?: string; language?: string; updated_at?: string; stargazers_count?: number; };
 
+// Add "substack" | "medium" here when you create those accounts
 const TABS = ["all", "blog", "linkedin", "github"] as const;
 type Tab = typeof TABS[number];
 
