@@ -60,7 +60,11 @@ export default function BlogFeed() {
 
   const counts = { all: posts.length + ghRepos.length, blog: posts.filter(p => p.source === "blog").length, linkedin: posts.filter(p => p.source === "linkedin").length, github: ghRepos.length };
 
-  const items = tab === "all" ? [...posts, ...ghRepos.slice(0, 4)] : tab === "github" ? ghRepos : posts.filter(p => p.source === tab);
+  // In "all" tab: show blog+linkedin posts first, then interleave GitHub repos
+  const items = tab === "all"
+    ? [...posts, ...ghRepos.slice(0, Math.max(2, 6 - posts.length))]
+    : tab === "github" ? ghRepos
+    : posts.filter(p => p.source === tab);
 
   return (
     <div>

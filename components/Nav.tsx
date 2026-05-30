@@ -2,6 +2,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
+import MobileNav from "./MobileNav";
 
 const links = [
   { href: "/",         label: "home" },
@@ -45,9 +46,12 @@ export default function Nav() {
           ))}
         </ul>
 
-        <Link href="/#contact" style={{ fontFamily:"'JetBrains Mono',monospace", fontSize:12, padding:"7px 18px", background:"var(--gold)", color:"var(--bg)", textDecoration:"none", borderRadius:8, fontWeight:600, letterSpacing:"0.02em", whiteSpace:"nowrap" }}>
-          let&apos;s talk →
-        </Link>
+        <div style={{ display:"flex", alignItems:"center", gap:10 }}>
+          <Link href="/#contact" style={{ fontFamily:"'JetBrains Mono',monospace", fontSize:12, padding:"7px 18px", background:"var(--gold)", color:"var(--bg)", textDecoration:"none", borderRadius:8, fontWeight:600, letterSpacing:"0.02em", whiteSpace:"nowrap" }}>
+            let&apos;s talk →
+          </Link>
+          <MobileNav />
+        </div>
       </nav>
 
       <style>{`

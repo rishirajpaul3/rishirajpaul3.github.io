@@ -4,13 +4,11 @@ on:
   push:
     branches: [main]
   schedule:
-    - cron: '0 */6 * * *'   # every 6 hours — keeps data fresh
+    - cron: '0 */6 * * *'
   workflow_dispatch:
 
 permissions:
   contents: write
-  pages: write
-  id-token: write
 
 jobs:
   deploy:
@@ -26,48 +24,21 @@ jobs:
       - name: Refresh live data
         run: |
           mkdir -p public
-
-          # GitHub profile + repos
           curl -sf "https://api.github.com/users/rishirajpaul3/repos?sort=updated&per_page=20" \
             -H "Accept: application/vnd.github+json" > public/github-repos.json || echo "[]" > public/github-repos.json
-
           curl -sf "https://api.github.com/users/rishirajpaul3" \
             -H "Accept: application/vnd.github+json" > public/github-profile.json || echo "{}" > public/github-profile.json
+          echo "Refreshed at $(date -u)" > public/last-updated.txt
 
-          # ── Substack RSS (add your Substack slug when ready) ──────────────
-          # SUBSTACK_SLUG="rishirajpaul"
-          # RSS_URL="https://${SUBSTACK_SLUG}.substack.com/feed"
-          # curl -sf "$RSS_URL" | python3 -c "
-          # import sys, json, xml.etree.ElementTree as ET
-          # tree = ET.parse(sys.stdin)
-          # items = []
-          # for item in tree.findall('.//item')[:5]:
-          #   items.append({
-          #     'title':   (item.findtext('title') or '').strip(),
-          #     'date':    (item.findtext('pubDate') or '')[:16],
-          #     'excerpt': (item.findtext('description') or '')[:240].strip() + '...',
-          #     'url':     item.findtext('link') or '',
-          #     'source':  'substack'
-          #   })
-          # print(json.dumps(items))
-          # " > public/substack-posts.json || echo "[]" > public/substack-posts.json
+      - name: Install dependencies
+        run: npm ci
 
-          # ── Medium RSS (add your Medium username when ready) ──────────────
-          # MEDIUM_USER="@rishirajpaul"
-          # curl -sf "https://medium.com/feed/${MEDIUM_USER}" | python3 -c "
-          # import sys, json, xml.etree.ElementTree as ET
-          # # (same parser as above)
-          # print(json.dumps([]))
-          # " > public/medium-posts.json || echo "[]" > public/medium-posts.json
-
-          echo "Data refreshed at $(date -u)" > public/last-updated.txt
-
-      - name: Install & build
-        run: npm ci && npm run build
+      - name: Build
+        run: npm run build
 
       - name: Deploy to gh-pages
-        uses: peaceiris/actions-gh-pages@v4
+        uses: JamesIves/github-pages-deploy-action@v4
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./out
-          force_orphan: true
+          folder: out
+          branch: gh-pages
+          clean: true

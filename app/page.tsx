@@ -45,6 +45,9 @@ export default function Home() {
           <div style={{ display:"grid", gridTemplateColumns:"1fr 1fr", gap:12 }}>
             {projects.map((p,i) => (
               <div key={i} style={{ background:"var(--surface-2)", border:"1px solid var(--border)", borderRadius:14, padding:"28px 26px", display:"flex", flexDirection:"column" }}>
+                <div style={{ fontFamily:"'JetBrains Mono',monospace", fontSize:10, color:"var(--text-dim)", letterSpacing:"0.12em", marginBottom:12 }}>
+                  {String(i+1).padStart(2,"0")}
+                </div>
                 <div style={{ display:"flex", justifyContent:"space-between", alignItems:"flex-start", marginBottom:10 }}>
                   <span style={{ fontFamily:"'Space Grotesk',sans-serif", fontSize:16, fontWeight:600, color:"var(--text)", letterSpacing:"-0.01em" }}>{p.name}</span>
                   <span style={{ fontFamily:"'JetBrains Mono',monospace", fontSize:9, color:"var(--gold)", background:"var(--gold-bg)", border:"1px solid var(--gold-border)", padding:"3px 9px", borderRadius:9999, flexShrink:0, display:"flex", alignItems:"center", gap:5 }}>● live</span>
