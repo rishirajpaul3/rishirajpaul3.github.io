@@ -1,0 +1,29 @@
+[
+  {
+    "slug": "ai-call-notetaker-railway",
+    "title": "How I built an AI call notetaker that runs 24/7 on Railway",
+    "date": "2026-05-28",
+    "source": "blog",
+    "excerpt": "I was tired of manually reviewing HubSpot call recordings. So I built a system that polls for new calls every 5 minutes, transcribes with Deepgram, extracts BANT with GPT-4o, and pushes insights back to the deal — fully automated. Here's the full architecture.",
+    "readTime": "6 min",
+    "tags": ["AI", "FastAPI", "HubSpot", "Railway"]
+  },
+  {
+    "slug": "prospect-csv-to-pipeline",
+    "title": "From a prospect CSV to a full outreach pipeline in 60 seconds",
+    "date": "2026-05-25",
+    "source": "blog",
+    "excerpt": "Pipeline AI takes a raw CSV and returns AI lead scores, personalised email sequences for each prospect, and discovery call scripts — all with human review gates before anything sends. Here's how I built the scoring and personalisation logic.",
+    "readTime": "5 min",
+    "tags": ["AI", "Outbound", "Clay", "GPT-4o"]
+  },
+  {
+    "slug": "b2b-account-intelligence-deepaccount",
+    "title": "DeepAccount: B2B account intelligence in seconds, not hours",
+    "date": "2026-05-20",
+    "source": "blog",
+    "excerpt": "Paste a company URL and your ICP criteria. DeepAccount scrapes live web data, scores the account fit, builds buyer personas, surfaces key objections, and writes a cold opener — all in under 10 seconds. The architecture behind it.",
+    "readTime": "4 min",
+    "tags": ["AI", "B2B", "Account Intelligence", "Python"]
+  }
+]
