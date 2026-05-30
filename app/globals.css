@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+@import "tailwindcss";
+
+/* ── DESIGN TOKENS ── */
+:root {
+  --bg:          #0c0904;
+  --surface:     #16110a;
+  --surface-2:   #1e1810;
+  --border:      #2e2518;
+  --border-2:    #3d3020;
+  --text:        #f0e6d0;
+  --text-muted:  #9a8a72;
+  --text-dim:    #5a4e3c;
+  --gold:        #c9963b;
+  --gold-light:  #e8b84b;
+  --gold-bg:     rgba(201,150,59,0.10);
+  --gold-border: rgba(201,150,59,0.25);
+  --radius:      14px;
+  --radius-sm:   8px;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 14px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+/* grain texture overlay */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  opacity: 0.04;
+  mix-blend-mode: overlay;
+}
+
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--border-2); }
+::selection { background: rgba(201,150,59,0.2); }
+
+.section-label {
+  font-size: 10px;
+  color: var(--text-dim);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+  font-family: 'JetBrains Mono', monospace;
+}
+.section-label::before { content: '// '; color: var(--gold); }
+
+input, textarea {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 13px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  color: var(--text);
+  outline: none;
+  padding: 11px 14px;
+  width: 100%;
+  transition: border-color 0.2s;
+}
+input:focus, textarea:focus { border-color: var(--border-2); }
+input::placeholder, textarea::placeholder { color: var(--text-dim); }
+
+@keyframes pulse-dot { 0%,100%{opacity:1} 50%{opacity:0.3} }
+@keyframes fade-up { from{opacity:0;transform:translateY(16px)} to{opacity:1;transform:none} }

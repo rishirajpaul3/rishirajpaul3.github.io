@@ -1,0 +1,17 @@
+[
+  {
+    "date": "MAY 2026",
+    "excerpt": "I built a tool that polls HubSpot every 5 minutes, downloads call recordings, transcribes them with Deepgram, extracts BANT with GPT-4o, and pushes the insights back to the deal — fully automated. Here's how the pipeline works...",
+    "url": "https://www.linkedin.com/in/rishiraj-paul/"
+  },
+  {
+    "date": "MAY 2026",
+    "excerpt": "Most GTM engineers build pipelines. I build systems that understand why a deal stalled. DeepAccount — paste any company URL, get back ICP fit score, buyer personas, key objections, and an opening line. Ships in seconds.",
+    "url": "https://www.linkedin.com/in/rishiraj-paul/"
+  },
+  {
+    "date": "APR 2026",
+    "excerpt": "The mistake most outbound teams make: they automate the sending but not the thinking. Pipeline AI takes a raw CSV and returns scored leads, personalised email sequences, and discovery call scripts with human review gates before anything goes out.",
+    "url": "https://www.linkedin.com/in/rishiraj-paul/"
+  }
+]
