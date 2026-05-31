@@ -26,6 +26,7 @@ export default function ThemeToggle() {
   const isDark = theme === "dark";
 
   return (
+    <>
     <button
       onClick={toggle}
       title={isDark ? "Switch to light mode" : "Switch to dark mode"}
@@ -52,6 +53,7 @@ export default function ThemeToggle() {
       <span style={{ fontSize: 14 }}>{isDark ? "☀" : "◗"}</span>
       <span className="theme-label">{isDark ? "light" : "dark"}</span>
     </button>
-    <style>{`@media(max-width:900px){ .theme-label { display:none; } }`}</style>
+    <style>{"@media(max-width:900px){ .theme-label { display:none; } }"}</style>
+    </>
   );
 }
