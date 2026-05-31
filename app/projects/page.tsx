@@ -7,17 +7,10 @@ import { motion } from "framer-motion";
 
 const deployed = [
   {
-    name: "SaravaSales Notetaker",
-    desc: "AI sales co-pilot that polls HubSpot every 5 minutes, transcribes calls with Deepgram, extracts BANT with GPT-4o, and pushes structured insights back to deals automatically. Full React dashboard for review.",
+    name: "NoteAI",
+    desc: "AI sales co-pilot that transcribes calls, extracts BANT with GPT-4o, and pushes structured insights back to CRM deal records automatically. Full React dashboard for review and reprocessing.",
     stack: ["FastAPI","React","Deepgram","GPT-4o","HubSpot","PostgreSQL","Railway"],
-    href: "https://github.com/rishirajpaul3",
-    status: "live",
-  },
-  {
-    name: "Pipeline AI",
-    desc: "Paste a prospect CSV and get a full outreach pipeline: AI lead scoring, deep company research, personalised email drafts, and discovery call scripts — all with human review gates before anything sends.",
-    stack: ["Python","GPT-4o","Claude","n8n","HubSpot"],
-    href: "https://github.com/rishirajpaul3/pipeline-ai",
+    href: "https://github.com/rishirajpaul3/noteai",
     status: "live",
   },
   {
@@ -28,10 +21,10 @@ const deployed = [
     status: "live",
   },
   {
-    name: "OutreachOS",
-    desc: "Unified outbound dashboard consolidating Smartlead email and HeyReach LinkedIn campaigns in one place. AI insights surface what's working, what's stalling, and what to fix next.",
-    stack: ["React","TypeScript","Smartlead API","HeyReach API","GPT-4o"],
-    href: "https://github.com/rishirajpaul3/outreachos-app",
+    name: "Pipeline AI",
+    desc: "Paste a prospect CSV and get a full outreach pipeline: AI lead scoring, deep company research, personalised email drafts, and discovery call scripts — all with human review gates before anything sends.",
+    stack: ["Python","GPT-4o","Claude","n8n","HubSpot"],
+    href: "https://github.com/rishirajpaul3/pipeline-ai",
     status: "live",
   },
 ];
@@ -81,14 +74,14 @@ export default function ProjectsPage() {
             Systems I&apos;ve built.<br /><G>Open source. In production.</G>
           </h1>
           <p style={{ fontFamily:"'JetBrains Mono',monospace", fontSize:15, color:"var(--text-muted)", maxWidth:580, lineHeight:1.8 }}>
-            4 deployed AI applications running in production + open source GTM tools.
+            3 deployed AI applications running in production + open source GTM tools.
             Everything is on GitHub.
           </p>
 
           {/* Quick stats */}
           <div style={{ display:"flex", gap:24, marginTop:32, flexWrap:"wrap" }}>
             {[
-              { val:"4", label:"deployed apps" },
+              { val:"3", label:"deployed apps" },
               { val:"11+", label:"public repos" },
               { val:"100%", label:"open source" },
               { val:"3", label:"languages" },
