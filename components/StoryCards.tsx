@@ -59,7 +59,7 @@ function TiltCard({ card, delay }: { card: typeof cards[0]; delay: number }) {
 export default function StoryCards() {
   return (
     <div style={{ marginTop: 48 }}>
-      <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 12, perspective: 1000 }}>
+      <div className="grid-3col" style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 12, perspective: 1000 }}>
         {cards.map((c, i) => <TiltCard key={i} card={c} delay={i * 0.1} />)}
       </div>
       <motion.a
