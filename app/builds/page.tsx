@@ -5,6 +5,27 @@ import RightRail from "@/components/RightRail";
 import { motion } from "framer-motion";
 import Link from "next/link";
 
+const projects = [
+  {
+    name: "NoteAI",
+    desc: "AI sales co-pilot that transcribes calls, extracts BANT with GPT-4o, and pushes structured insights back to CRM deal records automatically.",
+    stack: ["FastAPI", "React", "Deepgram", "GPT-4o", "HubSpot", "PostgreSQL"],
+    href: "https://github.com/rishirajpaul3/noteai",
+  },
+  {
+    name: "DeepAccount",
+    desc: "Paste a company URL and your ICP criteria, get back a fit score, buyer personas, key objections, and a personalised cold opener — generated from live web data.",
+    stack: ["Python", "GPT-4o", "Web scraping", "React", "TypeScript"],
+    href: "https://github.com/rishirajpaul3/deepaccount",
+  },
+  {
+    name: "Pipeline AI",
+    desc: "Paste a prospect CSV and get a full outreach pipeline: AI lead scoring, company research, personalised email drafts, and discovery call scripts.",
+    stack: ["Python", "GPT-4o", "Claude", "n8n", "HubSpot"],
+    href: "https://github.com/rishirajpaul3/pipeline-ai",
+  },
+];
+
 const categories = [
   {
     id: "n8n",
@@ -75,6 +96,45 @@ export default function BuildsPage() {
         </section>
 
         <div className="divider" />
+
+        {/* Deployed Apps */}
+        <section style={{ padding: "72px 0 0" }}>
+          <div className="section-label">deployed apps</div>
+          <h2 style={{ fontFamily: "'Space Grotesk',sans-serif", fontSize: "clamp(24px,3vw,36px)", fontWeight: 700, letterSpacing: "-0.025em", color: "var(--text)", marginBottom: 32 }}>
+            Running in production <G>right now.</G>
+          </h2>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 12 }}>
+            {projects.map((p, i) => (
+              <motion.a
+                key={p.name}
+                href={p.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                initial={{ opacity: 0, y: 16 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: i * 0.08 }}
+                style={{ textDecoration: "none", color: "inherit", display: "block" }}
+              >
+                <div
+                  style={{ background: "var(--surface-2)", border: "1px solid var(--border)", borderRadius: 16, padding: "28px 24px", height: "100%", transition: "border-color 0.2s", cursor: "pointer" }}
+                  onMouseEnter={e => (e.currentTarget as HTMLElement).style.borderColor = "var(--border-2)"}
+                  onMouseLeave={e => (e.currentTarget as HTMLElement).style.borderColor = "var(--border)"}
+                >
+                  <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: 12 }}>
+                    <div style={{ fontFamily: "'Space Grotesk',sans-serif", fontSize: 18, fontWeight: 700, color: "var(--text)", letterSpacing: "-0.02em" }}>{p.name}</div>
+                    <span style={{ fontFamily: "'JetBrains Mono',monospace", fontSize: 9, color: "var(--gold)", background: "var(--gold-bg)", border: "1px solid var(--gold-border)", padding: "3px 9px", borderRadius: 9999, flexShrink: 0 }}>● LIVE</span>
+                  </div>
+                  <p style={{ fontFamily: "Inter, 'DM Sans', system-ui, sans-serif", fontSize: 13, color: "var(--text-muted)", lineHeight: 1.75, marginBottom: 16 }}>{p.desc}</p>
+                  <div style={{ display: "flex", flexWrap: "wrap", gap: 6, marginBottom: 16 }}>{p.stack.map(tag)}</div>
+                  <div style={{ fontFamily: "'JetBrains Mono',monospace", fontSize: 11, color: "var(--gold)" }}>view on github ↗</div>
+                </div>
+              </motion.a>
+            ))}
+          </div>
+        </section>
+
+        <div className="divider" style={{ margin: "72px 0 0" }} />
 
         {/* Categories */}
         <section style={{ padding: "72px 0 80px" }}>
