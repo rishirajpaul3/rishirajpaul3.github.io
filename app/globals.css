@@ -110,3 +110,69 @@ input::placeholder, textarea::placeholder { color: var(--text-dim); }
 /* Animations */
 @keyframes pulse-dot { 0%,100%{opacity:1} 50%{opacity:0.3} }
 @keyframes shimmer   { 0%,100%{opacity:0.4} 50%{opacity:0.8} }
+
+/* ── MOBILE RESPONSIVE ── */
+@media (max-width: 768px) {
+
+  /* Main content padding */
+  main { padding-left: 20px !important; padding-right: 20px !important; }
+
+  /* Announce bar */
+  .announce { padding: 9px 20px !important; font-size: 10px !important; }
+
+  /* Force all multi-column grids to single column */
+  [style*="gridTemplateColumns: \"1fr 1fr\""],
+  [style*="gridTemplateColumns: '1fr 1fr'"],
+  [style*="gridTemplateColumns:\"1fr 1fr\""],
+  [style*="gridTemplateColumns:\"repeat(2"],
+  [style*="gridTemplateColumns: \"repeat(2"],
+  [style*="gridTemplateColumns: \"repeat(3"],
+  [style*="gridTemplateColumns: \"repeat(4"],
+  [style*="gridTemplateColumns:\"repeat(3"],
+  [style*="gridTemplateColumns:\"repeat(4"],
+  [style*="gridTemplateColumns: \"1fr 400px\""],
+  [style*="gridTemplateColumns: \"220px 1fr\""],
+  [style*="gridTemplateColumns: \"200px 1fr\""],
+  [style*="gridTemplateColumns: \"1fr 260px\""],
+  [style*="gridTemplateColumns: \"1fr 1fr 1fr\""] {
+    grid-template-columns: 1fr !important;
+    gap: 10px !important;
+  }
+
+  /* How-to article sidebar — hide on mobile */
+  aside[style*="position:\"sticky\""],
+  aside[style*="position: \"sticky\""] {
+    display: none !important;
+  }
+
+  /* Section padding */
+  section[style*="padding: \"80px"] { padding-top: 48px !important; padding-bottom: 40px !important; }
+  section[style*="padding: \"72px"] { padding-top: 40px !important; padding-bottom: 40px !important; }
+  section[style*="padding: \"60px"] { padding-top: 32px !important; padding-bottom: 32px !important; }
+
+  /* Hero headline */
+  h1[style*="clamp(48px"] { font-size: clamp(36px,10vw,56px) !important; }
+
+  /* Right rail — hide on mobile */
+  [class*="RightRail"],
+  [style*="position:\"fixed\""][style*="right"] { display: none !important; }
+
+  /* Nav */
+  nav { padding: 0 20px !important; }
+
+  /* Contact section flex column */
+  [style*="gridTemplateColumns: \"1fr 1fr\""][id="contact"] { grid-template-columns: 1fr !important; }
+
+  /* Pulse page hero */
+  [style*="fontSize: \"clamp(72px"] { font-size: clamp(52px,14vw,80px) !important; }
+
+  /* Log stats row */
+  [style*="gridTemplateColumns:\"repeat("] { grid-template-columns: 1fr 1fr !important; }
+
+  /* How-to article grid — 2 col blocks */
+  [style*="gridTemplateColumns: \"1fr 1fr\""] { grid-template-columns: 1fr !important; }
+
+  /* Tables in about page */
+  [style*="gridTemplateColumns: \"220px"] { grid-template-columns: 1fr !important; }
+  [style*="gridTemplateColumns: \"200px"] { grid-template-columns: 1fr !important; }
+}
