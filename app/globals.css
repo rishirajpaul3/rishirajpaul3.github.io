@@ -162,6 +162,9 @@ input::placeholder, textarea::placeholder { color: var(--text-dim); }
   .grid-3col  { grid-template-columns: 1fr !important; gap: 12px !important; }
   .grid-4col  { grid-template-columns: 1fr 1fr !important; gap: 10px !important; }
 
+  /* Timeline cards — reduce padding on mobile */
+  .grid-2col[style*="background"] { padding: 20px 18px !important; }
+
   /* How-to sidebar — hide on mobile */
   aside { display: none !important; }
 

@@ -65,7 +65,7 @@ export default function AboutPage() {
         <div className="divider" />
 
         {/* Story + Stack */}
-        <section style={{ padding: "72px 0", display: "grid", gridTemplateColumns: "1fr 400px", gap: 80, alignItems: "start" }}>
+        <section className="grid-2col" style={{ padding: "72px 0", display: "grid", gridTemplateColumns: "1fr 400px", gap: 80, alignItems: "start" }}>
           <div>
             <div className="section-label">the story</div>
             <div style={{ display: "flex", flexDirection: "column", gap: 22, fontFamily: "Inter, 'DM Sans', system-ui, sans-serif", fontSize: 16, color: "var(--text-muted)", lineHeight: 1.9 }}>
@@ -145,7 +145,7 @@ export default function AboutPage() {
           </h2>
           <div style={{ display: "flex", flexDirection: "column", gap: 2 }}>
             {timeline.map((t, i) => (
-              <div key={i} style={{ background: "var(--surface-2)", border: "1px solid var(--border)", padding: "28px 32px", display: "grid", gridTemplateColumns: "220px 1fr", gap: 40, alignItems: "start" }}>
+              <div key={i} className="grid-2col" style={{ background: "var(--surface-2)", border: "1px solid var(--border)", padding: "28px 32px", display: "grid", gridTemplateColumns: "220px 1fr", gap: 40, alignItems: "start" }}>
                 <div>
                   <div style={{ fontFamily: "'JetBrains Mono',monospace", fontSize: 10, color: "var(--gold)", letterSpacing: "0.1em", marginBottom: 6 }}>{t.year}</div>
                   <div style={{ fontFamily: "'Space Grotesk',sans-serif", fontSize: 13, fontWeight: 600, color: "var(--text)", lineHeight: 1.4 }}>{t.role}</div>
@@ -159,7 +159,7 @@ export default function AboutPage() {
         <div className="divider" />
 
         {/* What drives me + Outside work */}
-        <section style={{ padding: "72px 0", display: "grid", gridTemplateColumns: "1fr 1fr", gap: 80 }}>
+        <section className="grid-2col" style={{ padding: "72px 0", display: "grid", gridTemplateColumns: "1fr 1fr", gap: 80 }}>
           <div>
             <div className="section-label">what drives me</div>
             <p style={{ fontFamily: "Inter, 'DM Sans', system-ui, sans-serif", fontSize: 16, color: "var(--text-muted)", lineHeight: 1.9, marginBottom: 16 }}>
