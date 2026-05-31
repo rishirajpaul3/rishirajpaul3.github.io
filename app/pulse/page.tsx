@@ -187,10 +187,6 @@ export default function PulsePage() {
                     <span style={{ fontFamily: "'JetBrains Mono',monospace", fontSize: 10, color: "var(--text-dim)", background: "var(--surface-2)", border: "1px solid var(--border)", padding: "4px 12px", borderRadius: 9999 }}>
                       {index.length} digests
                     </span>
-                    <a href="/pulse/index.json" target="_blank" rel="noopener noreferrer"
-                      style={{ fontFamily: "'JetBrains Mono',monospace", fontSize: 10, color: "var(--text-dim)", background: "var(--surface-2)", border: "1px solid var(--border)", padding: "4px 12px", borderRadius: 9999, textDecoration: "none" }}>
-                      JSON
-                    </a>
                   </div>
                 </div>
 

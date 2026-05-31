@@ -281,7 +281,9 @@ def update_index(date_str, digest):
 # ── Main ────────────────────────────────────────────────────────────────────────
 
 def main():
-    date_str = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+    import re as _re
+    date_arg = next((a for a in sys.argv[1:] if _re.match(r"\d{4}-\d{2}-\d{2}", a)), None)
+    date_str = date_arg if date_arg else datetime.now(timezone.utc).strftime("%Y-%m-%d")
     out_file = OUTPUT_DIR / f"{date_str}.json"
 
     print(f"Daily Pulse — {date_str}")
