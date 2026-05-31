@@ -98,7 +98,7 @@ export default function Home() {
         <div style={{ borderTop:"1px solid var(--border)", paddingTop:60, paddingBottom:80, display:"flex", justifyContent:"space-between", alignItems:"center", gap:40, flexWrap:"wrap" }}>
           <div>
             <div style={{ fontFamily:"'Space Grotesk',sans-serif", fontSize:20, fontWeight:600, color:"var(--text)", marginBottom:6 }}>Build Log</div>
-            <div style={{ fontFamily:"Inter, 'DM Sans', system-ui, sans-serif", fontSize:14, color:"var(--text-muted)" }}>GTM systems, AI tools, and what I&apos;m shipping. No noise. No fluff.</div>
+            <div style={{ fontFamily:"Inter, 'DM Sans', system-ui, sans-serif", fontSize:14, color:"var(--text-muted)" }}>Every week I share what I&apos;m learning, building, and shipping in GTM and AI.</div>
           </div>
           <a href="https://build-logrishiraj.beehiiv.com/subscribe" target="_blank" rel="noopener noreferrer"
             style={{ fontFamily:"'JetBrains Mono',monospace", fontSize:12, padding:"12px 28px", background:"var(--gold)", color:"var(--bg)", textDecoration:"none", borderRadius:8, fontWeight:600, letterSpacing:"0.03em", whiteSpace:"nowrap", boxShadow:"0 4px 24px rgba(201,150,59,0.2)" }}>
