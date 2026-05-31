@@ -44,10 +44,10 @@ export default function BlogPage() {
         <div style={{ borderTop:"1px solid var(--border)", paddingTop:60, paddingBottom:80, display:"flex", justifyContent:"space-between", alignItems:"center", gap:40, flexWrap:"wrap" }}>
           <div>
             <div style={{ fontFamily:"'JetBrains Mono',monospace", fontSize:12, color:"var(--text-dim)", marginBottom:8 }}>// subscribe to follow the build</div>
-            <div style={{ fontFamily:"'Space Grotesk',sans-serif", fontSize:20, fontWeight:600, color:"var(--text)", letterSpacing:"-0.01em", marginBottom:5 }}>Build logs. GTM drops. No spam.</div>
+            <div style={{ fontFamily:"'Space Grotesk',sans-serif", fontSize:20, fontWeight:600, color:"var(--text)", letterSpacing:"-0.01em", marginBottom:5 }}>Build Log. GTM systems, AI tools, and what I am shipping.</div>
             <div style={{ fontFamily:"'JetBrains Mono',monospace", fontSize:13, color:"var(--text-muted)" }}>Unsubscribe anytime.</div>
           </div>
-          <form action="https://formspree.io/f/mlgvkeja" method="POST" style={{ display:"flex", gap:8 }}>
+          <form action="https://build-logrishiraj.beehiiv.com/subscribe" method="POST" style={{ display:"flex", gap:8 }}>
             <input type="email" name="email" placeholder="your@email.com" required style={{ width:220, borderRadius:8 }} />
             <button type="submit" style={{ fontFamily:"'JetBrains Mono',monospace", fontSize:12, padding:"11px 22px", background:"var(--gold)", color:"var(--bg)", border:"none", borderRadius:8, fontWeight:600, cursor:"pointer", whiteSpace:"nowrap" }}>Subscribe</button>
           </form>

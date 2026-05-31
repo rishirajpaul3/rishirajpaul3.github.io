@@ -4,45 +4,41 @@ import RightRail from "@/components/RightRail";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "About",
-  description: "From pharma sales and 50+ reps in East India to building AI GTM systems in London.",
+  title: "About — Rishiraj Paul",
+  description: "Sales ops to AI builder. Not through a CS degree. Through years of watching broken GTM systems and eventually deciding to just fix them myself.",
 };
 
 const timeline = [
   {
-    year: "2015–2018",
-    role: "Commercial Sales · East India",
-    body: "Started on the ground — building distribution networks and commercial partnerships across East India. Learned how revenue actually moves: through people, relationships, and process. Not through dashboards.",
+    year: "Jan 2023 – Aug 2023",
+    role: "Sales & CRM Coordinator, Anhad Pharma",
+    body: "My first real ops role. Managed monthly sales and marketing reporting for a team of 10 reps, moved them off manual spreadsheets onto structured dashboards, and led the team to roll out a new CRM process. Got a feel for how broken most sales infrastructure actually is.",
   },
   {
-    year: "2018–2022",
-    role: "Sales Operations · 50+ Reps",
-    body: "Moved into managing sales teams at scale. 50+ reps, inbound and outbound, across multiple territories. Watched every broken CRM workflow, every missed follow-up, every lead that fell through the cracks. Built workarounds in spreadsheets. Hated it.",
+    year: "Sep 2023 – May 2024",
+    role: "Sales Operations, Rose Pharmaco",
+    body: "Stepped up to a bigger scope. Managed the reporting infrastructure for 50+ reps across territories, closed a commercial partnership with Roche Diabetic Care as the sole liaison for North-East India, and won 4 tenders by building a proper pricing and sourcing workflow. Also launched a full product line from scratch. That was the year I really understood GTM from the inside.",
   },
   {
-    year: "2022–2023",
-    role: "MSc Entrepreneurship & Innovation · QMUL London",
-    body: "Moved to London. Studied at Queen Mary University. The MSc gave me the frameworks — but the real shift was deciding to stop waiting for engineers to fix the tools and just learning to build them myself.",
+    year: "2024 – 2025",
+    role: "MSc Entrepreneurship & Innovation, QMUL London",
+    body: "Moved to London. Studied at Queen Mary University. First Class. The frameworks were useful but the real shift happened just by being around people who were building things. Something clicked.",
   },
   {
-    year: "2023–2024",
-    role: "First Systems · n8n + APIs",
-    body: "First pipelines: n8n workflows, Apollo enrichment, HubSpot integrations. Rough but functional. Started freelancing. Realised I could ship things clients actually used. Got faster.",
-  },
-  {
-    year: "2024–now",
-    role: "GTM Engineer · Production AI Systems",
-    body: "FastAPI backends on Railway. React dashboards. Deepgram transcription. GPT-4o extraction. Real HubSpot integrations on real deal pipelines. Invited to speak at GTM Daily Office Hours. Building in public.",
+    year: "Dec 2025 – Now",
+    role: "GTM Engineer, Building",
+    body: "First pipelines, then production apps. FastAPI backends, React dashboards, AI integrations running on real deal pipelines. Spoke at GTM Daily Office Hours. Building in public.",
   },
 ];
 
 const stack = [
-  { category: "Backend",        items: ["FastAPI", "Python", "PostgreSQL", "Railway"] },
-  { category: "Frontend",       items: ["React", "Next.js", "TypeScript", "Tailwind"] },
-  { category: "AI",             items: ["GPT-4o", "Claude", "Deepgram", "Whisper"] },
-  { category: "GTM Tools",      items: ["HubSpot", "Clay", "Apollo", "Instantly", "Smartlead", "HeyReach"] },
-  { category: "Automation",     items: ["n8n", "Make", "Zapier", "Webhook APIs"] },
-  { category: "Enrichment",     items: ["Hunter.io", "Clearbit", "ZoomInfo", "Seamless.ai"] },
+  { category: "Core Stack",       items: ["Clay", "Instantly", "HubSpot", "n8n", "Claude Code"] },
+  { category: "Outbound",         items: ["Instantly", "Smartlead", "Apollo", "HeyReach"] },
+  { category: "Enrichment & Data",items: ["Clay", "Apollo"] },
+  { category: "Automation",       items: ["Zapier", "n8n"] },
+  { category: "CRM",              items: ["GoHighLevel", "HubSpot", "Salesforce"] },
+  { category: "Data",             items: ["SQL", "SQLite", "Python", "JavaScript"] },
+  { category: "AI & APIs",        items: ["REST APIs", "Webhooks", "Postman", "Claude Code", "LLM Prompting"] },
 ];
 
 const G = ({ children }: { children: React.ReactNode }) =>
@@ -59,64 +55,63 @@ export default function AboutPage() {
         <section style={{ padding: "80px 0 60px" }}>
           <div className="section-label">about</div>
           <h1 style={{ fontFamily: "'Space Grotesk',sans-serif", fontSize: "clamp(40px,6vw,72px)", fontWeight: 700, letterSpacing: "-0.035em", lineHeight: 1.06, marginBottom: 24, color: "var(--text)" }}>
-            The long way round<br />to <G>building systems.</G>
+            The long way round<br />to <G>building.</G>
           </h1>
-          <p style={{ fontFamily: "'JetBrains Mono',monospace", fontSize: 16, color: "var(--text-muted)", maxWidth: 620, lineHeight: 1.85 }}>
-            I&apos;m a GTM Engineer with a background in sales operations and commercial partnerships.
-            I got here the unconventional way — not through a CS degree, but through years on the
-            ops floor watching every broken GTM tool fail in real time.
+          <p style={{ fontFamily: "Inter, 'DM Sans', system-ui, sans-serif", fontSize: 17, color: "var(--text-muted)", maxWidth: 580, lineHeight: 1.8 }}>
+            Sales ops to AI builder. Not through a CS degree. Through years of watching broken GTM systems and eventually deciding to just fix them myself.
           </p>
         </section>
 
         <div className="divider" />
 
-        {/* The story */}
-        <section style={{ padding: "72px 0", display: "grid", gridTemplateColumns: "1fr 420px", gap: 80, alignItems: "start" }}>
+        {/* Story + Stack */}
+        <section style={{ padding: "72px 0", display: "grid", gridTemplateColumns: "1fr 400px", gap: 80, alignItems: "start" }}>
           <div>
             <div className="section-label">the story</div>
-            <div style={{ display: "flex", flexDirection: "column", gap: 20, fontFamily: "'JetBrains Mono',monospace", fontSize: 15, color: "var(--text-muted)", lineHeight: 1.9 }}>
+            <div style={{ display: "flex", flexDirection: "column", gap: 22, fontFamily: "Inter, 'DM Sans', system-ui, sans-serif", fontSize: 16, color: "var(--text-muted)", lineHeight: 1.9 }}>
               <p>
-                I spent years on the ops floor — managing <strong style={{ color: "var(--text)" }}>50+ sales reps</strong> across East India,
-                building commercial distribution networks from scratch, watching every broken CRM
-                workflow, every missed follow-up, every lead that fell through the cracks because
-                nobody had time to fix the systems.
+                I spent two years in sales operations, first at Anhad Pharma and then at Rose Pharmaco in Mumbai.
+                Managing reporting for <strong style={{ color: "var(--text)" }}>50+ reps</strong>, building pricing workflows,
+                closing a commercial deal with Roche Diabetic Care, launching a product line from scratch.
               </p>
               <p>
-                I knew the process better than anyone. I just couldn&apos;t fix the tools. So I
-                built workarounds in spreadsheets. Hated it.
+                The work was real. The tools weren&apos;t. We ran campaigns off spreadsheets. Leads fell through.
+                Follow-ups got missed. I kept building workarounds and kept thinking someone should just fix this properly.
               </p>
               <p>
-                In 2022 I moved to London, got an <strong style={{ color: "var(--text)" }}>MSc in Entrepreneurship &amp; Innovation</strong> from
-                Queen Mary University, and made a decision: stop waiting for engineers to fix the
-                infrastructure and learn to build it myself.
+                Then I moved to London for my MSc. Something changed there. Everyone around me was just building things.
+                Not waiting for permission or a bigger team. Just figuring it out and shipping it.
               </p>
               <p>
-                Not to become a developer. To fix the <strong style={{ color: "var(--text)" }}>job the code was supposed to do</strong>.
+                I wanted that. I wanted to use AI to help companies actually grow revenue.
+                Not talk about it. Build it.
               </p>
               <p>
-                That background is the difference. Most GTM engineers know the code. I know
-                what it feels like when it breaks — at 9pm, mid-campaign, with a team of 50
-                waiting on a lead list that never arrived.
-              </p>
-              <p>
-                Now I build AI-powered GTM systems that run in production: outbound pipelines,
-                CRM automation, AI call transcription, lead enrichment stacks. Things that
-                actually ship and actually work.
+                That&apos;s what I&apos;ve been doing since.
               </p>
             </div>
 
             {/* Credentials */}
-            <div style={{ marginTop: 40, display: "flex", gap: 10, flexWrap: "wrap" }}>
+            <div style={{ marginTop: 40, display: "flex", gap: 8, flexWrap: "wrap" }}>
               {[
-                "MSc QMUL London",
-                "UK Work Visa",
-                "GTM Daily Speaker",
-                "Open to Work",
-                "50+ Reps Managed",
-                "4 Deployed Apps",
+                { label: "MSc QMUL London · First Class", highlight: false },
+                { label: "UK Work Visa", highlight: false },
+                { label: "GTM Daily Speaker", highlight: false },
+                { label: "Open to Work", highlight: true },
+                { label: "50+ Reps Managed", highlight: false },
+                { label: "7 Systems Shipped", highlight: false },
               ].map(b => (
-                <span key={b} style={{ fontFamily: "'JetBrains Mono',monospace", fontSize: 10, color: b === "Open to Work" ? "var(--gold)" : "var(--text-muted)", background: b === "Open to Work" ? "var(--gold-bg)" : "var(--surface-2)", border: `1px solid ${b === "Open to Work" ? "var(--gold-border)" : "var(--border)"}`, padding: "5px 13px", borderRadius: 9999, letterSpacing: "0.04em" }}>
-                  {b}
+                <span key={b.label} style={{
+                  fontFamily: "'JetBrains Mono', monospace",
+                  fontSize: 10,
+                  color: b.highlight ? "var(--gold)" : "var(--text-muted)",
+                  background: b.highlight ? "var(--gold-bg)" : "var(--surface-2)",
+                  border: `1px solid ${b.highlight ? "var(--gold-border)" : "var(--border)"}`,
+                  padding: "5px 13px",
+                  borderRadius: 9999,
+                  letterSpacing: "0.04em",
+                }}>
+                  {b.label}
                 </span>
               ))}
             </div>
@@ -150,14 +145,36 @@ export default function AboutPage() {
           </h2>
           <div style={{ display: "flex", flexDirection: "column", gap: 2 }}>
             {timeline.map((t, i) => (
-              <div key={i} style={{ background: "var(--surface-2)", border: "1px solid var(--border)", padding: "28px 32px", display: "grid", gridTemplateColumns: "180px 1fr", gap: 40, alignItems: "start" }}>
+              <div key={i} style={{ background: "var(--surface-2)", border: "1px solid var(--border)", padding: "28px 32px", display: "grid", gridTemplateColumns: "220px 1fr", gap: 40, alignItems: "start" }}>
                 <div>
                   <div style={{ fontFamily: "'JetBrains Mono',monospace", fontSize: 10, color: "var(--gold)", letterSpacing: "0.1em", marginBottom: 6 }}>{t.year}</div>
                   <div style={{ fontFamily: "'Space Grotesk',sans-serif", fontSize: 13, fontWeight: 600, color: "var(--text)", lineHeight: 1.4 }}>{t.role}</div>
                 </div>
-                <div style={{ fontFamily: "'JetBrains Mono',monospace", fontSize: 13, color: "var(--text-muted)", lineHeight: 1.8 }}>{t.body}</div>
+                <div style={{ fontFamily: "Inter, 'DM Sans', system-ui, sans-serif", fontSize: 14, color: "var(--text-muted)", lineHeight: 1.85 }}>{t.body}</div>
               </div>
             ))}
+          </div>
+        </section>
+
+        <div className="divider" />
+
+        {/* What drives me + Outside work */}
+        <section style={{ padding: "72px 0", display: "grid", gridTemplateColumns: "1fr 1fr", gap: 80 }}>
+          <div>
+            <div className="section-label">what drives me</div>
+            <p style={{ fontFamily: "Inter, 'DM Sans', system-ui, sans-serif", fontSize: 16, color: "var(--text-muted)", lineHeight: 1.9, marginBottom: 16 }}>
+              Exploring random ideas and shipping them fast. Learning something and immediately finding a use for it.
+              I get genuinely bored if I&apos;m not building something.
+            </p>
+            <p style={{ fontFamily: "Inter, 'DM Sans', system-ui, sans-serif", fontSize: 16, color: "var(--text-muted)", lineHeight: 1.9 }}>
+              Right now I just want to get my hands dirty on something great.
+            </p>
+          </div>
+          <div>
+            <div className="section-label">outside work</div>
+            <p style={{ fontFamily: "Inter, 'DM Sans', system-ui, sans-serif", fontSize: 16, color: "var(--text-muted)", lineHeight: 1.9 }}>
+              I box. Read a lot. Spend time with my friends and go out when I can. And I cook. Maybe.
+            </p>
           </div>
         </section>
 
@@ -168,15 +185,18 @@ export default function AboutPage() {
           <h2 style={{ fontFamily: "'Space Grotesk',sans-serif", fontSize: "clamp(24px,3vw,36px)", fontWeight: 700, letterSpacing: "-0.025em", color: "var(--text)", marginBottom: 14 }}>
             Want to build something <G>together?</G>
           </h2>
-          <p style={{ fontFamily: "'JetBrains Mono',monospace", fontSize: 14, color: "var(--text-muted)", marginBottom: 32 }}>
+          <p style={{ fontFamily: "Inter, 'DM Sans', system-ui, sans-serif", fontSize: 15, color: "var(--text-muted)", marginBottom: 32 }}>
             Open to freelance projects, consulting, and full-time GTM engineering roles in the UK.
           </p>
           <div style={{ display: "flex", gap: 12, justifyContent: "center", flexWrap: "wrap" }}>
             <a href="/#contact" style={{ fontFamily: "'JetBrains Mono',monospace", fontSize: 12, padding: "12px 28px", background: "var(--gold)", color: "var(--bg)", textDecoration: "none", borderRadius: 8, fontWeight: 600 }}>
-              Get in touch →
+              Get in touch
             </a>
-            <a href="/blog" style={{ fontFamily: "'JetBrains Mono',monospace", fontSize: 12, padding: "12px 28px", background: "transparent", color: "var(--text-muted)", textDecoration: "none", borderRadius: 8, border: "1px solid var(--border)" }}>
-              Read the build log
+            <a href="/projects" style={{ fontFamily: "'JetBrains Mono',monospace", fontSize: 12, padding: "12px 28px", background: "transparent", color: "var(--text-muted)", textDecoration: "none", borderRadius: 8, border: "1px solid var(--border)" }}>
+              See what I have built
+            </a>
+            <a href="https://app.notion.com/p/Rishiraj-Paul-GTM-E-Portfolio-32e4fc4568a980df833eea7faf5a6087" target="_blank" rel="noopener noreferrer" style={{ fontFamily: "'JetBrains Mono',monospace", fontSize: 12, padding: "12px 28px", background: "transparent", color: "var(--gold)", textDecoration: "none", borderRadius: 8, border: "1px solid var(--gold-border)" }}>
+              GTM portfolio ↗
             </a>
           </div>
         </section>

@@ -3,9 +3,9 @@ import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
 import { useRef } from "react";
 
 const cards = [
-  { era: "OPS FLOOR · 2018–2022", title: "I managed 50+ reps. Watched every broken GTM tool fail in real time.", body: "every system has a logic. i just couldn't fix the tools i was handed." },
-  { era: "MSc QMUL · 2022–2023",  title: "Moved to London. Studied innovation. Learned to code instead of complain.", body: "not to become a developer — to fix the infrastructure around sales." },
-  { era: "GTM ENGINEER · 2024–NOW", title: "I stopped working inside the systems and started building them.", body: "fastapi + react on railway. real hubspot integrations. real revenue impact." },
+  { era: "OPS FLOOR · 2023–2024", title: "I managed 50+ reps. Watched every broken GTM tool fail in real time.", body: "every system has a logic. i just couldn't fix the tools i was handed." },
+  { era: "MSc QMUL · 2024–2025",  title: "Moved to London. Studied innovation. Learned to code instead of complain.", body: "not to become a developer. to fix the infrastructure around sales." },
+  { era: "GTM ENGINEER · 2025–NOW", title: "I stopped working inside the systems and started building them.", body: "fastapi + react on railway. real hubspot integrations. real revenue impact." },
 ];
 
 function TiltCard({ card, delay }: { card: typeof cards[0]; delay: number }) {
@@ -66,7 +66,7 @@ export default function StoryCards() {
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
-        href="#story"
+        href="/about"
         style={{ display: "inline-flex", alignItems: "center", gap: 6, marginTop: 20, fontFamily: "'JetBrains Mono', monospace", fontSize: 13, color: "var(--text-muted)", textDecoration: "none" }}
       >
         Read the full arc →
@@ -91,8 +91,8 @@ export default function StoryCards() {
             </div>
             <div style={{ fontFamily: "'JetBrains Mono',monospace", fontSize: 11, color: "var(--text-muted)" }}>Office Hours Speaker</div>
           </div>
-          <div style={{ fontFamily: "'JetBrains Mono',monospace", fontSize: 12, color: "var(--text-muted)", maxWidth: 420, lineHeight: 1.7 }}>
-            &ldquo;Rishiraj went from pharma sales to building AI tools for real sales teams without a traditional coding background.&rdquo;
+          <div style={{ fontFamily: "Inter, 'DM Sans', system-ui, sans-serif", fontSize: 13, color: "var(--text-muted)", maxWidth: 420, lineHeight: 1.7 }}>
+            Hosted a live group session on how to use Claude Code for GTM engineers.
           </div>
         </div>
       </motion.div>

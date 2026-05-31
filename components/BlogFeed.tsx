@@ -37,8 +37,8 @@ export default function BlogFeed() {
 
   useEffect(() => {
     Promise.allSettled([
-      fetch("/data/posts.json").then(r => r.json()).catch(() => []),
-      fetch("/data/content.json").then(r => r.json()).catch(() => []),
+      fetch("/posts.json").then(r => r.json()).catch(() => []),
+      fetch("/content.json").then(r => r.json()).catch(() => []),
       (async () => {
         const K = "gh_blog_v3", TTL = 6 * 60 * 60 * 1000;
         const raw = localStorage.getItem(K);
@@ -132,7 +132,7 @@ export default function BlogFeed() {
                 <div style={{ fontFamily: "'Space Grotesk',sans-serif", fontSize: 17, fontWeight: 600, color: "var(--text)", letterSpacing: "-0.01em", marginBottom: 8, lineHeight: 1.35 }}>
                   {p.title || p.name}
                 </div>
-                <p style={{ fontFamily: "'JetBrains Mono',monospace", fontSize: 13, color: "var(--text-muted)", lineHeight: 1.75, marginBottom: 14, maxWidth: 680 }}>
+                <p style={{ fontFamily: "Inter, 'DM Sans', system-ui, sans-serif", fontSize: 14, color: "var(--text-muted)", lineHeight: 1.75, marginBottom: 14, maxWidth: 680 }}>
                   {p.excerpt || p.description}
                 </p>
                 <div style={{ display: "flex", alignItems: "center", gap: 14 }}>

@@ -4,7 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import StatCounter from "./StatCounter";
 
-const words = ["I", "build", "the", "revenue", "systems", "that"];
+const words = ["Just", "addicted", "to"];
 
 export default function Hero() {
   return (
@@ -31,7 +31,7 @@ export default function Hero() {
             </div>
             <div style={{ fontFamily:"'Space Grotesk',sans-serif", fontSize:15, fontWeight:600, color:"var(--text)", marginBottom:2 }}>Rishiraj Paul</div>
             <div style={{ fontFamily:"'JetBrains Mono',monospace", fontSize:12, color:"var(--text-muted)" }}>
-              GTM Engineer · UK · <span style={{ color:"var(--gold)" }}>Open to work</span>
+              <span style={{ color:"var(--gold)" }}>Open to work</span> · UK · India · Remote
             </div>
           </div>
         </motion.div>
@@ -47,15 +47,14 @@ export default function Hero() {
           <br />
           <motion.span initial={{ opacity:0, y:24 }} animate={{ opacity:1, y:0 }} transition={{ duration:0.55, delay:0.55, ease:[0.25,0.46,0.45,0.94] }}
             className="gold-gradient" style={{ display:"inline-block" }}>
-            ops teams couldn&apos;t.
+            solving hard problems.
           </motion.span>
         </h1>
 
         {/* Sub */}
         <motion.p initial={{ opacity:0, y:10 }} animate={{ opacity:1, y:0 }} transition={{ duration:0.5, delay:0.72 }}
           style={{ fontSize:17, color:"var(--text-muted)", maxWidth:600, lineHeight:1.82, marginBottom:44, marginTop:22 }}>
-          From pharma sales &amp; running 50+ reps to building AI pipelines that do it without them.
-          Every system, every deployment, runs through a single codebase.
+          GTM Engineer. I build things. Right now that means AI systems for revenue teams.
         </motion.p>
 
         {/* CTAs */}
@@ -64,9 +63,13 @@ export default function Hero() {
           <Link href="/blog" style={{ fontFamily:"'JetBrains Mono',monospace", fontSize:12, padding:"13px 28px", background:"var(--gold)", color:"var(--bg)", textDecoration:"none", borderRadius:8, fontWeight:700, letterSpacing:"0.03em", boxShadow:"0 4px 24px rgba(201,150,59,0.25)" }}>
             read the build log →
           </Link>
-          <Link href="#projects" style={{ fontFamily:"'JetBrains Mono',monospace", fontSize:12, padding:"13px 28px", background:"transparent", color:"var(--text-muted)", textDecoration:"none", borderRadius:8, border:"1px solid var(--border-2)", letterSpacing:"0.03em" }}>
+          <Link href="/builds" style={{ fontFamily:"'JetBrains Mono',monospace", fontSize:12, padding:"13px 28px", background:"transparent", color:"var(--text-muted)", textDecoration:"none", borderRadius:8, border:"1px solid var(--border-2)", letterSpacing:"0.03em" }}>
             see projects
           </Link>
+          <a href="https://app.notion.com/p/Rishiraj-Paul-GTM-E-Portfolio-32e4fc4568a980df833eea7faf5a6087" target="_blank" rel="noopener noreferrer"
+            style={{ fontFamily:"'JetBrains Mono',monospace", fontSize:12, padding:"13px 28px", background:"transparent", color:"var(--text-muted)", textDecoration:"none", borderRadius:8, border:"1px solid var(--border-2)", letterSpacing:"0.03em" }}>
+            GTM portfolio ↗
+          </a>
           <Link href="/about" style={{ fontFamily:"'JetBrains Mono',monospace", fontSize:12, color:"var(--text-dim)", textDecoration:"none", letterSpacing:"0.03em" }}>
             read the story →
           </Link>

@@ -9,7 +9,8 @@ export default function Footer() {
         <div style={{ display: "flex", gap: 20 }}>
           {[
             { href: "/blog", label: "Blog" },
-            { href: "https://linkedin.com/in/rishiraj-paul", label: "LinkedIn", external: true },
+            { href: "https://www.linkedin.com/in/rishiraj-paul-gtm/", label: "LinkedIn", external: true },
+            { href: "https://x.com/RishirajPa40653", label: "X", external: true },
             { href: "https://github.com/rishirajpaul3", label: "GitHub", external: true },
             { href: "mailto:rishirajpaul3@gmail.com", label: "Email" },
           ].map(l => (
