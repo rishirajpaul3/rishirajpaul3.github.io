@@ -175,10 +175,28 @@ export default function PulsePage() {
                     <div style={{ fontSize: "clamp(72px, 12vw, 120px)" }}>DAILY</div>
                     <div style={{ fontSize: "clamp(72px, 12vw, 120px)", color: "var(--gold)" }}>PULSE</div>
                   </div>
-                  <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 13, color: "var(--text-muted)", lineHeight: 1.9, marginBottom: 28 }}>
+                  <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 13, color: "var(--text-muted)", lineHeight: 1.9, marginBottom: 32 }}>
                     the daily signal for gtm engineers.<br />
                     tools. threads. insights. what to act on.
                   </div>
+
+                  {/* How it works */}
+                  <div style={{ display: "flex", flexDirection: "column", gap: 14, marginBottom: 32 }}>
+                    {[
+                      { n: "01", title: "it reads the internet for you", body: "every morning it pulls from product hunt, indie hackers, n8n blog, and hacker news. the stuff you'd spend an hour going through anyway." },
+                      { n: "02", title: "claude figures out what actually matters", body: "claude reads everything and picks out the signal. one headline. one tool worth knowing. one thread. one thing to act on. no noise." },
+                      { n: "03", title: "it's just there when you wake up", body: "github runs it at 7am utc every day. you open the page, it's ready. no newsletters, no apps, no tabs." },
+                    ].map(s => (
+                      <div key={s.n} style={{ display: "flex", gap: 14, alignItems: "flex-start" }}>
+                        <span style={{ fontFamily: "'JetBrains Mono',monospace", fontSize: 10, color: "var(--gold)", flexShrink: 0, marginTop: 2 }}>{s.n}</span>
+                        <div>
+                          <div style={{ fontFamily: "'JetBrains Mono',monospace", fontSize: 12, color: "var(--text)", marginBottom: 4 }}>{s.title}</div>
+                          <div style={{ fontFamily: "Inter, 'DM Sans', system-ui, sans-serif", fontSize: 12, color: "var(--text-muted)", lineHeight: 1.7 }}>{s.body}</div>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+
                   <div style={{ display: "flex", gap: 8, alignItems: "center" }}>
                     <span style={{ fontFamily: "'JetBrains Mono',monospace", fontSize: 10, color: "var(--gold)", background: "var(--gold-bg)", border: "1px solid var(--gold-border)", padding: "4px 12px", borderRadius: 9999, display: "inline-flex", alignItems: "center", gap: 6 }}>
                       <span style={{ width: 6, height: 6, borderRadius: "50%", background: "var(--gold)", display: "inline-block" }} />
