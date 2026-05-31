@@ -21,8 +21,8 @@ export default function Hero() {
           <div style={{ position:"relative", flexShrink:0 }}>
             {/* Glow ring */}
             <div style={{ position:"absolute", inset:-4, borderRadius:"50%", background:"radial-gradient(circle, rgba(201,150,59,0.3) 0%, transparent 70%)", zIndex:0 }} />
-            <div style={{ width:80, height:80, borderRadius:"50%", border:"2px solid var(--gold-border)", overflow:"hidden", position:"relative", zIndex:1, boxShadow:"0 0 24px rgba(201,150,59,0.15)" }}>
-              <Image src="/avatar.jpg" alt="Rishiraj Paul" width={80} height={80} style={{ width:"100%", height:"100%", objectFit:"cover" }} priority />
+            <div style={{ width:120, height:120, borderRadius:"50%", border:"2px solid var(--gold-border)", overflow:"hidden", position:"relative", zIndex:1, boxShadow:"0 0 24px rgba(201,150,59,0.15)" }}>
+              <Image src="/avatar.jpg" alt="Rishiraj Paul" width={120} height={120} style={{ width:"100%", height:"100%", objectFit:"cover" }} priority />
             </div>
           </div>
           <div>
