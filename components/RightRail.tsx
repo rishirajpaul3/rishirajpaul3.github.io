@@ -35,7 +35,7 @@ export default function RightRail() {
           display: flex;
           flex-direction: column;
           gap: 6px;
-          background: rgba(22,17,10,0.85);
+          background: var(--rail-bg);
           border: 1px solid var(--border);
           border-radius: 9999px;
           padding: 10px 8px;

@@ -3,6 +3,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import MobileNav from "./MobileNav";
+import ThemeToggle from "./ThemeToggle";
 
 const links = [
   { href: "/",              label: "home" },
@@ -36,7 +37,7 @@ export default function Nav() {
           <button onClick={() => setClosed(true)} style={{ background:"none", border:"none", cursor:"pointer", color:"var(--text-dim)", fontSize:18, lineHeight:1 }}>×</button>
         </div>
       )}
-      <nav style={{ position:"sticky", top:0, zIndex:100, height:56, display:"flex", alignItems:"center", justifyContent:"space-between", padding:"0 40px", background:"rgba(12,9,4,0.9)", backdropFilter:"blur(14px)", borderBottom:"1px solid var(--border)" }}>
+      <nav style={{ position:"sticky", top:0, zIndex:100, height:56, display:"flex", alignItems:"center", justifyContent:"space-between", padding:"0 40px", background:"var(--nav-bg)", backdropFilter:"blur(14px)", borderBottom:"1px solid var(--border)" }}>
         <Link href="/" style={{ fontFamily:"'Space Grotesk',sans-serif", fontSize:15, fontWeight:700, color:"var(--text)", textDecoration:"none", letterSpacing:"-0.01em" }}>
           rishiraj.paul
         </Link>
@@ -51,8 +52,9 @@ export default function Nav() {
           ))}
         </ul>
 
-        <div style={{ display:"flex", alignItems:"center", gap:10 }}>
-          <Link href="/#contact" style={{ fontFamily:"'JetBrains Mono',monospace", fontSize:12, padding:"7px 18px", background:"var(--gold)", color:"var(--bg)", textDecoration:"none", borderRadius:8, fontWeight:600, letterSpacing:"0.02em", whiteSpace:"nowrap" }}>
+        <div style={{ display:"flex", alignItems:"center", gap:8 }}>
+          <ThemeToggle />
+          <Link href="/#contact" className="nav-cta" style={{ fontFamily:"'JetBrains Mono',monospace", fontSize:12, padding:"7px 18px", background:"var(--gold)", color:"var(--bg)", textDecoration:"none", borderRadius:8, fontWeight:600, letterSpacing:"0.02em", whiteSpace:"nowrap" }}>
             let&apos;s talk →
           </Link>
           <MobileNav />
@@ -62,7 +64,7 @@ export default function Nav() {
       <style>{`
         .announce { background:var(--surface); border-bottom:1px solid var(--border); padding:9px 40px; display:flex; align-items:center; justify-content:space-between; font-family:'JetBrains Mono',monospace; font-size:11px; color:var(--text-muted); }
         .announce a { color:var(--gold); text-decoration:none; }
-        @media(max-width:900px){ nav ul { display:none } .announce{padding:9px 16px} nav{padding:0 16px} }
+        @media(max-width:900px){ nav ul { display:none !important; } .announce{padding:9px 16px} nav{padding:0 16px !important;} .nav-cta { display:none !important; } }
       `}</style>
     </>
   );

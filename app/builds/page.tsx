@@ -10,19 +10,19 @@ const projects = [
     name: "NoteAI",
     desc: "AI sales co-pilot that transcribes calls, extracts BANT with GPT-4o, and pushes structured insights back to CRM deal records automatically.",
     stack: ["FastAPI", "React", "Deepgram", "GPT-4o", "HubSpot", "PostgreSQL"],
-    href: "https://github.com/rishirajpaul3/noteai",
+    href: "https://noteai-rishiraj.vercel.app",
   },
   {
     name: "DeepAccount",
     desc: "Paste a company URL and your ICP criteria, get back a fit score, buyer personas, key objections, and a personalised cold opener — generated from live web data.",
     stack: ["Python", "GPT-4o", "Web scraping", "React", "TypeScript"],
-    href: "https://github.com/rishirajpaul3/deepaccount",
+    href: "https://deepaccount.vercel.app/dashboard",
   },
   {
     name: "Pipeline AI",
     desc: "Paste a prospect CSV and get a full outreach pipeline: AI lead scoring, company research, personalised email drafts, and discovery call scripts.",
     stack: ["Python", "GPT-4o", "Claude", "n8n", "HubSpot"],
-    href: "https://github.com/rishirajpaul3/pipeline-ai",
+    href: "https://pipeline-ai-five.vercel.app",
   },
 ];
 
@@ -127,7 +127,7 @@ export default function BuildsPage() {
                   </div>
                   <p style={{ fontFamily: "Inter, 'DM Sans', system-ui, sans-serif", fontSize: 13, color: "var(--text-muted)", lineHeight: 1.75, marginBottom: 16 }}>{p.desc}</p>
                   <div style={{ display: "flex", flexWrap: "wrap", gap: 6, marginBottom: 16 }}>{p.stack.map(tag)}</div>
-                  <div style={{ fontFamily: "'JetBrains Mono',monospace", fontSize: 11, color: "var(--gold)" }}>view on github ↗</div>
+                  <div style={{ fontFamily: "'JetBrains Mono',monospace", fontSize: 11, color: "var(--gold)" }}>visit app ↗</div>
                 </div>
               </motion.a>
             ))}

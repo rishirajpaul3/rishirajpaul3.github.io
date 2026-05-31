@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     title: "Rishiraj Paul — GTM Engineer",
     description: "I build the revenue systems that ops teams couldn't.",
     type: "website",
-    url: "https://rishirajpaul3.github.io",
+    url: "https://rishirajpaul.com",
     images: [{ url: "/og.png", width: 1200, height: 630 }],
   },
   twitter: {
@@ -25,6 +25,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <head>
+        <script dangerouslySetInnerHTML={{ __html: `try{var t=localStorage.getItem('theme');if(t==='light')document.documentElement.setAttribute('data-theme','light')}catch(e){}` }} />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />

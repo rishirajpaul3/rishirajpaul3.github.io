@@ -208,9 +208,6 @@ export default function PulsePage() {
                   </div>
                 </div>
 
-                <div style={{ flexShrink: 0, width: 120, height: 120, borderRadius: "50%", background: "var(--surface-2)", border: "2px solid var(--gold-border)", display: "flex", alignItems: "center", justifyContent: "center", boxShadow: "0 0 40px rgba(201,150,59,0.15)" }}>
-                  <div style={{ fontFamily: "'Space Grotesk', sans-serif", fontWeight: 700, fontSize: 36, color: "var(--gold)", letterSpacing: "-0.04em" }}>DP</div>
-                </div>
               </div>
             </section>
 
