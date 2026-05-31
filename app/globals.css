@@ -157,25 +157,10 @@ input::placeholder, textarea::placeholder { color: var(--text-dim); }
   /* Nav */
   nav { padding: 0 16px !important; }
 
-  /* Collapse all multi-column grids to single column.
-     React renders camelCase inline styles as kebab-case in the DOM. */
-  [style*="grid-template-columns: 1fr 1fr"],
-  [style*="grid-template-columns: repeat(2"],
-  [style*="grid-template-columns: repeat(3"],
-  [style*="grid-template-columns: repeat(4"],
-  [style*="grid-template-columns: 1fr 400px"],
-  [style*="grid-template-columns: 220px"],
-  [style*="grid-template-columns: 200px"],
-  [style*="grid-template-columns: 1fr 260px"],
-  [style*="grid-template-columns: 1fr 1fr 1fr"] {
-    grid-template-columns: 1fr !important;
-    gap: 12px !important;
-  }
-
-  /* Stats grid (4-col) → 2×2 */
-  [style*="grid-template-columns: repeat(4, 1fr)"] {
-    grid-template-columns: 1fr 1fr !important;
-  }
+  /* Class-based grid overrides — reliable on all browsers */
+  .grid-2col  { grid-template-columns: 1fr !important; gap: 16px !important; }
+  .grid-3col  { grid-template-columns: 1fr !important; gap: 12px !important; }
+  .grid-4col  { grid-template-columns: 1fr 1fr !important; gap: 10px !important; }
 
   /* How-to sidebar — hide on mobile */
   aside { display: none !important; }
@@ -185,13 +170,4 @@ input::placeholder, textarea::placeholder { color: var(--text-dim); }
 
   /* Hero headline */
   h1 { font-size: clamp(36px,10vw,54px) !important; }
-
-  /* Pulse page large title */
-  [style*="font-size: clamp(72px"] { font-size: clamp(52px,14vw,80px) !important; }
-
-  /* Subscribe bar — stack on mobile */
-  [style*="justify-content: space-between"][style*="flex-wrap: wrap"] {
-    flex-direction: column !important;
-    align-items: flex-start !important;
-  }
 }

@@ -35,7 +35,7 @@ export default function Home() {
           <h2 style={{ fontFamily:"'Space Grotesk',sans-serif", fontSize:"clamp(28px,3.5vw,40px)", fontWeight:700, letterSpacing:"-0.025em", color:"var(--text)", marginBottom:40 }}>
             What I build <G>for you.</G>
           </h2>
-          <div style={{ display:"grid", gridTemplateColumns:"1fr 1fr", gap:12 }}>
+          <div className="grid-2col" style={{ display:"grid", gridTemplateColumns:"1fr 1fr", gap:12 }}>
             {services.map((s,i) => (
               <div key={i} style={{ background:"var(--surface-2)", border:"1px solid var(--border)", borderRadius:14, padding:"28px 26px" }}>
                 <div style={{ fontFamily:"'JetBrains Mono',monospace", fontSize:10, color:"var(--text-dim)", letterSpacing:"0.12em", marginBottom:14 }}>{s.n}</div>
@@ -51,7 +51,7 @@ export default function Home() {
         <div className="divider" />
         <section id="contact" style={{ padding:"80px 0" }}>
           <div className="section-label">contact</div>
-          <div style={{ display:"grid", gridTemplateColumns:"1fr 1fr", gap:64 }}>
+          <div className="grid-2col" style={{ display:"grid", gridTemplateColumns:"1fr 1fr", gap:64 }}>
             <div>
               <h2 style={{ fontFamily:"'Space Grotesk',sans-serif", fontSize:"clamp(28px,3.5vw,40px)", fontWeight:700, letterSpacing:"-0.025em", color:"var(--text)", marginBottom:16 }}>
                 Let&apos;s build <G>something.</G>

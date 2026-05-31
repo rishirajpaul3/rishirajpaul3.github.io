@@ -103,7 +103,7 @@ export default function BuildsPage() {
           <h2 style={{ fontFamily: "'Space Grotesk',sans-serif", fontSize: "clamp(24px,3vw,36px)", fontWeight: 700, letterSpacing: "-0.025em", color: "var(--text)", marginBottom: 32 }}>
             Running in production <G>right now.</G>
           </h2>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 12 }}>
+          <div className="grid-3col" style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 12 }}>
             {projects.map((p, i) => (
               <motion.a
                 key={p.name}
@@ -138,7 +138,7 @@ export default function BuildsPage() {
 
         {/* Categories */}
         <section style={{ padding: "72px 0 80px" }}>
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12 }}>
+          <div className="grid-2col" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12 }}>
             {categories.map((c, i) => {
               const isLive = c.status === "live";
               const CardWrapper = isLive

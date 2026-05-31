@@ -77,7 +77,7 @@ export default function Hero() {
 
         {/* Stats grid */}
         <motion.div initial={{ opacity:0, y:14 }} animate={{ opacity:1, y:0 }} transition={{ duration:0.55, delay:1.0 }}
-          style={{ display:"grid", gridTemplateColumns:"repeat(4, 1fr)", border:"1px solid var(--border)", background:"var(--border)", gap:1 }}>
+          className="grid-4col" style={{ display:"grid", gridTemplateColumns:"repeat(4, 1fr)", border:"1px solid var(--border)", background:"var(--border)", gap:1 }}>
           {[
             { value:10, suffix:"+", label:"Systems shipped" },
             { value:2,  suffix:"×", label:"Reply rate lift"  },
