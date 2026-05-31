@@ -1,0 +1,35 @@
+name: Weekly Build Log
+
+on:
+  schedule:
+    - cron: '0 23 * * 0'   # Every Sunday at 11pm UTC
+  workflow_dispatch:         # Manual trigger from GitHub UI
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0   # Full history needed for git log scanning
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Run weekly scanner
+        run: python3 scripts/tracker/weekly_scan.py scan
+        env:
+          REPOS_BASE: /home/runner/work
+
+      - name: Commit weekly log
+        uses: EndBug/add-and-commit@v9
+        with:
+          add: 'public/weekly-log'
+          message: 'log: weekly scan ${{ env.WEEK_LABEL }}'
+          default_author: github_actions

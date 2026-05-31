@@ -31,7 +31,7 @@ REPOS = [
 
 CLAUDE_PROJECTS_DIR = Path.home() / ".claude" / "projects"
 
-OUTPUT_DIR = Path(__file__).parent.parent.parent / "data" / "weekly-log"
+OUTPUT_DIR = Path(__file__).parent.parent.parent / "public" / "weekly-log"
 
 # Token pricing per million tokens
 PRICING = {
@@ -390,6 +390,24 @@ def load_or_init(out_path, monday, sunday):
             return json.load(f)
     return {"week": week_label(monday), "todos": [], "manual": [], "token_usage": []}
 
+def update_index(label, merged):
+    index_path = OUTPUT_DIR / "index.json"
+    index = []
+    if index_path.exists():
+        try:
+            index = json.loads(index_path.read_text())
+        except Exception:
+            index = []
+    index = [w for w in index if w.get("week") != label]
+    index.insert(0, {
+        "week":       label,
+        "date_range": merged.get("date_range", ""),
+        "grade":      merged.get("stats", {}).get("letter_grade", "?"),
+        "score":      merged.get("stats", {}).get("output_score", 0),
+        "commits":    merged.get("stats", {}).get("total_commits", 0),
+    })
+    index_path.write_text(json.dumps(index, indent=2))
+
 def cmd_scan(monday, sunday):
     label = week_label(monday)
     out_path = OUTPUT_DIR / f"{label}.json"
@@ -400,6 +418,7 @@ def cmd_scan(monday, sunday):
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
     with open(out_path, "w") as f:
         json.dump(merged, f, indent=2)
+    update_index(label, merged)
     s = merged["stats"]
     print(f"\n✓ {label} saved → {out_path}")
     print(f"  Score: {s['output_score']}  Grade: {s['letter_grade']}  Commits: {s['total_commits']}  Files: {s['total_files']}")
