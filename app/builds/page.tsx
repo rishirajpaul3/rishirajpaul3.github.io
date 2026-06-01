@@ -10,7 +10,7 @@ const projects = [
     name: "NoteAI",
     desc: "AI sales co-pilot that transcribes calls, extracts BANT with GPT-4o, and pushes structured insights back to CRM deal records automatically.",
     stack: ["FastAPI", "React", "Deepgram", "GPT-4o", "HubSpot", "PostgreSQL"],
-    href: "https://noteai-rishiraj.vercel.app",
+    href: "https://web-nine-kappa-82.vercel.app",
   },
   {
     name: "DeepAccount",
