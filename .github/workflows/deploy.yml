@@ -35,6 +35,8 @@ jobs:
 
       - name: Build
         run: npm run build
+        env:
+          STATIC_EXPORT: "true"
 
       - name: Deploy to gh-pages
         uses: JamesIves/github-pages-deploy-action@v4
