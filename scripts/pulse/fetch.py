@@ -193,6 +193,21 @@ def call_claude(prompt):
         print(f"  [error] Claude API → {e}")
         return None
 
+def recent_headlines(date_str, n=5):
+    """Return the last n signal headlines before date_str, to avoid repetition."""
+    if not INDEX_FILE.exists():
+        return []
+    try:
+        index = json.loads(INDEX_FILE.read_text())
+        return [
+            entry["headline"]
+            for entry in index
+            if entry.get("date") != date_str and entry.get("headline")
+        ][:n]
+    except Exception:
+        return []
+
+
 def build_prompt(reddit_posts, rss_items, date_str):
     sections = []
     if reddit_posts:
@@ -210,15 +225,22 @@ def build_prompt(reddit_posts, rss_items, date_str):
 
     content_block = "\n\n".join(sections)
 
+    past = recent_headlines(date_str)
+    avoid_block = ""
+    if past:
+        avoid_block = "\nRecent Signal headlines already published (DO NOT repeat these topics):\n" + \
+            "\n".join(f"- {h}" for h in past) + "\n"
+
     return f"""You are writing "Daily Pulse" — a sharp daily digest for GTM engineers and founders who build AI-powered revenue systems. Published at rishiraj.paul.
 
 Today's date: {date_str}
-
+{avoid_block}
 Here is today's raw content:
 
 {content_block}
 
 Write a structured JSON digest. Be specific, direct, and opinionated. Write like a GTM engineer talking to another GTM engineer — no fluff, no hype. Reference real items from the content above.
+For "the_signal", pick the most important story that has NOT already been covered in recent issues listed above.
 
 Return ONLY valid JSON in this exact structure:
 {{
