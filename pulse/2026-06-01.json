@@ -1,0 +1,43 @@
+{
+  "date": "2026-06-01",
+  "the_signal": {
+    "headline": "SAP bets $5.2B on n8n: enterprise workflow automation goes mainstream",
+    "body": "SAP's strategic investment\u2014valuing n8n at $5.2B, doubling its Series C valuation\u2014signals that visual AI workflow orchestration isn't a nice-to-have anymore; it's table stakes for enterprise revenue systems. For GTM engineers, this means the infrastructure to connect AI agents to your actual sales stack (CRM, billing, support) is finally getting real enterprise backing and distribution channels."
+  },
+  "tool_drop": {
+    "name": "n8n + SAP Joule Studio Integration",
+    "what": "Visual AI workflow orchestration embedded natively in SAP's Business AI Platform, allowing developers to build connected AI automation without code.",
+    "why": "If your buyer is already on SAP (spoiler: many enterprises are), this eliminates the build-vs-buy debate\u2014AI agent orchestration becomes a first-class citizen in their existing infrastructure, making your pitch to CIOs way easier.",
+    "url": "https://blog.n8n.io"
+  },
+  "thread_of_day": {
+    "title": "AI Agents at scale still fail because they're isolated\u2014Mercedes-Benz and n8n show the pattern that works",
+    "source": "n8n Blog",
+    "takeaway": "Production AI automation requires connecting agents to live systems end-to-end; proof-of-concept purgatory happens when you don't architect for integration from day one.",
+    "url": "https://blog.n8n.io"
+  },
+  "quote": {
+    "text": "92% of C-suite leaders say they're fully confident in AI ROI. Yet 58% admit there's no clear owner of AI, and 75% lack a governance framework.",
+    "source": "n8n Blog \u2014 AI Maturity Report"
+  },
+  "whats_moving": [
+    {
+      "topic": "Enterprise AI governance gap",
+      "context": "Three-quarters of enterprises lack governance frameworks despite claiming confidence in AI ROI\u2014this is your wedge to position GTM tooling as the control layer that SAP/enterprise buyers actually need."
+    },
+    {
+      "topic": "Visual workflow builders as distribution",
+      "context": "SAP embedding n8n into Joule Studio proves that AI orchestration platforms are becoming embedded infrastructure, not standalone tools\u2014expect similar moves from Salesforce, Microsoft, and Oracle within 12 months."
+    },
+    {
+      "topic": "AI agent reliability patterns",
+      "context": "Content on agent architecture patterns, guardrails, and output schemas is proliferating\u2014signals that production reliability is the hard problem now, not model capability."
+    }
+  ],
+  "act_on_this": "Map your top 20 enterprise prospects against SAP's installed base; if they're using SAP, start building proof-of-concepts using n8n workflows to connect your GTM tools into their existing stack\u2014this becomes a faster, lower-risk sell.",
+  "numbers": {
+    "stat": "$5.2B valuation for n8n (up from ~$2.6B in Series C less than a year ago)",
+    "context": "2x valuation growth in sub-12 months validates that enterprise workflow orchestration is a genuine category, not a feature\u2014your customers will expect native integrations into whatever orchestration layer their enterprise standardizes on."
+  },
+  "generated_at": "2026-06-01T12:33:48.621051+00:00"
+}
