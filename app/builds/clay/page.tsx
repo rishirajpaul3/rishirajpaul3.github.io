@@ -4,57 +4,16 @@ import Footer from "@/components/Footer";
 import RightRail from "@/components/RightRail";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { useEffect, useState } from "react";
 
 const templates = [
-  {
-    id: "hiring-icp",
-    name: "Find Companies Hiring Your ICP",
-    desc: "Companies actively hiring for GTM roles have budget, intent, and a scaling team. This table finds them using live LinkedIn job data, enriches the right contact, and feeds them into your outreach sequence automatically.",
-    tags: ["LinkedIn Jobs", "Lead Sourcing", "Signal-Based"],
-    href: "https://app.clay.com/shared-table/share%5F8ZgobfBJuP5e",
-  },
-  {
-    id: "account-score",
-    name: "Build Account List and Score from Tech and Firmographic Data",
-    desc: "Paste your ICP criteria. The table pulls matching companies, enriches each with tech stack, headcount, and funding data, then scores them 1 to 10. No more guessing who to go after first.",
-    tags: ["ICP Scoring", "Technographics", "Firmographics", "Account Lists"],
-    href: "https://app.clay.com/shared-table/share%5FDmTWzkMgiXpU",
-  },
-  {
-    id: "decision-makers",
-    name: "Find Decision Makers from Just a Website URL",
-    desc: "Paste a list of domains. Get back the name, title, LinkedIn, and email of the person you actually need to talk to. Waterfall enrichment across multiple providers so you get coverage even on harder contacts.",
-    tags: ["Contact Finding", "Waterfall Enrichment", "Email", "LinkedIn"],
-    href: "https://app.clay.com/shared-table/share%5Fx6FoeEJVNMdR",
-  },
-  {
-    id: "lead-scoring",
-    name: "Score Leads Based on Multiple Signals",
-    desc: "Takes a messy lead list and runs each one through a multi-signal scoring model. Company size, funding stage, tech stack, hiring activity. Output is a clean ranked list sorted by ICP fit.",
-    tags: ["Lead Scoring", "Multi-Signal", "Prioritisation"],
-    href: "https://app.clay.com/shared-table/share%5FPI2cSCbHoDHa",
-  },
-  {
-    id: "inbound-enrich",
-    name: "Enrich Inbound Leads and Write Personalised Emails",
-    desc: "When a lead comes in, this enriches them with company data, finds what they actually care about, and generates a first email that references something real. Not a template. An actual personalised message.",
-    tags: ["Inbound", "Enrichment", "AI Email", "Personalisation"],
-    href: "https://app.clay.com/shared-table/share%5FKId7qqyJ5JuL",
-  },
-  {
-    id: "viral-heyreach",
-    name: "Scrape Viral Posts, Qualify, Push to HeyReach",
-    desc: "Find a viral LinkedIn post in your niche. This scrapes the comments, qualifies each commenter against your ICP, and pushes the ones that fit directly into a HeyReach sequence. Intent-based sourcing from people already engaged.",
-    tags: ["LinkedIn", "HeyReach", "Intent-Based", "Comment Scraping"],
-    href: "https://app.clay.com/shared-table/share%5FpQ4RF2dH2uau",
-  },
-  {
-    id: "buying-signals",
-    name: "Track Funding, New Locations, Acquisitions via RSS",
-    desc: "Set it up once. It checks RSS feeds for funding announcements, new office openings, and acquisitions in your target market. Buying signals delivered before your competitors see them.",
-    tags: ["Buying Signals", "RSS", "Funding", "Acquisitions"],
-    href: "https://app.clay.com/shared-table/share%5FRxafj8Hearlt",
-  },
+  { id: "hiring-icp",       name: "Find Companies Hiring Your ICP",                               desc: "Companies actively hiring for GTM roles have budget, intent, and a scaling team. This table finds them using live LinkedIn job data, enriches the right contact, and feeds them into your outreach sequence automatically.", tags: ["LinkedIn Jobs", "Lead Sourcing", "Signal-Based"] },
+  { id: "account-score",    name: "Build Account List and Score from Tech and Firmographic Data",  desc: "Paste your ICP criteria. The table pulls matching companies, enriches each with tech stack, headcount, and funding data, then scores them 1 to 10. No more guessing who to go after first.",                                  tags: ["ICP Scoring", "Technographics", "Firmographics", "Account Lists"] },
+  { id: "decision-makers",  name: "Find Decision Makers from Just a Website URL",                  desc: "Paste a list of domains. Get back the name, title, LinkedIn, and email of the person you actually need to talk to. Waterfall enrichment across multiple providers so you get coverage even on harder contacts.",                tags: ["Contact Finding", "Waterfall Enrichment", "Email", "LinkedIn"] },
+  { id: "lead-scoring",     name: "Score Leads Based on Multiple Signals",                         desc: "Takes a messy lead list and runs each one through a multi-signal scoring model. Company size, funding stage, tech stack, hiring activity. Output is a clean ranked list sorted by ICP fit.",                                   tags: ["Lead Scoring", "Multi-Signal", "Prioritisation"] },
+  { id: "inbound-enrich",   name: "Enrich Inbound Leads and Write Personalised Emails",            desc: "When a lead comes in, this enriches them with company data, finds what they actually care about, and generates a first email that references something real. Not a template. An actual personalised message.",                  tags: ["Inbound", "Enrichment", "AI Email", "Personalisation"] },
+  { id: "viral-heyreach",   name: "Scrape Viral Posts, Qualify, Push to HeyReach",                 desc: "Find a viral LinkedIn post in your niche. This scrapes the comments, qualifies each commenter against your ICP, and pushes the ones that fit directly into a HeyReach sequence. Intent-based sourcing from people already engaged.", tags: ["LinkedIn", "HeyReach", "Intent-Based", "Comment Scraping"] },
+  { id: "buying-signals",   name: "Track Funding, New Locations, Acquisitions via RSS",             desc: "Set it up once. It checks RSS feeds for funding announcements, new office openings, and acquisitions in your target market. Buying signals delivered before your competitors see them.",                                        tags: ["Buying Signals", "RSS", "Funding", "Acquisitions"] },
 ];
 
 const G = ({ children }: { children: React.ReactNode }) =>
@@ -65,6 +24,15 @@ const tag = (t: string) => (
 );
 
 export default function ClayPage() {
+  const [clayUrls, setClayUrls] = useState<Record<string, string>>({});
+
+  useEffect(() => {
+    fetch("/api/clay")
+      .then(r => r.ok ? r.json() : {})
+      .then(setClayUrls)
+      .catch(() => {});
+  }, []);
+
   return (
     <>
       <Nav />
@@ -121,10 +89,10 @@ export default function ClayPage() {
                   </div>
                 </div>
                 <a
-                  href={t.href}
+                  href={clayUrls[t.id] || "#"}
                   target="_blank"
                   rel="noopener noreferrer"
-                  style={{ fontFamily: "'JetBrains Mono',monospace", fontSize: 11, padding: "10px 20px", background: "var(--gold)", color: "var(--bg)", textDecoration: "none", borderRadius: 8, fontWeight: 600, letterSpacing: "0.02em", textAlign: "center", whiteSpace: "nowrap", flexShrink: 0 }}
+                  style={{ fontFamily: "'JetBrains Mono',monospace", fontSize: 11, padding: "10px 20px", background: "var(--gold)", color: "var(--bg)", textDecoration: "none", borderRadius: 8, fontWeight: 600, letterSpacing: "0.02em", textAlign: "center", whiteSpace: "nowrap", flexShrink: 0, opacity: clayUrls[t.id] ? 1 : 0.5 }}
                 >
                   Open in Clay ↗
                 </a>

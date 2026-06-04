@@ -4,6 +4,7 @@ import Footer from "@/components/Footer";
 import RightRail from "@/components/RightRail";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { useEffect, useState } from "react";
 
 const workflows = [
   {
@@ -72,6 +73,15 @@ const tag = (t: string) => (
 );
 
 export default function N8NPage() {
+  const [downloadUrls, setDownloadUrls] = useState<Record<string, string>>({});
+
+  useEffect(() => {
+    fetch("/api/n8n")
+      .then(r => r.ok ? r.json() : {})
+      .then(setDownloadUrls)
+      .catch(() => {});
+  }, []);
+
   return (
     <>
       <Nav />
@@ -128,9 +138,9 @@ export default function N8NPage() {
                   </div>
                 </div>
                 <a
-                  href={`/templates/n8n/${w.file}`}
+                  href={downloadUrls[w.file] || "#"}
                   download
-                  style={{ fontFamily: "'JetBrains Mono',monospace", fontSize: 11, padding: "10px 20px", background: "var(--gold)", color: "var(--bg)", textDecoration: "none", borderRadius: 8, fontWeight: 600, letterSpacing: "0.02em", textAlign: "center", whiteSpace: "nowrap", flexShrink: 0 }}
+                  style={{ fontFamily: "'JetBrains Mono',monospace", fontSize: 11, padding: "10px 20px", background: "var(--gold)", color: "var(--bg)", textDecoration: "none", borderRadius: 8, fontWeight: 600, letterSpacing: "0.02em", textAlign: "center", whiteSpace: "nowrap", flexShrink: 0, opacity: downloadUrls[w.file] ? 1 : 0.5 }}
                 >
                   ↓ Download JSON
                 </a>
