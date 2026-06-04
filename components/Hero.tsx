@@ -56,16 +56,16 @@ export default function Hero() {
             {/* CTAs */}
             <motion.div initial={{ opacity:0, y:10 }} animate={{ opacity:1, y:0 }} transition={{ duration:0.5, delay:0.85 }}
               style={{ display:"flex", gap:10, alignItems:"center", flexWrap:"wrap" }}>
-              <Link href="/blog" style={{ fontFamily:"'JetBrains Mono',monospace", fontSize:12, padding:"13px 28px", background:"var(--gold)", color:"var(--bg)", textDecoration:"none", borderRadius:8, fontWeight:700, letterSpacing:"0.03em", boxShadow:"0 4px 24px rgba(201,150,59,0.25)" }}>
-                read the build log →
-              </Link>
-              <Link href="/builds" style={{ fontFamily:"'JetBrains Mono',monospace", fontSize:12, padding:"13px 28px", background:"transparent", color:"var(--text-muted)", textDecoration:"none", borderRadius:8, border:"1px solid var(--border-2)", letterSpacing:"0.03em" }}>
-                see projects
-              </Link>
               <a href="https://app.notion.com/p/Rishiraj-Paul-GTM-E-Portfolio-32e4fc4568a980df833eea7faf5a6087" target="_blank" rel="noopener noreferrer"
-                style={{ fontFamily:"'JetBrains Mono',monospace", fontSize:12, padding:"13px 28px", background:"transparent", color:"var(--text-muted)", textDecoration:"none", borderRadius:8, border:"1px solid var(--border-2)", letterSpacing:"0.03em" }}>
+                style={{ fontFamily:"'JetBrains Mono',monospace", fontSize:12, padding:"13px 28px", background:"var(--gold)", color:"var(--bg)", textDecoration:"none", borderRadius:8, fontWeight:700, letterSpacing:"0.03em", boxShadow:"0 4px 24px rgba(201,150,59,0.25)" }}>
                 GTM portfolio ↗
               </a>
+              <Link href="/builds" style={{ fontFamily:"'JetBrains Mono',monospace", fontSize:12, padding:"13px 28px", background:"transparent", color:"var(--text-muted)", textDecoration:"none", borderRadius:8, border:"1px solid var(--border-2)", letterSpacing:"0.03em" }}>
+                builds
+              </Link>
+              <Link href="/blog" style={{ fontFamily:"'JetBrains Mono',monospace", fontSize:12, padding:"13px 28px", background:"transparent", color:"var(--text-muted)", textDecoration:"none", borderRadius:8, border:"1px solid var(--border-2)", letterSpacing:"0.03em" }}>
+                build log →
+              </Link>
               <Link href="/about" style={{ fontFamily:"'JetBrains Mono',monospace", fontSize:12, color:"var(--text-dim)", textDecoration:"none", letterSpacing:"0.03em" }}>
                 read the story →
               </Link>
