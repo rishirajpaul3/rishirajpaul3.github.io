@@ -1,0 +1,78 @@
+{
+  "week": "2026-W24",
+  "date_range": "Jun 08\u201314, 2026",
+  "generated_at": "2026-06-08T00:02:22.223213",
+  "version": 1,
+  "repos_scanned": [],
+  "accomplishments": [],
+  "daily_breakdown": {
+    "monday": {
+      "score": 0,
+      "commits": 0,
+      "files": 0,
+      "lines_added": 0,
+      "lines_removed": 0
+    },
+    "tuesday": {
+      "score": 0,
+      "commits": 0,
+      "files": 0,
+      "lines_added": 0,
+      "lines_removed": 0
+    },
+    "wednesday": {
+      "score": 0,
+      "commits": 0,
+      "files": 0,
+      "lines_added": 0,
+      "lines_removed": 0
+    },
+    "thursday": {
+      "score": 0,
+      "commits": 0,
+      "files": 0,
+      "lines_added": 0,
+      "lines_removed": 0
+    },
+    "friday": {
+      "score": 0,
+      "commits": 0,
+      "files": 0,
+      "lines_added": 0,
+      "lines_removed": 0
+    },
+    "saturday": {
+      "score": 0,
+      "commits": 0,
+      "files": 0,
+      "lines_added": 0,
+      "lines_removed": 0
+    },
+    "sunday": {
+      "score": 0,
+      "commits": 0,
+      "files": 0,
+      "lines_added": 0,
+      "lines_removed": 0
+    }
+  },
+  "project_breakdown": {},
+  "token_usage": [],
+  "todos": [],
+  "manual": [],
+  "stats": {
+    "output_score": 0,
+    "letter_grade": "D",
+    "total_commits": 0,
+    "total_files": 0,
+    "lines_added": 0,
+    "lines_removed": 0,
+    "lines_net": 0,
+    "active_days": 0,
+    "claude_cost_usd": 0,
+    "total_input_tokens": 0,
+    "total_output_tokens": 0,
+    "efficiency_rating": 0,
+    "score_breakdown": []
+  }
+}
