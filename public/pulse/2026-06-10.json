@@ -1,0 +1,43 @@
+{
+  "date": "2026-06-10",
+  "the_signal": {
+    "headline": "AWS Bedrock forces 30-day data retention with Anthropic models",
+    "body": "This isn't just a compliance footnote\u2014it's a hidden cost shock for any GTM team running revenue AI on Bedrock's high-capability models (Mythos, Fable 5+). You're now contractually obligated to share customer interaction data with Anthropic for 30 days, which breaks your data residency promises and compliance posture. For B2B SaaS builders, this either kills Bedrock as your inference backbone or forces a costly migration to sovereign alternatives mid-production."
+  },
+  "tool_drop": {
+    "name": "n8n OpenTelemetry Native Support",
+    "what": "n8n now emits every workflow execution as an OpenTelemetry trace, integrating directly into your existing observability stack.",
+    "why": "If you're running multi-agent workflows (which you should be debugging), having traces that show up in your Datadog/Honeycomb console eliminates the \"black box\" problem that's currently killing production velocity.",
+    "url": "https://n8n.io/blog/trace-n8n-workflow-and-node-executions-with-opentelemetry/"
+  },
+  "thread_of_day": {
+    "title": "How to Monitor AI Steps in Production: Memory State & Early Warnings",
+    "source": "n8n Blog",
+    "takeaway": "Monitoring agent execution is pointless without structured outputs and memory state tracking\u2014set up early warning signals before your pipeline hallucinates on a customer's data.",
+    "url": "https://n8n.io/blog/how-to-monitor-usage-and-performance-of-ai-steps/"
+  },
+  "quote": {
+    "text": "Knowing your agent is running is different from what it's doing.",
+    "source": "n8n Blog: How to Monitor Usage and Performance of AI Steps"
+  },
+  "whats_moving": [
+    {
+      "topic": "LLM Observability & Instrumentation",
+      "context": "n8n's multi-part content push on observability signals that teams still can't see what's happening inside their AI pipelines\u2014this is now table stakes for production GTM systems."
+    },
+    {
+      "topic": "Data Residency as Vendor Lock-in",
+      "context": "AWS Bedrock's Anthropic data-sharing requirement shows that 'cloud agnostic' is dead; where your model inference happens now directly impacts compliance and cost structure."
+    },
+    {
+      "topic": "Integration Architecture Patterns",
+      "context": "n8n's deep dive on integration tradeoffs suggests GTM teams are hitting scalability walls with their workflow compositions and need systematic pattern guidance."
+    }
+  ],
+  "act_on_this": "Audit your current LLM inference provider's data retention policy and check if it's compatible with your customer's data residency contracts\u2014if you're on Bedrock with Anthropic models, you have a compliance problem.",
+  "numbers": {
+    "stat": "n8n targeting 200-person UK team by 2029",
+    "context": "The workflow automation platform is betting hard on Europe as a sovereign AI infrastructure play, signaling that EU customers are actively rejecting US-only SaaS for production systems."
+  },
+  "generated_at": "2026-06-10T10:53:47.291827+00:00"
+}
