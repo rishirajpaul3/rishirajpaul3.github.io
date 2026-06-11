@@ -1,0 +1,43 @@
+{
+  "date": "2026-06-11",
+  "the_signal": {
+    "headline": "LLM routing shifts from strategy to production architecture",
+    "body": "n8n's deep dive on per-request model selection shows routing is no longer a nice-to-have optimization\u2014it's now table stakes for controlling token costs and latency in production. GTM teams shipping multi-model pipelines need routing logic baked into their orchestration layer from day one, not bolted on after your agent bill explodes."
+  },
+  "tool_drop": {
+    "name": "n8n OpenTelemetry Native Support",
+    "what": "Workflows now emit execution traces directly into existing observability stacks without custom instrumentation.",
+    "why": "GTM engineers managing production AI pipelines can now close the visibility loop\u2014seeing agent behavior in the same platform your infra team uses means faster debugging and fewer finger-pointing sessions when revenue flows break.",
+    "url": "https://n8n.io"
+  },
+  "thread_of_day": {
+    "title": "Production AI Playbook: Complex Agent Patterns",
+    "source": "n8n Blog",
+    "takeaway": "Multi-agent systems become undebuggable fast\u2014sub-workflow composition and memory management are the real problems after your first agent scales, not the agent itself.",
+    "url": "https://n8n.io/blog"
+  },
+  "quote": {
+    "text": "Your first AI agent worked great. Then you added three more and the system became impossible to debug.",
+    "source": "n8n Blog \u2013 Production AI Playbook: Complex Agent Patterns"
+  },
+  "whats_moving": [
+    {
+      "topic": "LLM Routing & Model Selection",
+      "context": "Teams are moving from static model choice to per-request routing based on cost, latency, and accuracy tradeoffs\u2014this is now a core architectural decision, not an optimization."
+    },
+    {
+      "topic": "AI Governance & Compliance Tooling",
+      "context": "Enterprise demand for audit trails and control surfaces is forcing tooling vendors to build governance layers that GTM orgs can't skip anymore."
+    },
+    {
+      "topic": "Orchestration Observability Standards",
+      "context": "OpenTelemetry becoming native in orchestration platforms means observability is converging\u2014GTM teams can now instrument once and see everything from workflow to model call."
+    }
+  ],
+  "act_on_this": "Audit your current AI agent routing logic this week\u2014if you're using static model selection, map out which requests should route to which models based on cost-per-token and latency requirements, then propose a routing framework to your eng team.",
+  "numbers": {
+    "stat": "n8n targeting 200-person UK team by 2029",
+    "context": "Orchestration platforms are investing heavily in regional expansion and headcount, signaling massive market growth for workflow automation as AI complexity drives demand for managed execution layers."
+  },
+  "generated_at": "2026-06-11T11:21:01.283627+00:00"
+}

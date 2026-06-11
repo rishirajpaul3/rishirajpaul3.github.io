@@ -1,5 +1,9 @@
 [
   {
+    "date": "2026-06-11",
+    "headline": "LLM routing shifts from strategy to production architecture"
+  },
+  {
     "date": "2026-06-10",
     "headline": "AWS Bedrock forces 30-day data retention with Anthropic models"
   },
