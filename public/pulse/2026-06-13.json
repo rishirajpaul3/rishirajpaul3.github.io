@@ -1,0 +1,43 @@
+{
+  "date": "2026-06-13",
+  "the_signal": {
+    "headline": "LLM observability shifts from optional to production requirement",
+    "body": "n8n's native OpenTelemetry support and enterprise governance tooling signals that observability is now table stakes for production AI systems. GTM engineers shipping multi-model systems need visibility into which models are actually being called, why, and at what cost\u2014blindness here kills margin on every transaction."
+  },
+  "tool_drop": {
+    "name": "n8n OpenTelemetry Integration",
+    "what": "Native trace emission for every workflow and node execution, integrated into existing observability stacks.",
+    "why": "You can't optimize what you can't see; this lets you instrument LLM routing, multi-agent paths, and token spend in real-time without custom instrumentation overhead.",
+    "url": "https://n8n.io"
+  },
+  "thread_of_day": {
+    "title": "Ask HN: What Are You Working On?",
+    "source": "Hacker News",
+    "takeaway": "The indie builder sentiment shows demand for agent visualization and knowledge graph integrations (see brain-map-skill), suggesting PLG revenue systems need better observability UX for non-technical users.",
+    "url": "https://news.ycombinator.com/item?id=48514461"
+  },
+  "quote": {
+    "text": "Your first AI agent worked great. Then you added three more and the system became impossible to debug.",
+    "source": "n8n Blog \u2014 Production AI Playbook: Complex Agent Patterns"
+  },
+  "whats_moving": [
+    {
+      "topic": "AI Governance & Compliance Tooling",
+      "context": "Enterprise demand for audit trails and compliance frameworks is forcing GTM teams to bake governance into product architecture, not bolt it on after."
+    },
+    {
+      "topic": "Workflow Orchestration as Revenue Infrastructure",
+      "context": "n8n's 200-person UK expansion and focus on integration patterns signals that workflow platforms are becoming the backbone of enterprise AI deployments\u2014GTM teams need to own this layer."
+    },
+    {
+      "topic": "Observability as Competitive Moat",
+      "context": "OpenTelemetry adoption means observability is now a standards game, not a proprietary advantage\u2014speed of insight into production behavior becomes the differentiator."
+    }
+  ],
+  "act_on_this": "Audit your current LLM routing logic and add structured logging (JSON events with model selection, latency, token count) to three customer workflows this week; you'll uncover cost leaks and performance bottlenecks worth 10-15% margin improvement.",
+  "numbers": {
+    "stat": "n8n targeting 200-person UK team by 2029, tripled current UK headcount in 12 months",
+    "context": "Enterprise orchestration is a land-grab moment; if you're building agent systems, the platforms you build on will determine your ability to scale observability and governance without custom engineering."
+  },
+  "generated_at": "2026-06-13T09:54:56.444107+00:00"
+}
