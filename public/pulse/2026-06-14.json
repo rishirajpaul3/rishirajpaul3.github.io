@@ -1,0 +1,43 @@
+{
+  "date": "2026-06-14",
+  "the_signal": {
+    "headline": "Large context windows are a reliability trap \u2014 verify before deploying",
+    "body": "The 'Don't trust large context windows' post exposes a critical GTM risk: RAG systems and agentic revenue tools bleeding accuracy at scale because engineers assume bigger context = better performance. This directly impacts conversion workflows where hallucinations cost revenue, not just API bills. You need validation gates before shipping context-heavy prompts to production."
+  },
+  "tool_drop": {
+    "name": "n8n OpenTelemetry Native Support",
+    "what": "Native OpenTelemetry tracing for every workflow and node execution, emitting traces to your existing observability stack.",
+    "why": "GTM engineers can now instrument revenue automation end-to-end without building custom logging \u2014 critical for debugging multi-agent revenue workflows without adding latency to customer-facing systems.",
+    "url": "https://n8n.io"
+  },
+  "thread_of_day": {
+    "title": "Complex Agent Patterns: From proof-of-concept to production debugging",
+    "source": "n8n Blog",
+    "takeaway": "Multi-agent revenue systems fail not at scale but at composition \u2014 sub-workflow memory management and inter-agent state becomes the bottleneck before cost guardrails do.",
+    "url": "https://n8n.io/blog/production-ai-playbook-complex-agent-patterns"
+  },
+  "quote": {
+    "text": "Your first AI agent worked great. Then you added three more and the system became impossible to debug.",
+    "source": "n8n Blog \u2014 Production AI Playbook"
+  },
+  "whats_moving": [
+    {
+      "topic": "Enterprise AI Governance",
+      "context": "Compliance is no longer a post-deployment concern \u2014 n8n's governance tools post signals that GTM stacks need compliance-first architecture for regulated industries and SOC 2 deals."
+    },
+    {
+      "topic": "Context Window Reliability",
+      "context": "The Hacker News conversation on large context windows reveals that 100K+ token contexts are shipping broken \u2014 revenue systems relying on long-context RAG need validation testing before customer handoff."
+    },
+    {
+      "topic": "Integration Pattern Selection",
+      "context": "n8n's integration patterns post drops as GTM teams scale automation \u2014 choosing between event-driven, polling, and webhook patterns now impacts both revenue latency and operational debugging costs."
+    }
+  ],
+  "act_on_this": "Run a context window stress test on your top 3 revenue workflows \u2014 benchmark accuracy, latency, and hallucination rates at 25%, 50%, 75%, and 100% of your max context window before next quarter's expansion.",
+  "numbers": {
+    "stat": "n8n targeting 200-person UK team by 2029, tripling UK headcount in past year",
+    "context": "Workflow orchestration is becoming a core GTM infrastructure layer \u2014 the investment velocity signals that enterprise revenue automation is consolidating around purpose-built platforms rather than custom integrations."
+  },
+  "generated_at": "2026-06-14T10:22:13.857083+00:00"
+}
