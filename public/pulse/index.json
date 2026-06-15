@@ -1,5 +1,9 @@
 [
   {
+    "date": "2026-06-15",
+    "headline": "Multi-agent systems demand observability architecture\u2014not optional debugging"
+  },
+  {
     "date": "2026-06-14",
     "headline": "Large context windows are a reliability trap \u2014 verify before deploying"
   },
