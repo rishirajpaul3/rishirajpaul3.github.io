@@ -1,0 +1,43 @@
+{
+  "date": "2026-06-17",
+  "the_signal": {
+    "headline": "LLM routing shifts model selection from static to per-request dynamic",
+    "body": "n8n's routing architecture post shows how production systems now choose models request-by-request based on complexity, cost, and latency\u2014not upfront. This is the operational difference between 'we use Claude' and 'we use the right model every time.' GTM engineers need to understand this because it directly impacts pipeline economics and agent reliability at scale."
+  },
+  "tool_drop": {
+    "name": "n8n OpenTelemetry Native Support",
+    "what": "Every n8n workflow execution now emits as an OTel trace, surfacing into your existing observability stack without separate instrumentation.",
+    "why": "If you're running multi-agent systems, this eliminates the observability blind spot\u2014your n8n workflows show up in the same tracing layer as your LLM calls, making end-to-end debugging possible instead of guessing.",
+    "url": ""
+  },
+  "thread_of_day": {
+    "title": "Production AI Playbook: Complex Agent Patterns",
+    "source": "n8n Blog",
+    "takeaway": "Your first agent works until you add three more and the system becomes undebuggable\u2014this post covers multi-agent composition, memory management, and failure modes that actually matter in production.",
+    "url": ""
+  },
+  "quote": {
+    "text": "Learn how LLM routing improves accuracy, latency, and cost with per request model selection. Optimize pipelines, and use the right tool every time.",
+    "source": "n8n Blog: LLM Routing"
+  },
+  "whats_moving": [
+    {
+      "topic": "LLM Routing as Infrastructure",
+      "context": "n8n's focus on per-request model selection signals that static model choices are becoming a cost liability\u2014routing is now table stakes for production agents."
+    },
+    {
+      "topic": "OpenTelemetry as Native Workflow Standard",
+      "context": "n8n's OTel support confirms observability is moving from add-on to native\u2014platforms that don't emit traces natively will become harder to run at scale."
+    },
+    {
+      "topic": "AI Governance as Enterprise Blocker",
+      "context": "n8n's governance tools post reflects growing regulatory/compliance friction\u2014GTM teams now need to sell 'governed agents' not just 'agents.'"
+    }
+  ],
+  "act_on_this": "Audit your current LLM routing logic: if you're hardcoding model selection per endpoint or workflow, map out where dynamic routing (cost/latency/accuracy) could reduce spend by 20-40% without degrading output quality.",
+  "numbers": {
+    "stat": "n8n plans 200-person UK team by 2029 (tripled UK headcount in past year)",
+    "context": "European AI infrastructure plays are scaling aggressively\u2014this is capital and talent concentration that will shape workflow automation defaults in GTM stacks."
+  },
+  "generated_at": "2026-06-17T11:44:25.131581+00:00"
+}
