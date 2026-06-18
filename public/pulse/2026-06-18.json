@@ -1,0 +1,43 @@
+{
+  "date": "2026-06-18",
+  "the_signal": {
+    "headline": "Agent-to-Agent protocols move from theory to production necessity",
+    "body": "n8n's deep dive on A2A protocol specification, failure modes, and enterprise orchestration signals that cross-agent communication is now table-stakes for scaling multi-agent systems. GTM teams deploying revenue automation with multiple AI agents need to architect for interop now\u2014not patch it later when agents start siloing data and decisions."
+  },
+  "tool_drop": {
+    "name": "Locofy",
+    "what": "Design-to-code agent that converts designs directly into production code",
+    "why": "Reduces engineering bottleneck in GTM iteration cycles\u2014ship product variations and landing page tests without waiting for dev sprints",
+    "url": ""
+  },
+  "thread_of_day": {
+    "title": "Production AI Playbook: Complex Agent Patterns",
+    "source": "n8n Blog",
+    "takeaway": "Your first agent scales; three agents become undebuggable without proper multi-agent architecture, memory isolation, and sub-workflow composition patterns built in from day one",
+    "url": ""
+  },
+  "quote": {
+    "text": "Your first AI agent worked great. Then you added three more and the system became impossible to debug.",
+    "source": "n8n Blog \u2014 Production AI Playbook"
+  },
+  "whats_moving": [
+    {
+      "topic": "DeepSeek Vision Launch",
+      "context": "New vision capability from DeepSeek signals competitive pressure on Claude/GPT-4V pricing and latency\u2014matters for GTM engineers choosing vision models for document processing in deal workflows"
+    },
+    {
+      "topic": "Agent-to-Agent Protocols",
+      "context": "Enterprise AI orchestration now requires formal A2A specs and failure handling; this is infrastructure GTM automation systems can't ignore at scale"
+    },
+    {
+      "topic": "LLM Governance Tooling",
+      "context": "Enterprise compliance for AI systems is becoming standardized\u2014GTM teams deploying autonomous revenue systems need governance selection criteria for AML, PII, and audit trails"
+    }
+  ],
+  "act_on_this": "Map your multi-agent architecture against n8n's A2A protocol spec\u2014identify where agents communicate and add explicit handoff contracts, retry logic, and observability hooks before adding the fourth agent to your revenue stack.",
+  "numbers": {
+    "stat": "n8n targeting 200-person UK team by 2029 (tripled existing UK team in 2025 alone)",
+    "context": "Workflow automation platform expansion accelerating into enterprise\u2014signals demand for orchestration tooling is real and consolidating around platforms that handle complexity at scale"
+  },
+  "generated_at": "2026-06-18T11:07:20.336452+00:00"
+}
