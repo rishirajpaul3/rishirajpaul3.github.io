@@ -1,0 +1,43 @@
+{
+  "date": "2026-06-19",
+  "the_signal": {
+    "headline": "AI governance becomes table-stakes for enterprise revenue systems",
+    "body": "n8n's new enterprise governance guide signals what's actually shipping now: compliance tooling isn't optional anymore for GTM teams deploying multi-agent systems at scale. If you're building agent-driven revenue workflows, governance architecture determines whether you can sell into enterprises\u2014not whether it's nice to have."
+  },
+  "tool_drop": {
+    "name": "API to MCP",
+    "what": "Converts REST APIs into Model Context Protocol compatible interfaces for direct LLM integration.",
+    "why": "Eliminates the routing layer friction between your revenue data APIs and agent decision-making\u2014agents get native data access without custom integrations.",
+    "url": ""
+  },
+  "thread_of_day": {
+    "title": "Integration Patterns: How To Choose for Your Architecture",
+    "source": "n8n Blog",
+    "takeaway": "The pattern you pick (sync vs async vs event-driven) determines whether your multi-agent system scales or collapses under state management debt\u2014most GTM teams pick wrong on day one.",
+    "url": ""
+  },
+  "quote": {
+    "text": "Your first AI agent worked great. Then you added three more and the system became impossible to debug.",
+    "source": "n8n Blog \u2014 Production AI Playbook: Complex Agent Patterns"
+  },
+  "whats_moving": [
+    {
+      "topic": "Enterprise AI Governance Tooling",
+      "context": "n8n's detailed governance comparison signals that sales teams now need compliance proofs before enterprise deals close\u2014visibility into model decisions and audit trails are closing friction."
+    },
+    {
+      "topic": "Process Orchestration as Revenue Infrastructure",
+      "context": "n8n's expanded orchestration framework guide shows the shift from workflow automation as a backend tool to orchestration as a required GTM capability for agent deployment."
+    },
+    {
+      "topic": "Integration Pattern Selection",
+      "context": "New guidance on sync/async/event-driven patterns suggests most teams are hitting scaling walls because they don't match their agent communication model to their data architecture."
+    }
+  ],
+  "act_on_this": "Audit your current multi-agent system's integration pattern against n8n's framework\u2014map whether you're using sync blocking calls when you should be async, or event-driven when you need consistency guarantees. Most revenue system failures aren't LLM problems; they're integration topology problems.",
+  "numbers": {
+    "stat": "n8n targeting 200-person UK team by 2029 (UK team already tripled YoY)",
+    "context": "Enterprise orchestration platforms are capital-intensive and betting hard on GTM/compliance as their moat\u2014the market is consolidating around platforms that handle governance natively rather than bolt-on tooling."
+  },
+  "generated_at": "2026-06-19T11:18:45.091704+00:00"
+}
