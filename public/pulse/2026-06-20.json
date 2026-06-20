@@ -1,0 +1,43 @@
+{
+  "date": "2026-06-20",
+  "the_signal": {
+    "headline": "Process orchestration becomes the invisible GTM infrastructure layer",
+    "body": "n8n's expanded content on orchestration tools and complex agent patterns signals that revenue teams now need orchestration as fundamental stack\u2014not just workflow automation. This matters because GTM engineers are debugging multi-agent failures without proper architecture; orchestration platforms are becoming the difference between deployable vs. firefighting revenue systems."
+  },
+  "tool_drop": {
+    "name": "WorkClaw",
+    "what": "Workflow automation tool surfaced on Product Hunt today.",
+    "why": "GTM teams are clearly hunting for better workflow tooling\u2014track this category as potential alternative to n8n/Zapier for revenue automation.",
+    "url": ""
+  },
+  "thread_of_day": {
+    "title": "LLM Routing: From Strategy Selection to Production Architecture",
+    "source": "n8n Blog",
+    "takeaway": "Per-request dynamic model selection is now table-stakes\u2014teams using static model routing are leaving accuracy, latency, and cost optimization on the table in production revenue systems.",
+    "url": ""
+  },
+  "quote": {
+    "text": "Your first AI agent worked great. Then you added three more and the system became impossible to debug.",
+    "source": "n8n Blog \u2014 Production AI Playbook: Complex Agent Patterns"
+  },
+  "whats_moving": [
+    {
+      "topic": "Process Orchestration Maturity",
+      "context": "n8n publishing deep dives on orchestration patterns and architecture suggests this moved from 'nice-to-have' to 'required infrastructure' for production multi-agent systems."
+    },
+    {
+      "topic": "LLM Routing Economics",
+      "context": "Shift from static to per-request model selection is now being formalized in production playbooks\u2014cost and latency optimization through intelligent routing is becoming standard GTM practice."
+    },
+    {
+      "topic": "Integration Pattern Standardization",
+      "context": "n8n's comparative content on integration patterns indicates the market is consolidating around specific architectural approaches\u2014standardization reduces decision friction for GTM engineers."
+    }
+  ],
+  "act_on_this": "Audit your current multi-agent revenue system for observability gaps using the LLM observability checklist (metrics, failure modes, feedback loops)\u2014chances are you're debugging blind if you built before June 2026.",
+  "numbers": {
+    "stat": "n8n targeting 200-person UK team by 2029; UK headcount already tripled in past year",
+    "context": "The orchestration/AI agent market is consolidating capital and talent around proven platforms\u2014this signals which vendors are winning production deployments at scale."
+  },
+  "generated_at": "2026-06-20T10:07:31.081840+00:00"
+}
