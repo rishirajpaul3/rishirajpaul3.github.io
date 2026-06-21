@@ -1,0 +1,43 @@
+{
+  "date": "2026-06-21",
+  "the_signal": {
+    "headline": "Cognitive debt now rivals technical debt in AI systems",
+    "body": "CTOs are flagging that complex agent architectures create invisible cognitive overhead \u2014 the mental tax of understanding multi-agent flows, failure modes, and state management. For GTM engineers, this means your revenue systems need built-in debuggability from day one, or you'll lose engineering velocity faster than you gain pipeline velocity."
+  },
+  "tool_drop": {
+    "name": "Atomic Mail Agentic",
+    "what": "Agent-based email orchestration for outbound revenue workflows.",
+    "why": "Early signal that email sequence logic is moving from static rules to agentic decision-making \u2014 watch this category for GTM automation patterns.",
+    "url": ""
+  },
+  "thread_of_day": {
+    "title": "Production AI Playbook: Complex Agent Patterns",
+    "source": "n8n Blog",
+    "takeaway": "Your first AI agent works. Three agents later, your system becomes impossible to debug \u2014 multi-agent architecture requires explicit memory management, sub-workflow composition, and failure mode design from the start.",
+    "url": ""
+  },
+  "quote": {
+    "text": "Learn how LLM routing improves accuracy, latency, and cost with per request model selection. Optimize pipelines, and use the right tool every time.",
+    "source": "n8n Blog \u2014 LLM Routing: From Strategy Selection to Production Architecture"
+  },
+  "whats_moving": [
+    {
+      "topic": "Multi-agent debugging complexity",
+      "context": "As GTM systems scale from single agents to orchestrated workflows, observability and cognitive clarity become bottlenecks \u2014 not raw compute."
+    },
+    {
+      "topic": "LLM routing maturity",
+      "context": "Per-request model selection is now a production pattern, not a nice-to-have \u2014 cheaper routing decisions compound at scale in high-volume GTM workflows."
+    },
+    {
+      "topic": "Integration pattern standardization",
+      "context": "n8n publishing deep dives on integration patterns suggests the market is moving beyond 'does it connect' to 'which pattern actually scales for your architecture.'"
+    }
+  ],
+  "act_on_this": "Audit your current multi-agent revenue system (if you have one) for cognitive debt: Can your team explain why each agent exists, what it owns, and how it fails? If the answer takes more than 2 minutes, you have a problem.",
+  "numbers": {
+    "stat": "n8n UK team tripled in size over 12 months; company targets 200-person UK operation by 2029",
+    "context": "Orchestration tooling is moving from niche to mainstream infrastructure \u2014 GTM engineers who don't evaluate these platforms are building on sand."
+  },
+  "generated_at": "2026-06-21T10:27:40.156641+00:00"
+}
