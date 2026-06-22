@@ -1,0 +1,43 @@
+{
+  "date": "2026-06-22",
+  "the_signal": {
+    "headline": "LLM observability shifts from optional to mandatory revenue ops",
+    "body": "You can't optimize what you can't measure\u2014and most teams instrumenting LLM pipelines are flying blind on cost, latency, and accuracy drift. n8n's observability deep-dive signals the market recognizing that feedback loops on model behavior are now table-stakes for revenue systems. Without visibility into which models are actually performing on which requests, your GTM engine degrades silently."
+  },
+  "tool_drop": {
+    "name": "Agentic Document Extraction",
+    "what": "AI-powered document processing that routes extraction tasks to specialized agents rather than single-model solutions.",
+    "why": "Document extraction at scale is a revenue blocker in most sales and underwriting workflows\u2014agents that specialize per document type will crush single-model approaches on accuracy and speed.",
+    "url": ""
+  },
+  "thread_of_day": {
+    "title": "Multi-agent systems are debuggable nightmares at scale",
+    "source": "n8n Blog - Production AI Playbook",
+    "takeaway": "The jump from one agent to three agents exposes a critical gap: most teams lack memory management, sub-workflow composition, and failure isolation patterns needed for production reliability.",
+    "url": ""
+  },
+  "quote": {
+    "text": "Your first AI agent worked great. Then you added three more and the system became impossible to debug.",
+    "source": "n8n Blog - Production AI Playbook: Complex Agent Patterns"
+  },
+  "whats_moving": [
+    {
+      "topic": "LLM observability instrumentation",
+      "context": "Teams are realizing post-deployment observation isn't enough; they need real-time feedback loops to catch cost creep and accuracy drift before it kills unit economics."
+    },
+    {
+      "topic": "Enterprise document extraction via agents",
+      "context": "Single-model document processing is being replaced by agent-based routing, enabling specialized handling per document type and better compliance auditability."
+    },
+    {
+      "topic": "Multi-agent architecture patterns",
+      "context": "Production failures are forcing teams to adopt formal patterns for memory, composition, and failure modes\u2014moving beyond toy agent demos to actual revenue systems."
+    }
+  ],
+  "act_on_this": "Audit your LLM pipeline's observability today: map which metrics you're actually tracking (cost per request, latency by model, accuracy per use case) versus which ones you're guessing on. If you can't answer 'which model handled this customer interaction' in under 30 seconds, you have a problem.",
+  "numbers": {
+    "stat": "n8n targeting 200-person UK team by 2029, tripled UK headcount in past year",
+    "context": "Process orchestration tooling is consolidating around vendors that own the full stack\u2014this means GTM teams should expect orchestration to become as standard as CI/CD, not optional infrastructure."
+  },
+  "generated_at": "2026-06-22T12:46:36.309674+00:00"
+}
