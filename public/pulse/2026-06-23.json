@@ -1,0 +1,43 @@
+{
+  "date": "2026-06-23",
+  "the_signal": {
+    "headline": "LLM routing moves from optimization hack to production necessity",
+    "body": "N8n's deep dive on per-request model selection shows routing is now table-stakes for controlling cost and latency in multi-model revenue systems. GTM engineers can't ship agent-heavy pipelines without strategic routing \u2014 it's the difference between sustainable and unsustainable inference budgets at scale."
+  },
+  "tool_drop": {
+    "name": "N8n Process Orchestration Platform",
+    "what": "Enterprise workflow engine that handles multi-agent coordination, LLM routing, and complex agent patterns in production.",
+    "why": "If you're building agent-driven GTM systems, orchestration is where your actual reliability lives \u2014 it's the invisible layer preventing chaos when three agents need to talk to each other.",
+    "url": "https://n8n.io"
+  },
+  "thread_of_day": {
+    "title": "Who Does What? Team Topologies for the Agentic Platform",
+    "source": "Hacker News",
+    "takeaway": "Agentic platforms require new organizational models \u2014 your GTM ops team structure needs to reflect how agents distribute work, not how humans used to.",
+    "url": "https://blog.owulveryck.info/2026/06/22/who-does-what-team-topologies-for-the-agentic-platform.html"
+  },
+  "quote": {
+    "text": "Your first AI agent worked great. Then you added three more and the system became impossible to debug.",
+    "source": "N8n Blog \u2014 Production AI Playbook: Complex Agent Patterns"
+  },
+  "whats_moving": [
+    {
+      "topic": "LLM routing as core architecture",
+      "context": "Multi-model selection per request is now essential for cost control in production revenue systems, not a nice-to-have optimization."
+    },
+    {
+      "topic": "Integration patterns maturation",
+      "context": "N8n's deep taxonomy of integration patterns signals the market is converging on standard approaches \u2014 GTM stacks need to standardize on these patterns."
+    },
+    {
+      "topic": "Multi-agent debugging complexity",
+      "context": "Growing recognition that agent composition creates new failure modes; observability and orchestration become non-negotiable for revenue-critical systems."
+    }
+  ],
+  "act_on_this": "Audit your current agent-driven GTM workflows for routing strategy \u2014 map which models run at which steps and calculate your actual monthly inference spend. You're likely overpaying on commodity tasks.",
+  "numbers": {
+    "stat": "n8n targeting 200-person UK team by 2029, tripling current size",
+    "context": "Orchestration demand is global and growing fast; the infrastructure layer is consolidating around a few platforms, so choose your vendor lock-in carefully."
+  },
+  "generated_at": "2026-06-23T10:34:36.537975+00:00"
+}
