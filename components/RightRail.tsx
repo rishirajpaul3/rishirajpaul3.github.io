@@ -2,7 +2,7 @@
 import Link from "next/link";
 
 const items = [
-  { href: "https://linkedin.com/in/rishiraj-paul", label: "in", title: "LinkedIn" },
+  { href: "https://www.linkedin.com/in/rishiraj-paul/", label: "in", title: "LinkedIn" },
   { href: "https://github.com/rishirajpaul3", label: "gh", title: "GitHub" },
   { href: "/blog", label: "✍", title: "Blog" },
   { href: "mailto:rishirajpaul3@gmail.com", label: "@", title: "Email" },

@@ -29,7 +29,7 @@ export default function BlogPage() {
               Live feed — everything I build: blog, LinkedIn, GitHub.
             </div>
           </div>
-          <a href="https://linkedin.com/in/rishiraj-paul" target="_blank" rel="noopener noreferrer"
+          <a href="https://www.linkedin.com/in/rishiraj-paul/" target="_blank" rel="noopener noreferrer"
             style={{ fontFamily:"'JetBrains Mono',monospace", fontSize:11, padding:"8px 16px", background:"var(--surface-2)", border:"1px solid var(--border)", borderRadius:8, color:"var(--text-muted)", textDecoration:"none" }}>
             + Follow on LinkedIn
           </a>

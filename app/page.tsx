@@ -61,7 +61,7 @@ export default function Home() {
               </p>
               {[
                 { icon:"@",  label:"Email",    val:"rishirajpaul3@gmail.com",          href:"mailto:rishirajpaul3@gmail.com" },
-                { icon:"in", label:"LinkedIn", val:"linkedin.com/in/rishiraj-paul-gtm", href:"https://www.linkedin.com/in/rishiraj-paul-gtm/" },
+                { icon:"in", label:"LinkedIn", val:"linkedin.com/in/rishiraj-paul", href:"https://www.linkedin.com/in/rishiraj-paul/" },
                 { icon:"x",  label:"X",        val:"@RishirajPa40653",                 href:"https://x.com/RishirajPa40653" },
                 { icon:"gh", label:"GitHub",   val:"github.com/rishirajpaul3",          href:"https://github.com/rishirajpaul3" },
               ].map(c => (

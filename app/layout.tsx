@@ -33,7 +33,7 @@ const personSchema = {
   "description": "GTM Engineer building AI-powered revenue systems. Specialises in outbound infrastructure, CRM automation, lead enrichment pipelines, and AI sales co-pilots.",
   "knowsAbout": ["GTM Engineering", "AI Sales Automation", "CRM Automation", "Outbound Infrastructure", "HubSpot", "Clay", "n8n", "Lead Enrichment", "Sales Operations"],
   "sameAs": [
-    "https://www.linkedin.com/in/rishiraj-paul-gtm/",
+    "https://www.linkedin.com/in/rishiraj-paul/",
     "https://github.com/rishirajpaul3",
     "https://x.com/RishirajPa40653",
     "https://build-logrishiraj.beehiiv.com"
