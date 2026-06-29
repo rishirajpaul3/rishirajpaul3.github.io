@@ -1,0 +1,43 @@
+{
+  "date": "2026-06-29",
+  "the_signal": {
+    "headline": "LLM routing moves from optimization to production necessity",
+    "body": "n8n's deep dive on per-request model selection shows routing is now table-stakes for cost control and latency management. GTM teams running multi-agent systems can't afford static model assignments anymore\u2014you need dynamic routing to stay competitive on unit economics as inference costs flatten across providers."
+  },
+  "tool_drop": {
+    "name": "Herdr",
+    "what": "Agent multiplexer that orchestrates multiple AI agents from your terminal.",
+    "why": "If you're debugging multi-agent workflows locally before deploying to production, this cuts down context-switching and gives you visibility into agent communication patterns that usually hide in logs.",
+    "url": "https://github.com/ogulcancelik/herdr"
+  },
+  "thread_of_day": {
+    "title": "HackerRank open-sourced its ATS and nobody knows what their resume actually scored",
+    "source": "Hacker News",
+    "takeaway": "Black-box scoring systems in hiring (and by extension, GTM automation) create friction because users can't trust or optimize against the signal\u2014this is your future if you don't make agent scoring transparent.",
+    "url": "https://danunparsed.com/p/hackerrank-open-source-ats"
+  },
+  "quote": {
+    "text": "When a review run falls short, this workflow catches it and proposes a fix to the skill, then writes the improved instructions back once you approve the diff.",
+    "source": "n8n Blog \u2014 Build Self-Improving Agent Skills"
+  },
+  "whats_moving": [
+    {
+      "topic": "Self-healing agent skills",
+      "context": "n8n's workflow pattern shows agents can now auto-diagnose and propose fixes to their own instructions\u2014reduces manual debugging cycles for GTM teams running review-heavy processes."
+    },
+    {
+      "topic": "LLM routing architecture",
+      "context": "As model pricing converges, routing strategy (not just model choice) becomes the cost lever; GTM teams need to own this layer instead of treating it as infrastructure."
+    },
+    {
+      "topic": "Agent governance maturity",
+      "context": "Enterprise AI governance tools are consolidating around compliance requirements; GTM teams building revenue systems now need governance roadmaps, not just automation."
+    }
+  ],
+  "act_on_this": "Map your multi-agent revenue workflow's critical paths and identify where dynamic LLM routing could cut costs or latency by 15%+\u2014then test routing logic on one high-volume subprocess before rolling out.",
+  "numbers": {
+    "stat": "5-level AI maturity framework now standard for enterprise benchmarking",
+    "context": "If your GTM AI stack doesn't map to a documented maturity level, you can't communicate ROI to leadership or make defensible investment decisions on the next tool."
+  },
+  "generated_at": "2026-06-29T11:56:22.172837+00:00"
+}
