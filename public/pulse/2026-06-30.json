@@ -1,0 +1,43 @@
+{
+  "date": "2026-06-30",
+  "the_signal": {
+    "headline": "Agent-to-Agent protocols move from theory to production spec",
+    "body": "n8n published a production-grade A2A protocol spec covering failure modes and enterprise orchestration\u2014this is the standardization layer that turns multi-agent chaos into debuggable systems. For GTM orgs running 3+ agents in revenue workflows, this means you can finally stop building custom inter-agent communication and start using battle-tested patterns. The real signal: infrastructure is catching up to the agent explosion."
+  },
+  "tool_drop": {
+    "name": "AgentPeek",
+    "what": "Debugging and visibility layer purpose-built for multi-agent workflows",
+    "why": "You can't optimize what you can't see\u2014this directly addresses the multi-agent debugging blocker that's currently halting GTM teams from scaling beyond single-agent pilots",
+    "url": ""
+  },
+  "thread_of_day": {
+    "title": "Production AI Playbook: Complex Agent Patterns",
+    "source": "n8n Blog",
+    "takeaway": "Memory management and sub-workflow composition are non-negotiable once you move past proof-of-concept\u2014teams scaling agents are hitting the same architectural walls and need patterns, not more frameworks",
+    "url": "n8n.io"
+  },
+  "quote": {
+    "text": "When a review run falls short, this workflow catches it and proposes a fix to the skill, then writes the improved instructions back once you approve the diff.",
+    "source": "n8n Blog \u2014 Build Self-Improving Agent Skills"
+  },
+  "whats_moving": [
+    {
+      "topic": "A2A Protocol Standardization",
+      "context": "Enterprise orchestration requires formal specification\u2014the vacuum is closing and custom integration debt is about to become obsolete"
+    },
+    {
+      "topic": "MoE Efficiency (LongCat-2.0: 48B active params, 1.6T total)",
+      "context": "Mixture-of-Experts models are proving you don't need monolithic inference\u2014sparse activation reduces cost per token significantly for routing-heavy GTM stacks"
+    },
+    {
+      "topic": "Self-Improving Agent Workflows",
+      "context": "Agents that audit their own output and request instruction updates are moving from labs into production\u2014this closes the feedback loop that manual iteration can't handle at scale"
+    }
+  ],
+  "act_on_this": "Map your current multi-agent workflows against the A2A protocol spec\u2014identify which inter-agent communication patterns you're building custom and flag them for replacement when tools stabilize around the emerging standard in Q3.",
+  "numbers": {
+    "stat": "48B active parameters in LongCat-2.0 (1.6T total MoE)",
+    "context": "This efficiency level makes distributed agent inference viable for GTM teams without enterprise GPU budgets\u2014smaller active models mean faster response times and lower per-token cost at scale"
+  },
+  "generated_at": "2026-06-30T10:29:59.720937+00:00"
+}
