@@ -1,0 +1,43 @@
+{
+  "date": "2026-07-01",
+  "the_signal": {
+    "headline": "AI governance moves from compliance checkbox to revenue protection",
+    "body": "Enterprise AI governance tools are now table stakes\u2014not for legal, but for GTM. The n8n deep dive on governance frameworks shows companies are losing deals and pipeline when they can't prove audit trails, model selection logic, and cost attribution across multi-agent systems. Your sales team can't scale without it."
+  },
+  "tool_drop": {
+    "name": "n8n + cognee (Self-Improving Agent Skills)",
+    "what": "Workflow automation that catches failed review runs, proposes skill fixes, and updates instructions after approval\u2014closing the feedback loop on agent performance.",
+    "why": "GTM teams running AI-powered lead scoring or qualification agents need this pattern now; manual skill tuning doesn't scale when you're running 100+ agents across pipelines.",
+    "url": "https://n8n.io/blog/build-self-improving-agent-skills/"
+  },
+  "thread_of_day": {
+    "title": "Production AI Playbook: Complex Agent Patterns",
+    "source": "n8n Blog",
+    "takeaway": "Multi-agent debugging is the actual blocker\u2014once you add three agents to your GTM stack, the system becomes impossible to debug without architectural patterns for memory management and sub-workflow composition.",
+    "url": "https://n8n.io/blog/production-ai-playbook-complex-agent-patterns/"
+  },
+  "quote": {
+    "text": "Your first AI agent worked great. Then you added three more and the system became impossible to debug.",
+    "source": "n8n Blog - Production AI Playbook"
+  },
+  "whats_moving": [
+    {
+      "topic": "Enterprise AI Governance Stack",
+      "context": "Companies are now benchmarking governance capabilities as a deal requirement, not a post-sale compliance exercise."
+    },
+    {
+      "topic": "Self-Healing Agent Workflows",
+      "context": "The pattern of agents monitoring, proposing fixes, and auto-updating their own skills is moving from n8n tutorials to production revenue ops."
+    },
+    {
+      "topic": "Process Orchestration as GTM Infrastructure",
+      "context": "n8n's orchestration framework analysis signals that GTM stacks now require explicit orchestration tools, not just APIs and webhooks."
+    }
+  ],
+  "act_on_this": "Audit your current multi-agent GTM stack (lead scoring, qualification, routing) for debugging visibility\u2014if you can't trace why an agent made a decision, you don't have governance yet, and you're one bad lead route away from a deal loss.",
+  "numbers": {
+    "stat": "5-level AI maturity framework now standard for enterprise benchmarking",
+    "context": "Leadership is starting to benchmark GTM AI maturity across Usage, Integration, Governance, Skills, and Intelligence dimensions\u2014your competitive position is becoming measurable against this framework."
+  },
+  "generated_at": "2026-07-01T10:39:31.269543+00:00"
+}
