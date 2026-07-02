@@ -1,0 +1,43 @@
+{
+  "date": "2026-07-02",
+  "the_signal": {
+    "headline": "Agent skill self-improvement moves from concept to reviewable workflows",
+    "body": "n8n's cognee integration shows agents catching their own failures and proposing fixes with diffs you approve before auto-deployment. This is the production pattern for reducing hallucination feedback loops \u2014 your agents now self-correct instead of requiring manual retraining cycles. For GTM teams running lead qualification or discovery agents, this cuts iteration time from days to hours."
+  },
+  "tool_drop": {
+    "name": "Senior SWE-Bench",
+    "what": "Open-source benchmark that evaluates AI agents on senior engineer-level coding tasks, not junior-level toy problems.",
+    "why": "If you're building code-generation revenue systems or internal tool agents, you need honest benchmarks that test agent reasoning at production complexity \u2014 this replaces the inflated evals that vendors ship.",
+    "url": "https://senior-swe-bench.snorkel.ai/"
+  },
+  "thread_of_day": {
+    "title": "CursorBench 3.1: Agent coding capability gap widens",
+    "source": "Hacker News",
+    "takeaway": "Latest coding agent benchmarks expose the delta between top performers and mid-tier models \u2014 routing strategy (which model for which task) is now table stakes for GTM systems using code generation.",
+    "url": "https://cursor.com/evals"
+  },
+  "quote": {
+    "text": "When a review run falls short, this workflow catches it and proposes a fix to the skill, then writes the improved instructions back once you approve the diff.",
+    "source": "n8n Blog \u2014 Build Self-Improving Agent Skills"
+  },
+  "whats_moving": [
+    {
+      "topic": "Vector database selection maturity",
+      "context": "n8n's comparison framework (scale ceiling, metadata filtering, overhead) signals RAG pipelines are moving past proof-of-concept into architectural trade-off decisions for production GTM stacks."
+    },
+    {
+      "topic": "MCP server security as blocker",
+      "context": "Auth, tool-call scoping, and observability are now the gatekeepers for enterprise agent deployments \u2014 security theater no longer flies with revenue-critical workflows."
+    },
+    {
+      "topic": "AI maturity frameworks becoming governance standard",
+      "context": "n8n's 5-level framework (Usage, Skills, Governance, Integration, Optimization) gives GTM leaders language to budget and prioritize agent rollout instead of treating it as feature work."
+    }
+  ],
+  "act_on_this": "Map your agent workflows against n8n's self-improvement pattern: identify which steps fail silently today and design a review loop that lets agents propose fixes before you approve them into production.",
+  "numbers": {
+    "stat": "Senior SWE-Bench tests agents on real codebase problems vs. isolated coding tasks",
+    "context": "Most AI benchmarks reward narrow task completion; this one tests reasoning across context and complexity \u2014 closer to how agents will actually perform in your GTM stack."
+  },
+  "generated_at": "2026-07-02T09:58:58.306101+00:00"
+}
