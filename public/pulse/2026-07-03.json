@@ -1,0 +1,43 @@
+{
+  "date": "2026-07-03",
+  "the_signal": {
+    "headline": "MCP server security moves from afterthought to production requirement",
+    "body": "n8n's MCP security guide reveals that tool-call scoping, auth, and observability aren't optional\u2014they're the difference between a working agent and a compromised revenue system. As agents move into production workflows, security gaps become liability vectors that directly impact GTM credibility and customer trust."
+  },
+  "tool_drop": {
+    "name": "Safari MCP Server",
+    "what": "WebKit's native MCP implementation that lets agents interact with Safari directly via standardized protocol.",
+    "why": "Signals that browser automation is moving from janky scraping to protocol-native agent integrations\u2014your agent stacks should start planning for this parity.",
+    "url": "https://webkit.org/blog/18136/introducing-the-safari-mcp-server-for-web-developers/"
+  },
+  "thread_of_day": {
+    "title": "The case against shipping half-baked AI products",
+    "source": "Hacker News",
+    "takeaway": "Rushing to production without validating agent behavior under review workflows erodes the trust that enterprise GTM buyers need to bet on AI systems.",
+    "url": "https://weli.dev/blog/half-baked-product/"
+  },
+  "quote": {
+    "text": "When a review run falls short, this workflow catches it and proposes a fix to the skill, then writes the improved instructions back once you approve the diff.",
+    "source": "n8n Blog \u2014 Build Self-Improving Agent Skills with cognee and n8n"
+  },
+  "whats_moving": [
+    {
+      "topic": "Vector database selection at scale",
+      "context": "n8n's comparison of 10+ options signals that RAG pipeline cost and latency are now deal-breakers for enterprise deployments\u2014your architecture choice directly impacts margin."
+    },
+    {
+      "topic": "AI maturity frameworks for leadership",
+      "context": "5-level benchmark frameworks are becoming table stakes for justifying AI spend to execs\u2014GTM teams need to speak this language when pitching AI-powered revenue systems internally."
+    },
+    {
+      "topic": "Geopolitical AI risk (Claude Code bans at Alibaba)",
+      "context": "Enterprise security teams are now treating AI tool access as compliance risk, not convenience\u2014expect more tooling bans and vendor scrutiny in regulated markets."
+    }
+  ],
+  "act_on_this": "Audit your production agent workflows for MCP server security gaps\u2014specifically tool-call scoping and observability\u2014before your first enterprise customer asks about it in a security review.",
+  "numbers": {
+    "stat": "14\u00d7 faster embeddings in Manticore's ONNX rebuild",
+    "context": "Embedding latency directly impacts agent response times; this kind of infrastructure optimization is becoming table stakes for competitive vector retrieval in production systems."
+  },
+  "generated_at": "2026-07-03T09:54:00.466953+00:00"
+}
