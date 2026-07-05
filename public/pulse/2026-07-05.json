@@ -1,0 +1,43 @@
+{
+  "date": "2026-07-05",
+  "the_signal": {
+    "headline": "Vector DB choice now shapes RAG pipeline economics, not just accuracy",
+    "body": "n8n's comparison framework reveals that vector database selection directly impacts cost control and scaling ceiling \u2014 two things GTM engineers historically ignored. If your revenue system runs RAG at scale, metadata filtering overhead and architectural fit now determine whether you're competitive or hemorrhaging on inference costs."
+  },
+  "tool_drop": {
+    "name": "MentionDrop MCP",
+    "what": "MCP server for capturing and managing mentions across platforms.",
+    "why": "MCP is moving from protocol spec to production tooling \u2014 if you're building agent workflows that touch external data, this signals where the ecosystem is standardizing.",
+    "url": ""
+  },
+  "thread_of_day": {
+    "title": "AI Maturity: The 5-Level Framework",
+    "source": "n8n Blog",
+    "takeaway": "Benchmarking framework assesses organizations across Usage, Governance, Integration, and Optimization \u2014 gives you a language to map where your revenue systems sit and what's blocking scale.",
+    "url": ""
+  },
+  "quote": {
+    "text": "When a review run falls short, the workflow catches it and proposes a fix to the skill, then writes the improved instructions back once you approve the diff.",
+    "source": "n8n Blog \u2014 Build Self-Improving Agent Skills"
+  },
+  "whats_moving": [
+    {
+      "topic": "Vector database architecture decisions",
+      "context": "Scale ceiling and metadata filtering are now revenue-blocking variables, not implementation details."
+    },
+    {
+      "topic": "RAG pipeline cost modeling",
+      "context": "n8n's guide surfaces that vector DB choice determines whether RAG stays profitable at production query volumes."
+    },
+    {
+      "topic": "Agent skill reviewability workflows",
+      "context": "Self-improvement loops moving from theory to documented, approvable processes \u2014 customers expect auditability in revenue-critical agents."
+    }
+  ],
+  "act_on_this": "Map your current RAG pipeline's vector DB choice against the 10-database comparison framework from n8n \u2014 specifically check if your metadata filtering overhead is linear or sub-linear at your query volume projections.",
+  "numbers": {
+    "stat": "sqlite-utils 4.0 written by Claude Fable for ~$149.25 in labor cost",
+    "context": "Shows AI-assisted open-source tooling economics have flipped \u2014 what costs $10k in engineering time now costs <$200 in API calls, reshaping build vs. buy decisions."
+  },
+  "generated_at": "2026-07-05T09:39:57.279036+00:00"
+}

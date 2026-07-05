@@ -1,5 +1,9 @@
 [
   {
+    "date": "2026-07-05",
+    "headline": "Vector DB choice now shapes RAG pipeline economics, not just accuracy"
+  },
+  {
     "date": "2026-07-04",
     "headline": "Error handling in LLM tool calling moves from edge case to architecture"
   },
