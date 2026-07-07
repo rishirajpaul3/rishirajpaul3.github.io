@@ -1,0 +1,43 @@
+{
+  "date": "2026-07-07",
+  "the_signal": {
+    "headline": "Context rot is killing your agent reliability\u2014here's how to fix it",
+    "body": "n8n's deep dive on context engineering reveals that prompt design alone won't save you; token budgeting, context decay over time, and memory management are now first-class architecture problems. If your agents degrade after 50+ tool calls, you're not debugging logic\u2014you're drowning in context bloat. This shifts agentic AI from 'does it work' to 'does it work predictably at scale.'"
+  },
+  "tool_drop": {
+    "name": "Ternlight",
+    "what": "7MB embedding model running in-browser via WASM for real-time vector search without server calls.",
+    "why": "Eliminates RAG latency and inference cost for GTM workflows that need instant semantic search\u2014perfect for live chat agents, CRM enrichment, or deal scoring that can't wait for API roundtrips.",
+    "url": "https://ternlight-demo.vercel.app/"
+  },
+  "thread_of_day": {
+    "title": "Small AI models gain traction in places with unreliable networks",
+    "source": "Hacker News / IEEE Spectrum",
+    "takeaway": "Edge deployment and offline-first agent design are no longer niche\u2014they're becoming table stakes for GTM systems in emerging markets and enterprise networks with restricted egress.",
+    "url": "https://spectrum.ieee.org/small-language-models-ai-pharmaceuticals"
+  },
+  "quote": {
+    "text": "When a review run falls short, this workflow catches it and proposes a fix to the skill, then writes the improved instructions back once you approve the diff.",
+    "source": "n8n Blog \u2014 Build Self-Improving Agent Skills with cognee"
+  },
+  "whats_moving": [
+    {
+      "topic": "Agent memory architecture",
+      "context": "n8n's new guide maps in-context buffers vs. vector stores vs. persistent databases\u2014teams are now choosing memory strategy upfront, not bolting it on after production failures."
+    },
+    {
+      "topic": "LLM tool-call failure classification",
+      "context": "The architectural guide on error handling for tool calling is shipping with retry strategies and circuit breakers\u2014indicating tool calls are now treated as production infrastructure, not experimental plumbing."
+    },
+    {
+      "topic": "AI security monitoring as ops",
+      "context": "n8n's post on AI security risks and automated response suggests observability + mitigation is moving from compliance checklist to daily ops responsibility for any agent in production."
+    }
+  ],
+  "act_on_this": "Audit your agent's memory footprint right now: log token consumption per workflow step, measure context size after 25 and 50 tool calls, and identify where context rot first appears\u2014fix this before scaling.",
+  "numbers": {
+    "stat": "10 vector databases now benchmarked on scale ceiling, metadata filtering, and overhead",
+    "context": "Your RAG pipeline's performance isn't tied to model choice anymore\u2014it's tied to which vector DB you picked; misalignment here will kill your GTM agent's latency and cost."
+  },
+  "generated_at": "2026-07-07T10:22:58.183608+00:00"
+}
