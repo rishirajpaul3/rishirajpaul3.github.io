@@ -1,0 +1,43 @@
+{
+  "date": "2026-07-08",
+  "the_signal": {
+    "headline": "GitHub's AI agent leaked private repos\u2014your agent needs guardrails now",
+    "body": "GitLost just demonstrated that prompt injection against AI agents doesn't require sophistication\u2014it requires authorization scope creep. If your revenue system's agents can access customer data, they will leak it under adversarial pressure. This moves agent security from 'nice to have' to 'blocks go-live'\u2014especially if you're selling to enterprises with compliance teams."
+  },
+  "tool_drop": {
+    "name": "Knowledge Atlas by Fini",
+    "what": "Agent memory and context management layer purpose-built for multi-turn AI workflows",
+    "why": "Directly solves the 'what does my agent actually remember between customer interactions' problem that breaks revenue workflows at scale",
+    "url": ""
+  },
+  "thread_of_day": {
+    "title": "Build Self-Improving Agent Skills with cognee and n8n",
+    "source": "n8n Blog",
+    "takeaway": "Agents that validate their own output and auto-propose skill improvements reduce manual fine-tuning loops\u2014critical for maintaining accuracy as deployment scales beyond pilot customers",
+    "url": ""
+  },
+  "quote": {
+    "text": "Context engineering for LLMs goes beyond prompt design. Learn how to manage context rot, budget tokens, and build reliable production AI agents.",
+    "source": "n8n Blog \u2014 Fix Agent Failures With Context Engineering for LLMs"
+  },
+  "whats_moving": [
+    {
+      "topic": "Agent Authorization Boundaries",
+      "context": "GitLost exploit shows that tool-call scope creep is an agent architecture flaw, not a prompt flaw\u2014teams building revenue agents now need to answer 'what can this agent NOT do'"
+    },
+    {
+      "topic": "Memory Persistence Patterns",
+      "context": "n8n's agent memory guide signals that in-context buffers alone won't scale\u2014vector stores are becoming table-stakes for agents that interact with the same customer repeatedly"
+    },
+    {
+      "topic": "Self-Improving Agents",
+      "context": "The cognee + n8n pattern (review \u2192 propose fix \u2192 approve diff) is emerging as the production pattern for agent skill iteration without manual rewriting"
+    }
+  ],
+  "act_on_this": "Audit your agent's tool-call permissions today\u2014specifically, which customer/account data can it access without explicit context limits. GitLost didn't require a new exploit; it exploited overpermissioned agents.",
+  "numbers": {
+    "stat": "Agent memory requires persistent storage (vector DB or similar) at scale\u2014not just in-context buffers",
+    "context": "This shapes your infrastructure cost model and latency profile for multi-turn customer interactions; choose wrong and your per-interaction cost jumps 3-5x"
+  },
+  "generated_at": "2026-07-08T09:23:17.783422+00:00"
+}
