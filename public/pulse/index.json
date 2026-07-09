@@ -1,5 +1,9 @@
 [
   {
+    "date": "2026-07-09",
+    "headline": "Agent memory architecture now determines production reliability, not just performance"
+  },
+  {
     "date": "2026-07-08",
     "headline": "GitHub's AI agent leaked private repos\u2014your agent needs guardrails now"
   },

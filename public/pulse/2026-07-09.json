@@ -1,0 +1,43 @@
+{
+  "date": "2026-07-09",
+  "the_signal": {
+    "headline": "Agent memory architecture now determines production reliability, not just performance",
+    "body": "n8n's deep dive on AI agent memory types\u2014in-context buffers, vector stores, persistent layers\u2014reveals that how you *store* context is now a core reliability decision. Without proper memory architecture, your agents degrade faster than vector DBs can refresh. This is shifting from a nice-to-have optimization to a must-have for any GTM system hitting scale."
+  },
+  "tool_drop": {
+    "name": "n8n Incident Response Workflow Template",
+    "what": "Pre-built workflow combining RAG, threat intelligence feeds, and historical incident data to accelerate SOC investigation automation.",
+    "why": "GTM engineers deploying security-critical revenue systems need templates that prove AI agents can handle complex, multi-step investigations without hallucinating\u2014this shows the pattern.",
+    "url": "https://n8n.io"
+  },
+  "thread_of_day": {
+    "title": "MCP Server Security Now a Design Constraint, Not an Afterthought",
+    "source": "n8n Blog",
+    "takeaway": "Auth, tool-call scoping, and observability for Model Context Protocol servers are shifting from optional hardening to architectural requirements\u2014agents calling third-party tools need explicit guardrails before they touch your data.",
+    "url": "https://n8n.io"
+  },
+  "quote": {
+    "text": "Context engineering for LLMs goes beyond prompt design. Learn how to manage context rot, budget tokens, and build reliable production AI agents.",
+    "source": "n8n Blog \u2014 Fix Agent Failures With Context Engineering"
+  },
+  "whats_moving": [
+    {
+      "topic": "Agent Memory Patterns",
+      "context": "n8n published comprehensive guidance on in-context vs. persistent memory\u2014GTM teams are now discovering memory management is a scalability bottleneck, not a feature."
+    },
+    {
+      "topic": "MCP Server Security",
+      "context": "As Claude's Model Context Protocol becomes a standard integration layer, security controls for tool scoping and auth are moving from best-practice to mandatory-before-production."
+    },
+    {
+      "topic": "Incident Response Automation",
+      "context": "Security teams automating SOC workflows with AI are proving that complex multi-step reasoning + RAG + tool calling works at scale\u2014GTM ops teams are watching this pattern."
+    }
+  ],
+  "act_on_this": "Audit your agent's memory strategy this week: if you're only using in-context buffers for state, you're leaving reliability on the table. Map which data needs persistent storage (vector DB, SQL, cache) vs. what stays in-context\u2014this decision shapes your cost-per-call and error rates.",
+  "numbers": {
+    "stat": "Vector DB choice now shapes RAG pipeline economics, not just accuracy",
+    "context": "As agents scale, vector DB selection directly impacts token costs and latency per query\u2014wrong choice early locks you into a worse cost/performance curve for 18+ months."
+  },
+  "generated_at": "2026-07-09T10:21:05.795590+00:00"
+}
