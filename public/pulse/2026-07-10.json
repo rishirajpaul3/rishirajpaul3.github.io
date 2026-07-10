@@ -1,0 +1,43 @@
+{
+  "date": "2026-07-10",
+  "the_signal": {
+    "headline": "Error handling in tool calling is your new production bottleneck",
+    "body": "n8n's architectural guide shows that LLM tool-calling failures\u2014classification, retries, fallbacks, circuit breakers\u2014are where agents break in production, not in the model itself. If your agent failures aren't traced back to tool-call errors, you're debugging the wrong layer. This shifts reliability ownership from prompt engineering to infrastructure design."
+  },
+  "tool_drop": {
+    "name": "Ship OS by Notion",
+    "what": "Notion's OS-like interface for managing workflows and agent orchestration.",
+    "why": "GTM teams using Notion for ops could now build lightweight agent workflows without leaving their existing workspace, reducing tool sprawl in revenue stacks.",
+    "url": ""
+  },
+  "thread_of_day": {
+    "title": "Building a real-time AI tutor for 5-year-olds",
+    "source": "Hacker News",
+    "takeaway": "Getting an AI system to reliably teach a child requires solving for intent clarity, context persistence, and error recovery at scales smaller teams ignore\u2014same constraints your revenue agents face.",
+    "url": "https://news.ycombinator.com/item?id=48856904"
+  },
+  "quote": {
+    "text": "Agent Identity, Reliable Execution, and Intent are only half-way solved",
+    "source": "n8n Blog"
+  },
+  "whats_moving": [
+    {
+      "topic": "MCP Server Security",
+      "context": "As agents delegate to external tools via Model Context Protocol, auth, tool-call scoping, and observability become GTM-critical\u2014one leaked credential breaks your entire agent-driven pipeline."
+    },
+    {
+      "topic": "Context Engineering for LLMs",
+      "context": "Token budgeting and context rot management are now production reliability levers, not optimization afterthoughts\u2014your agent's accuracy degrades predictably as conversation history grows."
+    },
+    {
+      "topic": "AI-Powered Incident Response",
+      "context": "RAG + threat intelligence + historical incident memory is becoming a solved pattern; GTM teams using this for customer escalation workflows now have architectural blueprints instead of guessing."
+    }
+  ],
+  "act_on_this": "Audit your agent's tool-calling error handlers today\u2014classify which failures are retryable, which need fallbacks, and which should trigger circuit breakers; document each in your runbook.",
+  "numbers": {
+    "stat": "75 capabilities expected in an agent development tool (per n8n's analysis)",
+    "context": "Most teams are shipping agents with <30% of these capabilities implemented, explaining why production reliability is still a surprise."
+  },
+  "generated_at": "2026-07-10T10:20:22.781529+00:00"
+}
