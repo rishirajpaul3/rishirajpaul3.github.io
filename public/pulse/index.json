@@ -1,5 +1,9 @@
 [
   {
+    "date": "2026-07-11",
+    "headline": "Agent identity and intent validation are only half-solved problems"
+  },
+  {
     "date": "2026-07-10",
     "headline": "Error handling in tool calling is your new production bottleneck"
   },
