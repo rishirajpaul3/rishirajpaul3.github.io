@@ -1,0 +1,43 @@
+{
+  "date": "2026-07-12",
+  "the_signal": {
+    "headline": "Compliance automation is your next revenue moat\u2014build it on your infra",
+    "body": "n8n's compliance automation guide signals that GTM teams are moving beyond bolt-on compliance tools to embedding compliance workflows directly into revenue operations. For GTM engineers, this means compliance stops being a friction point and becomes a competitive advantage\u2014especially for enterprise deals where audit trails and governance directly impact deal velocity and contract terms."
+  },
+  "tool_drop": {
+    "name": "Mindwalk",
+    "what": "Replay and visualize coding-agent sessions as a 3D map of your codebase.",
+    "why": "If your agents are writing or modifying code in revenue workflows, observability like this becomes critical\u2014you need to see exactly what path your agent took and why it failed or succeeded.",
+    "url": "https://github.com/cosmtrek/mindwalk"
+  },
+  "thread_of_day": {
+    "title": "Why Write Code in 2026",
+    "source": "Hacker News",
+    "takeaway": "The argument isn't 'agents replace code'\u2014it's that humans need to know *when* to write code versus when agents can handle it, which directly impacts GTM engineering efficiency.",
+    "url": "https://softwaredoug.com/blog/2026/07/09/write-code.html"
+  },
+  "quote": {
+    "text": "Compliance automation software... how to build flexible workflows with n8n on infrastructure you control.",
+    "source": "n8n Blog"
+  },
+  "whats_moving": [
+    {
+      "topic": "AI-powered incident response workflows",
+      "context": "n8n's focus on RAG + threat intelligence for SOC investigations shows how agents are moving into ops-critical revenue infrastructure where latency and accuracy directly affect customer trust."
+    },
+    {
+      "topic": "AI Security monitoring and automated response",
+      "context": "As agents touch more of your revenue infrastructure, security monitoring is shifting from detection-only to automated remediation\u2014your agent needs to self-heal or escalate, not just alert."
+    },
+    {
+      "topic": "Agent observability and session replay",
+      "context": "Mindwalk's codebase visualization pattern suggests the GTM tooling market is waking up to the fact that agent debugging needs to be visual and deterministic, not just log-based."
+    }
+  ],
+  "act_on_this": "Audit which of your revenue workflows touch compliance (CRM sync, data export, customer data handling) and map them to n8n's compliance automation checklist\u2014you'll find 2-3 quick wins that reduce friction on enterprise deals.",
+  "numbers": {
+    "stat": "75 capabilities expected from an agent development tool (per n8n's recent analysis)",
+    "context": "Most GTM teams are building agents with maybe 15-20 of these capabilities, which means you're leaving reliability and safety on the table\u2014and that shows in production incidents."
+  },
+  "generated_at": "2026-07-12T08:59:53.776845+00:00"
+}
