@@ -1,0 +1,43 @@
+{
+  "date": "2026-07-13",
+  "the_signal": {
+    "headline": "Context engineering now separates production agents from demos",
+    "body": "n8n's new guide on context management for LLMs covers token budgeting, context rot prevention, and prompt design that actually survives production scale. This isn't prompt optimization\u2014it's the infrastructure layer that determines whether your agent stays reliable as it scales to real customers. GTM teams shipping agents need this figured out before your first SLA miss."
+  },
+  "tool_drop": {
+    "name": "Fudge MCP",
+    "what": "Model Context Protocol implementation for managing agent contexts and tool interactions",
+    "why": "MCP standardization is becoming table stakes for multi-agent systems; teams building revenue automation need interop with other tools in their stack",
+    "url": ""
+  },
+  "thread_of_day": {
+    "title": "Agentic AI Design Patterns: From Architecture to Production",
+    "source": "n8n Blog",
+    "takeaway": "Production agents require validation layers, governance gates, error recovery circuits, and cost controls built into architecture\u2014not bolted on after launch",
+    "url": ""
+  },
+  "quote": {
+    "text": "After spending the past couple of months looking at hundreds of tech docs, I tallied up 75 capabilities you'd expect an agent development tool to offer\u2014but only half are solved",
+    "source": "n8n Blog: Agent Identity, Reliable Execution, and Intent"
+  },
+  "whats_moving": [
+    {
+      "topic": "Agent memory architecture",
+      "context": "Teams are learning that persistent memory (vector stores, retrieval layers) is non-negotiable for maintaining context across multi-turn customer interactions"
+    },
+    {
+      "topic": "Incident response automation",
+      "context": "n8n's RAG + threat intelligence workflow pattern is emerging as the reference for SOC automation, signaling demand for compliance-grade agent workflows"
+    },
+    {
+      "topic": "Error classification for tool calling",
+      "context": "Smart retry logic and circuit breakers are moving from nice-to-have to mandatory for agents handling real customer data and transactions"
+    }
+  ],
+  "act_on_this": "Map your agent's failure modes against the error handling classification framework in n8n's tool calling guide\u2014identify which failures need retries vs. fallbacks vs. escalation, then wire circuit breakers before your next production deployment",
+  "numbers": {
+    "stat": "75 capabilities expected from modern agent tools, but only ~37 are production-ready today",
+    "context": "This capability gap is why agents built on generic LLM platforms are failing at scale\u2014GTM teams need to audit which 25+ capabilities they're missing before committing to a customer deployment"
+  },
+  "generated_at": "2026-07-13T10:20:58.558881+00:00"
+}
