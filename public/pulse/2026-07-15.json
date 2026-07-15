@@ -1,0 +1,43 @@
+{
+  "date": "2026-07-15",
+  "the_signal": {
+    "headline": "Agent memory architecture now separates scaling from reliability",
+    "body": "n8n's breakdown of in-context buffers vs. vector stores exposes a hard choice: speed or persistence. GTM engineers building multi-turn revenue workflows need to decide now whether stateless agents (faster, cheaper) or persistent memory (reliable, data-heavy) fit their playbook. This isn't theoretical\u2014it directly impacts whether your deal qualification agent remembers context across 10 touchpoints or forgets after conversation reset."
+  },
+  "tool_drop": {
+    "name": "n8n's AI Agent Memory Guide",
+    "what": "Architectural patterns for implementing persistent memory into LLM agents without token bleed or latency penalties.",
+    "why": "You're probably shipping agents with in-context memory only\u2014this shows the production path to remember lead history, objection handling, and deal stage across sessions.",
+    "url": "https://n8n.io/blog/ai-agent-memory/"
+  },
+  "thread_of_day": {
+    "title": "Claude Code vs. n8n: Five questions to pick your agent stack",
+    "source": "n8n Blog",
+    "takeaway": "The real split isn't tool vs. platform\u2014it's whether you own compliance, observability, and retry logic (n8n) or bet on Claude's LLM-first UX (Claude Code).",
+    "url": "https://n8n.io/blog/claude-code-or-n8n/"
+  },
+  "quote": {
+    "text": "Context engineering for LLMs goes beyond prompt design. You need to manage context rot, budget tokens, and build reliable production AI agents.",
+    "source": "n8n Blog: Fix Agent Failures With Context Engineering for LLMs"
+  },
+  "whats_moving": [
+    {
+      "topic": "Agent Memory Implementations",
+      "context": "Vector stores and persistent layers are moving from nice-to-have to required for multi-turn revenue conversations that don't reset context mid-deal."
+    },
+    {
+      "topic": "AI Security Monitoring",
+      "context": "Automated detection and response workflows are shipping for prompt injection and data exfiltration risks\u2014table stakes for agents accessing Salesforce or deal data."
+    },
+    {
+      "topic": "Incident Response Automation",
+      "context": "RAG + threat intelligence patterns are now being applied to revenue ops workflows, not just SOC\u2014expect agent-assisted qualification to flag red flags in real-time."
+    }
+  ],
+  "act_on_this": "Map your current agent's memory footprint: does it persist lead context, objection history, or deal stage across sessions? If not, prototype a vector store integration this week\u2014your qualification accuracy will plateau without it.",
+  "numbers": {
+    "stat": "75+ capabilities expected from modern agent development tools according to n8n's capability audit",
+    "context": "Most teams ship with 20\u201330% of that scope, which means your agent's failure modes (identity drift, intent misclassification, tool hallucination) are probably preventable with architecture you're not using yet."
+  },
+  "generated_at": "2026-07-15T09:07:06.960920+00:00"
+}

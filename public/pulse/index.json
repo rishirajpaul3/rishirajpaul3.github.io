@@ -1,5 +1,9 @@
 [
   {
+    "date": "2026-07-15",
+    "headline": "Agent memory architecture now separates scaling from reliability"
+  },
+  {
     "date": "2026-07-14",
     "headline": "AI agent maturity benchmarking becomes table stakes for engineering leaders"
   },
