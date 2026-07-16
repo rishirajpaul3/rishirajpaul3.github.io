@@ -1,0 +1,43 @@
+{
+  "date": "2026-07-16",
+  "the_signal": {
+    "headline": "LLM tool-calling failures are now your biggest reliability tax",
+    "body": "n8n's deep dive on error handling for LLM tool calling reveals the gap between demo agents and production ones: classification, retries, fallbacks, and circuit breakers aren't optional engineering anymore\u2014they're table stakes. If your revenue agent can't handle tool failures gracefully, you're bleeding conversion and data integrity. This is the infrastructure debt that kills GTM velocity."
+  },
+  "tool_drop": {
+    "name": "DevSwat",
+    "what": "AI-powered incident response automation for engineering teams.",
+    "why": "GTM engineers running AI infrastructure need incident response velocity; an agent that can triage and escalate infrastructure failures cuts your mean-time-to-recovery and keeps your revenue pipeline from breaking mid-transaction.",
+    "url": ""
+  },
+  "thread_of_day": {
+    "title": "Claude Code vs n8n: Which tool should you actually use?",
+    "source": "n8n Blog",
+    "takeaway": "Five questions separate the two: if you need infrastructure control, compliance audit trails, and multi-step workflows, n8n wins; if you're prototyping a one-off agent in isolation, Claude Code is faster.",
+    "url": ""
+  },
+  "quote": {
+    "text": "Agent identity, reliable execution, and intent are only halfway solved problems",
+    "source": "n8n Blog analysis of 75 agent development capabilities"
+  },
+  "whats_moving": [
+    {
+      "topic": "Incident Response Automation",
+      "context": "Combining RAG, threat intelligence, and historical data into automated SOC workflows is now table stakes; GTM engineers need to own this because security incidents kill deal flow."
+    },
+    {
+      "topic": "Error Handling Patterns for LLM Agents",
+      "context": "The gap between demo reliability and production reliability is widening; circuit breakers, smart retries, and fallback chains are moving from 'nice to have' to 'must-have' infrastructure."
+    },
+    {
+      "topic": "Infrastructure-Owned Compliance",
+      "context": "Building compliance automation on your own infrastructure (not third-party black boxes) is becoming the moat; audit trails and workflow transparency are now revenue enablers."
+    }
+  ],
+  "act_on_this": "Audit your agent's tool-calling error handling today\u2014classify failures by type (invalid args, timeout, external API failure), implement exponential backoff with circuit breakers, and log the full context chain so you can debug production failures without guessing.",
+  "numbers": {
+    "stat": "75 capabilities expected in a production agent development tool",
+    "context": "Most platforms only ship 30-40; the gap between 'works in demo' and 'works at scale' is measured in unbuilt infrastructure, not just prompt engineering."
+  },
+  "generated_at": "2026-07-16T09:10:17.469386+00:00"
+}
