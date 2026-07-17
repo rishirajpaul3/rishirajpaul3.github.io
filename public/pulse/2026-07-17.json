@@ -1,0 +1,43 @@
+{
+  "date": "2026-07-17",
+  "the_signal": {
+    "headline": "Fine-tuning vs RAG: production systems need both, not either",
+    "body": "n8n's breakdown exposes the false choice GTM teams face when building LLM-powered revenue tools. Most production systems fail because they pick one strategy when they should layer them\u2014RAG for dynamic customer data, fine-tuning for domain-specific reasoning that doesn't drift. This directly impacts your sales agent reliability and close rates."
+  },
+  "tool_drop": {
+    "name": "Unabyss for Claude",
+    "what": "Claude integration that adds persistent context management and multi-turn memory for AI workflows.",
+    "why": "If you're building sales or support agents on Claude, memory drift is killing your conversion funnel\u2014this fixes it without rebuilding your stack.",
+    "url": ""
+  },
+  "thread_of_day": {
+    "title": "Agent Identity, Reliable Execution, and Intent are only half-way solved",
+    "source": "n8n Blog",
+    "takeaway": "75 expected capabilities exist across agent dev tools but no single platform delivers all three: stable agent identity, deterministic execution, and intent clarity\u2014forcing GTM engineers to stitch together multiple vendors.",
+    "url": ""
+  },
+  "quote": {
+    "text": "Context engineering for LLMs goes beyond prompt design\u2014managing context rot, token budgets, and building reliable production AI agents requires deliberate infrastructure.",
+    "source": "n8n Blog: Fix Agent Failures With Context Engineering for LLMs"
+  },
+  "whats_moving": [
+    {
+      "topic": "Fine-tuning vs RAG trade-offs",
+      "context": "Production LLM systems are moving away from single-strategy approaches; layering both improves reasoning reliability and real-time adaptability for revenue workflows."
+    },
+    {
+      "topic": "Agent execution reliability frameworks",
+      "context": "The maturity bar for shipping production agents just shifted\u2014identity, execution determinism, and intent detection are now baseline expectations, not differentiators."
+    },
+    {
+      "topic": "AI security monitoring in revenue workflows",
+      "context": "As sales and support agents touch customer data, automated detection and response for AI-specific risks (prompt injection, data exfiltration) is moving from nice-to-have to compliance requirement."
+    }
+  ],
+  "act_on_this": "Audit your current revenue agent architecture: identify where you're using RAG alone and where fine-tuning alone exists, then map a 4-week plan to layer both for 20% higher reliability in your top 3 workflows.",
+  "numbers": {
+    "stat": "75 expected capabilities across agent dev platforms, zero platforms delivering all three core functions",
+    "context": "This fragmentation means your GTM tech stack is inherently stitched together\u2014reducing vendor lock-in is now a competitive advantage, not an option."
+  },
+  "generated_at": "2026-07-17T09:06:24.619550+00:00"
+}
