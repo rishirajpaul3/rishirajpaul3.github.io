@@ -7,12 +7,12 @@ import ThemeToggle from "./ThemeToggle";
 
 const links = [
   { href: "/",              label: "home" },
+  { href: "/builds",        label: "builds" },
   { href: "/how-to",        label: "how-to" },
   { href: "/glossary",      label: "glossary" },
   { href: "/compare",       label: "compare" },
   { href: "/case-studies",  label: "case studies" },
   { href: "/pulse",         label: "daily pulse" },
-  { href: "/log",           label: "log" },
   { href: "/blog",          label: "blog" },
   { href: "/about",         label: "about" },
   { href: "/#contact",      label: "contact" },
