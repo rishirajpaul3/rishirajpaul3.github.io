@@ -200,6 +200,28 @@ Generate one subject line for each angle:
 Output as a numbered list. No explanations.`,
   },
   {
+    id: "linkedin-connection",
+    name: "LinkedIn Connection Request",
+    category: "Cold Email",
+    model: "GPT-4o / Claude",
+    desc: "Short, non-salesy LinkedIn connection requests that actually get accepted. I keep these under 200 characters — anything longer gets ignored.",
+    prompt: `Write a LinkedIn connection request from Rishiraj Paul, a GTM engineer who builds AI-powered sales infrastructure.
+
+Prospect:
+- Name: {{first_name}}
+- Role: {{job_title}} at {{company_name}}
+- Reason to connect: {{signal}} (e.g. we share a connection, their post about outbound, their company is hiring SDRs)
+
+Rules:
+- Under 200 characters
+- No pitch, no ask, no "I'd love to pick your brain"
+- Sound like a human, not a template
+- Reference something real about them or a shared interest
+- No emojis
+
+Output only the message. Nothing else.`,
+  },
+  {
     id: "follow-up-email",
     name: "Follow-Up Email After No Reply",
     category: "Cold Email",
