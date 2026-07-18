@@ -40,6 +40,116 @@ Return a JSON object with:
 - recommended_action: "Prioritise", "Monitor", or "Skip"`,
   },
   {
+    id: "clay-icp-signal-scorer",
+    name: "Clay AI Column: ICP Signal Scorer",
+    category: "Clay & Enrichment",
+    model: "GPT-4o / Claude",
+    desc: "Runs as an AI column in Clay. Reads company data from multiple enrichment sources and returns a fit score, tier, and outreach angle per row — so you only write to the top accounts.",
+    prompt: `You are a B2B sales analyst running inside a Clay AI column. Read the company data below and score how well this company fits the ICP for a GTM infrastructure vendor.
+
+Company data:
+- Company name: {{company_name}}
+- Industry: {{industry}}
+- Headcount: {{headcount}}
+- Location: {{location}}
+- Funding stage: {{funding_stage}}
+- Recent funding: {{recent_funding}}
+- Tech stack (known): {{tech_stack}}
+- Recent hires (roles): {{recent_hires}}
+- LinkedIn about section: {{linkedin_about}}
+- Website description: {{website_description}}
+
+ICP definition:
+- Industry: B2B SaaS, FinTech, professional services, or agencies
+- Headcount: 15–500 employees
+- Has or is building a sales team (SDRs, AEs, RevOps, Sales Ops)
+- Using or likely to need: CRM (HubSpot or Salesforce), outbound tools, or data enrichment
+- Signals of active GTM investment: hiring for sales roles, recent funding, new market expansion
+
+Return JSON only:
+{
+  "fit_score": <0-100>,
+  "tier": <"Hot" | "Warm" | "Cold">,
+  "icp_match_reasons": [<2-4 specific reasons why they match or do not>],
+  "strongest_signal": <the single most compelling reason to reach out, or null>,
+  "recommended_action": <"Reach out now" | "Add to nurture" | "Skip">,
+  "suggested_angle": <one sentence on what to lead with in outreach, or null if Cold>
+}
+
+Return JSON only. No text outside the object.`,
+  },
+  {
+    id: "signal-prioritisation",
+    name: "Signal Prioritisation Ranker",
+    category: "Prospecting",
+    model: "GPT-4o / Claude",
+    desc: "Paste all the enrichment signals you have on a prospect and get back a ranked top 5 with outreach hooks. Useful when Clay returns 20+ data points and you need to decide what to lead with.",
+    prompt: `You are a GTM prioritisation analyst. A sales rep has enriched a prospect with multiple signals. Rank those signals by outreach priority and tell the rep exactly what to do.
+
+Prospect:
+- Company: {{company_name}}, {{industry}}, {{headcount}} employees
+- Contact: {{contact_name}}, {{contact_title}}
+
+Signals detected (unranked):
+{{signals_list}}
+(paste each signal as a bullet — e.g. "- Raised Series A 3 weeks ago", "- Hired 4 SDRs in last 60 days", "- CTO posted about scaling infrastructure", "- Using HubSpot based on job posts")
+
+Rank the top 5 signals by outreach priority. For each:
+- Rank: 1 (highest) to 5
+- Signal: restate it clearly
+- Why it matters: one sentence on what this reveals about buying intent or timing
+- Urgency: "Act now" / "Act this week" / "Monitor"
+- Outreach hook: one sentence that uses this signal as a natural opening without feeling like surveillance
+
+Then give:
+- Recommended first touch: which channel (email or LinkedIn), which signal to lead with, and why
+- What to avoid: one thing that would kill the reply rate or feel creepy
+
+Return as structured output. This goes directly into a sequence brief.`,
+  },
+  {
+    id: "pain-from-jd",
+    name: "Pain Point Extractor from Job Descriptions",
+    category: "Prospecting",
+    model: "GPT-4o / Claude",
+    desc: "Paste a job description and extract what's broken in their GTM stack. Job ads are the most honest thing companies publish — they list exactly what's not working.",
+    prompt: `You are a GTM analyst reading between the lines of a job description to understand what problems this company is trying to solve.
+
+Job description:
+{{job_description}}
+
+Extract:
+1. What process or function are they clearly struggling with right now?
+2. What tools or skills are they looking for — and what does that reveal about their current stack gaps?
+3. What buying signals does this JD contain for a B2B SaaS or services vendor?
+4. What is the single most actionable outreach angle based on this JD?
+
+Keep it practical. No fluff. This output goes directly into a cold email.`,
+  },
+  {
+    id: "funding-outreach",
+    name: "Funding Round Outreach Email",
+    category: "Prospecting",
+    model: "GPT-4o / Claude",
+    desc: "A company just raised. Here's how I write the outreach — specifically for the 30-day window after a funding announcement when they are actively spending on growth infrastructure.",
+    prompt: `Write a cold email to a company that recently raised a funding round. The email should be relevant to the funding news without being generic.
+
+Context:
+- Company: {{company_name}}
+- Funding round: {{round}} (e.g. Series A, $8M)
+- Contact: {{first_name}}, {{job_title}}
+- What we help with: {{value_prop}} (e.g. building outbound infrastructure to support a new SDR team)
+
+Rules:
+- Reference the funding round naturally — do not lead with it
+- Tie the funding to a specific growth challenge they are likely facing right now
+- Show you understand what comes after raising (hiring pressure, pipeline targets, board metrics)
+- Under 100 words
+- One question at the end, not a calendar link
+
+Output only the email body. No subject line.`,
+  },
+  {
     id: "cold-email-opener",
     name: "Cold Email First Line Generator",
     category: "Cold Email",
@@ -60,6 +170,86 @@ Rules:
 - End with a natural transition into value, not a question
 
 Output only the first line. No subject line. No explanation.`,
+  },
+  {
+    id: "subject-line-gen",
+    name: "Cold Email Subject Line Generator",
+    category: "Cold Email",
+    model: "GPT-4o / Claude",
+    desc: "Generates 10 subject line variants across different angles — curiosity, specificity, social proof, pain. I A/B test the top 2 before scaling any sequence.",
+    prompt: `Generate 10 cold email subject lines for a B2B outreach campaign. Each should use a different psychological angle.
+
+Context:
+- Sender: {{sender_name}}, {{sender_role}}
+- Product or service: {{value_prop}}
+- Target: {{target_title}} at {{target_company_type}}
+- Main pain point being addressed: {{pain_point}}
+
+Generate one subject line for each angle:
+1. Specificity — a real number or outcome
+2. Curiosity — makes them wonder without being clickbait
+3. Pain — names the problem directly
+4. Social proof — references a customer or result
+5. Timing — references a signal or moment
+6. Question — a short, direct question
+7. Personalisation — uses their company or role
+8. Contrarian — challenges a common assumption
+9. Short — 3 words or fewer
+10. Lowercased casual — like a message from a colleague
+
+Output as a numbered list. No explanations.`,
+  },
+  {
+    id: "follow-up-email",
+    name: "Follow-Up Email After No Reply",
+    category: "Cold Email",
+    model: "GPT-4o / Claude",
+    desc: "Writes a follow-up that adds value instead of just bumping the thread. The goal is to give them a reason to reply, not just remind them you exist.",
+    prompt: `Write a follow-up email for a B2B cold outreach sequence. The prospect did not reply to the first email. This is touch {{touch_number}} (e.g. 2, 3, 4).
+
+Context:
+- Prospect: {{first_name}}, {{job_title}} at {{company_name}}
+- First email topic: {{first_email_summary}}
+- New angle or value to add: {{new_angle}} (e.g. a relevant case study, a stat, a recent news item about their company, a short loom video)
+
+Rules:
+- Do not say "just following up" or "circling back"
+- Add something new — a resource, a stat, a question, or a short insight
+- Keep it under 80 words
+- One clear CTA at the end — a question or a soft ask
+- Match the tone of the first email
+
+Output only the email body. No subject line.`,
+  },
+  {
+    id: "sequence-brief",
+    name: "Outreach Sequence Brief Generator",
+    category: "Sequences",
+    model: "Claude / GPT-4o",
+    desc: "Give it an ICP and a trigger signal, get back a full multi-step sequence strategy with angles, tone, subject lines, and message frameworks per step. What I write before building any sequence in Instantly or Smartlead.",
+    prompt: `You are a GTM strategist writing a cold outreach sequence brief. A sales rep will use this to build a full multi-channel sequence.
+
+Input:
+- ICP: {{icp_description}} (e.g. "VP Sales at Series B SaaS companies, 50-200 employees, UK or US")
+- Trigger or signal: {{signal}} (e.g. "company just raised Series A", "posted a job for Head of RevOps", "new VP Sales started 30 days ago")
+- Our value proposition: {{value_prop}}
+- Sequence length: {{num_steps}} steps
+- Channels available: {{channels}} (e.g. "Email + LinkedIn")
+
+Write a complete sequence brief. For each step include:
+- Step number and channel
+- Day to send (relative to step 1)
+- Angle — the specific idea or hook for this touch
+- Tone — (e.g. direct, curious, value-add, pattern interrupt, break-up)
+- Subject line options (for email steps) — give 2 variants
+- Message framework — not a written email, but a clear structure: opening hook, body point, CTA. Two to three sentences per section max. Use {{variables}} where personalisation should go.
+
+After all steps, include:
+- Primary objection this sequence should pre-empt and how
+- What reply rate signals the angle is working (and when to kill it and rewrite)
+- The one thing that will make or break deliverability for this sequence
+
+Keep each step tight. This is a brief, not a final copy.`,
   },
   {
     id: "bant-extractor",
@@ -83,6 +273,55 @@ Return a JSON object with these fields:
 - summary: string — 3–5 sentence summary of the call for the CRM.
 
 If a field cannot be determined from the transcript, set it to null. Do not invent information.`,
+  },
+  {
+    id: "discovery-script",
+    name: "Discovery Call Script",
+    category: "BANT & Qualification",
+    model: "Claude / GPT-4o",
+    desc: "Generates a tailored discovery script before a first call. I run this with company context from Clay — so every call prep takes 2 minutes instead of 20.",
+    prompt: `You are preparing a discovery call script for a B2B sales rep. The goal is to qualify the opportunity and uncover the real pain — not to pitch.
+
+Company context:
+- Company: {{company_name}}
+- Industry: {{industry}}
+- Headcount: {{headcount}}
+- Contact: {{contact_name}}, {{contact_title}}
+- Known signals: {{signals}}
+- Our solution: AI-powered GTM infrastructure (outbound automation, CRM enrichment, AI transcription, lead pipelines)
+
+Generate a 30-minute discovery script including:
+1. Opening (2 min) — warm and specific, reference why this call is relevant
+2. Agenda set (1 min) — clear structure, ask for their time limit
+3. Situation questions (10 min) — 5 questions to understand their current GTM motion
+4. Pain questions (10 min) — 5 questions to expose friction, inefficiency, or missed revenue
+5. Implication questions (5 min) — 3 questions to quantify the cost of inaction
+6. Next step close (2 min) — propose a specific next step with a date
+
+Format as a script with stage labels, estimated timing, and space for notes.`,
+  },
+  {
+    id: "call-summary",
+    name: "Call Summary + CRM Update",
+    category: "BANT & Qualification",
+    model: "GPT-4o",
+    desc: "Turns raw call notes or a transcript into a clean CRM entry. I run this as part of my HubSpot AI pipeline — every call gets a structured note pushed to the deal record automatically.",
+    prompt: `You are a sales operations assistant. Convert the following call notes or transcript into a clean CRM update.
+
+Raw notes or transcript:
+{{call_notes}}
+
+Return a structured CRM note with:
+- Date: {{call_date}}
+- Participants: {{participants}}
+- Summary: 3–5 sentences covering what was discussed, what was learned, and what was agreed
+- Key pain points identified: bullet list
+- BANT status: Budget / Authority / Need / Timeline — what is confirmed, what is unknown
+- Red flags: anything that could derail the deal
+- Next steps: specific actions with owners and dates if mentioned
+- Deal stage recommendation: should this move forward, hold, or be disqualified?
+
+Write in past tense. Keep it factual — no editorialising. This goes directly into HubSpot.`,
   },
   {
     id: "reply-classifier",
@@ -134,136 +373,32 @@ Return a brief covering:
 Keep each section to 2–3 sentences. Do not pad. If you cannot find information on a section, say so.`,
   },
   {
-    id: "pain-from-jd",
-    name: "Pain Point Extractor from Job Descriptions",
-    category: "Prospecting",
-    model: "GPT-4o / Claude",
-    desc: "Paste a job description and extract what's broken in their GTM stack. Job ads are the most honest thing companies publish — they list exactly what's not working.",
-    prompt: `You are a GTM analyst reading between the lines of a job description to understand what problems this company is trying to solve.
-
-Job description:
-{{job_description}}
-
-Extract:
-1. What process or function are they clearly struggling with right now?
-2. What tools or skills are they looking for — and what does that reveal about their current stack gaps?
-3. What buying signals does this JD contain for a B2B SaaS or services vendor?
-4. What is the single most actionable outreach angle based on this JD?
-
-Keep it practical. No fluff. This output goes directly into a cold email.`,
-  },
-  {
-    id: "linkedin-connection",
-    name: "LinkedIn Connection Request",
-    category: "Cold Email",
-    model: "GPT-4o / Claude",
-    desc: "Short, non-salesy LinkedIn connection requests that actually get accepted. I keep these under 200 characters — anything longer gets ignored.",
-    prompt: `Write a LinkedIn connection request from Rishiraj Paul, a GTM engineer who builds AI-powered sales infrastructure.
-
-Prospect:
-- Name: {{first_name}}
-- Role: {{job_title}} at {{company_name}}
-- Reason to connect: {{signal}} (e.g. we share a connection, their post about outbound, their company is hiring SDRs)
-
-Rules:
-- Under 200 characters
-- No pitch, no ask, no "I'd love to pick your brain"
-- Sound like a human, not a template
-- Reference something real about them or a shared interest
-- No emojis
-
-Output only the message. Nothing else.`,
-  },
-  {
-    id: "discovery-script",
-    name: "Discovery Call Script",
-    category: "BANT & Qualification",
+    id: "competitor-intel",
+    name: "Competitor Review Intelligence Extractor",
+    category: "Account Research",
     model: "Claude / GPT-4o",
-    desc: "Generates a tailored discovery script before a first call. I run this with company context from Clay — so every call prep takes 2 minutes instead of 20.",
-    prompt: `You are preparing a discovery call script for a B2B sales rep. The goal is to qualify the opportunity and uncover the real pain — not to pitch.
+    desc: "Paste G2 or Trustpilot reviews of a competitor and get back the pain points their customers complain about most. I use this to build outreach angles and update sequence positioning when a competitor is in the deal.",
+    prompt: `You are a competitive intelligence analyst. I am going to paste customer reviews of a competitor product. Extract the patterns that matter for outreach — not a balanced product review.
 
-Company context:
-- Company: {{company_name}}
-- Industry: {{industry}}
-- Headcount: {{headcount}}
-- Contact: {{contact_name}}, {{contact_title}}
-- Known signals: {{signals}}
-- Our solution: AI-powered GTM infrastructure (outbound automation, CRM enrichment, AI transcription, lead pipelines)
+Competitor: {{competitor_name}}
+Reviews:
+{{reviews}}
 
-Generate a 30-minute discovery script including:
-1. Opening (2 min) — warm and specific, reference why this call is relevant
-2. Agenda set (1 min) — clear structure, ask for their time limit
-3. Situation questions (10 min) — 5 questions to understand their current GTM motion
-4. Pain questions (10 min) — 5 questions to expose friction, inefficiency, or missed revenue
-5. Implication questions (5 min) — 3 questions to quantify the cost of inaction
-6. Next step close (2 min) — propose a specific next step with a date
+Extract the following:
 
-Format as a script with stage labels, estimated timing, and space for notes.`,
-  },
-  {
-    id: "objection-handler",
-    name: "Objection Handler",
-    category: "BANT & Qualification",
-    model: "GPT-4o / Claude",
-    desc: "Given an objection, generates 3 ways to handle it — a direct response, a reframe, and a question to redirect. I use this for coaching reps and prepping for hard conversations.",
-    prompt: `You are a B2B sales coach specialising in GTM and outbound. A prospect has raised the following objection. Generate three distinct handling approaches.
+1. Top 3 pain points — what do customers complain about most? Quote specific phrases where possible. These become outreach angles.
 
-Context:
-- What we sell: {{product_or_service}}
-- Stage: {{call_stage}} (e.g. cold outreach, discovery, proposal)
-- Objection: {{objection}}
+2. Jobs they hired this product to do — what were customers actually trying to accomplish? This reveals what they care about most.
 
-Return three approaches:
-1. Direct — address the objection head-on with evidence or specifics
-2. Reframe — shift the way they are thinking about the problem without dismissing their concern
-3. Question — a question that redirects the conversation back to their pain
+3. Switch triggers — what events or frustrations caused customers to look for alternatives? These are the moments to reach out.
 
-For each approach: write the exact words the rep should say (2–4 sentences max). Make it sound human, not scripted.`,
-  },
-  {
-    id: "follow-up-email",
-    name: "Follow-Up Email After No Reply",
-    category: "Cold Email",
-    model: "GPT-4o / Claude",
-    desc: "Writes a follow-up that adds value instead of just bumping the thread. The goal is to give them a reason to reply, not just remind them you exist.",
-    prompt: `Write a follow-up email for a B2B cold outreach sequence. The prospect did not reply to the first email. This is touch {{touch_number}} (e.g. 2, 3, 4).
+4. Language patterns — exact phrases customers use to describe their pain. Mirror this language in outreach copy.
 
-Context:
-- Prospect: {{first_name}}, {{job_title}} at {{company_name}}
-- First email topic: {{first_email_summary}}
-- New angle or value to add: {{new_angle}} (e.g. a relevant case study, a stat, a recent news item about their company, a short loom video)
+5. Competitor weaknesses to exploit — specific gaps in their product, support, or pricing that a competitor can directly address.
 
-Rules:
-- Do not say "just following up" or "circling back"
-- Add something new — a resource, a stat, a question, or a short insight
-- Keep it under 80 words
-- One clear CTA at the end — a question or a soft ask
-- Match the tone of the first email
+6. Outreach angles — 3 specific, non-generic opening lines based on these reviews. Each should reference a real pain without naming the competitor directly.
 
-Output only the email body. No subject line.`,
-  },
-  {
-    id: "funding-outreach",
-    name: "Funding Round Outreach Email",
-    category: "Prospecting",
-    model: "GPT-4o / Claude",
-    desc: "A company just raised. Here's how I write the outreach — specifically for the 30-day window after a funding announcement when they are actively spending on growth infrastructure.",
-    prompt: `Write a cold email to a company that recently raised a funding round. The email should be relevant to the funding news without being generic.
-
-Context:
-- Company: {{company_name}}
-- Funding round: {{round}} (e.g. Series A, $8M)
-- Contact: {{first_name}}, {{job_title}}
-- What we help with: {{value_prop}} (e.g. building outbound infrastructure to support a new SDR team)
-
-Rules:
-- Reference the funding round naturally — do not lead with it
-- Tie the funding to a specific growth challenge they are likely facing right now
-- Show you understand what comes after raising (hiring pressure, pipeline targets, board metrics)
-- Under 100 words
-- One question at the end, not a calendar link
-
-Output only the email body. No subject line.`,
+Format each section clearly. This goes directly into a sequence brief or battlecard.`,
   },
   {
     id: "buyer-persona",
@@ -287,57 +422,6 @@ Cover:
 7. What they ignore — the outreach patterns that immediately get deleted
 
 Keep each section practical. This goes directly into a sequence brief for a GTM team.`,
-  },
-  {
-    id: "subject-line-gen",
-    name: "Cold Email Subject Line Generator",
-    category: "Cold Email",
-    model: "GPT-4o / Claude",
-    desc: "Generates 10 subject line variants across different angles — curiosity, specificity, social proof, pain. I A/B test the top 2 before scaling any sequence.",
-    prompt: `Generate 10 cold email subject lines for a B2B outreach campaign. Each should use a different psychological angle.
-
-Context:
-- Sender: {{sender_name}}, {{sender_role}}
-- Product or service: {{value_prop}}
-- Target: {{target_title}} at {{target_company_type}}
-- Main pain point being addressed: {{pain_point}}
-
-Generate one subject line for each angle:
-1. Specificity — a real number or outcome
-2. Curiosity — makes them wonder without being clickbait
-3. Pain — names the problem directly
-4. Social proof — references a customer or result
-5. Timing — references a signal or moment
-6. Question — a short, direct question
-7. Personalisation — uses their company or role
-8. Contrarian — challenges a common assumption
-9. Short — 3 words or fewer
-10. Lowercased casual — like a message from a colleague
-
-Output as a numbered list. No explanations.`,
-  },
-  {
-    id: "call-summary",
-    name: "Call Summary + CRM Update",
-    category: "BANT & Qualification",
-    model: "GPT-4o",
-    desc: "Turns raw call notes or a transcript into a clean CRM entry. I run this as part of my HubSpot AI pipeline — every call gets a structured note pushed to the deal record automatically.",
-    prompt: `You are a sales operations assistant. Convert the following call notes or transcript into a clean CRM update.
-
-Raw notes or transcript:
-{{call_notes}}
-
-Return a structured CRM note with:
-- Date: {{call_date}}
-- Participants: {{participants}}
-- Summary: 3–5 sentences covering what was discussed, what was learned, and what was agreed
-- Key pain points identified: bullet list
-- BANT status: Budget / Authority / Need / Timeline — what is confirmed, what is unknown
-- Red flags: anything that could derail the deal
-- Next steps: specific actions with owners and dates if mentioned
-- Deal stage recommendation: should this move forward, hold, or be disqualified?
-
-Write in past tense. Keep it factual — no editorialising. This goes directly into HubSpot.`,
   },
   {
     id: "waterfall-enrichment",
@@ -369,16 +453,47 @@ Return:
 
 Only use what you can verify. Do not fabricate.`,
   },
+  {
+    id: "n8n-node-generator",
+    name: "n8n Function Node Code Generator",
+    category: "Automation",
+    model: "Claude / GPT-4o",
+    desc: "Describe what you need in plain English and get back a working n8n Function node in JavaScript. I use this when the built-in nodes don't cover the logic I need — saves 30 minutes of debugging v1 syntax.",
+    prompt: `You are an expert n8n workflow developer. Write a working Function node (JavaScript) for the following task.
+
+Context:
+- What this node receives as input: {{input_description}} (describe the data coming in from the previous node)
+- What this node needs to output: {{output_description}} (describe what the next node expects)
+- Logic to implement: {{logic}} (describe in plain English what needs to happen)
+- n8n version: n8n v1.x
+
+Requirements:
+- Use correct n8n v1 Function node syntax: const items = $input.all(); ... return items;
+- Handle null or missing fields gracefully — the node must never crash on bad data
+- If transforming or enriching data, preserve all existing fields and add new ones on top
+- Add a short inline comment above any non-obvious logic
+- If the task requires calling an external API, note it clearly but do not include credentials in the code
+
+Return in this order:
+1. The complete working JavaScript code block, ready to paste into an n8n Function node
+2. A 2-line plain English explanation of what the code does and any assumptions made
+3. Two edge cases the user should test before going live
+
+Lead with the code. No boilerplate preamble.`,
+  },
 ];
 
-const CATEGORIES = ["All", "Prospecting", "Cold Email", "BANT & Qualification", "Reply Classification", "Account Research"];
+const CATEGORIES = ["All", "Prospecting", "Cold Email", "Sequences", "BANT & Qualification", "Reply Classification", "Account Research", "Clay & Enrichment", "Automation"];
 
 const categoryColors: Record<string, { color: string; bg: string; border: string }> = {
-  "Prospecting":         { color: "#c9963b", bg: "rgba(201,150,59,0.1)",  border: "rgba(201,150,59,0.25)" },
-  "Cold Email":          { color: "#5b9bd5", bg: "rgba(91,155,213,0.1)",  border: "rgba(91,155,213,0.25)" },
-  "BANT & Qualification":{ color: "#9b8afb", bg: "rgba(155,138,251,0.1)", border: "rgba(155,138,251,0.25)" },
-  "Reply Classification":{ color: "#4ade80", bg: "rgba(74,222,128,0.1)",  border: "rgba(74,222,128,0.25)" },
-  "Account Research":    { color: "#f87171", bg: "rgba(248,113,113,0.1)", border: "rgba(248,113,113,0.25)" },
+  "Prospecting":          { color: "#c9963b", bg: "rgba(201,150,59,0.1)",  border: "rgba(201,150,59,0.25)" },
+  "Cold Email":           { color: "#5b9bd5", bg: "rgba(91,155,213,0.1)",  border: "rgba(91,155,213,0.25)" },
+  "Sequences":            { color: "#e879f9", bg: "rgba(232,121,249,0.1)", border: "rgba(232,121,249,0.25)" },
+  "BANT & Qualification": { color: "#9b8afb", bg: "rgba(155,138,251,0.1)", border: "rgba(155,138,251,0.25)" },
+  "Reply Classification": { color: "#4ade80", bg: "rgba(74,222,128,0.1)",  border: "rgba(74,222,128,0.25)" },
+  "Account Research":     { color: "#f87171", bg: "rgba(248,113,113,0.1)", border: "rgba(248,113,113,0.25)" },
+  "Clay & Enrichment":    { color: "#38bdf8", bg: "rgba(56,189,248,0.1)",  border: "rgba(56,189,248,0.25)" },
+  "Automation":           { color: "#fb923c", bg: "rgba(251,146,60,0.1)",  border: "rgba(251,146,60,0.25)" },
 };
 
 const G = ({ children }: { children: React.ReactNode }) =>
@@ -448,7 +563,7 @@ export default function AIPromptsPage() {
             {prompts.length} GTM prompts. <G>Copy and run.</G>
           </h1>
           <p style={{ fontFamily: "Inter, 'DM Sans', system-ui, sans-serif", fontSize: 15, color: "var(--text-muted)", maxWidth: 580, lineHeight: 1.8, marginBottom: 24 }}>
-            Every prompt I use across my GTM stack — cold email, BANT extraction, account research, reply classification. Tested in production. Drop them into Claude, GPT-4o, or your Clay AI columns.
+            Every prompt I use across my GTM stack — cold email, BANT extraction, account research, reply classification, Clay columns, and n8n automation. Tested in production. Drop them into Claude, GPT-4o, or your Clay AI columns.
           </p>
           <div style={{ display: "inline-flex", alignItems: "center", gap: 8, fontFamily: "'JetBrains Mono',monospace", fontSize: 11, color: "var(--gold)", background: "var(--gold-bg)", border: "1px solid var(--gold-border)", padding: "8px 16px", borderRadius: 9999 }}>
             <span style={{ width: 6, height: 6, borderRadius: "50%", background: "var(--gold)", display: "inline-block" }} />
