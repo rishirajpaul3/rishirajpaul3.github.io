@@ -8,7 +8,7 @@ import Link from "next/link";
 const projects = [
   {
     name: "NoteAI",
-    desc: "AI sales co-pilot that transcribes calls, extracts BANT with GPT-4o, and pushes structured insights back to CRM deal records automatically.",
+    desc: "Polls HubSpot for new sales calls, transcribes them, and extracts BANT with GPT-4o. Writes the output straight onto the deal record.",
     stack: ["FastAPI", "React", "Deepgram", "GPT-4o", "HubSpot", "PostgreSQL"],
     href: "https://web-nine-kappa-82.vercel.app",
   },

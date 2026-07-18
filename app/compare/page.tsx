@@ -9,7 +9,7 @@ const comparisons = [
     slug: "clay-vs-apollo",
     title: "Clay vs Apollo",
     subtitle: "Enrichment powerhouse vs all-in-one sales platform",
-    desc: "Clay and Apollo get compared constantly but they are not actually competing for the same job. One is an enrichment engine, the other is an outbound platform. Here is when to use each and when to use both.",
+    desc: "People compare these constantly but they don't do the same job. Clay enriches, Apollo sends. When to use each, and when you want both.",
     tags: ["Clay", "Apollo", "Enrichment", "Outbound"],
     readTime: "6 min",
     date: "May 2026",
@@ -19,7 +19,7 @@ const comparisons = [
     slug: "zapier-vs-n8n-vs-make",
     title: "Zapier vs n8n vs Make",
     subtitle: "Three automation platforms, three different philosophies",
-    desc: "Zapier is for non-technical teams who need something running today. n8n is for engineers who want full control. Make sits in the middle. All three automate GTM workflows but they are built for very different people.",
+    desc: "Zapier if you're non-technical and need it running today. n8n if you're technical and want full control. Make sits between them. Same category, very different users.",
     tags: ["Zapier", "n8n", "Make", "Automation"],
     readTime: "7 min",
     date: "May 2026",
@@ -29,7 +29,7 @@ const comparisons = [
     slug: "instantly-vs-smartlead",
     title: "Instantly vs Smartlead",
     subtitle: "Cold email deliverability head to head",
-    desc: "Both promise inbox placement at scale. The difference is in account management, deliverability infrastructure, and how they handle warming. Real comparison from running both on live campaigns.",
+    desc: "Both promise inbox placement at scale. They differ on account management, deliverability infrastructure, and warmup. Written after running both on live campaigns.",
     tags: ["Instantly", "Smartlead", "Cold Email", "Deliverability"],
     readTime: "5 min",
     date: "May 2026",
@@ -39,7 +39,7 @@ const comparisons = [
     slug: "heyreach-vs-expandi",
     title: "HeyReach vs Expandi",
     subtitle: "LinkedIn outreach tools for GTM teams",
-    desc: "LinkedIn automation has real limits and both tools handle them differently. HeyReach is built for agencies managing multiple accounts. Expandi is built for solo operators. Here is the actual difference.",
+    desc: "LinkedIn has hard limits and each tool handles them its own way. HeyReach suits agencies juggling many accounts. Expandi suits solo operators. Here's what actually differs.",
     tags: ["HeyReach", "Expandi", "LinkedIn", "Outreach"],
     readTime: "4 min",
     date: "May 2026",
@@ -49,7 +49,7 @@ const comparisons = [
     slug: "hubspot-vs-gohighlevel",
     title: "HubSpot vs GoHighLevel",
     subtitle: "Enterprise CRM vs all-in-one GTM platform",
-    desc: "HubSpot is the default CRM choice for most B2B companies. GoHighLevel is what agencies and leaner GTM teams reach for when they want everything in one place at a fraction of the price. Here is the real difference.",
+    desc: "HubSpot is the default B2B CRM. GoHighLevel is what agencies and lean GTM teams pick when they want everything in one tool for less money. Here's what you trade for that.",
     tags: ["HubSpot", "GoHighLevel", "CRM", "GTM"],
     readTime: "6 min",
     date: "May 2026",
@@ -59,7 +59,7 @@ const comparisons = [
     slug: "apollo-vs-linkedin-sales-navigator",
     title: "Apollo vs LinkedIn Sales Navigator",
     subtitle: "Third-party database vs native LinkedIn intelligence",
-    desc: "Apollo gives you a massive contact database and sequences in one tool. LinkedIn Sales Navigator gives you the most accurate LinkedIn data that exists. The question is whether you need third-party coverage or LinkedIn's own data.",
+    desc: "Apollo bundles a huge database with sequencing. Sales Navigator has the most accurate LinkedIn data there is. It comes down to whether you need third party coverage or LinkedIn's own data.",
     tags: ["Apollo", "LinkedIn", "Sales Navigator", "Prospecting"],
     readTime: "5 min",
     date: "May 2026",
@@ -80,10 +80,10 @@ export default function ComparePage() {
         <section style={{ padding: "80px 0 60px" }}>
           <div className="section-label">compare</div>
           <h1 style={{ fontFamily: "'Space Grotesk',sans-serif", fontSize: "clamp(40px,6vw,72px)", fontWeight: 700, letterSpacing: "-0.035em", lineHeight: 1.06, marginBottom: 20, color: "var(--text)" }}>
-            Honest tool<br /><G>comparisons.</G>
+            Which tool,<br /><G>when.</G>
           </h1>
           <p style={{ fontFamily: "Inter, 'DM Sans', system-ui, sans-serif", fontSize: 16, color: "var(--text-muted)", maxWidth: 520, lineHeight: 1.8 }}>
-            Written by someone who has used all of them in production. No sponsored opinions, no affiliate links. Just what actually works and when.
+            I&apos;ve run every one of these on live campaigns. No sponsorships, no affiliate links. Just what works and when.
           </p>
         </section>
 

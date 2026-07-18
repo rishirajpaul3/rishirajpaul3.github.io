@@ -33,7 +33,7 @@ export default function HowToPage() {
             {guides.length} guides.<br /><G>No filler.</G>
           </h1>
           <p style={{ fontFamily: "Inter, 'DM Sans', system-ui, sans-serif", fontSize: 16, color: "var(--text-muted)", maxWidth: 520, lineHeight: 1.8 }}>
-            Written from building real systems. Researched properly. Each one is a full article, not a bullet list.
+            Written after building the thing, not before. Each one is a full article, not a bullet list.
           </p>
         </section>
 
