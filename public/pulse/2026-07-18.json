@@ -1,0 +1,43 @@
+{
+  "date": "2026-07-18",
+  "the_signal": {
+    "headline": "AI security monitoring becomes mandatory incident response layer",
+    "body": "Production AI systems now require dedicated security monitoring \u2014 not as optional infrastructure, but as core reliability plumbing. The gap between detecting AI-specific risks and automating response is where most GTM teams are bleeding operational cost and customer trust right now."
+  },
+  "tool_drop": {
+    "name": "n8n Incident Response Workflow Templates",
+    "what": "Pre-built AI-powered incident response that combines RAG, threat intelligence, and historical incident data for SOC acceleration.",
+    "why": "GTM engineers running revenue ops can fork this pattern into customer escalation workflows \u2014 catching deal-breaking issues before sales finds out.",
+    "url": ""
+  },
+  "thread_of_day": {
+    "title": "Agent development tooling still missing 75 core capabilities",
+    "source": "n8n Blog",
+    "takeaway": "Agent identity, reliable execution, and intent detection are only halfway solved across all major platforms \u2014 meaning your AI agent reliability tax is still structural, not solvable by tooling alone.",
+    "url": ""
+  },
+  "quote": {
+    "text": "Context engineering for LLMs goes beyond prompt design. Learn how to manage context rot, budget tokens, and build reliable production AI agents.",
+    "source": "n8n Blog \u2014 Fix Agent Failures With Context Engineering for LLMs"
+  },
+  "whats_moving": [
+    {
+      "topic": "Compliance automation as GTM differentiator",
+      "context": "Revenue ops and customer success teams are now evaluating compliance automation \u2014 but most tools lock you into their infrastructure, making n8n's on-premise-first approach suddenly relevant for deal velocity."
+    },
+    {
+      "topic": "RAG + fine-tuning hybrid adoption in production",
+      "context": "Teams are finally internalizing that this isn't either/or; it's architectural \u2014 and that decision cascades into how your customer data pipeline integrates with your AI revenue system."
+    },
+    {
+      "topic": "Agent memory persistence as scaling bottleneck",
+      "context": "In-context buffers don't scale; vector stores add latency. The teams solving this cleanly are winning on agent reliability, which directly impacts customer trust in your AI-powered workflows."
+    }
+  ],
+  "act_on_this": "Audit your customer-facing AI agents for context rot \u2014 specifically, check if your long-running workflows are injecting stale customer data or outdated deal context into agent decisions, then run a test incident where you intentionally trigger an agent failure and measure response time.",
+  "numbers": {
+    "stat": "75 expected capabilities still only halfway solved across agent development platforms",
+    "context": "This means your reliability engineering is 50% platform limitation, 50% your own context and memory design \u2014 so stop waiting for tools to fix this and start building deterministic fallback paths now."
+  },
+  "generated_at": "2026-07-18T08:46:15.297165+00:00"
+}
