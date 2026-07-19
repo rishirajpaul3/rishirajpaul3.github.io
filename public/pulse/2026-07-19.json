@@ -1,0 +1,43 @@
+{
+  "date": "2026-07-19",
+  "the_signal": {
+    "headline": "Context engineering is now the production reliability multiplier",
+    "body": "N8n's deep dive on context engineering for LLMs surfaces the real problem: token budgets, context rot, and prompt design aren't separate concerns\u2014they're a unified reliability architecture. GTM engineers shipping agents in production need context management frameworks before they scale, not after reliability breaks."
+  },
+  "tool_drop": {
+    "name": "Rewisp",
+    "what": "Ambient memory system for macOS that captures context without explicit logging.",
+    "why": "If you're building sales/customer success workflows, persistent context without friction is the gap between agents that learn from interactions and those that restart cold every call.",
+    "url": ""
+  },
+  "thread_of_day": {
+    "title": "Agent Identity, Reliable Execution, and Intent Are Only Half-Way Solved",
+    "source": "n8n Blog",
+    "takeaway": "After analyzing 75 expected capabilities across n8n, Google, and Gumloop tooling, the industry still lacks standardized patterns for agent identity verification, deterministic execution, and intent routing\u2014three foundational GTM problems.",
+    "url": ""
+  },
+  "quote": {
+    "text": "Why many production LLM systems use both [fine-tuning and RAG]. Fine-tuning vs. RAG isn't either/or\u2014it's architectural layering.",
+    "source": "n8n Blog: Fine-Tuning vs. RAG"
+  },
+  "whats_moving": [
+    {
+      "topic": "Open-weight model acceleration (Qwen3.8)",
+      "context": "As Alibaba pushes open-weight models with competitive inference, proprietary API costs for revenue systems become a margin conversation, not just a convenience one."
+    },
+    {
+      "topic": "Compliance automation workflows",
+      "context": "N8n's compliance automation content signals GTM orgs need audit trails and governance built into their AI workflows from day one, not retrofitted after incidents."
+    },
+    {
+      "topic": "Incident response automation",
+      "context": "AI-powered incident workflows combining RAG + threat intelligence are moving from SOC-only to revenue-blocking GTM workflows (payment failures, API degradation, lead pipeline disruption)."
+    }
+  ],
+  "act_on_this": "Audit your agent's context window usage across a week of production calls\u2014map where context rot happens (old customer data, outdated deal stage, stale intent signals) and build a context refresh policy before scaling to 10x volume.",
+  "numbers": {
+    "stat": "75 capabilities expected from modern agent dev tools, yet still only partially solved",
+    "context": "This fragmentation means GTM engineers are building reliability patterns from scratch instead of inheriting battle-tested frameworks\u2014each new agent platform costs you 2-4 weeks of context/identity/execution hardening."
+  },
+  "generated_at": "2026-07-19T09:03:10.179078+00:00"
+}
