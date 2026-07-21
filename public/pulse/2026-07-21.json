@@ -1,0 +1,43 @@
+{
+  "date": "2026-07-21",
+  "the_signal": {
+    "headline": "Agent memory is now your persistent state bottleneck",
+    "body": "Vector stores and in-context buffers aren't scaling with multi-turn agent workflows. GTM teams deploying autonomous revenue systems are hitting memory management failures before they hit execution failures \u2014 your agents forget context mid-deal, lose deal state across sessions, or hallucinate from stale vectors. This is now a production blocker, not a nice-to-have."
+  },
+  "tool_drop": {
+    "name": "CreateOS Sandbox",
+    "what": "Sandboxed environment for testing AI agent behavior without production blast radius.",
+    "why": "Before shipping agents to your CRM workflows, you need isolated testing that catches memory leaks and state corruption \u2014 this prevents costly production incidents.",
+    "url": ""
+  },
+  "thread_of_day": {
+    "title": "Agent Identity, Reliable Execution, and Intent are only half-way solved",
+    "source": "n8n Blog",
+    "takeaway": "The market is converging on 75+ required capabilities for production agents, but most tools only ship 30-40 \u2014 you're missing identity persistence, reliable tool retry, and intent disambiguation out of the box.",
+    "url": "https://n8n.io"
+  },
+  "quote": {
+    "text": "Context engineering for LLMs goes beyond prompt design. Learn how to manage context rot, budget tokens, and build reliable production AI agents.",
+    "source": "n8n Blog \u2014 Fix Agent Failures With Context Engineering for LLMs"
+  },
+  "whats_moving": [
+    {
+      "topic": "Agent memory architectures",
+      "context": "Multi-turn workflows demand persistent state; in-context buffers alone can't scale revenue automation at deal velocity."
+    },
+    {
+      "topic": "Compliance automation workflows",
+      "context": "n8n's compliance evaluation framework shows GTM teams are now bundling incident response + compliance into single orchestrated systems."
+    },
+    {
+      "topic": "Vision model capabilities",
+      "context": "Qwen-Image-3.0 signals that multimodal agents are moving from research to production \u2014 expect revenue teams to use visual deal signals (pitch decks, contract reviews) within 60 days."
+    }
+  ],
+  "act_on_this": "Audit your agent's memory implementation this week: map where state lives (in-context vs. vector store vs. database), measure context window bleed, and identify which deal-critical information you're losing between turns. You're probably losing more than you think.",
+  "numbers": {
+    "stat": "75 capabilities expected in production agent tools; most platforms ship 30-40",
+    "context": "You're running on 40-50% of what production revenue automation actually needs \u2014 identity, execution reliability, and intent disambiguation gaps are why your agents fail on real deals."
+  },
+  "generated_at": "2026-07-21T09:24:45.624245+00:00"
+}

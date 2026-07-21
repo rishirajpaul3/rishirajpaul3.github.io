@@ -1,5 +1,9 @@
 [
   {
+    "date": "2026-07-21",
+    "headline": "Agent memory is now your persistent state bottleneck"
+  },
+  {
     "date": "2026-07-20",
     "headline": "Agent execution failures now demand incident response automation"
   },
