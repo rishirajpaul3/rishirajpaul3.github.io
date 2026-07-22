@@ -1,0 +1,43 @@
+{
+  "date": "2026-07-22",
+  "the_signal": {
+    "headline": "Agent identity and intent remain half-solved in production systems",
+    "body": "n8n's analysis of 75+ agent capabilities across Google, Claude, and Gumloop reveals that reliable agent execution still lacks standards for identity management and intent verification. This is a GTM blocker: your AI sales agents can't scale without knowing who they are or what they're supposed to do, and the tooling hasn't caught up to the problem."
+  },
+  "tool_drop": {
+    "name": "Gemini 3.6 Flash Family",
+    "what": "Google's latest multimodal model with faster inference and lower latency targeting real-time agent workloads.",
+    "why": "If your revenue agents hit latency walls during customer interactions, this is worth benchmarking against Claude to see if you can cut response time without sacrificing reasoning quality.",
+    "url": ""
+  },
+  "thread_of_day": {
+    "title": "Claude Code vs n8n: when to code vs orchestrate your automation",
+    "source": "n8n Blog",
+    "takeaway": "Claude Code solves single-task automation fast; n8n scales when you need multi-step workflows, visibility, and infrastructure control \u2014 pick based on whether you need speed or reliability.",
+    "url": ""
+  },
+  "quote": {
+    "text": "Agent identity, reliable execution, and intent are only halfway solved \u2014 after reviewing hundreds of tech docs, 75 capabilities are still missing standards across platforms.",
+    "source": "n8n Blog"
+  },
+  "whats_moving": [
+    {
+      "topic": "Compliance automation tooling",
+      "context": "n8n published a deep evaluation guide, signaling that GTM teams building on untrusted infrastructure need composable compliance workflows, not black-box solutions."
+    },
+    {
+      "topic": "AI-powered incident response",
+      "context": "New n8n template combines RAG + threat intel + historical incidents; your revenue ops team should be thinking about automating deal-breaking technical support escalations."
+    },
+    {
+      "topic": "Agent execution standardization",
+      "context": "Google and competitors still lack consensus on how agents handle identity and intent \u2014 this fragmentation means your agent architecture decisions today will lock you in for 12+ months."
+    }
+  ],
+  "act_on_this": "Test whether your current agent setup can answer 'who am I?' and 'what am I trying to do?' in production without manual intervention \u2014 if not, you have a scaling ceiling at 10-50 concurrent customer interactions.",
+  "numbers": {
+    "stat": "75 agent capabilities still lack standardization across major platforms",
+    "context": "This fragmentation means you're building custom glue code instead of deploying proven patterns \u2014 your technical debt in agent orchestration is growing faster than your revenue automation."
+  },
+  "generated_at": "2026-07-22T09:24:02.154311+00:00"
+}
