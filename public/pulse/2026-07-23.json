@@ -1,0 +1,43 @@
+{
+  "date": "2026-07-23",
+  "the_signal": {
+    "headline": "Fine-tuning vs. RAG: Production systems now need both",
+    "body": "Most GTM teams treating these as either/or when production LLM systems increasingly demand both approaches working together. Fine-tuning handles domain-specific behavior; RAG handles real-time data freshness. Your agent stack that only does one is leaving accuracy and cost optimization on the table."
+  },
+  "tool_drop": {
+    "name": "Claude Code vs. n8n decision framework",
+    "what": "n8n published a structured guide comparing Claude Code (fast prototyping) vs. n8n (production workflows with audit trails).",
+    "why": "GTM teams building AI-powered sales workflows need this decision tree before committing to either path\u2014wrong choice means rework at scale.",
+    "url": "https://n8n.io/blog/should-i-use-claude-code-or-n8n/"
+  },
+  "thread_of_day": {
+    "title": "Compliance automation now demands infrastructure you control",
+    "source": "n8n Blog",
+    "takeaway": "SaaS compliance tools create vendor lock-in risk; building flexible workflows on controlled infrastructure is becoming table stakes for regulated revenue systems.",
+    "url": "https://n8n.io/blog/compliance-automation-software/"
+  },
+  "quote": {
+    "text": "Context engineering for LLMs goes beyond prompt design\u2014it's about managing context rot, budgeting tokens, and building reliable production AI agents.",
+    "source": "n8n Blog: Fix Agent Failures With Context Engineering"
+  },
+  "whats_moving": [
+    {
+      "topic": "RAG + fine-tuning hybrid strategies",
+      "context": "Production teams realizing single-approach LLM strategies fail under real-world data freshness and domain specificity demands."
+    },
+    {
+      "topic": "Compliance workflow automation",
+      "context": "Regulated GTM motions (audit trails, data governance) shifting from SaaS tools to self-hosted n8n workflows for control and flexibility."
+    },
+    {
+      "topic": "Agent incident response automation",
+      "context": "AI security monitoring moving from detection-only to automated response workflows, treating agent failures like production incidents requiring SOC-grade triage."
+    }
+  ],
+  "act_on_this": "Audit your current LLM implementation: are you using RAG, fine-tuning, or both? If just one, map out which production workflows are losing accuracy or freshness this week and prototype the hybrid approach.",
+  "numbers": {
+    "stat": "75 capabilities expected in production agent development tools, but most platforms only deliver half",
+    "context": "This capability gap explains why agent failures keep escalating\u2014tools are missing core identity, execution reliability, and intent resolution features GTM teams need."
+  },
+  "generated_at": "2026-07-23T09:22:23.751665+00:00"
+}
