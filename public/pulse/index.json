@@ -1,5 +1,9 @@
 [
   {
+    "date": "2026-07-24",
+    "headline": "Open-weight model pooling cuts AI inference costs by 66%"
+  },
+  {
     "date": "2026-07-23",
     "headline": "Fine-tuning vs. RAG: Production systems now need both"
   },
