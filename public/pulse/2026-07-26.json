@@ -1,0 +1,43 @@
+{
+  "date": "2026-07-26",
+  "the_signal": {
+    "headline": "AI maturity is non-linear; most orgs skip levels catastrophically",
+    "body": "n8n's framework reveals organizations don't progress evenly through AI maturity stages\u2014they leap, plateau, and fail at orchestration. GTM engineers building on agent frameworks need to audit whether your stack actually matches your org's maturity level, not the vendor's marketing tier. Misalignment here kills production workflows and revenue ops credibility."
+  },
+  "tool_drop": {
+    "name": "n8n AI Agent Governance Framework",
+    "what": "Enterprise-grade governance layer for production agents: inventory tracking, least-privilege access enforcement, and runtime guardrails at the workflow level.",
+    "why": "GTM revenue systems can't afford agent failures or audit black holes\u2014this moves governance from compliance theater to operational requirement, directly enabling sales and CS automation at scale.",
+    "url": "https://n8n.io"
+  },
+  "thread_of_day": {
+    "title": "Claude Code vs. n8n: Five questions to choose your agent builder",
+    "source": "n8n Blog",
+    "takeaway": "The decision isn't about features\u2014it's about whether you need versioning, observability, and non-technical orchestration (n8n) vs. speed and code flexibility (Claude Code); GTM orgs almost always need the former.",
+    "url": "https://n8n.io"
+  },
+  "quote": {
+    "text": "Organizations do not advance evenly through these levels. There is a specific transition point where most fail.",
+    "source": "n8n Blog: AI Maturity - Bridging the Orchestration Chasm"
+  },
+  "whats_moving": [
+    {
+      "topic": "Agent orchestration maturity models",
+      "context": "Non-linear progression means the standard playbook vendors sell is misleading; GTM teams are discovering they're at level 2 while their AI stack assumes level 4."
+    },
+    {
+      "topic": "Compliance automation workflows",
+      "context": "Revenue operations now overlaps with compliance requirements; audit trails and governance are becoming revenue-blocking dependencies, not afterthoughts."
+    },
+    {
+      "topic": "Incident response automation via RAG + threat intel",
+      "context": "SOC teams are building AI workflows that combine historical incident data with live context; GTM engineers should steal this pattern for deal-closing workflows and customer issue triage."
+    }
+  ],
+  "act_on_this": "Map your current agent stack (Claude, n8n, Gumloop, etc.) against the 75-capability checklist n8n published; identify the three capabilities you're missing that block revenue workflows, then decide: build it or switch platforms.",
+  "numbers": {
+    "stat": "75 capabilities expected in agent development tools; less than half are production-ready across platforms",
+    "context": "This gap explains why experimental agent POCs don't scale to revenue systems\u2014vendors are selling potential, not production reality."
+  },
+  "generated_at": "2026-07-26T09:09:20.151643+00:00"
+}
