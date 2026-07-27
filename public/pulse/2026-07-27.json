@@ -1,0 +1,43 @@
+{
+  "date": "2026-07-27",
+  "the_signal": {
+    "headline": "Compliance automation shifts from workflow tool to revenue blocker",
+    "body": "n8n's compliance automation framework reveals orgs are building audit trails and governance directly into GTM workflows, not bolting them on afterward. For revenue teams, this means your AI agents need compliance-by-design or they'll hit regulatory friction at scale. This is the compliance-as-GTM-infrastructure moment."
+  },
+  "tool_drop": {
+    "name": "Robynn AI",
+    "what": "Self-improving website AI that learns from user interactions and optimizes conversion flows automatically.",
+    "why": "Direct A/B testing alternative for GTM teams testing messaging without shipping new variants\u2014lets the AI adapt landing pages in real-time based on visitor behavior.",
+    "url": "https://www.producthunt.com"
+  },
+  "thread_of_day": {
+    "title": "Claude Code vs n8n: Five questions to pick your AI builder",
+    "source": "n8n Blog",
+    "takeaway": "Claude Code wins for one-off automations and prototyping; n8n wins for production workflows that need audit trails, versioning, and multi-step orchestration\u2014exactly what GTM ops needs.",
+    "url": "https://n8n.io"
+  },
+  "quote": {
+    "text": "Organizations do not advance evenly through AI maturity levels. There is a specific transition point where most skip levels catastrophically.",
+    "source": "n8n Blog \u2014 AI Maturity: Bridging the Orchestration Chasm"
+  },
+  "whats_moving": [
+    {
+      "topic": "AI incident response workflows",
+      "context": "SOC teams are building RAG + threat intelligence + historical incident mapping into n8n\u2014GTM can steal this pattern for customer escalation automation."
+    },
+    {
+      "topic": "Kimi-K3 open-weight release",
+      "context": "New multi-modal open model from Moonshot AI hits HuggingFace today; another data point on open-weight inference becoming standard for cost-sensitive revenue operations."
+    },
+    {
+      "topic": "Agent execution reliability",
+      "context": "75-capability audit shows identity, intent, and reliable execution still half-solved in agent frameworks\u2014GTM teams building on immature agent stacks will hit production walls."
+    }
+  ],
+  "act_on_this": "Map your current AI-powered GTM workflows (lead routing, scoring, follow-up) against n8n's compliance automation checklist\u2014identify which ones lack audit trails and add runtime guardrails before they become liability.",
+  "numbers": {
+    "stat": "75 capabilities expected in agent development tools; most frameworks deliver ~35-40.",
+    "context": "This capability gap explains why production AI agents fail unexpectedly\u2014you're building on incomplete foundations."
+  },
+  "generated_at": "2026-07-27T10:38:52.367734+00:00"
+}
