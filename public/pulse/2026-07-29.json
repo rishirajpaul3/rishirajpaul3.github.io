@@ -1,0 +1,43 @@
+{
+  "date": "2026-07-29",
+  "the_signal": {
+    "headline": "Fine-tuning vs RAG: Production LLM systems need both",
+    "body": "n8n's analysis cuts through the false choice between fine-tuning and RAG\u2014most production revenue systems use both, not either/or. GTM engineers shipping AI agents need to stop debating and start architecting hybrid approaches that balance accuracy (fine-tuning) with freshness (RAG). This is the difference between demo performance and production reliability."
+  },
+  "tool_drop": {
+    "name": "Claude Code vs n8n Framework Decision Matrix",
+    "what": "n8n published a decision framework comparing low-code agent orchestration vs Claude Code for production workflows.",
+    "why": "GTM engineers choosing between Claude Code and n8n need a credible comparison\u2014this cuts build time selection paralysis with five concrete evaluation questions.",
+    "url": "https://n8n.io/blog/should-i-use-claude-code-or-n8n"
+  },
+  "thread_of_day": {
+    "title": "SQLite in Production: WAL Mode, Concurrency, and VFS Layers",
+    "source": "Hacker News",
+    "takeaway": "SQLite is becoming viable for revenue-critical systems when optimized for concurrency\u2014relevant for GTM engineers building lightweight agents that need reliable state without PostgreSQL overhead.",
+    "url": "https://micrologics.org/blog/sqlite-in-production-optimizing-wal-mode-concurrency-and-vfs-layers-for-low-latency-app-servers"
+  },
+  "quote": {
+    "text": "Organizations do not advance evenly through AI maturity levels. There is a specific transition point where most orgs catastrophically skip levels.",
+    "source": "n8n Blog: AI Maturity - Bridging the Orchestration Chasm"
+  },
+  "whats_moving": [
+    {
+      "topic": "Fine-tuning vs RAG for production LLMs",
+      "context": "The binary debate is dead\u2014n8n's analysis confirms production systems need both approaches layered together for accuracy and freshness."
+    },
+    {
+      "topic": "AI-powered incident response workflows",
+      "context": "SOC and security teams are moving RAG + threat intelligence into automated incident workflows, expanding AI revenue systems beyond customer-facing use cases."
+    },
+    {
+      "topic": "SQLite for production state management",
+      "context": "Lightweight databases are re-entering revenue systems as concurrency and WAL optimizations make them viable for agent state and execution logs."
+    }
+  ],
+  "act_on_this": "Audit your current agent architecture: if you're using only RAG or only fine-tuning, design a hybrid layer this sprint. Start with a single revenue-critical workflow and benchmark retrieval accuracy + latency before/after adding fine-tuned reasoning.",
+  "numbers": {
+    "stat": "75 capabilities expected in production agent development tools; most platforms only deliver ~40.",
+    "context": "You're shipping incomplete agent infrastructure if you haven't inventoried the 35-capability gap\u2014this is where production execution reliability fails."
+  },
+  "generated_at": "2026-07-29T09:34:54.206151+00:00"
+}
