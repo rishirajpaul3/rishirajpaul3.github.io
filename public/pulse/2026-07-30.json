@@ -1,0 +1,43 @@
+{
+  "date": "2026-07-30",
+  "the_signal": {
+    "headline": "Agentic RAG becomes the production baseline for complex queries",
+    "body": "n8n's deep dive on Agentic RAG vs. classical RAG shows the architecture shift: multi-hop queries and ambiguous context require retrieval-as-a-control-loop, not static vector lookups. For GTM systems handling complex customer data and decision trees, this means your RAG implementation is already outdated if it's not iterative."
+  },
+  "tool_drop": {
+    "name": "LangWatch Claude Code Usage Tracking",
+    "what": "Observability layer for Claude Code execution, tracking runtime behavior and cost per agent operation.",
+    "why": "As your revenue automation scales to Claude Code or similar agentic systems, you need visibility into what's executing\u2014cost creep and hallucination loops hide in the blind spots.",
+    "url": ""
+  },
+  "thread_of_day": {
+    "title": "Should I use Claude Code or n8n?",
+    "source": "n8n Blog",
+    "takeaway": "The real decision isn't tool choice\u2014it's whether you need repeatable, auditable workflows (n8n) or rapid prototyping with embedded logic (Claude Code); most GTM teams need both, not either.",
+    "url": ""
+  },
+  "quote": {
+    "text": "Organizations do not advance evenly through AI maturity levels. There is a specific transition point where most orgs catastrophically skip levels.",
+    "source": "n8n Blog \u2014 AI Maturity: Bridging the Orchestration Chasm"
+  },
+  "whats_moving": [
+    {
+      "topic": "Agentic RAG architectures",
+      "context": "Moving from static retrieval to iterative control loops; classical RAG hitting walls on ambiguous multi-hop queries that are common in deal analysis workflows."
+    },
+    {
+      "topic": "AI agent governance at runtime",
+      "context": "Enterprise buyers now asking for least-privilege execution and runtime guardrails; this shifts from deployment-time config to continuous enforcement."
+    },
+    {
+      "topic": "Claude Code vs. orchestration platform debate",
+      "context": "Founder/GTM tool choice is splitting: rapid iteration wins (Claude Code) vs. compliance/auditability wins (n8n); neither is wrong, but mixing them poorly breaks revenue systems."
+    }
+  ],
+  "act_on_this": "Map your current RAG implementations against the n8n agentic RAG framework\u2014specifically identify where you're hitting multi-hop query failures (CRM lookups + deal context + precedent retrieval). If you find 3+ hops, prototype an agentic loop before scaling.",
+  "numbers": {
+    "stat": "Most AI orgs skip maturity levels catastrophically rather than progress linearly",
+    "context": "This means your current architecture is likely one breaking point away from requiring a rebuild; better to design for the next level now than migrate under pressure."
+  },
+  "generated_at": "2026-07-30T09:27:16.937923+00:00"
+}
