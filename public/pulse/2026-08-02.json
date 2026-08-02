@@ -1,0 +1,43 @@
+{
+  "date": "2026-08-02",
+  "the_signal": {
+    "headline": "Event sourcing becomes critical for AI workflow auditability",
+    "body": "As regulators and customers demand complete audit trails for revenue-impacting AI decisions, event sourcing shifts from architectural nice-to-have to compliance requirement. n8n's deep dive on event sourcing trade-offs signals the industry recognizing immutable logs as table stakes for enterprise AI deployments. For GTM engineers, this means your AI systems need architectural rebuild capacity\u2014not just guardrails on top."
+  },
+  "tool_drop": {
+    "name": "n8n Open-Source Workflow Automation",
+    "what": "Enterprise-grade workflow orchestration with built-in secrets handling, audit capabilities, and event sourcing support.",
+    "why": "If you're building AI data pipelines for revenue systems, n8n's secrets isolation and audit trail mechanics solve the 'prove it worked correctly' problem that will kill your deal cycles by Q4.",
+    "url": "https://n8n.io"
+  },
+  "thread_of_day": {
+    "title": "Agentic-first CRM hits GitHub",
+    "source": "Hacker News",
+    "takeaway": "Open-source CRM built with agent-first architecture signals that revenue teams are ready to move past traditional database-centric design\u2014agents need native delegation, memory, and tool orchestration baked in from day one.",
+    "url": "https://github.com/trycompai/crm"
+  },
+  "quote": {
+    "text": "Classic RAG hits a wall on multi-hop and ambiguous queries. Agentic RAG turns retrieval into a control loop.",
+    "source": "n8n Blog: RAG vs. Agentic RAG"
+  },
+  "whats_moving": [
+    {
+      "topic": "LLM Security in Production",
+      "context": "n8n's focused piece on prompt injection and data poisoning threats reflects rising pressure from security audits blocking AI revenue tool deployments."
+    },
+    {
+      "topic": "Agent Identity Management",
+      "context": "Authentication and authorization for autonomous agents operating across APIs is now a discrete architectural problem, not delegated to application auth\u2014this unblocks multi-tenant SaaS AI integrations."
+    },
+    {
+      "topic": "AI Data Pipeline Orchestration",
+      "context": "Organizations are hitting the orchestration chasm between POC and production; tooling maturity around ingestion, feature engineering, and model serving is now decisive for GTM velocity."
+    }
+  ],
+  "act_on_this": "Map your current AI revenue system against the n8n event sourcing and AI maturity framework\u2014identify which orchestration layer your stack is missing and cost out the rebuild vs. buy decision before your first compliance audit lands.",
+  "numbers": {
+    "stat": "Event sourcing adds immutability requirement but eliminates audit log retrofitting",
+    "context": "Teams shipping revenue AI without event sourcing will face costly architectural debt when customers demand proof-of-execution logs; building it in now costs less than bolting it on later."
+  },
+  "generated_at": "2026-08-02T09:06:20.928210+00:00"
+}

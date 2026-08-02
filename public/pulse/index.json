@@ -1,5 +1,9 @@
 [
   {
+    "date": "2026-08-02",
+    "headline": "Event sourcing becomes critical for AI workflow auditability"
+  },
+  {
     "date": "2026-08-01",
     "headline": "LLM guardrails become mandatory, not optional, for revenue systems"
   },
