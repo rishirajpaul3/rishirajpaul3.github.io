@@ -1,0 +1,43 @@
+{
+  "date": "2026-08-04",
+  "the_signal": {
+    "headline": "AI projects break in production. Plan for Day 2 ops now.",
+    "body": "n8n's latest signals that the real cost isn't building the agent\u2014it's keeping it running when reality hits. GTM teams shipping AI-powered workflows need explicit monitoring, fallback routing, and degradation strategies before launch, not after your first 3am incident. This shifts the conversation from 'does it work?' to 'what's our runbook when it doesn't?'"
+  },
+  "tool_drop": {
+    "name": "Swiftlet",
+    "what": "Run 80B parameter models in 4.3GB RAM on consumer hardware, down to 35B on iPhone.",
+    "why": "Embedded AI inference at the edge kills latency and dependency on APIs\u2014massive for field sales teams building offline-capable tools or running local RAG without cloud round-trips.",
+    "url": "https://github.com/leonickson1/Swiftlet"
+  },
+  "thread_of_day": {
+    "title": "LLMs Reward Expertise",
+    "source": "Hacker News",
+    "takeaway": "Smaller, domain-tuned models with structured training outperform generic large models on specialized tasks\u2014a direct challenge to the 'bigger always wins' narrative.",
+    "url": "https://www.seangoedecke.com/llms-reward-expertise/"
+  },
+  "quote": {
+    "text": "Production AI needs more than a system prompt. Learn how to use LLM guardrails to protect every stage of an AI workflow, from input to output.",
+    "source": "n8n Blog: How LLM Guardrails Keep Production AI Safe"
+  },
+  "whats_moving": [
+    {
+      "topic": "Day 2 ops for AI agents",
+      "context": "n8n is explicitly positioning operational resilience as the gating factor for production AI, not model capability\u2014this is GTM teams' blind spot."
+    },
+    {
+      "topic": "Edge inference scale",
+      "context": "Swiftlet and similar tools are making on-device AI practical, enabling offline-first workflows that SaaS competitors can't match."
+    },
+    {
+      "topic": "Model specialization vs. scale",
+      "context": "HN conversation on expertise rewards shows the market is shifting toward smaller, focused models\u2014counterintuitive for teams betting on one mega-model."
+    }
+  ],
+  "act_on_this": "Document your AI agent's failure modes and recovery paths now\u2014what happens when the LLM rate-limits, hallucinates, or takes 15 seconds instead of 2? Map this into your sales runbook before your first customer deployment.",
+  "numbers": {
+    "stat": "80B parameter model runs in 4.3GB on Mac; 35B on iPhone",
+    "context": "Edge inference is no longer a hobbyist hack\u2014it's production-ready and removes the API dependency tax from your GTM stack."
+  },
+  "generated_at": "2026-08-04T09:36:29.925641+00:00"
+}
