@@ -1,5 +1,9 @@
 [
   {
+    "date": "2026-08-05",
+    "headline": "RAG isn't enough. Agentic RAG becomes table stakes for production."
+  },
+  {
     "date": "2026-08-04",
     "headline": "AI projects break in production. Plan for Day 2 ops now."
   },

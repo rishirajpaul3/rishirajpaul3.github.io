@@ -1,0 +1,43 @@
+{
+  "date": "2026-08-05",
+  "the_signal": {
+    "headline": "RAG isn't enough. Agentic RAG becomes table stakes for production.",
+    "body": "Classic RAG fails on multi-hop queries and ambiguous requests\u2014the exact patterns your sales and support agents need to handle. Agentic RAG turns retrieval into a control loop, letting your system reason about what to fetch next. If you're building AI revenue systems, this architectural shift from retrieval-only to retrieval-with-reasoning is non-negotiable."
+  },
+  "tool_drop": {
+    "name": "ngrok AI Gateway",
+    "what": "API gateway purpose-built for AI workflows, handling routing, rate-limiting, and observability for LLM-powered services.",
+    "why": "Your AI revenue systems need visibility into every API call touching your LLMs\u2014this strips out the black box problem between your workflow orchestrator and external models.",
+    "url": ""
+  },
+  "thread_of_day": {
+    "title": "Zero-Mem: Zero-Token Memory Operations for LLM Agents",
+    "source": "Hacker News / arXiv",
+    "takeaway": "Agents can now maintain state and context without burning tokens on memory retrieval\u2014critical for cost-effective long-running revenue workflows.",
+    "url": "https://arxiv.org/abs/2607.29377"
+  },
+  "quote": {
+    "text": "Classic RAG hits a wall on multi-hop and ambiguous queries. Agentic RAG turns retrieval into a control loop.",
+    "source": "n8n Blog: RAG vs. Agentic RAG"
+  },
+  "whats_moving": [
+    {
+      "topic": "AI Data Pipeline Orchestration",
+      "context": "Teams are moving beyond single-model inference to full pipeline ownership\u2014ingestion, feature engineering, training, and orchestration are now GTM engineer responsibilities."
+    },
+    {
+      "topic": "Memory Efficiency in Agents",
+      "context": "Zero-token memory operations emerging as a solution for cost control in production agents handling high-volume revenue operations."
+    },
+    {
+      "topic": "Open-Source Workflow Automation",
+      "context": "Flowise shutdown signals consolidation pressure; builders need audit-capable, self-hosted alternatives like n8n for revenue-critical workflows."
+    }
+  ],
+  "act_on_this": "Audit your current RAG implementation: if it's answering single-hop queries only, map out the multi-step reasoning your sales agents actually need and prototype agentic RAG this sprint.",
+  "numbers": {
+    "stat": "$8 ESP32-S3 can run a small language model",
+    "context": "Edge AI is entering the conversation\u2014for GTM engineers, this means offline-capable agents and reduced latency on device-side revenue workflows."
+  },
+  "generated_at": "2026-08-05T09:33:42.325973+00:00"
+}
