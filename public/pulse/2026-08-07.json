@@ -1,0 +1,43 @@
+{
+  "date": "2026-08-07",
+  "the_signal": {
+    "headline": "LLM security threats are now revenue-blocking production risks",
+    "body": "Prompt injection, data poisoning, and unauthorized access patterns are moving from theoretical to actively exploited in production AI workflows. Framework's Metabase 0-day breach shows that your AI revenue stack is only as secure as its weakest integration point. GTM engineers need to audit their AI agent permissions and external API connections now \u2014 before compliance and customers do it for you."
+  },
+  "tool_drop": {
+    "name": "Mem0",
+    "what": "Persistent memory layer for AI agents that tracks context, user history, and agent state across sessions.",
+    "why": "Long-term memory is the difference between one-off AI interactions and repeatable revenue workflows \u2014 critical for personalized sales and customer success automation.",
+    "url": ""
+  },
+  "thread_of_day": {
+    "title": "Semantic Chunking vs. Fixed-Size Splitting: Which Actually Works in Production?",
+    "source": "n8n Blog",
+    "takeaway": "Semantic chunking preserves context boundaries and reduces token costs while improving RAG retrieval accuracy \u2014 meaning cheaper, faster, more accurate AI responses in your revenue systems.",
+    "url": ""
+  },
+  "quote": {
+    "text": "The questions to ask BEFORE you start building, to make sure it keeps working. Your AI project WILL break. Welcome to the Day 2 problem.",
+    "source": "n8n Blog \u2014 'Your AI project WILL break'"
+  },
+  "whats_moving": [
+    {
+      "topic": "AI Agent Sandboxing & Isolation",
+      "context": "Control boundaries around tool access, memory, and external systems are becoming non-negotiable for production deployments to prevent unauthorized API calls or data leaks."
+    },
+    {
+      "topic": "Semantic Chunking in RAG",
+      "context": "Moving beyond naive fixed-size splitting is now table stakes for cost-effective and accurate retrieval in high-volume revenue workflows."
+    },
+    {
+      "topic": "LLM Security & Prompt Injection",
+      "context": "Real breaches (Framework/Metabase) are shifting security from nice-to-have to revenue-blocking requirement for any AI system touching customer or prospect data."
+    }
+  ],
+  "act_on_this": "Audit your AI agent's external API integrations and permission scopes today \u2014 specifically which CRM, payment, or customer data endpoints it can access without human approval. One overpermissioned agent is one breach away from revenue impact.",
+  "numbers": {
+    "stat": "Semantic chunking reduces token costs while improving retrieval accuracy \u2014 exact savings vary, but 20-40% token reduction is common in production RAG systems.",
+    "context": "At scale, token efficiency directly translates to lower inference costs and faster response times, both critical for customer-facing revenue automation."
+  },
+  "generated_at": "2026-08-07T08:10:12.254901+00:00"
+}
