@@ -1,0 +1,43 @@
+{
+  "date": "2026-08-08",
+  "the_signal": {
+    "headline": "Semantic chunking now beats fixed-size RAG splits in production",
+    "body": "Your RAG pipelines are leaving money on the table. Semantic chunking preserves context better than fixed splitting, cutting token costs while improving retrieval accuracy. For revenue teams, this means cheaper inference per lead qualification query and fewer hallucinations in customer-facing AI agents."
+  },
+  "tool_drop": {
+    "name": "Firecrawl MCP (new release)",
+    "what": "Model Context Protocol integration for web scraping and data extraction into AI workflows.",
+    "why": "GTM teams using agents for prospect research or competitive intelligence just got a cleaner way to feed live web data into their agentic systems without custom integrations.",
+    "url": ""
+  },
+  "thread_of_day": {
+    "title": "AI Agent Sandboxes: isolation and secure execution patterns",
+    "source": "n8n Blog",
+    "takeaway": "You need execution boundaries (tool access, memory limits, external system permissions) locked down before your revenue AI hits production\u2014sandboxing isn't optional anymore.",
+    "url": ""
+  },
+  "quote": {
+    "text": "The questions to ask BEFORE you start building, to make sure it keeps working.",
+    "source": "n8n Blog \u2014 'Your AI project WILL break. Welcome to the Day 2 problem.'"
+  },
+  "whats_moving": [
+    {
+      "topic": "AI observability tooling maturity",
+      "context": "Teams are now evaluating tracing, evaluation, and cost tracking as core GTM infrastructure\u2014not optional instrumentation."
+    },
+    {
+      "topic": "Event sourcing for AI workflows",
+      "context": "Audit trails and replay capabilities are becoming table stakes for regulated revenue operations using agents."
+    },
+    {
+      "topic": "Open-source workflow automation",
+      "context": "Comparing platforms on secrets handling and audit capabilities signals that GTM teams are moving beyond no-code toward production-grade deployments."
+    }
+  ],
+  "act_on_this": "Audit your current RAG chunking strategy\u2014if you're still using fixed-size splits, run a semantic chunking pilot on your top 3 customer queries this week and measure token savings and accuracy lift.",
+  "numbers": {
+    "stat": "Semantic chunking reduces token costs while increasing retrieval accuracy and improving AI response quality",
+    "context": "For GTM teams running hundreds of lead qualification or discovery calls through AI daily, this compounds into 15-25% infrastructure cost reduction over a month."
+  },
+  "generated_at": "2026-08-08T07:44:35.947361+00:00"
+}

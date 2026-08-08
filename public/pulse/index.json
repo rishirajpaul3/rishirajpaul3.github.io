@@ -1,5 +1,9 @@
 [
   {
+    "date": "2026-08-08",
+    "headline": "Semantic chunking now beats fixed-size RAG splits in production"
+  },
+  {
     "date": "2026-08-07",
     "headline": "LLM security threats are now revenue-blocking production risks"
   },
