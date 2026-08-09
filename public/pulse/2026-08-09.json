@@ -1,0 +1,43 @@
+{
+  "date": "2026-08-09",
+  "the_signal": {
+    "headline": "AI agent sandboxes shift from nice-to-have to revenue protection",
+    "body": "As agents touch more production systems and external APIs, execution isolation isn't optional anymore\u2014it's your liability wall. n8n's new sandbox guide signals the market recognizing that uncontained agents are undeployable agents. GTM teams need to understand sandbox requirements before selling agent-based revenue automation to enterprises."
+  },
+  "tool_drop": {
+    "name": "Real-time MCP Interceptor",
+    "what": "Blocks dangerous .env reads and command execution in AI agent workflows before they run.",
+    "why": "This is the operational control layer your sales team needs to close enterprise deals; agents without guardrails are a contract killer.",
+    "url": "https://marketnow.site/"
+  },
+  "thread_of_day": {
+    "title": "AI Observability Tools for Engineering Teams",
+    "source": "n8n Blog",
+    "takeaway": "Tracing, evaluation, and cost tracking are now table-stakes infrastructure\u2014teams without observability can't justify agent spend to finance.",
+    "url": ""
+  },
+  "quote": {
+    "text": "Your AI project WILL break. Welcome to the Day 2 problem. The questions to ask BEFORE you start building, to make sure it keeps working.",
+    "source": "n8n Blog"
+  },
+  "whats_moving": [
+    {
+      "topic": "AI Agent Identity & Access Control",
+      "context": "Production agents now need formal authentication, authorization, and delegated access\u2014this is becoming a sales requirement, not an afterthought."
+    },
+    {
+      "topic": "Security Incident Surface Area",
+      "context": "Metabase breach hitting n8n internally reminds us that third-party tools in your automation stack are now attack vectors; audit your vendor chain."
+    },
+    {
+      "topic": "Workflow Automation Vendor Consolidation",
+      "context": "Open-source options are hardening around deployment models and secrets handling; this is pushing enterprise buyers toward hosted solutions with built-in compliance."
+    }
+  ],
+  "act_on_this": "Map your current agent deployments against sandbox isolation requirements and identity management controls\u2014then document which ones fail. Use that gap analysis in your next customer risk conversation.",
+  "numbers": {
+    "stat": "Metabase security incident occurred 3 August 2026, discovered 6 August 2026 (3-day detection lag)",
+    "context": "This lag is typical for third-party breaches; if your GTM stack relies on integrated analytics, you have visibility debt\u2014audit it now."
+  },
+  "generated_at": "2026-08-09T07:50:35.027565+00:00"
+}
