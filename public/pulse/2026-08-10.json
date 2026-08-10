@@ -1,0 +1,43 @@
+{
+  "date": "2026-08-10",
+  "the_signal": {
+    "headline": "Claude Code auto mode defaults on: AI agents now ship faster than teams",
+    "body": "Anthropic just made agentic autonomy the default, not opt-in. This means production AI systems will move faster and fail differently\u2014your error handling, observability, and audit trails need to catch autonomous decisions in real time, not retroactively. GTM teams shipping AI workflows need to rebuild Day 2 operational readiness around auto-executing agents, not supervised ones."
+  },
+  "tool_drop": {
+    "name": "Docker Sandboxes",
+    "what": "Disposable, isolated execution environments for AI agents\u2014Docker's native answer to sandbox-as-infrastructure.",
+    "why": "If you're deploying agentic RAG or multi-step AI workflows into production, sandboxes are no longer defensive overhead; they're revenue protection and compliance-critical infrastructure.",
+    "url": "https://www.docker.com/products/docker-sandboxes/"
+  },
+  "thread_of_day": {
+    "title": "Your AI project WILL break. Welcome to the Day 2 problem.",
+    "source": "n8n Blog",
+    "takeaway": "The questions you ask before building (observability, fallback paths, audit trails) determine whether your AI system survives its first production incident\u2014most teams skip this and pay later.",
+    "url": ""
+  },
+  "quote": {
+    "text": "Semantic chunking improves RAG performance by preserving context, increasing retrieval accuracy, reducing token costs, and improving AI responses.",
+    "source": "n8n Blog \u2014 When Semantic Chunking Beats Fixed-Size Splitting"
+  },
+  "whats_moving": [
+    {
+      "topic": "AI agent identity and access control",
+      "context": "As agents operate autonomously across tools and APIs, identity management shifts from human-centric auth to delegated, auditable machine-to-machine access\u2014n8n published a full guide on this today."
+    },
+    {
+      "topic": "Observability for AI workflows",
+      "context": "Teams are now actively evaluating tracing, evaluation, and cost-tracking tools; the signal is clear that black-box AI systems are unacceptable for revenue operations."
+    },
+    {
+      "topic": "Security incident surface area",
+      "context": "Metabase's breach of n8n's internal systems shows that third-party analytics and infrastructure tools become attack vectors for workflow automation platforms\u2014every dependency is a risk."
+    }
+  ],
+  "act_on_this": "Audit your current AI workflows for three things: (1) Do you have execution isolation (sandbox or container)? (2) Can you trace every agent decision and external API call? (3) Do you have fallback paths if the agent fails or acts unexpectedly? If you said no to any of these, prioritize #1 this week.",
+  "numbers": {
+    "stat": "Metabase breach discovered 6 August 2026; unauthorized activity occurred 3 August 2026 \u2014 3-day detection lag",
+    "context": "For GTM teams, this is a reminder that AI infrastructure breaches hide in plain sight; if your workflow automation platform or data pipeline was compromised, you might not know for days, affecting your revenue data integrity and campaign targeting."
+  },
+  "generated_at": "2026-08-10T08:24:30.054391+00:00"
+}
