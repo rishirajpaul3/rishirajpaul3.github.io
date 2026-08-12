@@ -1,0 +1,43 @@
+{
+  "date": "2026-08-12",
+  "the_signal": {
+    "headline": "AI observability now separates working agents from broken ones",
+    "body": "The Day 2 problem is real: agents that ship fast fail silently in production without proper tracing, evaluation, and cost tracking. GTM teams deploying AI into revenue workflows need observability built in from day one, not bolted on after the first outage costs you a deal."
+  },
+  "tool_drop": {
+    "name": "n8n MCP Server Integrations (70+ live)",
+    "what": "Direct OAuth-based connections to 70+ Model Context Protocol servers in the Node panel\u2014no manual API wiring required.",
+    "why": "Reduces agent deployment friction for GTM automation: faster time-to-revenue for workflows that touch CRM, email, analytics, or payment systems.",
+    "url": "https://n8n.io"
+  },
+  "thread_of_day": {
+    "title": "Your AI project WILL break. Welcome to the Day 2 problem.",
+    "source": "n8n Blog",
+    "takeaway": "Ask hardening questions before building agents\u2014observability, fallback behavior, and audit trails separate production-grade revenue systems from weekend projects that fail on live customer data.",
+    "url": ""
+  },
+  "quote": {
+    "text": "AI agent identity management controls authentication, authorization, and delegated access for autonomous systems operating across tools, APIs, and workflows.",
+    "source": "n8n Blog - AI Agent Identity Management for Production"
+  },
+  "whats_moving": [
+    {
+      "topic": "AI Observability Stack Consolidation",
+      "context": "Teams are now evaluating tracing, evaluation, monitoring, and cost tracking as table-stakes for production agents\u2014no longer optional nice-to-haves."
+    },
+    {
+      "topic": "Agent Identity & Access Control",
+      "context": "As agents touch more revenue-critical systems (CRM, payment processors, customer data), controlling *what* an agent can access becomes a hard compliance and security requirement."
+    },
+    {
+      "topic": "Materials Discovery AI Agents (YC P26)",
+      "context": "Agents are now solving specialized domain problems at scale\u2014signals that vertical AI automation is moving upstream into R&D and complex workflows, not just support."
+    }
+  ],
+  "act_on_this": "Audit one production AI agent your team deployed in the last 6 months: does it have observability for tracing, cost tracking, and failure detection? If not, add it this sprint before it costs you.",
+  "numbers": {
+    "stat": "70+ MCP servers now natively connectable in n8n workflows",
+    "context": "This is the infrastructure play that kills custom integrations\u2014GTM teams building multi-step revenue automation no longer need to hand-code API clients."
+  },
+  "generated_at": "2026-08-12T08:13:04.509390+00:00"
+}
