@@ -1,0 +1,43 @@
+{
+  "date": "2026-08-13",
+  "the_signal": {
+    "headline": "Day 2 AI breaks systems\u2014ask these questions now",
+    "body": "n8n's latest signals that production AI failures aren't edge cases\u2014they're inevitable. GTM engineers shipping agents need to audit failure modes before launch, not after revenue impact. The shift from \"will it work in demo\" to \"will it survive customer load\" is the new GTM blocker."
+  },
+  "tool_drop": {
+    "name": "n8n MCP Server Connections",
+    "what": "Direct OAuth-authenticated connections to 70+ MCP servers from the n8n Node panel, no manual integration required.",
+    "why": "Reduces agent deployment friction from days to minutes\u2014critical for GTM teams selling agent-as-a-feature SaaS products.",
+    "url": "https://n8n.io"
+  },
+  "thread_of_day": {
+    "title": "LLM Security: Prompt Injection to Data Poisoning in Production",
+    "source": "n8n Blog",
+    "takeaway": "Enterprise customers now expect auditable, sandboxed agent execution\u2014ignoring this is a lost deal risk in 2026.",
+    "url": "https://n8n.io"
+  },
+  "quote": {
+    "text": "Your AI project WILL break. The questions to ask BEFORE you start building, to make sure it keeps working.",
+    "source": "n8n Blog \u2014 'Your AI project WILL break. Welcome to the Day 2 problem'"
+  },
+  "whats_moving": [
+    {
+      "topic": "AI Agent Reliability as Sales Enabler",
+      "context": "n8n publishing 5+ production hardening guides this week signals vendors are moving observability/sandboxing from nice-to-have to deal requirement."
+    },
+    {
+      "topic": "MCP Server Standardization",
+      "context": "70+ integrations now plug into workflows natively\u2014agents with broad tool access are becoming table-stakes competitive feature."
+    },
+    {
+      "topic": "LLM Security Compliance",
+      "context": "Enterprise buyers increasingly demanding audit trails and isolation guarantees; GTM teams selling to regulated verticals can't ignore this anymore."
+    }
+  ],
+  "act_on_this": "Map your agent's failure modes: list 3-5 ways it breaks under customer load (hallucinations, tool failures, cost overruns), then audit whether your sandbox/observability tooling catches them before revenue impact.",
+  "numbers": {
+    "stat": "70+ MCP servers now directly integrable",
+    "context": "This breadth of native integrations means agent product differentiation is shifting from \"can it call external tools\" to \"is it production-reliable and auditable\""
+  },
+  "generated_at": "2026-08-13T08:16:36.157601+00:00"
+}
