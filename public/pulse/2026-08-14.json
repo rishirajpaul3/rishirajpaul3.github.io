@@ -1,0 +1,43 @@
+{
+  "date": "2026-08-14",
+  "the_signal": {
+    "headline": "Semantic chunking now beats fixed-size RAG splits\u2014cost and accuracy",
+    "body": "RAG quality isn't just about the model anymore\u2014it's about how you chunk your knowledge base. Semantic chunking preserves context, cuts token costs, and improves retrieval accuracy in production. For GTM teams deploying AI agents on customer data, this is the difference between agents that hallucinate and agents that close deals."
+  },
+  "tool_drop": {
+    "name": "n8n MCP Server Integrations (70+ live)",
+    "what": "Connect to 70+ MCP servers directly from n8n workflows with OAuth\u2014no custom code needed.",
+    "why": "GTM engineers building agent workflows can now plug in pre-built integrations (CRM tools, data sources, APIs) instead of building connectors from scratch\u2014faster time-to-revenue for agentic workflows.",
+    "url": "https://n8n.io"
+  },
+  "thread_of_day": {
+    "title": "How Organizations Use AI: Evidence from ChatGPT",
+    "source": "Hacker News / OpenAI Research",
+    "takeaway": "Real data on how enterprises are actually deploying AI\u2014not hype, actual adoption patterns and use cases that GTM teams should reference when pitching internal stakeholders.",
+    "url": "https://cdn.openai.com/pdf/how-organizations-use-chatgpt.pdf"
+  },
+  "quote": {
+    "text": "The questions to ask BEFORE you start building, to make sure it keeps working.",
+    "source": "n8n Blog \u2014 'Your AI project WILL break. Welcome to the Day 2 problem'"
+  },
+  "whats_moving": [
+    {
+      "topic": "LLM Security in Production",
+      "context": "Metabase breach and renewed focus on prompt injection/data poisoning attacks means GTM teams deploying customer-facing agents need hardened security frameworks\u2014no longer optional."
+    },
+    {
+      "topic": "AI Observability as Table Stakes",
+      "context": "n8n published definitive guide to observability tools for tracing/evaluation/monitoring\u2014signal that teams without AI observability visibility are flying blind on agent reliability."
+    },
+    {
+      "topic": "GLM-5.3 Frontier Coding Capabilities",
+      "context": "New frontier model with emergent 'cyber capabilities' suggests coding agents are entering new territory\u2014GTM teams building dev-focused agent products need to benchmark against these emerging capabilities."
+    }
+  ],
+  "act_on_this": "Audit your production RAG implementation today\u2014compare semantic vs. fixed-size chunking on your top 5 customer knowledge bases and measure retrieval accuracy lift and token cost reduction.",
+  "numbers": {
+    "stat": "70+ MCP servers now directly connectable via n8n",
+    "context": "Integration count has jumped significantly, meaning the TAM for pre-built agent workflows just expanded\u2014teams building agent platforms can now offer broader out-of-box connectivity without custom engineering."
+  },
+  "generated_at": "2026-08-14T08:11:31.084583+00:00"
+}
