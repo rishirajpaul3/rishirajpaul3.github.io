@@ -1,0 +1,43 @@
+{
+  "date": "2026-08-15",
+  "the_signal": {
+    "headline": "Self-hosted LLMs kill token arbitrage\u2014your margin problem just changed",
+    "body": "n8n's analysis surfaces what's been inevitable: current token pricing is subsidized and unsustainable. GTM teams relying on API pricing models need to stress-test their unit economics now against self-hosted alternatives. The cost structure of your AI revenue system will flip when market rates reflect real compute."
+  },
+  "tool_drop": {
+    "name": "Deltix",
+    "what": "AI-driven testing platform that automates test case generation and validation for software workflows.",
+    "why": "If your revenue system runs on agents and workflows (n8n, MCP, Claude Code), AI-native testing becomes your bottleneck\u2014Deltix closes the gap between agent deployment speed and test coverage reliability.",
+    "url": "https://app.deltix.ai"
+  },
+  "thread_of_day": {
+    "title": "RPA vs. Workflow Automation: Building Automation That Lasts",
+    "source": "n8n Blog",
+    "takeaway": "Workflow automation wins on observability, scalability, and governance\u2014RPA breaks at enterprise scale because you can't see inside the black box when it fails.",
+    "url": "https://n8n.io/blog/rpa-vs-workflow-automation"
+  },
+  "quote": {
+    "text": "We don't know how much a token really costs. They are subsidized by big tech and most AI providers are operating at a loss.",
+    "source": "n8n Blog - Token prices won't increase if you host your own LLMs"
+  },
+  "whats_moving": [
+    {
+      "topic": "Self-hosted LLM economics",
+      "context": "Token subsidy model breaking forces GTM teams to recalculate per-call costs; on-prem deployments suddenly look cheaper at scale."
+    },
+    {
+      "topic": "Workflow automation governance",
+      "context": "n8n's multi-part series on deployment patterns signals market shift toward self-hosted, auditable automation over black-box RPA."
+    },
+    {
+      "topic": "AI testing automation",
+      "context": "Deltix and broader HN conversation on AI testing emergence\u2014teams shipping agents faster now need equivalent speed in QA."
+    }
+  ],
+  "act_on_this": "Run a token cost comparison: calculate your current API spend vs. a self-hosted Claude or Llama deployment at your actual usage volume. Lock in results before Q4 pricing changes hit.",
+  "numbers": {
+    "stat": "70+ MCP integrations live (from recent pulse)",
+    "context": "Agent integration surface area has exploded; your bottleneck is no longer 'can I plug in X service' but 'can I observe and debug what happens inside the agent when X fails.'"
+  },
+  "generated_at": "2026-08-15T07:26:15.720617+00:00"
+}

@@ -1,5 +1,9 @@
 [
   {
+    "date": "2026-08-15",
+    "headline": "Self-hosted LLMs kill token arbitrage\u2014your margin problem just changed"
+  },
+  {
     "date": "2026-08-14",
     "headline": "Semantic chunking now beats fixed-size RAG splits\u2014cost and accuracy"
   },
