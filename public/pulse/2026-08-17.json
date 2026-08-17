@@ -1,0 +1,43 @@
+{
+  "date": "2026-08-17",
+  "the_signal": {
+    "headline": "Event-driven architectures now mandatory for AI agent scaling",
+    "body": "n8n's deep dive on event-driven microservices reveals the production tradeoff GTM teams are hitting: synchronous workflows break under agent load, async patterns are non-negotiable. This is your operational blueprint when multi-agent coordination failures spike. Queue vs. stream decisions now directly impact your agent reliability SLA."
+  },
+  "tool_drop": {
+    "name": "Replay QA for Teams",
+    "what": "Records and replays test scenarios across team workflows for debugging automation failures.",
+    "why": "When your AI workflows fail in production, replay-based debugging beats logs\u2014gives you the exact state chain that broke your agent.",
+    "url": ""
+  },
+  "thread_of_day": {
+    "title": "RPA vs. Workflow Automation: Building Automation That Lasts",
+    "source": "n8n Blog",
+    "takeaway": "RPA dies when requirements shift; workflow automation with proper observability and governance scales through agent day-2 problems.",
+    "url": ""
+  },
+  "quote": {
+    "text": "Token prices won't increase if you host your own LLMs\u2014providers are operating at a loss, subsidized by big tech.",
+    "source": "n8n Blog"
+  },
+  "whats_moving": [
+    {
+      "topic": "Self-hosted LLM economics",
+      "context": "As token arbitrage collapses, GTM teams realizing their cost models assumed unsustainable pricing; self-hosting becomes margin protection, not just infrastructure choice."
+    },
+    {
+      "topic": "Chain-of-thought prompting gotchas",
+      "context": "n8n flagging when CoT actually hurts agent performance\u2014teams blindly chaining reasoning steps are wasting tokens and adding latency without accuracy gains."
+    },
+    {
+      "topic": "API auth for agent integrations",
+      "context": "Multi-agent systems hitting production reveals auth method choice (keys vs tokens vs OAuth) is now a reliability bottleneck, not just security hygiene."
+    }
+  ],
+  "act_on_this": "Audit your multi-agent workflow for synchronous blocking calls\u2014map them to event queues (not streams) and measure latency improvement before your next agent deployment.",
+  "numbers": {
+    "stat": "$12B wasted on a modeling mistake in PJM energy market",
+    "context": "When AI/automation logic compounds errors across systems, small mistakes scale to massive costs\u2014your observability and validation layers are now revenue-protection infrastructure."
+  },
+  "generated_at": "2026-08-17T07:48:21.138321+00:00"
+}
