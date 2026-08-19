@@ -1,0 +1,43 @@
+{
+  "date": "2026-08-19",
+  "the_signal": {
+    "headline": "RPA dies\u2014workflow automation with native async APIs wins at scale",
+    "body": "n8n's comparison of RPA vs. workflow automation exposes a hard truth: traditional RPA can't handle event-driven architectures or async request-response decoupling that production AI systems demand. If you're building GTM automation that coordinates multiple agents across async boundaries, you need native async API support, not RPA bots that can't reason about state or timing. This isn't theoretical\u2014it's the difference between deployable and fragile."
+  },
+  "tool_drop": {
+    "name": "Expert Chase 2.0",
+    "what": "Product Hunt launch\u2014likely a domain expert discovery or matching tool.",
+    "why": "GTM teams hunting for specialized AI vendor partners or implementation experts will need discovery layers; watch if this solves expert-to-buyer matching.",
+    "url": ""
+  },
+  "thread_of_day": {
+    "title": "Authentication & Authorization Patterns in Production AI Workflows",
+    "source": "n8n Blog",
+    "takeaway": "API key vs. token tradeoffs matter more in multi-agent systems where you're rotating credentials between LLM calls, database writes, and third-party webhooks\u2014token-based auth with expiry windows beats static keys for security at scale.",
+    "url": ""
+  },
+  "quote": {
+    "text": "We don't know how much a token really costs. They are subsidized by big tech and most AI providers are operating at a loss.",
+    "source": "n8n Blog\u2014Token prices won't increase if you host your own LLMs"
+  },
+  "whats_moving": [
+    {
+      "topic": "Async API architecture for AI workflows",
+      "context": "n8n is pushing async-first patterns hard; decoupling request/response is now table-stakes for scaling multi-agent orchestration without blocking."
+    },
+    {
+      "topic": "Self-hosted LLM economics validation",
+      "context": "The subsidy thesis is hardening\u2014if token prices rise post-funding, self-hosting margin advantage becomes real; this justifies engineering spend on deployment infrastructure now."
+    },
+    {
+      "topic": "Workflow automation platform consolidation",
+      "context": "n8n's alternative comparison signals market pressure; vendors are being forced to compete on self-hosting, observability, and governance\u2014not just features."
+    }
+  ],
+  "act_on_this": "Audit your current AI automation stack: if you're using RPA or webhook-based choreography for multi-agent flows, migrate to an event-driven workflow platform (n8n, Make, or self-hosted) with native async API support before Q4. RPA will fail under coordination load.",
+  "numbers": {
+    "stat": "$360/kg\u2014the cost of premium materials in hidden supply chains (via Hacker News sidebar noise)",
+    "context": "Irrelevant to GTM, but a reminder that cost discovery in specialized domains is a GTM problem\u2014applies to SaaS pricing research too."
+  },
+  "generated_at": "2026-08-19T07:33:52.148446+00:00"
+}
