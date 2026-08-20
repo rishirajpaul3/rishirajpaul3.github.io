@@ -1,0 +1,43 @@
+{
+  "date": "2026-08-20",
+  "the_signal": {
+    "headline": "SOC 2 automation now table stakes for enterprise GTM velocity",
+    "body": "n8n's SOC 2 compliance automation framework shows that evidence collection, monitoring, and remediation across heterogeneous stacks is no longer a sales blocker\u2014it's a deployment prerequisite. GTM teams selling to enterprises need compliance automation baked into their workflow layer before deal close, not after. This shifts your go-to-market from 'we'll handle compliance later' to 'compliance is built-in infrastructure.'"
+  },
+  "tool_drop": {
+    "name": "Cloudways Managed AI Agents",
+    "what": "Hosted AI agent orchestration with managed infrastructure for multi-agent workflows.",
+    "why": "Removes operational overhead for GTM teams deploying agents at scale\u2014you get observability and coordination without maintaining your own agent control plane.",
+    "url": ""
+  },
+  "thread_of_day": {
+    "title": "AGENTS.md feature request signals agent governance is becoming standardized",
+    "source": "GitHub (Anthropic Claude)",
+    "takeaway": "The community is pushing for standardized agent capability declarations\u2014similar to how README.md works\u2014which means agent discovery, permissions, and multi-agent coordination are moving from ad-hoc to declarative.",
+    "url": "https://github.com/anthropics/claude-code/issues/6235"
+  },
+  "quote": {
+    "text": "RPA versus workflow automation\u2014see how they stack up across reliability, security, scalability, observability, and long-term operations.",
+    "source": "n8n Blog (RPA vs. Workflow Automation)"
+  },
+  "whats_moving": [
+    {
+      "topic": "Compliance automation as revenue blocker",
+      "context": "n8n's SOC 2 automation guides suggest enterprises now expect compliance evidence collection built into workflow platforms\u2014not bolted on."
+    },
+    {
+      "topic": "Agent governance standardization",
+      "context": "AGENTS.md feature request shows the community is converging on declarative agent specs, which will force GTM teams to document agent capabilities and permissions."
+    },
+    {
+      "topic": "Self-hosted orchestration platforms gaining traction",
+      "context": "n8n alternatives comparison and Cloudways Managed AI Agents signal enterprises are moving away from vendor-locked SaaS agents toward deployable, governance-first platforms."
+    }
+  ],
+  "act_on_this": "Audit your agent deployment process for SOC 2 readiness\u2014specifically evidence collection and monitoring across your workflow stack\u2014and document it as a pre-close deliverable, not a post-close burden.",
+  "numbers": {
+    "stat": "6+ enterprise workflow automation alternatives now viable (n8n + 5 competitors)",
+    "context": "Market consolidation around open-source and self-hosted platforms means your vendor lock-in risk with SaaS automation is real\u2014enterprises will shop for alternatives if governance isn't built in."
+  },
+  "generated_at": "2026-08-20T07:36:40.570162+00:00"
+}
