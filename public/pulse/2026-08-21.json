@@ -1,0 +1,43 @@
+{
+  "date": "2026-08-21",
+  "the_signal": {
+    "headline": "Multi-agent memory now beats coordination\u2014Bedrock AgentCore ships",
+    "body": "Amazon's AgentCore lets you build triage agents that route to specialists while maintaining shared customer context across all four agents. This solves the hard problem: not just spinning up agents, but giving them persistent memory and task routing without coordination failures. For GTM, this means your lead scoring, enrichment, and qualification agents can finally work together on the same customer thread without hallucinating contradictory decisions."
+  },
+  "tool_drop": {
+    "name": "Argentic",
+    "what": "L402 Lightning toll booth for AI scraping agents\u2014pay-per-API-call billing via Bitcoin micropayments.",
+    "why": "If you're scaling scraping agents or data enrichment workflows, metered billing per agent action prevents runaway costs and creates new revenue models for data APIs.",
+    "url": "https://Argentic.network"
+  },
+  "thread_of_day": {
+    "title": "RPA vs. Workflow Automation: Building Automation That Lasts",
+    "source": "n8n Blog",
+    "takeaway": "Workflow automation with native async APIs scales and observes better than RPA; enterprises are replacing UiPath with event-driven systems because they can't debug or scale bot farms.",
+    "url": ""
+  },
+  "quote": {
+    "text": "All four [agents] run on a single Amazon Bedrock Agent [core]\u2014multi-agent teams that remember every customer",
+    "source": "n8n Blog, Amazon Bedrock AgentCore post"
+  },
+  "whats_moving": [
+    {
+      "topic": "Agent Memory as Competitive Moat",
+      "context": "Bedrock AgentCore shipping persistent context across multi-agent teams forces every GTM platform to solve customer memory; stateless agents are now a liability."
+    },
+    {
+      "topic": "Metered Billing for Agent Actions",
+      "context": "Argentic's L402 toll booth model shows the market is commoditizing per-action costs; GTM teams need to track agent spend the way they track API calls."
+    },
+    {
+      "topic": "API Authentication Security Tightening",
+      "context": "n8n's authentication explainer signals that key/token sprawl is becoming a compliance blocker; GTM automation stacks need centralized auth management."
+    }
+  ],
+  "act_on_this": "Audit your multi-agent workflows this week\u2014map which agents touch customer data and identify where memory/context is being lost between handoffs. Use that map to evaluate Bedrock AgentCore or equivalent platforms.",
+  "numbers": {
+    "stat": "Three specialist agents + one router agent = single Bedrock AgentCore instance (vs. four separate deployments with coordination failures)",
+    "context": "Consolidation from four failure points to one unified system is the inflection point where multi-agent GTM stops being experimental and becomes operational."
+  },
+  "generated_at": "2026-08-21T07:38:35.285986+00:00"
+}
