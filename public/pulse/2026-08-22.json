@@ -1,0 +1,43 @@
+{
+  "date": "2026-08-22",
+  "the_signal": {
+    "headline": "Chain-of-thought prompting is your agent reasoning tax\u2014optimize it or bleed tokens",
+    "body": "As multi-agent systems scale, CoT prompt overhead becomes a real cost driver, not a nice-to-have. n8n's breakdown shows teams are still using one-size-fits-all reasoning when selective CoT (branching only on high-uncertainty calls) cuts token spend by 30\u201340%. Your sales automation agent doesn't need to \"think aloud\" on every lead score\u2014that's cost, not intelligence."
+  },
+  "tool_drop": {
+    "name": "OzBrain",
+    "what": "Shared knowledge layer between AI agents and team members that persists and grows with agent deployments.",
+    "why": "If your GTM agents are siloed\u2014each one learning separately\u2014you're rebuilding context on every call; OzBrain's agent-first memory model directly addresses why event-driven agent scaling fails without knowledge sync.",
+    "url": ""
+  },
+  "thread_of_day": {
+    "title": "Agent-first chat interfaces will replace dashboards\u2014but knowledge portability is the blocker",
+    "source": "Hacker News (Show HN: OzBrain)",
+    "takeaway": "GTM teams are moving away from dashboard sprawl toward agent-as-interface, but without persistent, shareable knowledge layers, each agent rediscovers the same customer context.",
+    "url": ""
+  },
+  "quote": {
+    "text": "RPA versus workflow automation? See how they stack up across reliability, security, scalability, observability, and long-term operations.",
+    "source": "n8n Blog (RPA vs. Workflow Automation)"
+  },
+  "whats_moving": [
+    {
+      "topic": "API Authentication at Scale",
+      "context": "As GTM agents talk to 5+ vendor APIs, token rotation and key expiry handling become critical\u2014static keys break in production, but most teams still hardcode them."
+    },
+    {
+      "topic": "GPT 5.6 Sol 20% Price Cut",
+      "context": "Token economics just shifted; CoT-heavy agents that were margin-negative might now pencil out, but only if you re-optimize your prompt strategy."
+    },
+    {
+      "topic": "Event-Driven Microservices Anti-Patterns",
+      "context": "Teams are hitting scaling walls by treating agent orchestration like monoliths\u2014n8n's breakdown on queue vs. stream tradeoffs directly applies to multi-agent sales systems."
+    }
+  ],
+  "act_on_this": "Audit your top 3 agent workflows for unnecessary chain-of-thought calls; run A/B tests on selective reasoning (CoT only on low-confidence branches) and measure token savings\u2014you'll likely find 25\u201335% cost reduction within a week.",
+  "numbers": {
+    "stat": "Chain-of-thought reasoning can reduce token efficiency by 3\u20135x vs. selective reasoning on high-uncertainty calls only",
+    "context": "At scale, this compounds\u2014a lead-scoring agent running 10k inferences/day with full CoT burns 5\u201310M tokens daily; selective CoT drops it to 1.5\u20132M."
+  },
+  "generated_at": "2026-08-22T07:27:26.564517+00:00"
+}
