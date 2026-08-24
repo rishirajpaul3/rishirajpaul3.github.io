@@ -1,0 +1,43 @@
+{
+  "date": "2026-08-24",
+  "the_signal": {
+    "headline": "Event-driven microservices beat batch\u2014async APIs now your GTM baseline",
+    "body": "n8n's breakdown shows event-driven architecture is winning over legacy async patterns for real-time customer workflows. GTM teams building on batch-heavy stacks are leaving 10-50ms of latency (and conversion rate) on the table. Your automation backbone needs to shift from scheduled jobs to stream-based event consumption now."
+  },
+  "tool_drop": {
+    "name": "Amazon Bedrock AgentCore (via n8n)",
+    "what": "Single orchestration layer that runs multi-agent teams with persistent memory across specialist agents (compute, knowledge retrieval, investigation).",
+    "why": "Solves the routing-and-recall problem in customer-facing AI systems\u2014agents stop duplicating context lookups and start actually collaborating on triage at scale.",
+    "url": "https://n8n.io/blog/build-multi-agent-teams-with-amazon-bedrock-agentcore/"
+  },
+  "thread_of_day": {
+    "title": "RPA vs. Workflow Automation: Which Actually Ships in Production",
+    "source": "n8n Blog",
+    "takeaway": "RPA dies when you need observability and debugging; workflow automation with native async APIs wins because you can actually see what broke and why.",
+    "url": "https://n8n.io/blog/rpa-vs-workflow-automation/"
+  },
+  "quote": {
+    "text": "Event-driven microservices eliminate polling and batch delays\u2014your automation moves at the speed of data, not the speed of your scheduler.",
+    "source": "n8n Blog: Event-Driven Microservices"
+  },
+  "whats_moving": [
+    {
+      "topic": "API Authentication in Production",
+      "context": "As GTM teams embed more automation, poorly secured API integrations become liability vectors\u2014token rotation and OAuth are no longer optional."
+    },
+    {
+      "topic": "Self-Hosted Automation Platforms",
+      "context": "Enterprise GTM buyers are rejecting vendor lock-in; n8n alternatives comparison signals demand for deployable, code-extensible automation without SaaS constraints."
+    },
+    {
+      "topic": "Supply Chain Security (Infrastructure)",
+      "context": "Traffic camera backdoors and Android head-unit malware remind GTM ops that infrastructure assumptions break\u2014third-party device/firmware compromises now threaten customer data pipelines."
+    }
+  ],
+  "act_on_this": "Audit your current GTM automation stack: identify batch jobs that should be event-driven and replace them. Start with your highest-volume customer touchpoint (lead routing, payment confirmation, onboarding trigger)\u2014measure the latency delta.",
+  "numbers": {
+    "stat": "3 specialist agents (compute, knowledge, investigation) running on a single orchestration layer in the Bedrock example",
+    "context": "This is the baseline for production multi-agent GTM systems\u2014anything less and you're losing coordination gains; anything more and debugging becomes impossible."
+  },
+  "generated_at": "2026-08-24T07:54:15.920482+00:00"
+}
