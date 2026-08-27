@@ -1,0 +1,43 @@
+{
+  "date": "2026-08-27",
+  "the_signal": {
+    "headline": "Workflow versioning now table stakes for production automation",
+    "body": "n8n's deep dive on Git-based versioning shows that automation reliability lives or dies on rollback capability and environment management\u2014not just orchestration logic. GTM engineers shipping agent workflows into production need versioning built in from day one, not bolted on after outages. This is your safety net for rapid iteration without blowing up customer data pipelines."
+  },
+  "tool_drop": {
+    "name": "n8n Workflow Versioning (Git-based)",
+    "what": "Version control for automation workflows with rollback, environment management, and change tracking across production deployments.",
+    "why": "GTM automation that fails silently costs revenue; versioning gives you the observability and rollback speed to iterate fast without customer impact.",
+    "url": "https://n8n.io/blog/workflow-versioning/"
+  },
+  "thread_of_day": {
+    "title": "ETL vs ELT: Which pattern scales your GTM data stack?",
+    "source": "n8n Blog",
+    "takeaway": "ELT (extract, load, transform) beats ETL for modern GTM stacks because it keeps raw data queryable and lets you defer transformation logic until you know what you need.",
+    "url": "https://n8n.io/blog/etl-pipeline-patterns/"
+  },
+  "quote": {
+    "text": "Track changes, manage environments, and roll back safely in production.",
+    "source": "n8n Blog \u2014 Workflow Versioning for Reliable Automation and Maintenance"
+  },
+  "whats_moving": [
+    {
+      "topic": "Workflow versioning + Git-based source control",
+      "context": "Production automation is maturing past ad-hoc node wiring\u2014teams now demand audit trails and safe rollbacks."
+    },
+    {
+      "topic": "SOC 2 compliance automation",
+      "context": "GTM teams handling enterprise deals now need automated evidence collection; manual compliance work is killing deal velocity."
+    },
+    {
+      "topic": "RPA vs workflow automation positioning",
+      "context": "n8n is aggressively positioning against legacy RPA tools by emphasizing reliability, scalability, and observability\u2014GTM teams should know the difference when selling or building."
+    }
+  ],
+  "act_on_this": "Audit your active agent/automation workflows for versioning capability\u2014if you can't roll back a broken agent in under 2 minutes, add Git-based versioning this sprint.",
+  "numbers": {
+    "stat": "3 specialist agents + 1 triage agent = single Bedrock AgentCore orchestration",
+    "context": "Multi-agent teams are consolidating into unified orchestration layers, which means simpler memory management and cheaper token spend per customer interaction."
+  },
+  "generated_at": "2026-08-27T18:03:07.655213+00:00"
+}
