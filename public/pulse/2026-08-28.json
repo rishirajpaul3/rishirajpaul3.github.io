@@ -1,0 +1,43 @@
+{
+  "date": "2026-08-28",
+  "the_signal": {
+    "headline": "RBAC breaks at agentic layer\u2014task-based rules now replace roles",
+    "body": "Static role-based access control introduces security gaps when agents make autonomous decisions across your GTM stack. n8n's analysis shows why traditional IAM fails for multi-agent systems and why task-based authorization is becoming table stakes. If your agents touch customer data or revenue workflows, you're exposed today."
+  },
+  "tool_drop": {
+    "name": "Amazon Bedrock AgentCore multi-agent teams",
+    "what": "Single orchestration layer for triage + specialist agents that maintain persistent customer context across conversations.",
+    "why": "GTM teams running parallel agents for lead qualification, data retrieval, and customer investigation need unified memory\u2014this removes the context handoff tax that kills conversion velocity.",
+    "url": "https://n8n.io/blog/build-multi-agent-teams-bedrock-agentcore/"
+  },
+  "thread_of_day": {
+    "title": "Autonomous Mathematical Discovery in Open-World Multi-Agent Environment",
+    "source": "Hacker News / arXiv",
+    "takeaway": "Agents working in multi-agent teams without predefined workflows are discovering novel solutions\u2014signals that your GTM automation shouldn't be rigid choreography but adaptive orchestration.",
+    "url": "https://arxiv.org/abs/2608.23691"
+  },
+  "quote": {
+    "text": "Traditional access control breaks at the agentic layer\u2014task-based rules help. Learn why static roles introduce risky security gaps and how authorization evolves for agents.",
+    "source": "n8n Blog: RBAC for AI Agents"
+  },
+  "whats_moving": [
+    {
+      "topic": "Agent authorization patterns",
+      "context": "RBAC failing in production multi-agent setups is pushing GTM stacks toward capability-based and task-based access models instead of static roles."
+    },
+    {
+      "topic": "Multi-agent memory and context persistence",
+      "context": "Bedrock AgentCore's single memory layer for specialist teams shows the market moving away from stateless agents toward persistent customer context across triage \u2192 execution."
+    },
+    {
+      "topic": "ETL vs ELT trade-offs for revenue automation",
+      "context": "n8n's pattern guide surfacing again signals GTM teams still choosing wrong between transform-before-load (slow, certain) and load-then-transform (fast, operationally riskier)."
+    }
+  ],
+  "act_on_this": "Audit your agent authorization layer today\u2014if you're using static roles for multi-agent revenue workflows, you have a compliance and security debt that will break at scale. Map which agents touch PII or financial data and move those to task-based rules this sprint.",
+  "numbers": {
+    "stat": "3-specialist agent triage pattern (compute + data retrieval + investigation)",
+    "context": "Teams running parallel agent lanes for different customer question types are seeing faster resolution and lower hallucination rates\u2014this is becoming the standard GTM automation pattern."
+  },
+  "generated_at": "2026-08-28T19:12:49.783813+00:00"
+}
