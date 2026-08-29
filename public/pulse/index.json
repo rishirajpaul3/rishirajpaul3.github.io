@@ -1,5 +1,9 @@
 [
   {
+    "date": "2026-08-29",
+    "headline": "SOC 2 compliance automation now decouples from vendor lock-in"
+  },
+  {
     "date": "2026-08-28",
     "headline": "RBAC breaks at agentic layer\u2014task-based rules now replace roles"
   },

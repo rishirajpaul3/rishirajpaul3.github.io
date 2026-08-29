@@ -1,0 +1,43 @@
+{
+  "date": "2026-08-29",
+  "the_signal": {
+    "headline": "SOC 2 compliance automation now decouples from vendor lock-in",
+    "body": "n8n's new pattern shows compliance evidence collection, monitoring, and remediation can run across heterogeneous stacks without vendor dependency. For GTM orgs scaling multi-tenant or regulated deals, this shifts compliance from a sales blocker into a deployable, auditable system that closes deals faster. This matters because compliance automation is now the table stakes for enterprise revenue velocity."
+  },
+  "tool_drop": {
+    "name": "Cohere Parse 5",
+    "what": "New structured data extraction model designed to parse unstructured documents into reliable JSON at scale.",
+    "why": "GTM data pipelines depend on clean, normalized customer/prospect data; Parse 5 reduces ETL friction when ingesting web forms, PDFs, and CRM exports into your revenue automation stack.",
+    "url": ""
+  },
+  "thread_of_day": {
+    "title": "ETL Pipeline Patterns for Reliable, Scalable Automation",
+    "source": "n8n Blog",
+    "takeaway": "The distinction between ETL and ELT is critical for GTM automation: ETL (transform then load) keeps compliance and data governance tight; ELT (load then transform) scales faster but sacrifices auditability\u2014choose based on whether your revenue workflows need to survive compliance audits.",
+    "url": ""
+  },
+  "quote": {
+    "text": "Traditional access control breaks at the agentic layer. Task-based rules replace static roles because agents make autonomous decisions that no pre-defined role can predict.",
+    "source": "n8n Blog: RBAC for AI Agents"
+  },
+  "whats_moving": [
+    {
+      "topic": "Multi-agent orchestration & memory splits",
+      "context": "Amazon Bedrock AgentCore now bundles triage + specialist agents with persistent customer memory\u2014this is the production pattern GTM teams need to copy for AI-powered outbound and support workflows."
+    },
+    {
+      "topic": "RPA vs. workflow automation clarity",
+      "context": "n8n's new comparison frameworks are surfacing that RPA is fragile for GTM (brittle UI parsing), while workflow automation scales; expect more GTM teams to migrate legacy RPA stacks this quarter."
+    },
+    {
+      "topic": "Self-hosted automation sovereignty",
+      "context": "n8n Alternatives analysis highlights vendor lock-in as a top GTM risk; companies managing customer data workflows are now demanding on-premise or hybrid deployment options."
+    }
+  ],
+  "act_on_this": "Audit your current compliance automation for vendor lock-in\u2014specifically, can your SOC 2 evidence collection run on your own infrastructure or a neutral platform? If not, you're leaking deal velocity and negotiating power.",
+  "numbers": {
+    "stat": "Multi-agent teams with shared memory across 3+ specialist agents now production-viable on single orchestration layer",
+    "context": "This means GTM automation can now route complex customer problems (triage \u2192 calculation \u2192 guidance \u2192 investigation) without building separate integrations for each specialist\u2014reducing build time and operational overhead."
+  },
+  "generated_at": "2026-08-29T12:56:13.559388+00:00"
+}
