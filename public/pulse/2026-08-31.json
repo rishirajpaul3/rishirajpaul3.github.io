@@ -1,0 +1,43 @@
+{
+  "date": "2026-08-31",
+  "the_signal": {
+    "headline": "Multi-agent teams need persistent memory architecture, not prompt fixes",
+    "body": "n8n's piece on Amazon Bedrock AgentCore shows production teams running 4+ agents on single cores with shared memory\u2014but most orgs are still treating memory as a prompt problem. GTM automation that scales requires deliberate memory design: what gets cached, what gets versioned, what gets purged. This is your actual bottleneck after you get routing right."
+  },
+  "tool_drop": {
+    "name": "Radar by Particle",
+    "what": "Real-time monitoring and alert system for production systems.",
+    "why": "GTM workflows that touch revenue can't fail silently\u2014you need observability built in from day one, not added after incidents.",
+    "url": ""
+  },
+  "thread_of_day": {
+    "title": "Agent Memory as a File Format",
+    "source": "Hacker News",
+    "takeaway": "Treating memory as a first-class data structure (not a side effect) makes agent state portable, debuggable, and auditable across teams.",
+    "url": "https://calpaterson.com/memoryfields.html"
+  },
+  "quote": {
+    "text": "You're relying too much on prompting your way through agent design. Call it context engineering or loop engineering, you still ask the LLM to make sure it only generates factual information\u2014but the real work is in the loop architecture itself.",
+    "source": "n8n Blog: Long-running agents beyond prompt engineering"
+  },
+  "whats_moving": [
+    {
+      "topic": "ETL/ELT Pipeline Patterns",
+      "context": "Teams are moving away from rigid ETL\u2192data warehouse flows toward ELT (extract, load, transform on warehouse) for faster iteration in revenue workflows."
+    },
+    {
+      "topic": "RPA vs. Workflow Automation",
+      "context": "Workflow automation platforms are winning on reliability and observability; RPA is retreating to niche use cases where screen scraping is the only option."
+    },
+    {
+      "topic": "Video Agent Tooling",
+      "context": "Fotor's Video Agent entering Product Hunt signals video content generation is moving into agentic territory\u2014GTM teams will soon need to automate video creation at scale."
+    }
+  ],
+  "act_on_this": "Audit your agent workflows for memory leaks: if your agents aren't tracking which customer queries they've already answered, you're burning tokens on duplicate reasoning. Implement versioned memory snapshots this week.",
+  "numbers": {
+    "stat": "Three specialist agents + one router agent = 4 distinct reasoning paths on single infrastructure",
+    "context": "This multiplier effect means you can handle 3-4x more concurrent customer interactions with the same agent core\u2014but only if memory is architectured correctly."
+  },
+  "generated_at": "2026-08-31T14:47:10.221472+00:00"
+}
