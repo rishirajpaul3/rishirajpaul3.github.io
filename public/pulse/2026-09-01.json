@@ -1,0 +1,43 @@
+{
+  "date": "2026-09-01",
+  "the_signal": {
+    "headline": "ETL pipeline patterns now define automation reliability at scale",
+    "body": "n8n's deep dive on ETL vs ELT patterns shows that how you structure data flow\u2014not just what tools you use\u2014determines whether your automation survives production. GTM engineers building revenue systems need to audit their pipeline architecture now; most are optimized for speed, not recovery or auditability."
+  },
+  "tool_drop": {
+    "name": "n8n Workflow Versioning + Git",
+    "what": "Native Git-based versioning for automation workflows with environment tracking and safe rollback.",
+    "why": "You can't own your automation reliability story to customers without versioning\u2014it's the difference between 'we broke it' and 'we know exactly what changed and can revert it.'",
+    "url": "https://n8n.io/blog/workflow-versioning"
+  },
+  "thread_of_day": {
+    "title": "Long-running agents beyond prompt engineering",
+    "source": "n8n Blog",
+    "takeaway": "Agents fail at scale because teams obsess over prompting when the real problem is loop design\u2014how the agent structures its decision cycles, not what you tell it to do.",
+    "url": "https://n8n.io/blog/long-running-agents"
+  },
+  "quote": {
+    "text": "Y'all relying too much on prompting your way through agent design. Call it context engineering or god damn loop engineering, you still ask the LLM to make sure it only generates factual information.",
+    "source": "n8n Blog \u2014 Long-running agents beyond prompt engineering"
+  },
+  "whats_moving": [
+    {
+      "topic": "ETL/ELT pattern adoption",
+      "context": "Production automation is shifting from 'does it work' to 'can we maintain it'\u2014pipeline architecture now table stakes."
+    },
+    {
+      "topic": "Agentic compliance tooling",
+      "context": "SOC 2 automation across heterogeneous stacks is decoupling from vendor lock-in, making it viable for GTM teams running multi-vendor AI stacks."
+    },
+    {
+      "topic": "RPA vs workflow automation",
+      "context": "The industry is formally articulating why workflow automation beats RPA for reliability and observability\u2014timing matters as GTM systems get more complex."
+    }
+  ],
+  "act_on_this": "Map your current automation workflows against ETL vs ELT patterns\u2014identify which ones lack proper data staging or error recovery, then prioritize versioning and rollback capability for your top 3 revenue-critical flows.",
+  "numbers": {
+    "stat": "ARC-AGI benchmark: 44% accuracy achieved for 67 cents",
+    "context": "Cheaper reasoning models are closing the capability gap fast\u2014cost of agentic reasoning in your GTM stack will drop 10x in next 12 months, forcing re-evaluation of build vs buy."
+  },
+  "generated_at": "2026-09-01T12:18:39.857826+00:00"
+}
