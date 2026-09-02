@@ -1,0 +1,43 @@
+{
+  "date": "2026-09-02",
+  "the_signal": {
+    "headline": "LLM judges miss what's absent\u2014clinical AI blindness spreads",
+    "body": "New research shows LLM evaluators only catch presence errors, not omissions\u2014a critical gap in high-stakes domains like healthcare and legal. This compounds earlier findings that agentic reasoning fails under pressure. For GTM teams selling AI-for-compliance or AI-for-healthcare tools, this means your customers' risk models are fundamentally incomplete without explicit absence-checking loops."
+  },
+  "tool_drop": {
+    "name": "Onset MCP",
+    "what": "Model Context Protocol integration for building structured agent behaviors.",
+    "why": "MCP adoption is becoming table-stakes for connecting agents to external systems without prompt-patch overhead\u2014critical if you're bundling integrations into your GTM motion.",
+    "url": ""
+  },
+  "thread_of_day": {
+    "title": "Long-running agents need architecture, not better prompts",
+    "source": "n8n Blog",
+    "takeaway": "Stop context engineering your way out of agent reliability\u2014build persistent memory and loop patterns instead, or your automation fails at production scale.",
+    "url": ""
+  },
+  "quote": {
+    "text": "Y'all relying too much on prompting your way through agent design. Call it context engineering or god damn loop engineering, you still ask the LLM to make sure it only generates factual information.",
+    "source": "n8n Blog \u2014 Long-running agents beyond prompt engineering"
+  },
+  "whats_moving": [
+    {
+      "topic": "Workflow versioning as operational necessity",
+      "context": "Git-based rollback for automation is now table-stakes\u2014your customers need safe prod deployments or they won't trust your platform at scale."
+    },
+    {
+      "topic": "RPA vs. workflow automation consolidation",
+      "context": "The market is clarifying that workflow automation wins on observability and maintainability; RPA-only stacks are becoming legacy\u2014position accordingly."
+    },
+    {
+      "topic": "Agent access control shifting task-based",
+      "context": "RBAC failures at the agentic layer mean GTM teams selling compliance tools need task-scoped permissions, not user roles\u2014already covered but reinforced today."
+    }
+  ],
+  "act_on_this": "Run a test: feed your AI system a customer support case with a critical missing detail (e.g., no mention of a refund policy) and see if it flags the absence. If it doesn't, you have an LLM judge problem to architect around before your next security audit.",
+  "numbers": {
+    "stat": "LLM judges fail on omission detection across clinical, legal, and compliance domains",
+    "context": "This is not a tuning problem\u2014it's a fundamental architectural gap that requires explicit absence-verification loops in any high-stakes AI system you're building or selling."
+  },
+  "generated_at": "2026-09-02T11:55:20.157495+00:00"
+}

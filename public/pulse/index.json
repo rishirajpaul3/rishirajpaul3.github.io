@@ -1,5 +1,9 @@
 [
   {
+    "date": "2026-09-02",
+    "headline": "LLM judges miss what's absent\u2014clinical AI blindness spreads"
+  },
+  {
     "date": "2026-09-01",
     "headline": "ETL pipeline patterns now define automation reliability at scale"
   },
@@ -354,9 +358,5 @@
   {
     "date": "2026-06-04",
     "headline": "Enterprise AI lacks governance; 75% have no framework in place"
-  },
-  {
-    "date": "2026-06-03",
-    "headline": "AI agents hallucinate silently\u2014debugging is now a GTM requirement"
   }
 ]
