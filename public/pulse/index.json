@@ -1,5 +1,9 @@
 [
   {
+    "date": "2026-09-03",
+    "headline": "RBAC breaks at agentic layer\u2014task-based rules become security baseline"
+  },
+  {
     "date": "2026-09-02",
     "headline": "LLM judges miss what's absent\u2014clinical AI blindness spreads"
   },
@@ -354,9 +358,5 @@
   {
     "date": "2026-06-05",
     "headline": "AI agent reliability now requires layered control architecture"
-  },
-  {
-    "date": "2026-06-04",
-    "headline": "Enterprise AI lacks governance; 75% have no framework in place"
   }
 ]

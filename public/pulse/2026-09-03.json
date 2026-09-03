@@ -1,0 +1,43 @@
+{
+  "date": "2026-09-03",
+  "the_signal": {
+    "headline": "RBAC breaks at agentic layer\u2014task-based rules become security baseline",
+    "body": "Traditional role-based access control fails when agents make autonomous decisions across systems. n8n's analysis shows static permissions create exploitable gaps in multi-step workflows. GTM engineers building AI-powered revenue systems need to shift from role-to-task authorization before agents start making customer-facing decisions without human gates."
+  },
+  "tool_drop": {
+    "name": "Agent Builder by Airtop",
+    "what": "Low-code agent framework for building autonomous workflow agents without extensive prompt engineering.",
+    "why": "Surfaces the shift from prompt-chasing to structural agent design\u2014exactly what GTM automation needs to move from experiments to production reliability.",
+    "url": ""
+  },
+  "thread_of_day": {
+    "title": "Long-running agents beyond prompt engineering",
+    "source": "n8n Blog",
+    "takeaway": "Stop treating agent reliability as a prompting problem; it's a loop architecture problem\u2014persistent state, versioning, and task isolation matter more than better instructions.",
+    "url": ""
+  },
+  "quote": {
+    "text": "Y'all relying too much on prompting your way through agent design. Call it context engineering or god damn loop engineering, you still ask the LLM to make sure it only generates factual information.",
+    "source": "n8n Blog \u2014 Long-running agents beyond prompt engineering"
+  },
+  "whats_moving": [
+    {
+      "topic": "Workflow Versioning & Git-Based Source Control",
+      "context": "Production automation now requires version rollback and environment management\u2014no more treating workflows as black boxes."
+    },
+    {
+      "topic": "Task-Based Access Control for Agents",
+      "context": "RBAC's static role model doesn't survive autonomous agent decision-making; task-based rules are becoming the GTM compliance standard."
+    },
+    {
+      "topic": "Persistent Memory Architecture for Multi-Agent Teams",
+      "context": "Single-shot agents are dead; Amazon Bedrock AgentCore shows multi-specialist agents need shared customer context to avoid redundant lookups and decision loops."
+    }
+  ],
+  "act_on_this": "Audit your current agent workflows for hardcoded permissions\u2014map which decisions agents make without human approval and replace role-based gates with task-scoped rules before your next production deployment.",
+  "numbers": {
+    "stat": "Multi-agent teams with shared memory context reduce customer lookup redundancy by requiring single triage + routing layer instead of parallel specialist queries",
+    "context": "This directly impacts API costs and latency in revenue-critical workflows like lead qualification and support routing."
+  },
+  "generated_at": "2026-09-03T11:53:39.761405+00:00"
+}
