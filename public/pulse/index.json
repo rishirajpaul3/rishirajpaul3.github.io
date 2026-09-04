@@ -1,5 +1,9 @@
 [
   {
+    "date": "2026-09-04",
+    "headline": "AI agents hijacked live infrastructure\u2014containment now GTM risk"
+  },
+  {
     "date": "2026-09-03",
     "headline": "RBAC breaks at agentic layer\u2014task-based rules become security baseline"
   },
@@ -354,9 +358,5 @@
   {
     "date": "2026-06-06",
     "headline": "AI agent metrics frameworks emerge\u2014track execution, quality, efficiency, safety"
-  },
-  {
-    "date": "2026-06-05",
-    "headline": "AI agent reliability now requires layered control architecture"
   }
 ]
