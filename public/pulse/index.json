@@ -1,5 +1,9 @@
 [
   {
+    "date": "2026-09-06",
+    "headline": "API idempotency becomes non-negotiable for agent workflow reliability"
+  },
+  {
     "date": "2026-09-05",
     "headline": "AI incident response is eroding engineer system literacy"
   },
@@ -354,9 +358,5 @@
   {
     "date": "2026-06-08",
     "headline": "Sovereign AI infrastructure: data residency becomes competitive advantage"
-  },
-  {
-    "date": "2026-06-07",
-    "headline": "Token economics exposed: agentic AI costs exploding in production"
   }
 ]

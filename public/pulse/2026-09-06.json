@@ -1,0 +1,43 @@
+{
+  "date": "2026-09-06",
+  "the_signal": {
+    "headline": "API idempotency becomes non-negotiable for agent workflow reliability",
+    "body": "n8n's deep dive on idempotency shows that duplicate operations are now a systemic failure mode in agentic workflows\u2014not edge cases. GTM teams running revenue automation must enforce idempotent API contracts before agents retry tasks at scale, or you're facing data corruption in your CRM/billing pipeline. This is the operational hygiene layer between working agents and production disasters."
+  },
+  "tool_drop": {
+    "name": "Pigeon (signed Pass for sub-agents)",
+    "what": "A capability-scoped credential system that signs what a sub-agent is allowed to do, preventing scope creep during delegation.",
+    "why": "Replaces RBAC's static role problem with delegated, verifiable permissions\u2014exactly what you need when agents spawn child agents to handle customer workflows without blowing open your security model.",
+    "url": "https://github.com/pigeonlabsHQ/pigeon"
+  },
+  "thread_of_day": {
+    "title": "Long-running agents beyond prompt engineering: Loop engineering is the real lever",
+    "source": "n8n Blog",
+    "takeaway": "Prompt tuning is theater; agent reliability lives in the control loop design\u2014how you manage retries, backoffs, state persistence, and failure modes across multi-step customer operations.",
+    "url": ""
+  },
+  "quote": {
+    "text": "Learn how workflow versioning works with Git-based source control. Track changes, manage environments, and roll back safely in production.",
+    "source": "n8n Blog: Workflow Versioning for Reliable Automation and Maintenance"
+  },
+  "whats_moving": [
+    {
+      "topic": "Workflow security for regulated industries",
+      "context": "HIPAA/SOC 2/GDPR compliance is moving from compliance theater to build-time concern\u2014workflows must log every action and control access at the task level, not just the user level."
+    },
+    {
+      "topic": "Multi-agent triage systems (Amazon Bedrock AgentCore)",
+      "context": "Architectures are shifting from single-agent handlers to agent teams with specialist routing\u2014triage agent + compute agent + documentation agent + investigation agent running in parallel, all maintaining shared customer context."
+    },
+    {
+      "topic": "Workflow automation vs. RPA comparison frameworks",
+      "context": "Workato alternatives analysis signals GTM teams are now comparing reliability, scalability, and observability as primary selection criteria\u2014not just feature count."
+    }
+  ],
+  "act_on_this": "Audit your agent workflows for idempotency violations: identify any step that could create duplicate records (Salesforce tasks, billing charges, email sends) and enforce API-level or state-level deduplication before next sprint.",
+  "numbers": {
+    "stat": "Three specialist agents (compute, guidance lookup, investigation) running on single AgentCore, reducing latency and maintaining unified customer context across triage flow.",
+    "context": "Multi-agent architectures are proving operationally simpler than trying to route everything through a single LLM\u2014delegation at the architecture layer beats prompt-level complexity."
+  },
+  "generated_at": "2026-09-06T11:29:23.580674+00:00"
+}
