@@ -1,0 +1,43 @@
+{
+  "date": "2026-09-09",
+  "the_signal": {
+    "headline": "Task-based access control replaces static RBAC for agentic systems",
+    "body": "n8n's latest research shows traditional role-based access control breaks when agents make dynamic decisions across resources. GTM teams deploying revenue automation need task-based rules\u2014permissions tied to what the agent is *doing* in a workflow, not who owns it. This is the compliance gap between your current infrastructure and production-grade agent systems."
+  },
+  "tool_drop": {
+    "name": "n8n Assistant",
+    "what": "LLM-powered workflow builder that translates plain English descriptions into executable automation logic",
+    "why": "Closes the gap between describing revenue automation and actually building it\u2014critical for non-engineers shipping workflows fast",
+    "url": "https://n8n.io"
+  },
+  "thread_of_day": {
+    "title": "Long-running agents need loop engineering, not just prompt engineering",
+    "source": "n8n Blog",
+    "takeaway": "Agents sustaining multi-step revenue workflows fail when you rely on LLM instructions alone; you need deterministic state loops and context resets to keep them factual across 100+ step sequences",
+    "url": "https://n8n.io"
+  },
+  "quote": {
+    "text": "Y'all relying too much on prompting your way through agent design. Call it context engineering or loop engineering, you still ask the LLM to make sure it only generates factual information.",
+    "source": "n8n Blog \u2014 Long-running agents beyond prompt engineering"
+  },
+  "whats_moving": [
+    {
+      "topic": "DeepSeek v4.1 Flash",
+      "context": "Cheaper, faster model dropping Sept 10 will pressure pricing on revenue automation\u2014GTM teams need to re-evaluate cost-per-run for their agent workloads"
+    },
+    {
+      "topic": "ETL pipeline patterns for automation",
+      "context": "n8n publishing deep guidance on when ETL vs ELT makes sense at scale\u2014directly impacts how you design data flows in revenue systems"
+    },
+    {
+      "topic": "Workflow versioning + compliance",
+      "context": "Git-based source control for workflows is moving from nice-to-have to requirement as regulated industries demand audit trails and rollback capabilities"
+    }
+  ],
+  "act_on_this": "Audit your current agent access control model today\u2014if you're using static RBAC for any revenue workflow, map which tasks need dynamic permission boundaries before your first security incident in production.",
+  "numbers": {
+    "stat": "DeepSeek v4.1 Flash comprehensively surpasses v4 Pro across benchmarks at lower cost",
+    "context": "Model pricing compression is accelerating; your unit economics on agent inference need quarterly review or you're leaving margin on the table"
+  },
+  "generated_at": "2026-09-09T12:07:12.285126+00:00"
+}
