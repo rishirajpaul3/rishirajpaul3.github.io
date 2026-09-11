@@ -1,5 +1,9 @@
 [
   {
+    "date": "2026-09-11",
+    "headline": "MCP replaces APIs as agent orchestration layer\u2014but breaks your monitoring"
+  },
+  {
     "date": "2026-09-10",
     "headline": "Natural language workflow building hits production\u2014but abstracts away critical debugging"
   },
@@ -354,9 +358,5 @@
   {
     "date": "2026-06-13",
     "headline": "LLM observability shifts from optional to production requirement"
-  },
-  {
-    "date": "2026-06-12",
-    "headline": "AI agents are now financial liabilities without cost guardrails"
   }
 ]

@@ -1,0 +1,43 @@
+{
+  "date": "2026-09-11",
+  "the_signal": {
+    "headline": "MCP replaces APIs as agent orchestration layer\u2014but breaks your monitoring",
+    "body": "Model Context Protocol is becoming the default for connecting agents to external systems, but it abstracts away traditional API observability. GTM engineers need to rebuild instrumentation around MCP's context-passing model, not HTTP request/response cycles. This shifts debugging from network layer to context layer\u2014and most revenue ops teams aren't ready."
+  },
+  "tool_drop": {
+    "name": "n8n Assistant",
+    "what": "Natural language to workflow compiler that translates English descriptions into n8n automation graphs.",
+    "why": "Closes the gap between RevOps describing what they want and engineers building it\u2014but only if your team owns the evaluation and testing layer before production.",
+    "url": ""
+  },
+  "thread_of_day": {
+    "title": "Long-running agents beyond prompt engineering",
+    "source": "n8n Blog",
+    "takeaway": "Treating agent reliability as a prompting problem fails at scale; you need deterministic loop engineering, state management, and context boundaries to ship agentic systems GTM teams can actually depend on.",
+    "url": ""
+  },
+  "quote": {
+    "text": "You're not prompt engineering your way through agent design. Call it context engineering or loop engineering\u2014you still need to architect guardrails so the LLM only generates factual, actionable outputs.",
+    "source": "n8n Blog \u2014 Long-running agents beyond prompt engineering"
+  },
+  "whats_moving": [
+    {
+      "topic": "Agent reliability shifts from testing to production monitoring",
+      "context": "n8n's new production debugging framework signals that GTM teams now expect agents to fail gracefully and self-report\u2014not just work or error out."
+    },
+    {
+      "topic": "MCP becoming standard agent-to-system bridge",
+      "context": "Move away from direct API integrations toward Model Context Protocol shows agents need richer semantic context, not just endpoint URLs, to stay reliable."
+    },
+    {
+      "topic": "Workflow security compliance moves from policy to code",
+      "context": "HIPAA/SOC 2 requirements now demand audit trails and access controls baked into workflow nodes, not bolted on\u2014changing how RevOps architecture revenue systems."
+    }
+  ],
+  "act_on_this": "Map your current agent integrations and identify which ones rely on API idempotency vs. MCP context\u2014then add a production monitoring dashboard for context drift before your agents start generating duplicate Salesforce records.",
+  "numbers": {
+    "stat": "Unknown\u2014no concrete metrics in today's feed",
+    "context": "This is the problem: n8n and vendors aren't publishing failure rates or reliability benchmarks for agentic systems, so GTM teams are flying blind on production risk."
+  },
+  "generated_at": "2026-09-11T12:00:00.404874+00:00"
+}
