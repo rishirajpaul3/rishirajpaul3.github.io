@@ -1,0 +1,43 @@
+{
+  "date": "2026-09-13",
+  "the_signal": {
+    "headline": "Idempotency becomes table stakes for production workflow reliability",
+    "body": "n8n's latest guidance on API idempotency isn't academic\u2014it's the difference between a $50K failed deal and a clean retry. GTM systems running on orchestrated workflows (sales automation, lead qualification, proposal generation) silently duplicate operations when networks hiccup or agents retry. Without idempotency baked into every external API call, you're hemorrhaging data quality and revenue tracking accuracy."
+  },
+  "tool_drop": {
+    "name": "n8n Assistant",
+    "what": "Natural language-to-workflow builder that translates intent into executable node sequences.",
+    "why": "Closes the gap between 'automate lead scoring' and actually configuring the right nodes\u2014but you still need to audit the generated workflow for idempotency, error handling, and revenue impact before it touches production.",
+    "url": "https://n8n.io"
+  },
+  "thread_of_day": {
+    "title": "Career paths for engineers better at supporting than creating",
+    "source": "Hacker News",
+    "takeaway": "Platform engineering and workflow orchestration are becoming career tracks that value system reliability over feature velocity\u2014directly relevant as GTM infrastructure increasingly depends on reliable AI agent execution.",
+    "url": "https://news.ycombinator.com"
+  },
+  "quote": {
+    "text": "Run AI agents reliably in production. Learn how to debug failures, evaluate performance, track key metrics, add guardrails, and monitor agent behavior.",
+    "source": "n8n Blog: AI Agent Reliability"
+  },
+  "whats_moving": [
+    {
+      "topic": "Workflow Security in Regulated Industries",
+      "context": "HIPAA/SOC 2 compliance is now baked into workflow platforms because GTM systems handling customer data can't afford audit failures or credential leaks."
+    },
+    {
+      "topic": "Process Orchestration Models (Deterministic vs. Agentic)",
+      "context": "n8n's breakdown of execution models signals that GTM teams need to choose between predictable workflows (lead routing) and adaptive agents (deal scoring)\u2014and most will need both."
+    },
+    {
+      "topic": "Perplexity Hybrid Compute",
+      "context": "If this enables cheaper, faster inference for revenue systems, it directly impacts the unit economics of AI-powered GTM agents that run real-time buyer intelligence."
+    }
+  ],
+  "act_on_this": "Audit your top 3 revenue workflows for idempotency gaps\u2014specifically any API calls that create/update Salesforce records, trigger emails, or pull data from external sources. One duplicate operation in a scaled workflow costs more than the fix.",
+  "numbers": {
+    "stat": "Every $1 Nvidia invests returns $100 (per Nvidia's claim)",
+    "context": "If even partially true, inference costs will keep dropping faster than your AI agent ROI calculations, making production reliability the actual competitive moat\u2014not raw model performance."
+  },
+  "generated_at": "2026-09-13T12:30:32.715262+00:00"
+}
