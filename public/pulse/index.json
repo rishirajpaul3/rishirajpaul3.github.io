@@ -1,5 +1,9 @@
 [
   {
+    "date": "2026-09-16",
+    "headline": "Workflow orchestration moves from APIs to deterministic execution models"
+  },
+  {
     "date": "2026-09-15",
     "headline": "n8n Assistant abstracts workflow logic\u2014your debugging debt just multiplied"
   },
@@ -354,9 +358,5 @@
   {
     "date": "2026-06-18",
     "headline": "Agent-to-Agent protocols move from theory to production necessity"
-  },
-  {
-    "date": "2026-06-17",
-    "headline": "LLM routing shifts model selection from static to per-request dynamic"
   }
 ]
