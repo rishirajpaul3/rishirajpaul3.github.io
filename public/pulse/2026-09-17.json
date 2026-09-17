@@ -1,0 +1,43 @@
+{
+  "date": "2026-09-17",
+  "the_signal": {
+    "headline": "n8n Gateway Credits eliminate API key friction\u2014adoption accelerator",
+    "body": "n8n v2.36 now lets you spin up AI models and integrations without provider account setup or API key generation. For GTM teams selling workflow automation, this removes the single biggest friction point in the POV-to-pilot journey. Your sales cycle just compressed."
+  },
+  "tool_drop": {
+    "name": "n8n Assistant",
+    "what": "Natural language workflow builder that abstracts node selection, ordering, and configuration logic.",
+    "why": "Enables non-technical revenue ops to ship workflows, but creates debugging blind spots\u2014you inherit abstraction debt when things break in production.",
+    "url": "https://n8n.io/blog/introducing-n8n-assistant/"
+  },
+  "thread_of_day": {
+    "title": "MCP vs. APIs: Protocol wars heating up",
+    "source": "n8n Blog",
+    "takeaway": "MCP (Model Context Protocol) handles dynamic tool discovery and context window management better than REST APIs, but APIs remain the fallback for legacy systems\u2014you'll need both.",
+    "url": "https://n8n.io/blog/mcp-vs-api/"
+  },
+  "quote": {
+    "text": "Autonomous AI agents require measurable quality gates, ROI tracking, and explicit safety controls\u2014not just reflection loops.",
+    "source": "n8n Blog: Autonomous AI Agents: Architecture and Risk Mitigation"
+  },
+  "whats_moving": [
+    {
+      "topic": "Autonomy levels mattering more than autonomy itself",
+      "context": "n8n published a full framework mapping agent autonomy to use cases and risk profiles\u2014boring but necessary for CRO/VP Ops to justify AI spend"
+    },
+    {
+      "topic": "Production observability becoming differentiator",
+      "context": "Debug, evaluate, and monitor capabilities now table stakes; vendors without built-in instrumentation for agent failures will lose enterprise deals"
+    },
+    {
+      "topic": "Credential management as compliance moat",
+      "context": "HIPAA/SOC2/GDPR workflow security requirements are pushing orchestration platforms to offer fine-grained access controls\u2014regulatory friction = vendor lock-in opportunity"
+    }
+  ],
+  "act_on_this": "Audit your production workflows for observability gaps\u2014specifically, whether you're logging every agent decision and can trace failure chains. n8n's new debugging tools expose this; competitors without equivalent tooling will lose deals to you.",
+  "numbers": {
+    "stat": "n8n v2.36 removes 3-5 manual setup steps per integration (account creation + API key generation + credential mapping)",
+    "context": "In a 10-workflow pilot, that's 30-50 friction points eliminated before a user touches your product\u2014directly impacts POV conversion rate"
+  },
+  "generated_at": "2026-09-17T12:22:53.261231+00:00"
+}

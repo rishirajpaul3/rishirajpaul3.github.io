@@ -1,5 +1,9 @@
 [
   {
+    "date": "2026-09-17",
+    "headline": "n8n Gateway Credits eliminate API key friction\u2014adoption accelerator"
+  },
+  {
     "date": "2026-09-16",
     "headline": "Workflow orchestration moves from APIs to deterministic execution models"
   },
@@ -354,9 +358,5 @@
   {
     "date": "2026-06-19",
     "headline": "AI governance becomes table-stakes for enterprise revenue systems"
-  },
-  {
-    "date": "2026-06-18",
-    "headline": "Agent-to-Agent protocols move from theory to production necessity"
   }
 ]
