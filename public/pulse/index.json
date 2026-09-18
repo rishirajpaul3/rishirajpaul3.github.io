@@ -1,5 +1,9 @@
 [
   {
+    "date": "2026-09-18",
+    "headline": "AI agents now self-correcting in production via reflection loops"
+  },
+  {
     "date": "2026-09-17",
     "headline": "n8n Gateway Credits eliminate API key friction\u2014adoption accelerator"
   },
@@ -354,9 +358,5 @@
   {
     "date": "2026-06-20",
     "headline": "Process orchestration becomes the invisible GTM infrastructure layer"
-  },
-  {
-    "date": "2026-06-19",
-    "headline": "AI governance becomes table-stakes for enterprise revenue systems"
   }
 ]
