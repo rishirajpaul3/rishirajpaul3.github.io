@@ -1,5 +1,9 @@
 [
   {
+    "date": "2026-09-19",
+    "headline": "Transactional outbox pattern now critical for reliable AI workflows"
+  },
+  {
     "date": "2026-09-18",
     "headline": "AI agents now self-correcting in production via reflection loops"
   },
@@ -354,9 +358,5 @@
   {
     "date": "2026-06-21",
     "headline": "Cognitive debt now rivals technical debt in AI systems"
-  },
-  {
-    "date": "2026-06-20",
-    "headline": "Process orchestration becomes the invisible GTM infrastructure layer"
   }
 ]

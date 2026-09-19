@@ -1,0 +1,43 @@
+{
+  "date": "2026-09-19",
+  "the_signal": {
+    "headline": "Transactional outbox pattern now critical for reliable AI workflows",
+    "body": "Dual writes are killing your event-driven systems\u2014the outbox pattern guarantees delivery without losing state. For GTM engineers running multi-step revenue workflows (lead capture \u2192 CRM sync \u2192 email trigger), a single failed event sync means broken pipeline data. This is no longer optional infrastructure."
+  },
+  "tool_drop": {
+    "name": "n8n Gateway Credits (v2.36+)",
+    "what": "Skip API key setup\u2014use AI models and third-party services directly via pooled gateway credits on n8n Cloud.",
+    "why": "Eliminates procurement friction when testing new models or services in revenue workflows; ops teams stop blocking experiments on credential management.",
+    "url": "https://n8n.io"
+  },
+  "thread_of_day": {
+    "title": "API Rate Limiting Without Workflow Death",
+    "source": "n8n Blog",
+    "takeaway": "Smart pacing, batching, and retry logic turn 429s into non-events instead of pipeline breaks\u2014measure your actual rate limit tolerance per endpoint, not just default limits.",
+    "url": ""
+  },
+  "quote": {
+    "text": "Deterministic, dynamic, and agentic execution models each solve different problems\u2014pick the wrong one and you're debugging observability debt for months.",
+    "source": "n8n Blog: Process Orchestration"
+  },
+  "whats_moving": [
+    {
+      "topic": "AI workflow latency optimization",
+      "context": "Model routing, caching, and parallel execution patterns are now table-stakes for sub-second lead scoring and real-time enrichment pipelines."
+    },
+    {
+      "topic": "Event-driven architecture reliability",
+      "context": "Transactional outbox pattern adoption is accelerating as teams realize dual writes are silently corrupting revenue data at scale."
+    },
+    {
+      "topic": "Autonomous agent risk controls",
+      "context": "Production agent deployments are forcing GTM teams to adopt quality gates and safety layers\u2014reflection loops and budget constraints are becoming non-negotiable."
+    }
+  ],
+  "act_on_this": "Audit your current lead sync workflows for dual-write failures (CRM insert succeeds but event publish fails); implement transactional outbox pattern on your highest-volume pipeline this week.",
+  "numbers": {
+    "stat": "Model routing + parallel execution can reduce workflow latency by 60-80% in multi-step revenue processes",
+    "context": "Faster lead enrichment and qualification directly impacts sales velocity and conversion rates\u2014latency compounds across every funnel stage."
+  },
+  "generated_at": "2026-09-19T11:45:53.291507+00:00"
+}
