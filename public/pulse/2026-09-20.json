@@ -1,0 +1,43 @@
+{
+  "date": "2026-09-20",
+  "the_signal": {
+    "headline": "API rate limiting patterns now table stakes for production workflows",
+    "body": "n8n's deep dive on 429 handling reveals most teams are still treating rate limits as failures, not design constraints. For GTM automation hitting third-party APIs at scale (Salesforce, HubSpot, Marketo), smart pacing and batching strategies directly impact pipeline velocity\u2014this isn't optional infrastructure anymore."
+  },
+  "tool_drop": {
+    "name": "n8n v2.36 Gateway Credits",
+    "what": "Skip API key setup for supported AI models and tools\u2014just use credits from your n8n Cloud plan.",
+    "why": "Reduces onboarding friction in GTM workflows; your sales ops team can test Anthropic, OpenAI, or service integrations without credential management sprawl.",
+    "url": "https://n8n.io"
+  },
+  "thread_of_day": {
+    "title": "If AI coding is lowering your code quality, you're not managing quality right",
+    "source": "Hacker News",
+    "takeaway": "The problem isn't AI\u2014it's lack of guardrails; teams treating LLM-generated code as shipped code rather than drafts will see technical debt compound in their workflow layers.",
+    "url": "https://www.i-kh.net/p/if-ai-coding-is-lowering-your-code"
+  },
+  "quote": {
+    "text": "Compare deterministic, dynamic, and agentic process orchestration models to build reliable, scalable workflows with visibility across enterprise systems.",
+    "source": "n8n Blog: Process Orchestration: Execution Models, Observability, and Production Challenges"
+  },
+  "whats_moving": [
+    {
+      "topic": "Latency optimization in AI workflows",
+      "context": "n8n published patterns for model routing, caching, and parallel execution\u2014teams racing to sub-second agent response times now have proven playbooks."
+    },
+    {
+      "topic": "MCP vs API architecture decisions",
+      "context": "Model Context Protocol adoption pressure is rising; GTM platforms choosing between MCP integrations and traditional APIs need clarity on when each wins."
+    },
+    {
+      "topic": "Autonomous agent risk frameworks",
+      "context": "As agents move into production revenue workflows, mitigation strategies (guardrails, quality gates, human checkpoints) are becoming competitive advantages."
+    }
+  ],
+  "act_on_this": "Audit your highest-volume API integrations (Salesforce, HubSpot sync) for rate limit handling\u2014implement exponential backoff and request batching this week, or you'll lose pipeline data at scale.",
+  "numbers": {
+    "stat": "$120K spent by Microsoft to port Copilot runtime to Rust",
+    "context": "Signals that agentic systems at enterprise scale now require language-level performance optimization\u2014interpreted runtimes are becoming cost liabilities."
+  },
+  "generated_at": "2026-09-20T11:59:10.022622+00:00"
+}

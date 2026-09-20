@@ -1,5 +1,9 @@
 [
   {
+    "date": "2026-09-20",
+    "headline": "API rate limiting patterns now table stakes for production workflows"
+  },
+  {
     "date": "2026-09-19",
     "headline": "Transactional outbox pattern now critical for reliable AI workflows"
   },
@@ -354,9 +358,5 @@
   {
     "date": "2026-06-22",
     "headline": "LLM observability shifts from optional to mandatory revenue ops"
-  },
-  {
-    "date": "2026-06-21",
-    "headline": "Cognitive debt now rivals technical debt in AI systems"
   }
 ]
