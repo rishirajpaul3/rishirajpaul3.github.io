@@ -1,5 +1,9 @@
 [
   {
+    "date": "2026-09-21",
+    "headline": "Latency optimization patterns now production baseline for AI workflows"
+  },
+  {
     "date": "2026-09-20",
     "headline": "API rate limiting patterns now table stakes for production workflows"
   },
@@ -354,9 +358,5 @@
   {
     "date": "2026-06-23",
     "headline": "LLM routing moves from optimization hack to production necessity"
-  },
-  {
-    "date": "2026-06-22",
-    "headline": "LLM observability shifts from optional to mandatory revenue ops"
   }
 ]
