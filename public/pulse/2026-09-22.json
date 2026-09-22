@@ -1,0 +1,43 @@
+{
+  "date": "2026-09-22",
+  "the_signal": {
+    "headline": "Prompt testing frameworks move from nice-to-have to production baseline",
+    "body": "n8n's new systematic prompt testing framework addresses the real pain point: you can't ship AI workflows without regression detection. For GTM engineers deploying LLM-powered lead scoring, email generation, or qualification\u2014prompt drift silently tanks conversion rates. This is the missing piece between reflection loops and production reliability."
+  },
+  "tool_drop": {
+    "name": "JetBrains Air",
+    "what": "System of products for agentic software development that automates coding workflows with AI agents.",
+    "why": "GTM engineers building AI revenue systems now need internal tooling that keeps pace with agentic patterns\u2014this signals the dev tool market is finally shipping for agent-first workflows.",
+    "url": "https://blog.jetbrains.com/blog/2026/09/22/introducing-jetbrains-air/"
+  },
+  "thread_of_day": {
+    "title": "MCP vs. API: When to use Model Context Protocol in production workflows",
+    "source": "n8n Blog",
+    "takeaway": "MCP is becoming the protocol for stateful agent interactions; APIs remain better for request-response patterns\u2014pick based on whether your revenue workflow needs persistent context or fire-and-forget calls.",
+    "url": "https://n8n.io"
+  },
+  "quote": {
+    "text": "Process orchestration models (deterministic, dynamic, agentic) require different observability strategies\u2014visibility across enterprise systems is non-negotiable for reliable revenue workflows.",
+    "source": "n8n Blog \u2014 Process Orchestration article"
+  },
+  "whats_moving": [
+    {
+      "topic": "Prompt Testing & Regression Detection",
+      "context": "Systematic testing frameworks now table stakes as teams realize silent prompt drift kills production LLM workflows without warning."
+    },
+    {
+      "topic": "Process Orchestration Patterns",
+      "context": "Agentic execution models require new observability primitives; deterministic + dynamic approaches no longer sufficient for multi-step revenue flows."
+    },
+    {
+      "topic": "MCP Adoption in Enterprise",
+      "context": "Model Context Protocol gaining traction as alternative to traditional APIs for stateful agent interactions in production systems."
+    }
+  ],
+  "act_on_this": "Build a regression test suite for your highest-friction LLM prompt (lead scoring, qualification, email generation) this week\u2014run it against last month's test cases to measure quality drift.",
+  "numbers": {
+    "stat": "9 ads per minute during FIFA Cup 26 broadcast",
+    "context": "Not directly GTM, but signals the attention economy is fracturing\u2014ad-heavy experiences drive users toward AI-powered alternatives that filter noise, creating new distribution channels for GTM tools."
+  },
+  "generated_at": "2026-09-22T12:18:50.907825+00:00"
+}

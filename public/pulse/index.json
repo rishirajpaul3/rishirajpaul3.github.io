@@ -1,5 +1,9 @@
 [
   {
+    "date": "2026-09-22",
+    "headline": "Prompt testing frameworks move from nice-to-have to production baseline"
+  },
+  {
     "date": "2026-09-21",
     "headline": "Latency optimization patterns now production baseline for AI workflows"
   },
@@ -354,9 +358,5 @@
   {
     "date": "2026-06-24",
     "headline": "Agent-to-Agent protocols move from theory to production necessity"
-  },
-  {
-    "date": "2026-06-23",
-    "headline": "LLM routing moves from optimization hack to production necessity"
   }
 ]
