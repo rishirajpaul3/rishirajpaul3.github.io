@@ -1,0 +1,43 @@
+{
+  "date": "2026-09-24",
+  "the_signal": {
+    "headline": "LLM Self-Correction Now Production Pattern for Quality Gates",
+    "body": "The reflection pattern\u2014where AI agents self-critique their outputs before delivery\u2014is moving from experimental to production baseline with measurable ROI. For GTM engineers, this means building quality gates into agentic workflows without adding latency tax, critical as you scale AI-driven customer interactions where hallucinations directly impact deal flow."
+  },
+  "tool_drop": {
+    "name": "n8n v2.36 Gateway Credits",
+    "what": "Skip provider account setup and use AI models/services directly via n8n's credit system instead of managing API keys.",
+    "why": "Removes friction from proof-of-concept to production\u2014your sales team tests new models in workflows without waiting for infra setup, accelerating time-to-value on AI-powered sequences.",
+    "url": "https://n8n.io"
+  },
+  "thread_of_day": {
+    "title": "The Year of Internal Tools",
+    "source": "Hacker News",
+    "takeaway": "GTM teams are building internal AI tools faster than buying them, suggesting off-the-shelf platforms are either missing workflow-specific features or adding overhead your revenue ops doesn't need.",
+    "url": "https://www.geocod.io/code-and-coordinates/2026-09-23-the-year-of-internal-tools"
+  },
+  "quote": {
+    "text": "MCP vs. API: Learn how the Model Context Protocol differs from traditional APIs, when to use each, and how to combine both in n8n.",
+    "source": "n8n Blog \u2014 MCP vs. API guide"
+  },
+  "whats_moving": [
+    {
+      "topic": "Model Context Protocol (MCP) adoption",
+      "context": "MCP is becoming the preferred interface for connecting AI agents to tools, not APIs\u2014GTM workflows will need to support both patterns simultaneously."
+    },
+    {
+      "topic": "AI agent self-correction loops",
+      "context": "Reflection patterns with quality gates are proven to improve accuracy; teams not building these will see higher error rates in customer-facing workflows."
+    },
+    {
+      "topic": "No-setup AI service access",
+      "context": "Gateway credit models remove setup friction\u2014expect faster experimentation cycles and quicker pivots to better-performing models in production workflows."
+    }
+  ],
+  "act_on_this": "Audit your current AI workflow error handling: do you have quality gates or reflection loops before customer-facing output? If not, prioritize adding a simple self-critique checkpoint in your highest-volume workflow this week.",
+  "numbers": {
+    "stat": "Zero account creation required for AI models on n8n Cloud select plans",
+    "context": "Removing setup friction directly correlates to faster GTM iteration cycles\u2014measure your current time-to-production for new AI capabilities and identify where provider account setup is your bottleneck."
+  },
+  "generated_at": "2026-09-24T12:30:06.497328+00:00"
+}
