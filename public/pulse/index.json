@@ -1,5 +1,9 @@
 [
   {
+    "date": "2026-09-25",
+    "headline": "n8n Agents ship: workflow automation enters agentic era"
+  },
+  {
     "date": "2026-09-24",
     "headline": "LLM Self-Correction Now Production Pattern for Quality Gates"
   },
@@ -354,9 +358,5 @@
   {
     "date": "2026-06-27",
     "headline": "Multi-agent debugging becomes the GTM blocker nobody's solving"
-  },
-  {
-    "date": "2026-06-26",
-    "headline": "AI maturity frameworks now critical for GTM benchmarking"
   }
 ]

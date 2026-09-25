@@ -1,0 +1,43 @@
+{
+  "date": "2026-09-25",
+  "the_signal": {
+    "headline": "n8n Agents ship: workflow automation enters agentic era",
+    "body": "n8n's new Agents feature lets you describe what you want, pick a model, and route it to tools and workflows\u2014no custom code required. This moves agentic patterns from research into GTM infrastructure. For revenue teams, this means faster deployment of AI-powered lead routing, qualification, and follow-up without waiting for engineering sprints."
+  },
+  "tool_drop": {
+    "name": "n8n Agents",
+    "what": "Declarative agent framework that chains models, tools, and workflows without custom orchestration code.",
+    "why": "Cuts the gap between 'we want an AI agent' and 'it's routing leads' from months to days\u2014direct GTM velocity play.",
+    "url": "https://n8n.io"
+  },
+  "thread_of_day": {
+    "title": "Agentic CUDA Kernel Optimizer: agents debugging agents",
+    "source": "Hacker News",
+    "takeaway": "Someone used LangGraph agents to optimize CUDA kernels by handing them a C++ test harness\u2014shows agents are becoming meta-level problem solvers, not just chatbots.",
+    "url": "https://news.ycombinator.com/item?id=49843269"
+  },
+  "quote": {
+    "text": "Starting with n8n v2.36, you can now use supported AI models and tool services on select n8n Cloud plans without creating a provider account or generating an API key.",
+    "source": "n8n Blog"
+  },
+  "whats_moving": [
+    {
+      "topic": "Agentic process orchestration",
+      "context": "n8n Agents + reflection patterns shipping together signal orchestration is now the default execution model, not an edge case."
+    },
+    {
+      "topic": "Event-driven reliability",
+      "context": "Transactional outbox pattern gaining traction\u2014GTM workflows need guaranteed event delivery, especially for compliance-heavy revenue ops."
+    },
+    {
+      "topic": "Model abstraction layers",
+      "context": "Gateway credits eliminating provider account friction is table stakes; expect competitors to match this UX pattern within weeks."
+    }
+  ],
+  "act_on_this": "Map your current lead qualification workflow to an n8n Agent prototype this week\u2014test whether agentic routing beats your deterministic rules engine on conversion rate.",
+  "numbers": {
+    "stat": "n8n v2.36 eliminates API key setup friction for model access",
+    "context": "One less blocker between 'let's try this model' and 'it's in production'\u2014matters for rapid experimentation cycles in GTM."
+  },
+  "generated_at": "2026-09-25T12:31:23.512156+00:00"
+}
