@@ -1,0 +1,43 @@
+{
+  "date": "2026-09-26",
+  "the_signal": {
+    "headline": "n8n Gateway Credits skip API key friction for AI model trials",
+    "body": "n8n v2.36 lets users experiment with AI models and services without provider account setup\u2014just pick a model, pay via Gateway credits. For GTM teams building AI workflows, this removes a critical activation barrier: your prospects can now test integrations in minutes instead of days of credential management. This is a product-market fit move that directly impacts velocity in enterprise sales cycles."
+  },
+  "tool_drop": {
+    "name": "Floci",
+    "what": "Locally emulates any cloud service without external dependencies.",
+    "why": "GTM engineers testing AI workflows need reproducible, fast feedback loops\u2014local emulation cuts feedback latency and eliminates cloud service brittleness during demos and proof-of-concepts.",
+    "url": "https://floci.io"
+  },
+  "thread_of_day": {
+    "title": "Rate Limiting Doesn't Have to Break Workflows",
+    "source": "n8n Blog",
+    "takeaway": "Smart pacing, batching, and retry strategies transform 429s from deal-killers into expected production patterns\u2014critical for scaling AI agents across rate-limited APIs.",
+    "url": ""
+  },
+  "quote": {
+    "text": "Choose a model, choose the tools and workflows it can use, and it's ready to go.",
+    "source": "n8n Blog \u2014 Introducing n8n Agents"
+  },
+  "whats_moving": [
+    {
+      "topic": "Event-Driven Architecture Reliability",
+      "context": "Transactional outbox pattern gaining traction as teams scale event-driven AI workflows\u2014prevents dual-write failures that break revenue systems."
+    },
+    {
+      "topic": "API Resilience Patterns",
+      "context": "Rate limiting moved from edge case to mainstream production challenge; teams need systematic handling, not workarounds."
+    },
+    {
+      "topic": "AI Model Experimentation UX",
+      "context": "Removing friction from model/service onboarding (Gateway credits) signals that AI adoption velocity now depends on setup speed, not capability."
+    }
+  ],
+  "act_on_this": "Audit your AI workflow's error handling for 429 responses\u2014implement batching + exponential backoff if you're not already, then document the pattern so your sales team can confidently demo against rate-limited APIs.",
+  "numbers": {
+    "stat": "n8n v2.36 eliminates manual API key generation for select Cloud plans",
+    "context": "Reducing onboarding friction by even one step has measurable impact on trial-to-paid conversion in B2B AI tooling\u2014watch if this becomes the industry standard."
+  },
+  "generated_at": "2026-09-26T12:01:29.641948+00:00"
+}
