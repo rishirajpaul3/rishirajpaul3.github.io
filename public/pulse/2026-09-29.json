@@ -1,0 +1,43 @@
+{
+  "date": "2026-09-29",
+  "the_signal": {
+    "headline": "Event delivery patterns separate reliable workflows from chaos",
+    "body": "The transactional outbox pattern is now table stakes for AI workflow reliability \u2014 it prevents dual writes and guarantees event delivery at scale. GTM engineers building revenue automation need this: one failed event sync means lost leads, broken handoffs, and revenue leakage. Without it, your workflow orchestration is just hopeful guessing."
+  },
+  "tool_drop": {
+    "name": "ZenABN - Create LinkedIn Ads with AI",
+    "what": "AI-powered LinkedIn ad generation tool that automates campaign creation.",
+    "why": "Direct signal that ABM workflows are moving into pure AI generation \u2014 GTM teams should test whether this reduces ad ops friction or adds more validation overhead.",
+    "url": ""
+  },
+  "thread_of_day": {
+    "title": "API Rate Limiting for More Reliable Workflows",
+    "source": "n8n Blog",
+    "takeaway": "Rate limiting failures don't have to tank workflows \u2014 smart retry patterns, batching, and pacing turn 429s into a solved problem instead of a cascade failure.",
+    "url": ""
+  },
+  "quote": {
+    "text": "Choose a model, the tools and workflows it can use, and it's ready to go \u2014 n8n Agents now ship as a core orchestration primitive.",
+    "source": "n8n Blog"
+  },
+  "whats_moving": [
+    {
+      "topic": "Process Orchestration Maturity",
+      "context": "Deterministic vs. dynamic vs. agentic execution models are now explicitly differentiated \u2014 GTM teams need to know which one their revenue workflows actually are."
+    },
+    {
+      "topic": "API Friction Elimination",
+      "context": "n8n Gateway Credits skip account setup and API key generation for model trials \u2014 the friction tax on trying new AI models is collapsing."
+    },
+    {
+      "topic": "Observability as Competitive Moat",
+      "context": "Visibility into workflow execution is now called out as core production challenge \u2014 teams blind to their orchestration are leaving money on the table."
+    }
+  ],
+  "act_on_this": "Audit your top 3 revenue workflows for event delivery failure modes \u2014 map where dual writes could break sync and add transactional outbox pattern to the backlog this sprint.",
+  "numbers": {
+    "stat": "Process orchestration now has three explicit execution models (deterministic, dynamic, agentic) instead of the vague 'workflow' category.",
+    "context": "This classification shift means GTM teams can now diagnose whether their automation is brittle, flexible, or actually intelligent \u2014 and pick the right one for each use case."
+  },
+  "generated_at": "2026-09-29T13:41:46.183549+00:00"
+}
