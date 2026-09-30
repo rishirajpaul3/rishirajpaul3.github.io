@@ -1,0 +1,43 @@
+{
+  "date": "2026-09-30",
+  "the_signal": {
+    "headline": "Process orchestration models now define workflow reliability tiers",
+    "body": "n8n's breakdown of deterministic vs. dynamic vs. agentic orchestration patterns gives you a framework to pick the right execution model for your revenue workflows. This matters because the wrong choice tanks observability and causes silent failures in production \u2014 especially critical when your workflows touch customer data or payment flows."
+  },
+  "tool_drop": {
+    "name": "CrawlRaven MCP",
+    "what": "Model Context Protocol tool for web crawling and data extraction at scale.",
+    "why": "GTM teams building AI workflows that need to ingest competitor intel, pricing data, or customer research at scale can now plug this directly into n8n agents without custom integrations.",
+    "url": ""
+  },
+  "thread_of_day": {
+    "title": "API Rate Limiting Doesn't Have to Break Your Workflows",
+    "source": "n8n Blog",
+    "takeaway": "Smart pacing, batching, and retry logic turn 429s from deal-breakers into handled edge cases \u2014 meaning your revenue workflows stay reliable even when upstream APIs throttle.",
+    "url": ""
+  },
+  "quote": {
+    "text": "Reflection pattern for LLMs: a self-critique loop that improves correctness, clarity, and reliability with measurable quality gates, ROI, and safety controls",
+    "source": "n8n Blog \u2014 Reflection Pattern: AI Agents Self-Correct in Production"
+  },
+  "whats_moving": [
+    {
+      "topic": "Agentic orchestration maturity",
+      "context": "n8n Agents ship with full tool/workflow support, signaling that deterministic workflow logic is now table stakes \u2014 agents define next-gen GTM automation."
+    },
+    {
+      "topic": "Gateway Credits friction removal",
+      "context": "Skipping API key setup for model trials lowers activation friction for teams experimenting with new AI services in revenue workflows."
+    },
+    {
+      "topic": "Self-correcting LLM loops",
+      "context": "Reflection patterns moving from research papers into production tools means AI workflows can now validate their own outputs before hitting your database or customer."
+    }
+  ],
+  "act_on_this": "Map your three biggest GTM workflows against the three orchestration models (deterministic, dynamic, agentic) and identify which one you're actually using vs. which one you should be \u2014 then spike the migration path for the highest-touch one.",
+  "numbers": {
+    "stat": "Three execution orchestration models now have defined production patterns",
+    "context": "This is the first time n8n has published a framework that lets teams make explicit choices rather than cargo-culting whatever pattern they started with."
+  },
+  "generated_at": "2026-09-30T13:17:50.582780+00:00"
+}

@@ -1,5 +1,9 @@
 [
   {
+    "date": "2026-09-30",
+    "headline": "Process orchestration models now define workflow reliability tiers"
+  },
+  {
     "date": "2026-09-29",
     "headline": "Event delivery patterns separate reliable workflows from chaos"
   },
@@ -354,9 +358,5 @@
   {
     "date": "2026-07-02",
     "headline": "Agent skill self-improvement moves from concept to reviewable workflows"
-  },
-  {
-    "date": "2026-07-01",
-    "headline": "AI governance moves from compliance checkbox to revenue protection"
   }
 ]
