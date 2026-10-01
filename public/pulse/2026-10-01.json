@@ -1,0 +1,43 @@
+{
+  "date": "2026-10-01",
+  "the_signal": {
+    "headline": "n8n Agents flip the script: describe, deploy, automate",
+    "body": "n8n's new Agent type lets you describe what you want, pick a model and tools, and it runs \u2014 no workflow builder required. This is the GTM inflection point: non-engineers can now build autonomous revenue workflows. If your competitors are still hand-coding orchestration, they're already behind."
+  },
+  "tool_drop": {
+    "name": "n8n Agents",
+    "what": "Declarative agent framework where you describe behavior, assign model + tools, and let it execute without manual workflow design.",
+    "why": "Collapses the gap between GTM intent and technical execution \u2014 your revenue ops team can now iterate on automation logic without engineering bottlenecks.",
+    "url": "https://n8n.io/blog/introducing-n8n-agents/"
+  },
+  "thread_of_day": {
+    "title": "AI model routing and parallel execution patterns now table stakes for workflow speed",
+    "source": "n8n Blog",
+    "takeaway": "Production AI workflows that don't route models by latency budget or run parallel tasks are leaving 300-500ms of wasted time on the table per execution.",
+    "url": "https://n8n.io/blog/reducing-ai-workflow-latency/"
+  },
+  "quote": {
+    "text": "Choose Gateway credits instead of creating a provider account or generating an API key. Starting with n8n v2.36, you can now use supported AI models and tool services on select n8n Cloud plans without the account setup friction.",
+    "source": "n8n Blog \u2014 Try new models and services, skip the account setup"
+  },
+  "whats_moving": [
+    {
+      "topic": "Agentic workflows hitting production",
+      "context": "n8n Agents + credit top-ups signal that autonomous systems are now the baseline, not the experiment."
+    },
+    {
+      "topic": "FTC AI investigation (OpenAI, Anthropic)",
+      "context": "Regulatory pressure on AI companies is escalating; GTM teams building on third-party models now need compliance and audit trails baked into orchestration."
+    },
+    {
+      "topic": "Memory supply tightening 2027-2028",
+      "context": "GPU scarcity will worsen; model routing and inference optimization (caching, batching) shift from nice-to-have to survival strategy for cost-efficient revenue workflows."
+    }
+  ],
+  "act_on_this": "Test n8n Agents on one existing workflow this week \u2014 pick a low-risk revenue process (lead routing, follow-up automation) and measure execution time vs. your current manual or deterministic orchestration. If latency drops >15%, expand to production workflows.",
+  "numbers": {
+    "stat": "API rate limiting and retry logic can save 20-40% of failed workflow executions when properly configured.",
+    "context": "Most GTM teams are losing revenue pipeline to preventable 429s; implementing smart batching and exponential backoff is a quick win that compounds across thousands of daily executions."
+  },
+  "generated_at": "2026-10-01T14:07:41.217809+00:00"
+}

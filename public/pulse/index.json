@@ -1,5 +1,9 @@
 [
   {
+    "date": "2026-10-01",
+    "headline": "n8n Agents flip the script: describe, deploy, automate"
+  },
+  {
     "date": "2026-09-30",
     "headline": "Process orchestration models now define workflow reliability tiers"
   },
@@ -354,9 +358,5 @@
   {
     "date": "2026-07-03",
     "headline": "MCP server security moves from afterthought to production requirement"
-  },
-  {
-    "date": "2026-07-02",
-    "headline": "Agent skill self-improvement moves from concept to reviewable workflows"
   }
 ]
