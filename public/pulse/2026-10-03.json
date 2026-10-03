@@ -1,0 +1,43 @@
+{
+  "date": "2026-10-03",
+  "the_signal": {
+    "headline": "Knowledge graphs vs. vector RAG: production routing decision tree",
+    "body": "n8n's new guidance on LLM knowledge graphs versus vector RAG forces a real architectural choice that affects retrieval accuracy, latency, and cost in revenue workflows. GTM engineers building AI-powered customer systems need to stop treating these as interchangeable and make explicit tradeoffs based on query patterns and hallucination tolerance. This matters now because your agent's knowledge layer directly impacts deal velocity and customer trust."
+  },
+  "tool_drop": {
+    "name": "Offrun",
+    "what": "Unified workspace to run and monitor Claude Code, Codex, AGY, and Grok Build simultaneously.",
+    "why": "GTM teams testing multiple AI coding agents for deal acceleration need visibility into which agent is actually performing\u2014Offrun gives you that comparison layer without context switching.",
+    "url": "https://news.ycombinator.com/item?id=49941"
+  },
+  "thread_of_day": {
+    "title": "Gemini ending free use of Flash and Pro models",
+    "source": "Hacker News / Reddit",
+    "takeaway": "Free tier LLM access is tightening across Google's stack, forcing GTM teams to evaluate paid tier reliability and cost per revenue interaction before building agents on free models.",
+    "url": "https://www.reddit.com/r/GeminiAI/comments/1wwalmc/"
+  },
+  "quote": {
+    "text": "Learn how to reduce AI workflow latency with production patterns: model routing, caching, parallel execution, timeouts, and budgets.",
+    "source": "n8n Blog \u2014 Reducing AI Workflow Latency"
+  },
+  "whats_moving": [
+    {
+      "topic": "AI model pricing consolidation",
+      "context": "Gemini moving away from free Flash/Pro access signals the end of zero-cost inference\u2014GTM teams need to bake token budgets into agent design now."
+    },
+    {
+      "topic": "Knowledge graph vs. RAG stack splits",
+      "context": "Production guidance on when to use structured knowledge graphs over vector retrieval is maturing, forcing explicit architectural decisions instead of default RAG patterns."
+    },
+    {
+      "topic": "Multi-agent orchestration UX",
+      "context": "Tools like Offrun and n8n Agents are normalizing side-by-side agent comparison, shifting from 'which model' to 'which agent performs best for this task'."
+    }
+  ],
+  "act_on_this": "Map your current LLM knowledge layer (vector RAG, knowledge graph, or hybrid) against the latency and accuracy requirements for your top 3 revenue workflows, then test switching to whichever architecture n8n's guidance suggests\u2014document the retrieval quality delta before you hit scaling pressure.",
+  "numbers": {
+    "stat": "Gemini Flash and Pro free tier elimination",
+    "context": "This is the third major LLM provider to restrict free inference in 2026; assume all foundational models will be paid-only by Q1 2027, change your cost assumptions now."
+  },
+  "generated_at": "2026-10-03T12:11:35.557622+00:00"
+}
