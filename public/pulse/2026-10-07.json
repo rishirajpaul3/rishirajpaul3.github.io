@@ -1,0 +1,43 @@
+{
+  "date": "2026-10-07",
+  "the_signal": {
+    "headline": "n8n Agents turn workflow automation into autonomous execution",
+    "body": "n8n's new Agent type lets you describe behavior, pick a model, assign tools, and deploy\u2014no flow diagram required. For GTM teams building revenue systems, this means faster iteration on multi-step customer interactions (lead scoring, outreach sequencing, deal routing) without waiting for workflow refactoring. This is the automation layer consolidating toward declarative AI."
+  },
+  "tool_drop": {
+    "name": "n8n Agents",
+    "what": "Declarative AI agents that execute workflows based on natural language instructions, model choice, and tool access.",
+    "why": "GTM engineers can prototype customer-facing automation (lead qualification, support triage, sales sequence optimization) without rewriting orchestration logic each time requirements shift.",
+    "url": "https://n8n.io/blog/introducing-n8n-agents"
+  },
+  "thread_of_day": {
+    "title": "iPaaS vs. API Management: Execution Control as the Deciding Factor",
+    "source": "n8n Blog",
+    "takeaway": "Teams choosing iPaaS over API management when they need self-hosting, code-level extensibility, and execution control\u2014exactly what GTM automation demands.",
+    "url": "https://n8n.io/blog/ipaas-vs-api-management"
+  },
+  "quote": {
+    "text": "Describe what an agent should do, choose a model, the tools and workflows it can use, and it's ready to go.",
+    "source": "n8n Blog \u2013 Introducing n8n Agents"
+  },
+  "whats_moving": [
+    {
+      "topic": "Event-driven architecture reliability",
+      "context": "The transactional outbox pattern is gaining traction as teams scale event-driven revenue systems and need guaranteed delivery without dual-write bugs."
+    },
+    {
+      "topic": "Declarative automation frameworks",
+      "context": "Move from flow-based to intent-based orchestration (n8n Agents) signals the market shifting toward natural language workflow definition\u2014lower barrier for non-engineers to own automation."
+    },
+    {
+      "topic": "AI workflow cost management",
+      "context": "n8n's manual and auto top-up for Assistant credits indicates token budgets and spend controls are now production concerns, not afterthoughts."
+    }
+  ],
+  "act_on_this": "Audit your current lead qualification or customer routing workflows\u2014map one to n8n Agents syntax and run a time-to-deploy comparison against your existing orchestration. If iteration time drops by 40%+ on prompt or tool changes, pilot Agents on your next automation project.",
+  "numbers": {
+    "stat": "Zero workflow diagram overhead in declarative agent setup",
+    "context": "Traditional iPaaS requires UI flow mapping; n8n Agents eliminate this layer, cutting feedback loops for GTM automation testing from hours to minutes."
+  },
+  "generated_at": "2026-10-07T14:10:00.665205+00:00"
+}
