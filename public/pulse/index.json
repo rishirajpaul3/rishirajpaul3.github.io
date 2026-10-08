@@ -1,5 +1,9 @@
 [
   {
+    "date": "2026-10-08",
+    "headline": "API contract testing catches breaking changes before production hits"
+  },
+  {
     "date": "2026-10-07",
     "headline": "n8n Agents turn workflow automation into autonomous execution"
   },
@@ -354,9 +358,5 @@
   {
     "date": "2026-07-10",
     "headline": "Error handling in tool calling is your new production bottleneck"
-  },
-  {
-    "date": "2026-07-09",
-    "headline": "Agent memory architecture now determines production reliability, not just performance"
   }
 ]

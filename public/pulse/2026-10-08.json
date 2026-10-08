@@ -1,0 +1,43 @@
+{
+  "date": "2026-10-08",
+  "the_signal": {
+    "headline": "API contract testing catches breaking changes before production hits",
+    "body": "n8n's fresh take on API contract testing shows GTM teams how to prevent workflow failures at scale. This isn't theoretical\u2014it's the operational pattern between 'automation works in dev' and 'automation breaks at 2am.' If you're shipping AI workflows that depend on external APIs, contract testing becomes your early warning system."
+  },
+  "tool_drop": {
+    "name": "n8n Assistant Credit Top-Up",
+    "what": "Pay-as-you-go credit system for n8n Cloud users to extend AI assistant usage without tier upgrades.",
+    "why": "GTM teams running high-volume AI workflow experiments now have flexible cost control\u2014spin up agent tests without committing to higher monthly spend.",
+    "url": ""
+  },
+  "thread_of_day": {
+    "title": "One Prompt, Six Hours, One Model: Claude Opus 5.5 Visualizes Invisible Cities",
+    "source": "Hacker News",
+    "takeaway": "Single-prompt agentic workflows can now handle 6+ hour task chains\u2014relevant benchmark for anyone building long-running AI automation in GTM.",
+    "url": "https://quesma.com/blog/invisible-cities-one-shot/"
+  },
+  "quote": {
+    "text": "iPaaS versus API management tools: engineering teams that need execution control, self-hosting, and code-level extensibility reach for n8n.",
+    "source": "n8n Blog \u2014 iPaaS vs. API Management"
+  },
+  "whats_moving": [
+    {
+      "topic": "API Contract Testing",
+      "context": "Production workflows now have a systematic way to catch breaking API changes before they cascade through your automation."
+    },
+    {
+      "topic": "Claude Haiku 5.5 Release",
+      "context": "Smaller, faster model entering the landscape means GTM teams have new cost-efficiency options for high-frequency AI tasks."
+    },
+    {
+      "topic": "iPaaS Self-Hosting Adoption",
+      "context": "Teams valuing execution control and code-level extensibility are choosing execution platforms over managed iPaaS\u2014shifting the architecture conversation."
+    }
+  ],
+  "act_on_this": "Run an API contract test against one of your three most critical integrations today\u2014document what breaking changes it would catch if a vendor pushed an undocumented schema update.",
+  "numbers": {
+    "stat": "One prompt sustained over six hours of agentic execution",
+    "context": "This duration is now achievable; GTM engineers should start testing whether their workflow orchestrations can scale to multi-hour tasks without timeout failures."
+  },
+  "generated_at": "2026-10-08T14:20:08.443537+00:00"
+}
