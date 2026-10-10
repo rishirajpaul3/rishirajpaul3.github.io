@@ -1,5 +1,9 @@
 [
   {
+    "date": "2026-10-10",
+    "headline": "Prompt testing frameworks now separate production AI from guesswork"
+  },
+  {
     "date": "2026-10-09",
     "headline": "Knowledge graphs vs. vector RAG: pick your grounding strategy now"
   },
@@ -354,9 +358,5 @@
   {
     "date": "2026-07-12",
     "headline": "Compliance automation is your next revenue moat\u2014build it on your infra"
-  },
-  {
-    "date": "2026-07-11",
-    "headline": "Agent identity and intent validation are only half-solved problems"
   }
 ]
