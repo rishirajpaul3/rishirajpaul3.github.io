@@ -1,0 +1,43 @@
+{
+  "date": "2026-10-13",
+  "the_signal": {
+    "headline": "n8n Agents ship: describe intent, pick model, deploy\u2014no code",
+    "body": "n8n just launched Agents as a native primitive\u2014you describe what you want, select an LLM, wire in tools and workflows, and it runs. This collapses the gap between prompt engineering and production automation. For GTM teams building AI-powered qualification or lead routing, this means faster iteration cycles and less ops overhead managing agent state."
+  },
+  "tool_drop": {
+    "name": "n8n Agents",
+    "what": "Native agent framework where you define intent, choose a model, attach tools/workflows, and deploy\u2014no glue code required.",
+    "why": "GTM teams can now spin up multi-step lead qualification or prospect research agents without building orchestration from scratch; reduces time-to-revenue on AI workflows.",
+    "url": "https://n8n.io"
+  },
+  "thread_of_day": {
+    "title": "n8n Morning AI News Brief Workflow: $0.00004 per article scoring at scale",
+    "source": "n8n Blog",
+    "takeaway": "Fully instrumented example of cost-efficient content scoring and Slack delivery\u2014shows how to batch LLM calls and score materiality without breaking budget.",
+    "url": "https://n8n.io/blog/build-morning-ai-news-brief-with-you-com-jev-and-n8n"
+  },
+  "quote": {
+    "text": "Every weekday at 8am, this workflow searches the day's AI news, scores every article for materiality at about $0.00004 apiece, and posts one cited brief per topic to Slack.",
+    "source": "n8n Blog \u2013 Morning AI News Brief"
+  },
+  "whats_moving": [
+    {
+      "topic": "Agent frameworks as first-class primitives",
+      "context": "n8n's native Agents release signals that the industry is moving away from bolted-on agentic logic toward integrated, model-agnostic frameworks."
+    },
+    {
+      "topic": "LLM grounding strategy maturity",
+      "context": "Multiple posts today (knowledge graphs vs. vector RAG) indicate GTM teams now need a deliberate grounding strategy, not just 'throw RAG at it.'"
+    },
+    {
+      "topic": "Cost-efficient LLM inference at production scale",
+      "context": "The $0.00004 per-article scoring example shows that batch processing and smart prompt design can keep multi-step AI workflows under budget."
+    }
+  ],
+  "act_on_this": "Audit your current lead qualification workflow\u2014if it's still rules-based or hybrid human/AI, sketch how you'd replace it with an n8n Agent, define the intent, and test on 100 warm leads this week.",
+  "numbers": {
+    "stat": "$0.00004 per article for LLM materiality scoring",
+    "context": "This cost structure proves that high-frequency, low-latency AI workflows at scale are now viable for GTM teams without exploding compute budgets."
+  },
+  "generated_at": "2026-10-13T14:45:45.645366+00:00"
+}
