@@ -1,0 +1,43 @@
+{
+  "date": "2026-10-14",
+  "the_signal": {
+    "headline": "Gemini 4 Argon + MCP unlocks stateful multi-step revenue workflows",
+    "body": "n8n shipped Gemini 4 Argon integration with Model Context Protocol support, meaning your AI agents can now maintain context across multi-step customer interactions without losing intent mid-funnel. This closes the gap between single-turn LLM calls and production revenue automation\u2014your qualification flows, lead routing, and contract review can now reason statefully instead of hallucinating."
+  },
+  "tool_drop": {
+    "name": "pg_vectorsearch",
+    "what": "Vector search index faster than pgvector's IVFFlat and HNSW for Postgres-native similarity queries.",
+    "why": "If you're shipping RAG-backed lead scoring or product recommendation engines, a 2-3x index speedup on your vector DB means sub-100ms retrieval at scale\u2014critical for real-time qualification flows.",
+    "url": "https://github.com/timescale/pg_vectorsearch"
+  },
+  "thread_of_day": {
+    "title": "AI agent erased edited footage mid-production at TV4",
+    "source": "Hacker News",
+    "takeaway": "Autonomous agents without rollback safeguards or audit trails are production liabilities\u2014this is your warning that 'agent autonomy' without guardrails kills revenue ops credibility.",
+    "url": "https://swedenherald.com/article/tv4-postpones-the-challenge-until-2027-after-technical-failure-erases-edited-footage"
+  },
+  "quote": {
+    "text": "API contract testing helps you catch breaking changes before they disrupt your workflows...while your automations run.",
+    "source": "n8n Blog \u2014 API Contract Testing for Production Failures"
+  },
+  "whats_moving": [
+    {
+      "topic": "Model Context Protocol (MCP) adoption",
+      "context": "Gemini 4 Argon + n8n integration signals MCP is moving from research artifact to revenue-critical standard for stateful agent workflows."
+    },
+    {
+      "topic": "Vector search performance race",
+      "context": "New indexes outpacing pgvector means RAG latency is no longer an excuse\u2014expectations for sub-100ms retrieval are now table stakes."
+    },
+    {
+      "topic": "AI agent safety in production",
+      "context": "TV4's erasure incident is forcing GTM teams to demand rollback capability and audit trails from agentic platforms before deploying to revenue ops."
+    }
+  ],
+  "act_on_this": "Test your current lead-scoring workflow with Gemini 4 Argon's MCP integration this week\u2014measure if stateful context reduces mid-funnel classification errors by >5% vs. your existing single-turn LLM implementation.",
+  "numbers": {
+    "stat": "$0.00004 per article materiality scoring decision",
+    "context": "At that unit cost, AI-graded content relevance for lead nurture is now economically viable even for SMB GTM ops\u2014the math just shifted."
+  },
+  "generated_at": "2026-10-14T12:36:56.234237+00:00"
+}
