@@ -1,0 +1,43 @@
+{
+  "date": "2026-10-15",
+  "the_signal": {
+    "headline": "On-device LLMs hit 24B sweet spot for production agents",
+    "body": "Liquid AI's LFM2.5-24B-A2B is built specifically for fast on-device agents \u2014 this means GTM workflows no longer need cloud roundtrips for every decision. Lower latency, lower cost per inference, and no API rate limits: this is the architecture shift that makes embedded revenue systems actually deployable at scale."
+  },
+  "tool_drop": {
+    "name": "Jev 1.14.0",
+    "what": "Type-safe AI workflow framework now shipping experimental features for agent state management and multi-step reasoning.",
+    "why": "GTM engineers need deterministic, testable agent behavior \u2014 Jev's type safety catches workflow bugs before they hit production and tank your conversion pipeline.",
+    "url": "https://typesafe.ai/blog/jev-1-14"
+  },
+  "thread_of_day": {
+    "title": "API Contract Testing Prevents Production Failures",
+    "source": "n8n Blog",
+    "takeaway": "Validating API responses mid-workflow execution catches breaking changes before they cascade through your revenue automation \u2014 not after your SDR workflow silently fails.",
+    "url": ""
+  },
+  "quote": {
+    "text": "Every weekday at 8am, this workflow searches the day's AI news, scores every article for materiality at about $0.00004 apiece, and posts one cited brief per topic to Slack.",
+    "source": "n8n Blog \u2014 AI news brief workflow tutorial"
+  },
+  "whats_moving": [
+    {
+      "topic": "Model-agnostic workflow steering (Aidlc)",
+      "context": "AWS Labs released adaptive workflow rules for AI coding agents \u2014 this pattern is now spreading to revenue workflows where intent-to-execution needs guard rails."
+    },
+    {
+      "topic": "Knowledge graphs vs. vector RAG trade-offs",
+      "context": "n8n's comparison guide signals that GTM teams need to choose grounding strategy based on determinism vs. flexibility \u2014 vector RAG wins for discovery, knowledge graphs win for repeatable qualification."
+    },
+    {
+      "topic": "n8n Assistant credit top-ups",
+      "context": "Self-service credit purchasing removes friction for teams building production AI workflows \u2014 scaling agent usage no longer requires account management overhead."
+    }
+  ],
+  "act_on_this": "Audit your current revenue workflows for API contract violations \u2014 add n8n's validation layer to catch silent failures before they tank your SDR handoff or qualification logic.",
+  "numbers": {
+    "stat": "$0.00004 per article materiality scoring",
+    "context": "At this cost, real-time relevance filtering on inbound signals becomes economically viable for every GTM workflow, not just high-touch deals."
+  },
+  "generated_at": "2026-10-15T12:25:03.794536+00:00"
+}
