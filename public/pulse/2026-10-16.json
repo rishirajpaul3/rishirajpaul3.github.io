@@ -1,0 +1,43 @@
+{
+  "date": "2026-10-16",
+  "the_signal": {
+    "headline": "Knowledge graphs vs vector RAG: which grounds your revenue agents?",
+    "body": "n8n just published a breakdown of when to use LLM knowledge graphs versus vector RAG for grounding AI workflows. For GTM engineers building agent-based revenue systems, this is the difference between structured entity relationships (better for deal routing, account scoring) and fuzzy semantic search (better for discovery). Pick wrong and your agents hallucinate buyer signals or miss high-intent accounts."
+  },
+  "tool_drop": {
+    "name": "Agent Vault",
+    "what": "Centralized repository for managing, versioning, and deploying AI agents across teams.",
+    "why": "GTM teams shipping multiple revenue agents need agent governance\u2014this solves sprawl, ensures consistency across lead scoring and outreach agents, and prevents model drift in production.",
+    "url": ""
+  },
+  "thread_of_day": {
+    "title": "API Contract Testing Prevents Production Failures",
+    "source": "n8n Blog",
+    "takeaway": "Contract testing catches breaking API changes before they tank your revenue workflows\u2014critical when your lead qualification engine depends on CRM/data warehouse APIs staying stable.",
+    "url": ""
+  },
+  "quote": {
+    "text": "API contract testing helps you catch breaking changes before they disrupt your workflows. See how n8n validates API responses while your automations run.",
+    "source": "n8n Blog \u2014 API Contract Testing"
+  },
+  "whats_moving": [
+    {
+      "topic": "Gemini 4 Argon + MCP adoption",
+      "context": "n8n shipping native workflows with Argon; multi-step revenue sequences now easier to build and test without engineering overhead."
+    },
+    {
+      "topic": "Knowledge graph vs vector RAG clarity",
+      "context": "GTM teams need to choose the right grounding strategy for their agents\u2014structured data wins for account context, vectors win for content relevance."
+    },
+    {
+      "topic": "n8n Assistant credit top-ups",
+      "context": "Self-hosted workflow engines now have per-execution LLM cost control, enabling GTM teams to scale AI agent usage without surprise bills."
+    }
+  ],
+  "act_on_this": "Audit your current lead scoring and routing workflows: if they're built on iPaaS with API deps, map which CRM/data APIs are mission-critical and implement contract testing today before they break in production.",
+  "numbers": {
+    "stat": "$0.00004 per article scored by n8n's AI news workflow",
+    "context": "At this cost per inference, batched GTM workflows (daily lead scoring, weekly account reviews) become practically free\u2014but only if latency doesn't kill conversion, so optimize for response time first."
+  },
+  "generated_at": "2026-10-16T12:03:52.442632+00:00"
+}
