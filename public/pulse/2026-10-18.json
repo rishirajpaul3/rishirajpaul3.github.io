@@ -1,0 +1,43 @@
+{
+  "date": "2026-10-18",
+  "the_signal": {
+    "headline": "DeepSeek search API launches at $0.75/1K requests\u2014undercuts perplexity layers",
+    "body": "DeepSeek's new search-and-fetch API is pricing aggressive enough to reshape how revenue agents integrate real-time data without burning through OpenAI/Anthropic budgets. For GTM workflows that need live market intel or prospect research at scale, this changes the unit economics of your agentic pipeline\u2014suddenly embedding live search into multi-step revenue sequences becomes viable at volume."
+  },
+  "tool_drop": {
+    "name": "Sphinx (Show HN)",
+    "what": "A hook that quizzes you on your AI-generated code before it ships to production.",
+    "why": "GTM engineers shipping agentic workflows need confidence checks\u2014this catches hallucinations and logic gaps in revenue-critical code before they hit customer APIs.",
+    "url": "https://news.ycombinator.com/item?id=show-hn-sphinx"
+  },
+  "thread_of_day": {
+    "title": "iPaaS vs. API Management: What Engineers Choose When Both Fall Short",
+    "source": "n8n Blog",
+    "takeaway": "Teams building production revenue systems are ditching iPaaS for execution-control tools like n8n because they need self-hosting, code-level extensibility, and stateful workflows\u2014not SaaS lock-in.",
+    "url": "https://n8n.io/blog/iPaaS-vs-api-management"
+  },
+  "quote": {
+    "text": "API contract testing helps you catch breaking changes before they disrupt your workflows. See how n8n validates API responses while your automations run.",
+    "source": "n8n Blog: How API Contract Testing Prevents Production Failures"
+  },
+  "whats_moving": [
+    {
+      "topic": "LLM inference cost compression",
+      "context": "DeepSeek's $0.75/1K search pricing and 24B on-device models are collapsing the cost of intelligent decision-making in revenue workflows."
+    },
+    {
+      "topic": "Workflow automation maturity",
+      "context": "n8n's focus on enterprise control, Gemini 4 Argon integration, and API contract validation show the market moving from 'can we automate this' to 'can we trust this in production.'"
+    },
+    {
+      "topic": "AI code safety gates",
+      "context": "Sphinx's pre-deploy code review for agentic systems is gaining traction as teams realize hallucinated API calls and logic errors are GTM killers."
+    }
+  ],
+  "act_on_this": "Audit your current API cost surface in revenue workflows\u2014swap one integration to DeepSeek's search API as a test and measure spend reduction; if you're using n8n, enable API contract testing on your most critical customer-facing workflows this sprint.",
+  "numbers": {
+    "stat": "$0.00004 per article materiality score (from morning news brief workflow)",
+    "context": "Shows how cheap intelligent filtering has become\u2014you can now score hundreds of data points in real-time for less than a penny, making relevance ranking viable in GTM pipelines at scale."
+  },
+  "generated_at": "2026-10-18T11:55:17.646327+00:00"
+}
