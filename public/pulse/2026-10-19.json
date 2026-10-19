@@ -1,0 +1,43 @@
+{
+  "date": "2026-10-19",
+  "the_signal": {
+    "headline": "n8n runs AI workflows on NVIDIA hardware\u2014no cloud APIs required",
+    "body": "Self-hosted workflow execution just moved from \"nice to have\" to competitive necessity. For GTM teams processing sensitive customer data (invoices, calls, emails), NVIDIA DGX integration means you keep data local while running inference at scale\u2014critical for enterprise deals that won't touch third-party APIs. This erodes the moat of hosted workflow platforms that depend on cloud lock-in."
+  },
+  "tool_drop": {
+    "name": "Harness2 by Google Research",
+    "what": "Framework for recursive agent orchestration\u2014agents that spawn and coordinate sub-agents to solve multi-step problems.",
+    "why": "GTM agents hitting complexity walls (complex deal qualification, multi-stakeholder nurture) need hierarchical agent patterns; this is the open-source blueprint showing how.",
+    "url": "https://github.com/google-research/harness2"
+  },
+  "thread_of_day": {
+    "title": "Qwen3-4B with AI writing tics trained out",
+    "source": "Hacker News",
+    "takeaway": "Edge models are moving past generic output bloat\u2014smaller, cleaner models now outperform larger ones on specific GTM tasks like email drafts and call summaries because they skip the filler.",
+    "url": "https://100toolkit.com/blog/deslop-model/"
+  },
+  "quote": {
+    "text": "Most small businesses want the same handful of AI jobs. They want to draft emails, summarize calls, read invoices, search their own documents, and make the odd image.",
+    "source": "n8n Blog \u2014 Run workflows on NVIDIA DGX"
+  },
+  "whats_moving": [
+    {
+      "topic": "Self-hosted inference",
+      "context": "n8n + NVIDIA partnership signals the end of cloud-only workflow automation; enterprises now have a path to execution without third-party data residency risk."
+    },
+    {
+      "topic": "Small-model optimization",
+      "context": "4-8B models trained on domain-specific outputs (Qwen3, Mistral's time-series models) are outcompeting 70B+ on GTM tasks, directly shrinking API costs and latency."
+    },
+    {
+      "topic": "Agent orchestration patterns",
+      "context": "Harness2 and recursive agent frameworks are becoming table stakes\u2014multi-step revenue workflows now require hierarchical agent design, not single-layer LLM chains."
+    }
+  ],
+  "act_on_this": "Test your email draft + call summary workflows on Qwen3-4B or a 24B model this week; measure latency and cost vs. your current API chain and document the 10-40% efficiency gain you'll likely find.",
+  "numbers": {
+    "stat": "$0.00004 per article scored",
+    "context": "n8n's AI news brief costs ~$0.002/day to run\u2014demonstrating that commodity GTM tasks (content eval, prioritization, routing) are now essentially free at scale, shifting competition from cost to speed and accuracy."
+  },
+  "generated_at": "2026-10-19T14:17:24.020707+00:00"
+}
