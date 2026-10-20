@@ -1,5 +1,9 @@
 [
   {
+    "date": "2026-10-20",
+    "headline": "Google Cloud outage cascades through fintech\u2014your fallback matters"
+  },
+  {
     "date": "2026-10-19",
     "headline": "n8n runs AI workflows on NVIDIA hardware\u2014no cloud APIs required"
   },
@@ -354,9 +358,5 @@
   {
     "date": "2026-07-22",
     "headline": "Agent identity and intent remain half-solved in production systems"
-  },
-  {
-    "date": "2026-07-21",
-    "headline": "Agent memory is now your persistent state bottleneck"
   }
 ]
