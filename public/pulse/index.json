@@ -1,5 +1,9 @@
 [
   {
+    "date": "2026-10-23",
+    "headline": "AI Agent Memory becomes production requirement\u2014not optional"
+  },
+  {
     "date": "2026-10-22",
     "headline": "OpenAI CLI launches\u2014direct API access without wrapper overhead"
   },
@@ -354,9 +358,5 @@
   {
     "date": "2026-07-25",
     "headline": "AI audit trails and governance shift from nice-to-have to compliance requirement"
-  },
-  {
-    "date": "2026-07-24",
-    "headline": "Open-weight model pooling cuts AI inference costs by 66%"
   }
 ]
